@@ -145,6 +145,11 @@ Please cite the Lean software release `v0.1.0-obstruction` and this report path 
 
 `docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md`
 
-Zenodo version DOI (if minted by GitHub–Zenodo integration after release): record in `docs/zenodo-status.md` when available. **Do not invent a DOI.**
+**DOIs (published):**
+
+| Artifact | DOI |
+|----------|-----|
+| Science report / repo | [10.5281/zenodo.21845587](https://doi.org/10.5281/zenodo.21845587) |
+| Lean obstruction package | [10.5281/zenodo.21845589](https://doi.org/10.5281/zenodo.21845589) |
 
 **License:** Apache-2.0 (code); report text © Quantyra Inc., released with the science repository.
