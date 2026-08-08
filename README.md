@@ -9,5 +9,10 @@ Science / reconstruction satellite for the Quantyra Jenny **Connes rigidity cont
 ## Role
 Notes, reconstruction cards, literature extracts, and non-Lean evidence live here. Theorem-grade math goes to the Lean satellite.
 
+## Public report (2026-08-08)
+
+**[Refutation of the Nielsen Ioana+Θ reductio](docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md)**  
+Lean companion: https://github.com/Quantyra/connes-rigidity-lean/releases/tag/v0.1.0-obstruction
+
 ## Non-claims
-This repo does not assert Connes true/false or OpenAI/Zhou/Nielsen victory. See planning charter and Lean `INTEGRITY.md`.
+This report does **not** assert Connes true/false or OpenAI/Zhou counterexample validity. It only refutes Nielsen’s use of Ioana Thm 8.2 on the map Θ.

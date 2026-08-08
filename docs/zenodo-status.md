@@ -1,10 +1,11 @@
-# Zenodo status — Quantyra-Connes-Rigidity (science)
-
-Science satellite is reconstruction/notes only. Prefer DOI on the **Lean** package when a bounded software release is ready.
+# Zenodo / release status — science satellite
 
 | Item | Status |
 |------|--------|
-| Science Zenodo deposit | **not planned** until there is a claim-bounded paper/PDF package |
-| Lean Zenodo | hook **enabled** on `connes-rigidity-lean`; no DOI until first bounded Release — see sibling status |
+| Report | `docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md` |
+| GitHub | https://github.com/Quantyra/connes-rigidity |
+| Release tag | `v0.1.0-report` (report + sources pins) |
+| Primary software DOI path | Lean sibling `connes-rigidity-lean` `v0.1.0-obstruction` |
+| Science Zenodo | optional; prefer citing Lean software + this report path |
 
-Last updated: 2026-08-07
+Do not invent DOIs.
