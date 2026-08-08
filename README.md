@@ -2,8 +2,9 @@
 
 Science / reconstruction satellite for the Quantyra Jenny **Connes rigidity controversy** audit.
 
-**Planning:** `C:\Users\Dan\Desktop\Projects\IGH\Quantyra-Jenny-Planning`  
-**Lean:** `C:\Users\Dan\Desktop\Projects\Quantyra-Connes-Rigidity-Lean`  
+**GitHub:** https://github.com/Quantyra/connes-rigidity  
+**Lean:** https://github.com/Quantyra/connes-rigidity-lean  
+**Planning:** https://github.com/Quantyra/Quantyra-Jenny-Planning (private)
 
 ## Role
 Notes, reconstruction cards, literature extracts, and non-Lean evidence live here. Theorem-grade math goes to the Lean satellite.
