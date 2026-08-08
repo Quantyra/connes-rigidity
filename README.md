@@ -11,6 +11,9 @@ Notes, reconstruction cards, literature extracts, and non-Lean evidence live her
 
 ## Public report (2026-08-08)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21845587.svg)](https://doi.org/10.5281/zenodo.21845587)
+[![Lean DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21845589.svg)](https://doi.org/10.5281/zenodo.21845589)
+
 **[Refutation of the Nielsen Ioana+Θ reductio](docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md)**  
 Lean companion: https://github.com/Quantyra/connes-rigidity-lean/releases/tag/v0.1.0-obstruction
 
