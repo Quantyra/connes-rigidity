@@ -1,0 +1,2855 @@
+JOURNAL OF THE
+AMERICAN MATHEMATICAL SOCIETY
+Volume 24, Number 4, October 2011, Pages 1175–1226
+S 0894-0347(2011)00706-6
+Article electronically published on June 8, 2011
+
+
+
+           W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS
+                    OF PROPERTY (T) GROUPS
+
+                                         ADRIAN IOANA
+
+
+
+
+                                            Contents
+       0. Introduction                                                        1175
+       1. Preliminaries                                                       1182
+       2. Rigid subalgebras of II1 factors arising from generalized Bernoulli
+           actions                                                            1186
+       3. A spectral gap argument                                             1189
+       4. Lower bound on height                                               1194
+       5. A conjugacy result for subalgebras                                  1196
+       6. A dichotomy result for subalgebras                                  1199
+       7. Popa’s conjugacy criterion for actions                              1203
+       8. Strong rigidity for embeddings of II1 factors                       1207
+       9. W∗ –superrigidity                                                   1213
+      10. Further applications                                                1217
+      References                                                              1224
+
+
+
+                                       0. Introduction
+0.1. The group measure space construction of Murray and von Neumann associates
+to every probability measure preserving (p.m.p.) action Γ  X of a countable group
+Γ on a probability space (X, μ) a ﬁnite von Neumann algebra L∞ (X)  Γ [24]. If
+the action is essentially free and ergodic, then this algebra is a II1 factor which
+contains L∞ (X) as a Cartan subalgebra. A central problem in the theory of von
+Neumann algebras is understading how much of the group action is “remembered”
+by its von Neumann algebra.
+   The main goal of this paper is to prove that, for a large, natural family of
+group actions (Bernoulli actions of property (T) groups), their associated II1 factor
+completely remembers the group and the action.
+   We start by giving some motivation for this result.
+   By a celebrated result of A. Connes, if Γ is inﬁnite amenable, then the II1 factor
+of any free ergodic p.m.p. action Γ  X is isomorphic to the hyperﬁnite II1 factor
+([4], see also [26] and [7]).
+
+   Received by the editors November 30, 2010 and, in revised form, April 20, 2011.
+   2010 Mathematics Subject Classiﬁcation. Primary 46L36; Secondary 28D15, 37A20.
+   The author was supported by a Clay Research Fellowship.
+                                                                    2011
+                                                                    c      American Mathematical Society
+                                                       Reverts to public domain 28 years from publication
+
+                                                1175
+1176                                  ADRIAN IOANA
+
+
+   In contrast, the study of group measure space algebras arising from actions of
+non–amenable groups has led to a deep rigidity theory (see the survey [38] and the
+introduction of [42]).
+   In particular, S. Popa’s seminal work [33], [34] shows that, for actions belonging
+to a large class, isomorphism of their group measure space algebras implies conju-
+gacy of the actions. More precisely, assume that Γ is an ICC (inﬁnite conjugacy
+class) group which has an inﬁnite, normal subgroup with the relative property (T)
+and let Γ  X be a free ergodic action. Additionally, suppose that Λ  Y = Y0Λ
+is a Bernoulli action. Popa proves that if the actions Γ  X and Λ  Y are
+W∗ –equivalent, i.e. if they produce isomorphic von Neumann algebras (also known
+as W∗ –algebras), then the actions are conjugate [34]. This means that Γ ∼   = Λ and
+there exists an isomorphism of probability spaces θ : X → Y such that θ Γθ −1 = Λ.
+   The natural question underlying and motivating this result, explicitly formulated
+in the introduction of [34], is whether the same is true if one imposes all the con-
+ditions on only one of the actions. In other words, assume that Γ is an ICC group
+having an inﬁnite, normal subgroup with the relative property (T) and suppose
+that Γ  X = X0Γ is a Bernoulli action. Is it true that any free ergodic p.m.p.
+action Λ  Y which is W∗ –equivalent to Γ  X, must be conjugate to it?
+   Further evidence that the answer to this question is true was provided by Popa.
+In [37], [34], he proves that this is the case if the actions are assumed to be orbit
+equivalent (OE). This amounts to the existence of an isomorphism of probability
+spaces θ : X → Y satisfying θ(Γx) = Λ(θx), for almost every x ∈ X. Recall
+that orbit equivalence is stronger than W∗ –equivalence of actions. More precisely,
+as ﬁrst noticed in [43] (see also [13]), two actions Γ  X and Λ  Y are orbit
+equivalent if and only if there exists an isomorphism of their group measure space
+algebras, L∞ (X)Γ ∼   = L∞ (Y )Λ, which identiﬁes the Cartan subalgebras L∞ (X)
+       ∞
+and L (Y ).
+
+
+0.2. The main result of this paper answers aﬃrmatively the above question. Before
+stating it, we ﬁrst review a few concepts and then introduce some terminology.
+   An inclusion (Γ0 ⊂ Γ) of countable groups has the relative property (T) of
+Kazhdan–Margulis if any unitary representation of Γ which has almost invariant
+vectors must have a non–zero Γ0 –invariant vector [20], [23]. When Γ0 = Γ, this
+condition is equivalent to the property (T) of the group Γ. Examples of relative
+property (T) inclusions of groups are given by (Z2 ⊂ Z2 Γ), for any non–amenable
+subgroup Γ of SL2 (Z) [3], and by (Γ0 ⊂ Γ0 × Γ1 ), for a property (T) group Γ0 (e.g.
+Γ0 = SLn (Z), n ≥ 3) and an arbitrary countable group Γ1 [20]). For a probability
+space (X0 , μ0 ), the Bernoulli action Γ  (X0Γ , μΓ0 ) is given by γ · (xg )g = (xγ −1 g )g ,
+for all (xg )g∈Γ ∈ X0Γ and γ ∈ Γ.
+   In this paper, by a W∗ – or OE–rigidity result we mean a result proving that two
+actions Γ  X, Λ  Y , which are W∗ – or OE–equivalent, must be conjugate. If
+this happens when only one of these actions is in a ﬁxed class, while the other can
+be any free ergodic action of any countable group, we have a superrigidity result.
+
+Theorem A (W∗ –superrigidity). Let Γ be a countable ICC group which admits
+an inﬁnite normal subgroup Γ0 such that the inclusion (Γ0 ⊂ Γ) has the relative
+property (T). Let (X0 , μ0 ) be a non–trivial probability space and let Γ  (X, μ) =
+(X0Γ , μΓ0 ) be the Bernoulli action. Denote M = L∞ (X)  Γ and let p ∈ M be a
+                    W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                          1177
+
+
+projection. Let Λ  (Y, ν) be a free ergodic p.m.p. action of a countable group Λ.
+Denote N = L∞ (Y )  Λ.
+        = pM p, then p = 1, Γ ∼
+   If N ∼                     = Λ and the actions Γ  X, Λ  Y are conjugate.
+   Moreover, any ∗–isomorphism θ : N → M comes from a conjugacy of the actions
+Γ  X, Λ  Y and a character of Γ (see Theorem 9.1). Note that Theorem A
+provides a new, large class of II1 factors which are not group measure space factors.
+   Theorem A is proven in the framework of Popa’s deformation/rigidity theory by
+playing against each other the “rigidity” of Γ (manifested here in the form of the
+relative property (T)) and the “deformation properties” of Bernoulli actions Γ  X
+(see Section 1.5).
+   Before discussing its method of proof in more detail, let us put it into context.
+0.3. Despite remarkable progress in both the areas of W∗ – and OE–rigidity dur-
+ing the last decade (see [38], [12], [42]), W∗ –superrigidity results remained elusive
+until very recently ([31], [42]). Prior to these results, several large classes of OE–
+superrigid actions were found ([11], [37], [39], [21], [15], [22]). In addition, for other
+classes of actions Γ  X, it was shown that L∞ (X) is the unique group mea-
+sure space Cartan subalgebra of L∞ (X)  Γ, up to unitary conjugacy ([28],[31]).
+However, since no examples of actions having both of these properties were known,
+W∗ –superrigidity still could not be concluded.
+   The situation changed starting with the work of J. Peterson who was able to
+show the existence of virtually W∗ –superrigid actions ([31]). He considered proﬁnite
+actions of certain groups having inﬁnite subgroups with the relative property (T)
+and used, among other things, techniques and results from [30], [28], [15].
+   Shortly after, S. Popa and S. Vaes discovered the ﬁrst concrete families of W∗ –
+superrigid actions ([42]). Furthermore, they succeeded in proving sweeping W∗ –
+superrigidity results.
+   First, they showed that for groups Γ in a certain class G of amalgamated free
+product groups, the II1 factor of any free ergodic action Γ  X has a unique group
+measure space Cartan subalgebra.
+   Then, by applying the OE–superrigidity results from [37, 39] and [22], they
+respectively deduced that the following actions are W∗ –superrigid: a) Bernoulli
+actions, generalized Bernoulli actions, Gaussian actions of groups Γ ∈ G and b) any
+free mixing action of Γ = PSLn (Z) ∗Tn PSLn (Z) ∈ G, where Tn ⊂ PSLn (Z) is the
+subgroup of upper triangular matrices and n ≥ 3.
+   The class G consists of groups of the form Γ = Γ1 ∗Σ Γ2 subject to several
+conditions: 1) Σ is amenable, 2) Σ is “almost malnormal” in Γ1 , normal in Γ2 and
+3) Γ1 is “rigid” (e.g. has property (T) or is a product of non–amenable groups). As
+is easy to see, 2) precludes groups Γ ∈ G from having an inﬁnite normal subgroup
+with the relative property (T). Therefore, Theorem A and the results of [42] cover
+disjoint classes of groups. In particular, Theorem A is the ﬁrst W∗ –superrigidity
+result that applies to property (T) groups.
+0.4. In this paper, we introduce a general strategy for analyzing group measure
+space decompositions of II1 factors and implement it successfully to derive Theorem
+A. To outline our approach, let M be the II1 factor associated to some ﬁxed,
+“known” action Γ  X.
+   The ﬁrst part consists of “classifying” all unital ∗–homomorphisms θ : M →
+M ⊗M (or embeddings of M into M ⊗M ) in terms of the decomposition M =
+1178                               ADRIAN IOANA
+
+
+L∞ (X)  Γ (i.e., one would like to have a rigidity result concerning the structure
+of such θ (see Thm. C)).
+   Now, suppose that M also arises as the II1 factor of a “mystery” action Λ  Y .
+   The decomposition of M as L∞ (Y )  Λ induces a unital ∗–homomorphism θ :
+M → M ⊗M given by θ(avλ ) = avλ ⊗ vλ , for all a ∈ L∞ (Y ) and every λ ∈ Λ. This
+embedding of M into M ⊗M has been introduced and used by Popa and Vaes in
+the proof of [42], Lemma 3.2.
+   In the second part, we apply the above classiﬁcation to θ. Thus, we have some
+information about the form of θ with respect to both group measure space decom-
+positions of M . This relates the two decompositions and, ideally, the relationship
+will be powerful enough to imply that the two decompositions coincide, up to uni-
+tary conjugacy. If in addition we know that the action Γ  X is OE–superrigid,
+then we can deduce that the involved actions must be conjugate.
+Remark. Using this strategy it can be readily seen that if a II1 factor M has property
+(T), in the sense of Connes–Jones [10], then it admits only countably many group
+measure space decompositions (see Section 10).
+0.5. Following the above strategy, we prove that the II1 factor M = L∞ (X)  Γ
+deﬁned in Theorem A has a unique group measure space Cartan subalgebra. In
+combination with Popa’s OE superrigidity result [37] this proves Theorem A.
+   To apply our approach, we ﬁrst need to describe all ∗–homomorphisms θ : M →
+M ⊗M . We start by addressing the seemingly easier question of describing all ∗–
+homomorphisms θ : M → M . In this context, we prove a strong rigidity result in
+the spirit of [34].
+Theorem B. Let M = L∞ (X)  Γ be as in Theorem A. Let θ : M → M be a (not
+necessarily unital) ∗–homomorphism and assume that Γ is torsion free.
+   Then one of the following holds true:
+(1) θ(M ) ≺M L(Γ) or
+(2) θ is unital and we can ﬁnd a character η of Γ, a morphism δ : Γ → Γ and a
+unitary u ∈ M such that uθ(L∞ (X))u∗ ⊂ L∞ (X) and uθ(uγ )u∗ = η(γ)uδ(γ) , for
+all γ ∈ Γ.
+   Furthermore, generalizing the main result of [34] (in the case of w–rigid groups),
+we prove a rigidity result for ∗–homomorphisms between two II1 factors, each of
+which share some, but not all, of the deﬁning properties of M (see Theorem 8.1).
+   Before elaborating on conditions (1) and (2), let us recall the notation used in
+Theorem B. Thus, we denote by L(Γ) ⊂ M the copy of the group von Neumann
+algebra of Γ generated by the canonical unitaries {uγ }γ∈Γ ⊂ M . Also, we use
+the notation Q ≺M B to indicate that “a corner of a subalgebra Q ⊂ M can be
+embedded into a subalgebra B ⊂ M inside a factor M ”, in the sense of Popa ([33],
+see 1.3.1). This roughly means that we can conjugate Q into B with a unitary
+element from M .
+   Now, condition (1) essentially says that θ comes from an embedding of M into
+L(Γ).
+   To better explain condition (2), we rephrase it diﬀerently using the following
+example.
+Example. Quotient actions naturally induce ∗–homomorphisms between group mea-
+sure space algebras.
+                    W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                        1179
+
+
+   Recall that an action Γ  Y is a quotient (or a factor) of an action Γ  Z if
+there exists a Γ–equivariant, measure preserving map q : Z → Y . This is equivalent
+to the existence of a ∗–homomorphism θ : L∞ (Y )  Γ → L∞ (Z)  Γ such that
+θ(L∞ (Y )) ⊂ L∞ (Z) and θ(uγ ) = uγ , for all γ ∈ Γ.
+   With this in mind, (2) says that there exists a subgroup Γ of Γ isomorphic to Γ
+such that θ comes from a conjugacy between Γ  X and a quotient of the action
+Γ  X.
+
+0.6. Next, returning to our initial question of describing ∗–homomorphisms θ :
+M → M ⊗M , we prove the following classiﬁcation result.
+Theorem C. Let M = L∞ (X)  Γ be as in Theorem A. Let θ : M → M ⊗M be a
+(not necessarily unital) ∗–homomorphism and assume that Γ is torsion free.
+   Then one of the following holds true:
+(1) θ(L(Γ0 )) ≺M ⊗M L(Γ) ⊗ 1 or θ(L(Γ0 )) ≺M ⊗M 1 ⊗ L(Γ).
+(2) θ(M ) ≺M ⊗M L(Γ)⊗M or θ(M ) ≺M ⊗M M ⊗L(Γ).
+(3) θ is unital and we can ﬁnd a character η of Γ, two group morphisms δ1 , δ2 :
+Γ → Γ and a unitary u ∈ M such that uθ(L∞ (X))u∗ ⊂ L∞ (X)⊗L∞ (X) and
+uθ(uγ )u∗ = η(γ)(uδ1 (γ) ⊗ uδ2 (γ) ), for all γ ∈ Γ.
+   This result holds true without the torsion freeness assumption, but in this case its
+statement becomes considerably more complicated (see Theorem 8.2). Therefore,
+for simplicity, we assume only here that Γ is torsion free although we will later
+state and prove Theorem C in full generality. This generalization will enable us
+to prove Theorem A for groups with torsion, including the interesting examples
+SLn (Z) (n ≥ 3) and Z2 SL2 (Z).
+
+0.7. In Section 9, we will combine Theorem C and the strategy described in 0.4
+to deduce Theorem A. Since the argument needed is quite involved, we will not
+elaborate more on this here. Rather, we mention a few words on the proofs of
+Theorems B and C. Since these proofs are analogous, let us only discuss the simpler
+case of Theorem B.
+   Consider, for simplicity, a unital embedding θ of M = L∞ (X)Γ into itself. The
+starting point of the proof of Theorem B is Popa’s “absorption” result for relative
+property (T) subalgebras of M which enables us to assume that θ(L(Γ)) ⊂ L(Γ)
+([33]).
+   The main ingredient of the proof consists of the following dichotomy for abelian
+subalgebras of II1 factors coming from Bernoulli actions.
+Theorem D. Let Γ  (X, μ) be a Bernoulli action of a countable group Γ. Denote
+M = L∞ (X)  Γ and let D ⊂ M be a unital abelian von Neumann subalgebra.
+Suppose that there exists a sequence of unitaries {un }n≥1 ⊂ L(Γ) such that un → 0
+(weakly) and un normalizes D (i.e. un Du∗n = D), for all n ≥ 1. Then either:
+(1) D ≺M L(Γ) or
+(2) D ∩ M is of type I and there exists a unitary u ∈ M such that uL∞ (X)u∗ ⊂
+D ∩ M .
+   The proof of Theorem D is based on several new ideas as well as on an idea of
+J. Peterson ([31], see Section 3).
+   Let us emphasize two key tools that we introduce, both of which are related to
+a certain notion of “height”.
+1180                               ADRIAN IOANA
+
+
+
+ First, ﬁx an element x in a group von Neumann algebra L(Γ) and write x =
+   γ∈Γ xγ uγ , where xγ ∈ C. The height of x is deﬁned as h(x) = maxγ∈Γ |xγ | and
+measures the distance between x and the group Γ = {uγ }γ∈Γ ⊂ L(Γ). With this
+notation, we show that if condition (1) of Theorem D fails, then inf n h(un ) > 0.
+Roughly, this means that the un ’s are uniformly close to Γ. This fact is crucial
+because it allows us to carry subsequent calculations by analogy with the case
+when un ∈ Γ.                  
+    More generally, if x = g∈Γ xg ug is an element of a crossed product algebra
+M = A  Γ, then we deﬁne its height over A as hA (x) = maxg∈Γ ||xg ||2 . Our
+second tool is a new “intertwining theorem” for subalgebras D ⊂ M . Thus, we
+prove that if the height function hA is bounded from below on the unitary group
+of D, i.e. inf x∈U (D) hA (x) > 0, then a corner of D can be embedded into A inside
+M (see Theorem 1.3.2).
+    Returning to the explanation of Theorem B, ﬁx a sequence {γn }n≥1 ⊂ Γ with
+γn → ∞. Notice that the unitary elements un = θ(uγn ) belong to L(Γ) and
+normalize D = θ(L∞ (X)). By applying Theorem D we derive that either (1)
+D ≺M L(Γ) or (2) D ∩ M = uL∞ (X)u∗ , for some unitary u (this is true only up
+to ﬁnite index).
+    In the ﬁrst case, since θ(L(Γ)) ⊂ L(Γ), we deduce that θ(M ) ≺M L(Γ); thus
+condition (1) in the conclusion of Theorem B is satisﬁed.
+    In the second case, denote by Γ̃ the group {θ(uγ )}γ∈Γ . Then Γ̃ normalizes D̃ =
+  
+D ∩ M . The crossed product algebra N = D̃  Γ̃, viewed inside M = L∞ (X)  Γ,
+has the property that its core, D̃, is a unitary conjugate of L∞ (X) in addition to
+satisfying L(Γ̃) ⊂ L(Γ). A generalization of Popa’s conjugacy criterion for actions
+([34], see Section 7) implies that we may in fact assume that Γ̃ ⊂ Γ (modulo scalars).
+In other words, condition (2) in the conclusion of Theorem B holds true.
+
+0.8. We continue with an application of Theorem B.
+Corollary E. Let Γ  (X, μ) be a non–trivial Bernoulli action of Γ = Fm × Fn ,
+with 2 ≤ m, n ≤ ∞. Denote M = L∞ (X)  Γ. If θ : M → pM p is a unital
+∗–homomorphism, for some projection p ∈ M , then p = 1. Moreover, there exist
+a character η of Γ, a group morphism δ : Γ → Γ and a unitary u ∈ M such that
+uθ(L∞ (X))u∗ ⊂ L∞ (X) and uθ(uγ )u∗ = η(γ)uδ(γ) , for all γ ∈ Γ.
+    The proof of Corollary E is the combination of two facts: an extension of Theorem
+B to groups Γ that are products of non–amenable groups (see Theorem 8.1) and a
+result of N. Ozawa and S. Popa guaranteeing that, if Γ is non–amenable and has
+the complete metric approximation property (e.g. if Γ = Fm × Fn ), then there is
+no embedding of M into L(Γ) ([28]).
+    Corollary E provides the ﬁrst examples of II1 factors M which do not embed
+into any of their corners. (The question of whether such factors exist was posed by
+N. Ozawa during a seminar at UCLA in 2007.)
+    Corollary E also reduces the calculation of the endomorphism semigroup of M
+(i.e., the semigroup, End(M ), of unital ∗–homomorphisms θ : M → M ) to an
+ergodic–theoretic problem. More precisely, any θ ∈ End(M ) is determined by the
+following data: a character η of Γ, a morphism δ : Γ → Γ and a measure preserving
+map q : X → X satisfying q(δ(γ)x) = γq(x), for every γ ∈ Γ and almost all x ∈ X
+(see the example from Section 0.5).
+                   W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                        1181
+
+
+0.9. Finally, let us present an application of Theorem C.
+   After introducing the group measure space construction in [24], Murray and von
+Neumann later found a simpler way of constructing II1 factors. Thus, to every
+countable group Λ, one can associate its group von Neumann algebra, L(Λ) ([25]).
+This algebra is ﬁnite in general and it is a II1 factor if and only if Λ is ICC.
+   The ﬁrst examples of II1 factors which are not group von Neumann algebras were
+discovered by A. Connes ([4], see also [18]). Recently, more examples have been
+exhibited in [17] and [40]. All of these examples were obtained by analyzing anti–
+automorphisms. More precisely, one ﬁrst proves that the II1 factors involved either
+do not have anti–automorphisms ([4], [17], [40]) or do not have anti–automorphisms
+of order 2 ([18]). Then, since any group von Neumann algebra L(Λ) admits an anti–
+automorphism of order 2 (given by Φ(vλ ) = vλ−1 , for λ ∈ Λ), one deduces lack of
+group von Neumann algebra decomposition.
+   As a consequence of Theorem C, we obtain a wide class of new examples through
+a diﬀerent method.
+
+Corollary F. Let M = L∞ (X)  Γ be as in Theorem A. Assume that Γ is torsion
+free. Then, for any projection p ∈ M \ {0, 1}, the II1 factor pM p is not isomorphic
+to the group von Neumann algebra, L(Λ), of a countable group Λ.
+
+     For a more general statement, see Theorem 10.1.
+     Corollary F provides in particular the ﬁrst examples of II1 factors which have
+involutary anti–automorphisms and yet are not group von Neumann algebras (see
+Remark 10.3). This answers a question posed by V.F.R. Jones in [18], Remark 5.7.
+     The proof of Corollary F borrows its main idea from the strategy described in
+Section 0.4. If pM p = L(Λ), then θ : pM p → pM p⊗pM p given by θ(vλ ) = vλ ⊗ vλ
+is a unital ∗–homomorphism. By taking ampliﬁcations, we get a ∗–homomorphism
+θ̃ : M → M ⊗M with τ (θ̃(1)) = τ (p). It is immediate to see that θ̃ does not satisfy
+conditions (1) and (2) of Theorem C.
+     Therefore, θ̃ is forced to be unital and hence p = 1.
+     Furthermore, as we explain in Section 10 (IV), an extension of our results can be
+used to show that the II1 factors pM p from Corollary F are in fact not isomorphic
+to any twisted group von Neumann algebra Lα (Λ).
+
+Corollary G. Let M = L∞ (X)  Γ be as in Theorem A. Assume that Γ is torsion
+free. Then, given a projection p ∈ M \ {0, 1}, the II1 factor pM p is not isomorphic
+to Lα (Λ), for any countable group Λ and any 2–cocycle α ∈ H2 (Λ, T).
+
+Organization of the paper. Besides the introduction, this paper has ten other sec-
+tions. In Section 1, we recall a few notions and results regarding von Neumann
+algebras and establish a crucial intertwining result (Theorem 1.3.2). In Section 2,
+we prove an “absorption” result for relative property (T) subalgebras of II1 fac-
+tors coming from generalized Bernoulli actions. The proof of Theorem D occupies
+Sections 3–6. Further, in Section 7, we generalize Popa’s conjugacy criterion for
+actions. In Section 8, we combine the results of the previous sections to derive
+Theorems B and C, while in Section 9 we deduce Theorem A. Our last section is
+devoted to several applications of Theorems B and C (including Corollaries E, F
+and G).
+1182                               ADRIAN IOANA
+
+
+                                 1. Preliminaries
+1.1. Finite von Neumann algebras. We ﬁrst review a few concepts and con-
+structions involving von Neumann algebras (see e.g. [2]). In this paper we work
+with ﬁnite von Neumann algebras M always endowed with a ﬁxed faithful normal
+tracial state τ .
+    We denote by L2 (M ) the Hilbert space obtained by completing M with respect
+to the 2–norm ||x||2 = τ (x∗ x) 2 . Hereafter, we view every x ∈ M both as an
+                                      1
+
+
+element of L2 (M ) and as a bounded (left multiplication) operator on L2 (M ). The
+inequality ||axb||2 ≤ ||a|| ||x||2 ||b||, for all a, b, x ∈ M , will be used often.
+    We denote by U(M ) the group of unitaries of M , by Aut(M ) the group of
+automorphisms of M endowed with the pointwise ||.||2 topology and by idM the
+identity automorphism of M . For every u ∈ U(M ), the inner automorphism Ad(u)
+of M is given by Ad(u)(x) = uxu∗ . We also denote by P(M ) the set of projections
+of M , by Z(M ) the center of M and by (M )1 the set of x ∈ M with ||x|| ≤ 1. A
+Hilbert space H is called an M –bimodule if it is endowed with commuting left and
+right Hilbert M –module structures.
+    For a subset X of M , we denote by L2 (X) its closure in L2 (M ), by X  ∩ M its
+commutant in M and by X  the von Neumann algebra it generates.
+    Let B be a unital von Neumann subalgebra of (M, τ ). We denote by qNM (B)
+the quasi–normalizer of B in M         , i.e., the set ofx ∈ M for which there exist
+x1 , . . . , xn ∈ M satisfying xB ⊂ ni=1 Bxi , Bx ⊂ ni=1 xi B (see [35]).
+    Note that qNM (B) contains NM (B), the normalizer of B in M , i.e., the set of
+unitaries u ∈ M such that Ad(u)(B) = B. If qNM (B) = M , we say that B is
+quasi–regular in M and if NM (B) = M , we say that B is regular in M . If Γ0 ⊂ Γ
+is an almost normal inclusion of countable groups, then L(Γ0 ) is quasi–regular in
+L(Γ).
+    Recall that if eB is the orthogonal projection from L2 (M ) onto L2 (B), then
+its restriction to M is equal to EB , the conditional expectation from M onto B.
+Jones’ basic construction M, eB  is the von Neumann algebra generated by M
+and eB inside B(L2 (M )). The basic construction M, eB  contains the span of
+{xeB y|x, y ∈ M } as a dense ∗–subalgebra and is endowed with a faithful normal
+semi–ﬁnite trace T r given by T r(xeB y) = τ (xy). We denote by L2 ( M, eB ) the
+associated Hilbert space.
+    Next, let ω be a free ultraﬁlter on N. For a ﬁnite von Neumann algebra (M, τ ),
+we denote by (M ω , τω ) its ultrapower algebra, i.e., the ﬁnite von Neumann algebra
+ ∞
+    (N, M )/I, where the trace τω is given by τω ((xn )n ) = limn→ω τ (xn ) and I is
+the ideal of x = (xn )n ∈ ∞ (N, M ) such that τω (x∗ x) = 0. Note that M embeds
+into M ω through the map x → (xn )n , where xn = x, for all n, and that any
+automorphism θ of M extends to an automorphism of M ω by letting θ((xn )n ) =
+(θ(xn ))n , for all x = (xn ) ∈ M ω .
+    Finally, let M be a II1 factor and t > 0. Let n ≥ t be an integer and p ∈ Mn (C)⊗
+M be a projection of normalized trace nt . The isomorphism class of the algebra
+p(Mn (C)⊗M )p is independent of the choice of n and p, is called the t–ampliﬁcation
+of M and is denoted by M t . If N is a II1 factor and θ : N → M is a unital
+∗–homomorphism, then for every t > 0 there exists a natural ∗–homomorphism
+θ t : N t → M t . Moreover, θ t is uniquely deﬁned, up to composition with an inner
+automorphism.
+                      W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                               1183
+
+
+1.2. The crossed product construction. Let σ : Γ → Aut(B) be a trace pre-
+serving action of a countable group Γ on a ﬁnite von Neumann algebra (B, τ )
+([24]). Set H = L2 (B)⊗ 2 (Γ) and for every b ∈ B, γ ∈ Γ, deﬁne the operators
+Lf , uγ ∈ B(H) through the formulas
+
+   Lb (b ⊗ δγ  ) = bb ⊗ δγ  , uγ (b ⊗ δγ  ) = σ(γ)(b ) ⊗ δγγ  , ∀b ∈ L2 (B), γ  ∈ Γ.
+
+    Since uγ uγ  = uγγ  , Lb Lb = Lbb , uγ Lb u∗γ = Lσ(γ)(b) , for every γ, γ  ∈ Γ and
+b, b ∈ B, the linear span of {Lb uγ |b ∈ B, γ ∈ Γ} is a ∗−subalgebra of B(H). The
+strong operator closure of this algebra, denoted B σ Γ, is called the crossed product
+von Neumann algebra associated to σ. The trace τ extends to a trace on B σ Γ
+given by τ (buγ ) = δγ,e τ (b), making B σ     Γ a ﬁnite von Neumann algebra. Every
+element x ∈ B σ Γ decomposes as x = γ∈Γ bγ uγ , where the convergence holds
+in ||.||2 and bγ ∈ B, for every γ ∈ Γ.
+    Two important examples of crossed product algebras arise when B is either
+trivial or abelian.
+    Firstly, if B = C1 (with Γ acting trivially), then the associated crossed product
+algebra is precisely the group von Neumann algebra L(Γ) of Γ ([25]). In general, we
+have the natural embedding L(Γ) ∼     = {uγ |γ ∈ Γ} ⊂ B σ Γ.
+                          ∞
+    Secondly, if B = L (X), for some standard probability space (X, μ), then σ
+comes from a probability measure preserving (p.m.p.) action Γ σ (X, μ). The
+crossed product algebra L∞ (X) σ Γ is called the group measure space construction
+associated with σ ([24]). If Γ is inﬁnite and σ is (essentially) free and ergodic, then
+L∞ (X) σ Γ is a II1 factor and L∞ (X) is a Cartan subalgebra; i.e., it is regular and
+maximal abelian.
+    Two free, ergodic p.m.p. actions Γ  (X, μ) and Λ  (Y, ν) are said to be
+• conjugate if there exist a measure space isomorphism θ : X → Y and a group
+isomorphism δ : Γ → Λ such that θ(γx) = δ(γ)θ(x), for almost every x ∈ X,
+• orbit equivalent if there exists a measure space isomorphism θ : X → Y such that
+θ(Γx) = Λθ(x), for almost every x ∈ X, and
+• W∗ –equivalent (or von Neumann equivalent) if L∞ (X)  Γ ∼          = L∞ (Y )  Λ.
+    If two actions are conjugate, then they are orbit equivalent. In turn, two ac-
+tions are orbit equivalent if and only if the inclusions (L∞ (X) ⊂ L∞ (X)  Γ) and
+(L∞ (Y ) ⊂ L∞ (Y )  Λ) are isomorphic ([43], [13]). This shows that orbit equivalent
+actions are W∗ –equivalent; the converse is false by [9].
+    A p.m.p. action Γ  (X, μ) is weakly mixing if for any measurable sets A1 , . . . , An
+of X and every ε > 0 we can ﬁnd γ ∈ Γ such that |μ(γAi ∩ Aj ) − μ(Ai )μ(Aj )| < ε,
+for all i, j. It is mixing if for any measurable sets A1 , A2 ⊂ X and every ε > 0 we
+can ﬁnd F ⊂ Γ ﬁnite such that |μ(γAi ∩ Aj ) − μ(Ai )μ(Aj )| < ε, for all γ ∈ Γ \ F .
+
+1.3. Popa’s intertwining technique. In [33], S. Popa introduced a very powerful
+technique for proving unitary conjugacy of two subalgebras of a ﬁnite von Neumann
+algebra. Throughout the paper, this technique will play a central role. Here, we
+recall Popa’s result and establish a strengthening of a particular case of it that will
+be crucial in the proof of our main results.
+
+Theorem 1.3.1 (see [33], Theorem 2.1, and Corollary 2.3). Let (M, τ ) be a
+ﬁnite von Neumann algebra together with two, possibly non–unital, von Neumann
+subalgebras B and Q (with units 1B and 1Q , respectively).
+1184                                  ADRIAN IOANA
+
+
+    Then the following are equivalent:
+(1) There exist non–zero projections q ∈ Q, p ∈ B, a ∗–homomorphism ψ : qQq →
+pBp and a non–zero partial isometry v ∈ pM q such that ψ(x)v = vx, for all
+x ∈ qQq.                                                     
+(2) There exist a1 , . . . , an ∈ 1B M 1Q and ε > 0 such that ni,j=1 ||EB (ai ua∗j )||22 ≥ ε,
+for all u ∈ U(Q).
+               a1 , . . . , an ∈ 1B M 1Q , ε > 0 and a group U ⊂ U(Q) such that
+(3) There exist
+U  = Q and ni,j=1 ||EB (ai ua∗j )||22 ≥ ε, for all u ∈ U.
+   If one of these conditions holds true, we say that a corner of Q embeds into
+B inside M and write Q ≺M B. Note that if B1 , B2 , . . . is a sequence of von
+Neumann subalgebras of M such that Q ⊀M Bi , for all i ≥ 1, then for every
+group U ⊂ U(Q) with U  = Q we can ﬁnd a sequence {un }n≥1 ⊂ U such that
+limn→∞ ||EBi (aun b)||2 = 0, for all i ≥ 1 and every a, b ∈ M . This statement
+follows from Theorem 1.3.1 (see [17], Proof of Theorem 4.3 or [45], Remark 3.3).
+   If M = B  Γ, for some action of a countable group Γ, then condition (2) is
+equivalent to the following: there exist F ⊂ Γ ﬁnite and ε > 0 such that for
+every u ∈ U (Q), the Fourier coeﬃcients bγ = EB (uu∗γ ) satisfy maxγ∈F ||bγ ||2 ≥
+ε. Below, we show that this is equivalent with the apparently weaker condition
+maxγ∈Γ ||bγ ||2 ≥ ε, for all u ∈ U(Q).
+Theorem 1.3.2. Let σ : Γ → Aut(B) be an action of a countable group Γ on a
+ﬁnite von Neumann algebra (B, τ ) and set M = B σ Γ. Let Q ⊂ M be a von
+Neumann subalgebra. If there exists ε > 0 such that maxγ∈Γ ||EB (uu∗γ )||2 ≥ ε, for
+all u ∈ U(Q), then Q ≺B M .
+Proof. We begin the proof with the following:
+Claim 1. Let α be the ﬂip automorphism of Q⊗Q, i.e. α(x ⊗ y) = y ⊗ x, for all
+x, y ∈ Q, and let Q = (Q⊗Q)α be the von Neumann algebra of α–ﬁxed points.
+Then U := {u ⊗ u|u ∈ U(Q)} ⊂ U(Q) satisﬁes U  = Q.
+Proof of Claim 1. Let H be the ||.||2 –closure of the span of U. Then the claim is
+equivalent to L2 (Q) = H.
+   First notice that the span of {x ⊗ y + y ⊗ x|x, y ∈ Q} is dense in L2 (Q). Since
+x, y ∈ Q are ﬁnite linear combinations of Hermitian elements of Q, the span of
+{h1 ⊗ h2 + h2 ⊗ h1 |h1 = h∗1 ∈ Q, h2 = h∗2 ∈ Q} is also dense in L2 (Q). Next, remark
+that for every h1 , h2 ∈ Q we have that h1 ⊗ h2 + h2 ⊗ h1 = (h1 + h2 ) ⊗ (h1 + h2 ) −
+h1 ⊗ h1 − h2 ⊗ h2 .
+   Altogether, to prove the claim it suﬃces to show that for every Hermitian element
+h ∈ Q we have that h ⊗ h ∈ H. Towards proving this, ﬁx h = h∗ ∈ Q. Let P
+be the orthogonal projection from L2 (Q) onto H and let a : R → H be given by
+a(t) = P (eith ⊗ eith ). By the deﬁnition of H
+                                             we get that   a(t) = 0, for all t ∈ R. On
+the other hand, we have that eith ⊗ eith = m,n≥0 m!n!   1
+                                                           im+n tm+n (hm ⊗ hn ), where
+the sum is absolutely convergent
+                                   in the uniform norm and thus in ||.||2 . Therefore
+we have that 0 = a(t) = m,n≥0 m!n!    1
+                                         im+n tm+n P (hm ⊗ hn ), for all t ∈ R, and by
+analyticity all the coeﬃcients of a must be equal to 0. In particular, we derive that
+h ⊗ 1 + 1 ⊗ h ∈ H and 12 (h2 ⊗ 1) + h ⊗ h + 12 (1 ⊗ h2 ) ∈ H, for all Hermitian h ∈ Q.
+Thus h ⊗ h ∈ H, which concludes the proof of the claim.                               
+    Further, we can assume that Q is diﬀuse; otherwise the conclusion of the lemma
+is trivial. Then we can ﬁnd v ∈ U(Q⊗Q) such that α(v) = −v. Indeed, Q contains
+                          W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                            1185
+
+
+a copy of L∞ ([0, 1]), so we can just take v ∈ L∞ ([0, 1] × [0, 1]) ⊂ Q⊗Q given by
+v(x, y) = 1 if x ≥ y and by v(x, y) = −1 if x < y. If we let V = U(Q) ∪ U(Q)v,
+then V is a subgroup of U(Q⊗Q) and V  = Q⊗Q.
+   Now, write M ⊗M = (B⊗B)  (Γ × Γ), let Δ(Γ) = {(γ, γ)|γ ∈ Γ} ⊂ Γ × Γ and
+set N = (B⊗B)  Δ(Γ).
+Claim 2. Q⊗Q ≺M ⊗M N .
+Proof of Claim 2. We start by noticing that for every u ∈ U(Q),
+                                 
+       ||EN (u ⊗ u)||22 = ||EN (        (EB (uu∗γ1 ) ⊗ EB (uu∗γ2 ))u(γ1 ,γ2 ) )||22
+                                       (γ1 ,γ2 )∈Γ×Γ
+                                                                     
+             = ||       (EB (uu∗γ ) ⊗ EB (uu∗γ ))u(γ,γ) )||22 =             ||EB (uu∗γ )||42 ≥ ε4 .
+                    γ∈Γ                                               γ∈Γ
+
+   By combining Claim 1 with Popa’s result (Theorem 1.3.1) we get that Q ≺M ⊗M
+N . Since V = U(Q) ∪ U(Q)v is a group and satisﬁes V  = Q⊗Q, it easily follows
+that Q⊗Q ≺M ⊗M N , as claimed.                                                
+
+   We are now ready to show   that Q ≺M B. By Claim 2, we can ﬁnd a1 , . . . , an ∈
+M ⊗M and c > 0 such that i,j=1 ||EN (ai ua∗j )||22 ≥ c, for all u ∈ U(Q⊗Q). By
+                                 n
+
+using ||.||2 approximations (see Section 1.2) and the fact that EN is N –bimodular,
+we may assume that ai = u(e,γi ) , for some γi ∈ Γ. Then, for every u ∈ U(Q),
+u ⊗ 1 ∈ U(Q⊗Q); hence
+       
+       n                                  
+                                          n                                      
+                                                                                 n
+  c≤         ||EN (ai (u ⊗ 1)a∗j ||22 =           ||EN (u ⊗ uγi γ −1 )||22 =             ||EB (uu∗γ γ −1 )||22 ,
+                                                                  j                                  i j
+       i,j                                i,j=1                                  i,j=1
+
+which proves the lemma.                                                                                            
+
+   We end this subsection with the following lemma, whose proof we leave as an
+exercise.
+Lemma 1.3.3. Let (M, τ ) be a ﬁnite von Neumann algebra and let Q, B ⊂ M
+      von Neumann subalgebras. Let p ∈ Z(Q) be a central projection and set
+be two
+p = u∈NM (Q) upu∗ ∈ Z(Q). If Qp ≺M B, then Qp ≺M B.
+1.4. Rigid inclusions of von Neumann algebras. We next recall S. Popa’s
+notion of rigidity for inclusions of ﬁnite von Neumann algebras. Let (M, τ ) be a
+ﬁnite von Neumann algebra together with a von Neumann subalgebra B.
+   The inclusion (B ⊂ M ) is rigid (or, has the relative property (T)) if any sequence
+of subunital (Φn (1) ≤ 1), subtracial (Φn ◦ τ ≤ τ ), normal completely positive maps
+Φn : M → M which satisfy limn→∞ ||Φn (x) − x||2 = 0, for all x ∈ M , converges to
+the identity uniformly on the unit ball of B, i.e. limn→∞ supx∈B, ||x||≤1 ||Φn (x) −
+x||2 = 0 ([35]). In the case when B = M , we say that M has property (T) ([10]).
+   For two countable groups Γ0 ⊂ Γ, the inclusion (L(Γ0 ) ⊂ L(Γ)) is rigid if and
+only if the inclusion (Γ0 ⊂ Γ) has the relative property (T) ([35], Proposition 5.1).
+By the classical results of Kazhdan and Margulis, the inclusions (SLn (Z) ⊂ SLn (Z))
+(n ≥ 3) and (Z2 ⊂ Z2  SL2 (Z)) have the relative property (T) ([20], [23]). Recall
+that a group Γ has property (T) of Kazhdan if and only if the inclusion (Γ ⊂ Γ) has
+the relative property (T). For examples of property (T) groups, see the extensive
+monograph [1].
+1186                               ADRIAN IOANA
+
+
+1.5. Weakly malleable deformations of Bernoulli actions. S. Popa discov-
+ered that Bernoulli actions Γ  (X0 , μ0 )Γ have a remarkable deformation property,
+and called it malleability ([33]). By pairing it with property (T) of the group Γ, he
+proved striking rigidity results concerning the associated II1 factor ([33], [34]).
+    Since then, malleable deformations have been found in several other contexts and
+are now a central tool in Popa’s deformation/rigidity theory (see [38], Section 6). In
+[14], in order to extend some of Popa’s results [33], [34] to II1 factors coming from
+Bernoulli actions with an arbitrary base, we introduced a new class of malleable
+deformations.
+    To recall their construction from [14], Section 2, let (B, τ ) be a ﬁnite von Neu-
+mann algebra and let Γ  I be an action of        a countable group on a countable
+                                                                                  
+set. For every set J ⊂ I, we denote B J =            i∈J (B)i . Whenever J ⊂ J , we
+                                    
+view B J as a subalgebra of B J , in the naturalway. Let σ      : Γ → Aut(B ) be
+                                                                                 I
+
+the generalized Bernoulli action deﬁned by σ(γ)( i∈I xi ) = i∈I xγ −1 ·i , for every
+      
+x = i∈I xi ∈ B I and γ ∈ Γ. Let M = B I σ Γ be the associated crossed product
+von Neumann algebra.
+    Next, we augment M to a von Neumann algebra M̃ and deﬁne a 1–parameter
+group of automorphisms {θt }t∈R of M̃ such that θt → idM̃ , in the pointwise ||.||2
+topology, as t → 0. Towards this, we deﬁne the free product von Neumann algebra
+B̃ = B ∗ L(Z). Let σ̃ : Γ → Aut(B̃ I ) be the generalized Bernoulli action. It is
+clear that B I ⊂ B̃ I and that σ̃ extends σ; hence we have the inclusion M ⊂ M̃ :=
+B̃ I σ̃ Γ.
+    Now, let u ∈ L(Z) be a Haar unitary such that L(Z) = {un |n ∈ Z} and
+let h ∈ L(Z) be a Hermitian element such that u = eih . For every t ∈ R, we
+deﬁne the unitary element ut = eith ∈ L(Z) and consider the automorphism θt =
+                     I
+    i∈I Ad(ut )i of B̃ . Since θt commutes
+                                    
+                                           with σ̃, it extends to an automorphism of
+                                                                
+M̃ through the formula θt (x) = γ∈Γ θt (xγ )uγ , for all x = γ∈Γ xγ uγ ∈ M̃ . Since
+limt→0 ||ut − 1||2 = 0, we get that θt → idM̃ as t → 0.
+    We end this section by noticing that {θt }t∈R admits a certain β−symmetry (see
+e.g. [33], Section 1.4).
+Lemma 1.5.1. There exists an automorphism β of M̃ such that β 2 = idM̃ , β|M =
+idM and βθt β = θ−t , for all t ∈ R.
+                                                            
+Proof. Since u generates L(Z), it follows that M and { i∈I uni |ni ∈ Z, |{i ∈
+I|ni = 0}| < ∞} generate M̃ as a von Neumann algebra.    Using this observation
+                                                                                 it
+is immediate to see that β deﬁned by β|M = idM and β( i∈I uni ) = i∈I u−ni ,
+for every ni ∈ Z such that {i ∈ I|ni = 0} is ﬁnite, extends to an automorphism of
+M̃ with the desired properties.                                                   
+
+             2. Rigid subalgebras of II1 factors arising from
+                        generalized Bernoulli actions
+   Let M = B Γ  Γ be the II1 factor associated with a Bernoulli action. S. Popa
+showed, as part of his deformation/rigidity theory, that if B is abelian, then any
+rigid subalgebra Q of M whose normalizer generates a factor can be conjugated
+inside L(Γ) by a unitary element ([33], Theorem 4.1). The proof exploits the
+tension between the rigidity of the inclusion Q ⊂ M and the malleability property
+of Bernoulli actions.
+                      W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                  1187
+
+
+   In [14], Theorems 3.6, 3.7, by using the weakly malleable deformations associated
+with M we showed that any rigid subalgebra Q of M has a corner which embeds
+into L(Γ), regardless of any regularity property of Q. In this section, by relying on
+ideas and techniques from [14] and by following a deformation/rigidity strategy, we
+extend the last result to the class of generalized Bernoulli actions.
+Theorem 2.1. Let Γ a countable group acting on a countable set I. For i ∈ I,
+denote by Γi its stabilizer in Γ. Let (B, τ ) be an abelian von Neumann algebra. Let
+σ : Γ → Aut(B I ) be the generalized Bernoulli action and denote M = B I σ Γ.
+Suppose that Q is a von Neumann subalgebra of M such that the inclusion (Q ⊂ M )
+is rigid.
+   Then Q ≺M L(Γ). Moreover, if Γ is ICC and Q ⊀M L(Γi ), for every i ∈ I, then
+there exists a unitary u ∈ M such that uQu∗ ⊂ L(Γ). Furthermore, in this case,
+we have that uP u∗ ⊂ L(Γ), where P is the von Neumann algebra generated by the
+quasi–normalizer of Q in M .
+   This theorem generalizes three other results in the literature. The ﬁrst part and
+the moreover part of Theorem 2.1 extend respectively [45], Lemma 5.2 and [40],
+Theorem 6.5 in whose hypotheses it is additionally assumed that P ⊀M B I σ Γi ,
+for all i ∈ I. Theorem 2.1 also generalizes (a particular case of) [16], Proposition
+3.3, which shows that M admits no rigid subalgebra Q such that Q ⊂ B I .
+Proof. Let M̃ and {θt }t∈R be deﬁned as in Section 1.5.
+   Since the inclusion Q ⊂ M is rigid, the inclusion Q ⊂ M̃ is rigid (by [35],
+Proposition 4.6). Since θt → idM̃ , we can ﬁnd t > 0 such that ||θt (u) − u||2 ≤ 12 ,
+for every u ∈ U(Q).
+   Let v be the unique element of minimal 2−norm in the ||.||2 –closed convex hull of
+the set {θt (u)u∗ |u ∈ U(Q)}. Then ||v−1||2 ≤ 12 ; hence v = 0. Also, by construction,
+v ∈ M̃ , ||v|| ≤ 1 and θt (u)v = vu, for all u ∈ U(Q).
+   Next, let ε > 0 such that δ := v2 − (1 + √ 2              4
+                                                                 )ε > 0. Then we can
+                                                                1−|τ (ut )|
+ﬁnd ﬁnite sets F ⊂ I, K ⊂ Γ and w in the linear span of {B̃ F uγ |γ ∈ K} such
+that ||w − v||2 ≤ ε and ||w|| ≤ 1. Suppose for simplicity that K = {γ −1 |γ ∈ K}.
+Also, we use the notation KF = {k · i|k ∈ K, i ∈ F }. Denote by T the orthogonal
+projection from L2 (M̃ ) onto the closed linear span of {(B̃ F ⊗B γKF \F )uγ |γ ∈ Γ}.
+Claim 1. For all u ∈ U(Q), we have ||T (wu)||2 ≥ δ.
+Proof of Claim 1. Fix u ∈ U(Q).  Then ||θt (u)w − wu||2     = ||θt (u)(w − v) − (w −
+v)u||2 ≤ 2ε. Decompose wu = γ∈Γ aγ uγ and θt (u)w = γ∈Γ bγ uγ .
+                      
+   Since u ∈ M , w ∈ γ∈K B̃ F uγ and K = K −1 , an easy calculation shows that
+aγ ∈ B̃ F ⊗B I\F and bγ ∈ B̃ γKF ⊗(ut Bu∗t )I\γKF , for all γ ∈ Γ.
+   Denote by Sγ and Rγ the orthogonal projections from L2 (B̃ I ) onto L2 (B̃ F ∪γKF )
+and onto L2 (B̃ γKF ⊗(ut Bu∗t )I\γKF ), respectively. Since aγ ∈ B̃ F ⊗B I\F , [16],
+Lemma 3.5 implies that
+(2.a)      ||Rγ (aγ )||22 ≤ |τ (ut )|4 ||aγ ||22 + (1 − |τ (ut )|4 )||Sγ (aγ )||22 , ∀γ ∈ Γ.
+   Now, since Rγ (bγ ) = bγ , for every γ ∈ Γ, we get that
+                                2
+                                                                         2
+(2.b)          ||aγ − Rγ (aγ )||2 ≤      ||aγ − bγ ||22 = ||wu − θt (u)w||2 ≤ 4ε2 .
+             γ∈Γ                          γ∈Γ
+1188                                      ADRIAN IOANA
+
+
+   On the other hand, (2.a) implies that
+                                                       
+(2.c)           ||aγ − Rγ (aγ )||22 ≥ (1 − |τ (ut )|4 )   ||aγ − Sγ (aγ )||22 .
+              γ∈Γ                                                γ∈Γ
+                                                       
+Since aγ ∈ B̃ F ⊗B I\F we have T (wu) = γ∈Γ Sγ (aγ )uγ . By combining (2.b) and
+(2.c) we get that T (wu) − wu22 ≤ 4ε2 (1 − |τ (ut )|4 )−1 , which yields the claim. 
+
+   Next, let {Bn }n≥1 bean increasing sequence of unital, ﬁnite dimensional subal-
+gebras of B such that n≥1 Bn is dense in B. For n ≥ 1, set Mn = BnI  Γ and
+denote by En the conditional expectation from M onto Mn . Since the inclusion
+Q ⊂ M is rigid and En → idM , we can ﬁnd n0 ≥ 1 such that ||En0 (u) − u||2 ≤ δ2 ,
+for all u ∈ U(Q). Together with (2.c) this yields
+                                                           δ
+(2.d)                        ||T (wEn0 (u))||2 ≥             , ∀u ∈ U(Q).
+                                                           2
+Claim 2. We have Q ≺M L(Γ).
+Proof of Claim 2. Assuming this is false, we get a sequence {um }m≥1 ⊂ U(Q) such
+that ||EL(Γ) (aum b)||2 → 0, for all a, b ∈ M. We will prove that
+
+(2.e)                   ||T (cug En0 (um ))||2 → 0, ∀c ∈ B̃ F , g ∈ Γ.
+
+   Note that since w belongs to the linear span of {B̃ F uγ |γ ∈ K}, (2.e) implies
+that ||T (wEn0 (um ))||2 → 0, which
+                                   contradicts (2.d).
+   To deduce (2.e), write um = γ∈Γ xγm uγ , where xγm ∈ B Γ , and assume ||c|| ≤ 1.
+Since En0 |B Γ = EBnΓ and σ commute we have
+                     0
+                                        
+                        cug En0 (um ) =   cEBnΓ (σg (xγm ))ugγ .
+                                                             0
+                                                 γ∈Γ
+
+   As c ∈ B̃ F , we get that
+                                       
+               T (cug En0 (um )) =           EB̃ F ⊗B gγKF \F (cEBnΓ (σg (xγm ))ugγ
+                                                                          0
+                                       γ∈Γ
+                                         
+                                   =c            EBnF ∪gγKF (σg (xγm ))ugγ .
+                                                       0
+                                         γ∈Γ
+
+   Thus, as ||c|| ≤ 1, we have
+                                                             
+(2.f) ||T (cug E(um ))||22 ≤   ||EBnF ∪gγKF (σg (xγm ))||22 =   ||EB g−1 F ∪γKF (xγm )||22 .
+                                             0                                         n0
+                               γ∈Γ                                        γ∈Γ
+
+Let {ξi }li=1 be an orthonormal
+                                          basis for Bn0 . For J ⊂ I ﬁnite and s = (si )i∈J ∈
+{1, . . . , l}J , set ξs = i∈J ξsi ∈ BnJ0 . Then {ξs }s∈{1,...,l}J is an orthonormal basis
+for BnJ0 ; hence
+                                                                
+(2.g)            ||EB g−1 F ∪γKF (xγm )||22 =                             |τ (ξs xγm ξt )|2
+                 n0
+                                           s∈{1,..,l}g−1 F t∈{1,..,l}γKF \g−1 F
+                                                 
+                      ≤                                     |τ (ξs xγm σγ (ξt ))|2 .
+                          s∈{1,..,l} g −1 F t∈{1,..,l}KF
+                    W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                1189
+
+
+  The combination of (2.f) and (2.g) gives that
+                                          
+       ||T (cug E(um ))||22 ≤                               ||EL(Γ) (ξs um ξt )||22 → 0.
+                             s∈{1,..,l}g−1 F t∈{1,..,l}KF
+
+For the moreover part of the statement, assume that Γ is ICC, i.e. L(Γ) is a factor,
+and that Q ⊀M L(Γi ), for all i ∈ I.
+Claim 3. For every relatively rigid von Neumann subalgebra Q ⊂ M which satisﬁes
+Q ⊀M L(Γi ), for all i ∈ I, we can ﬁnd a unitary u ∈ M and a non–zero projection
+q  ∈ Q ∩ M such that u(Qq  )u∗ ⊂ L(Γ).
+Proof of Claim 3. By the ﬁrst part of the proof we have that Q ≺M L(Γ). Since
+Q ⊀M L(Γi ), by [45], Remark 3.8 we can ﬁnd non–zero projections q ∈ Q, p ∈ L(Γ),
+a ∗–homomorphism ψ : qQq → pL(Γ)p and a partial isometry 0 = v ∈ pM q such
+that ψ(x)v = vx, for all x ∈ qQq, and ψ(qQq) ⊀L(Γ) L(Γi ), for all i ∈ I. Thus, by
+[45], Lemma 4.2(1) we deduce that ψ(qQq) ∩ pL(Γ)p ⊂ pL(Γ)p. In particular, it
+follows that vv ∗ ∈ pL(Γ)p and hence vQv ∗ ⊂ L(Γ). Since v ∗ v ∈ (qQq) ∩ qM q we
+can ﬁnd a projection q  ∈ Q ∩ M such that v ∗ v = qq  . Let w ∈ M be a unitary
+extending v. Then w(qQqq  )w∗ = vQv ∗ ⊂ L(Γ). Since L(Γ) is a factor it follows
+that we can ﬁnd a unitary u ∈ M such that u((Qq  )z)u∗ ⊂ L(Γ), where z is the
+central support of qq  in Qq  . Since the center of Qq  is contained in Q ∩ M we
+deduce that 0 = q  = q  z ∈ P(Q ∩ M ) satisﬁes the claim.                        
+
+   Now, let q ∈ Q, q  ∈ Q ∩ M such that τ (qq  ) = n1 , where n ≥ 1 is an integer,
+and consider the natural embedding of Q0 := Mn×n (qQqq  ) into M . By [35], the
+inclusion Q0 ⊂ M is rigid. Since Q ⊀M L(Γi ), we get that Q0 ⊀M L(Γi ), for all
+i ∈ I. Thus the conclusion of Claim 3 holds true for Q0 .
+   A close inspection of the last part of the proof of [33], Theorem 4.4(ii) reveals
+that this fact and the factoriality of L(Γ) are enough to imply (via a maximality
+argument) that we can ﬁnd u ∈ U(M ) such that uQu∗ ⊂ L(Γ). Finally, [45],
+Lemma 4.2(1) implies that uP u∗ ⊂ L(Γ).                                            
+Remark 2.2. Let N be a ﬁnite von Neumann algebra. The above proof can be
+modiﬁed to show that if a Neumann subalgebra Q ⊂ M ⊗N satisﬁes (θt ⊗idN )(x)v =
+vx, for every x ∈ Q, for some ﬁxed 0 = v ∈ M̃ ⊗N and t = 0, then Q ≺M ⊗N
+L(Γ)⊗N . To see this, just replace throughout the proof any subalgebra A ⊂ M
+with the subalgebra A⊗N of M ⊗N .
+
+                          3. A spectral gap argument
+   In the next sections, we prove a series of results concerning tensor products of II1
+factors arising from Bernoulli actions (Theorems 3.2, 4.1 and 6.1). These results
+have natural analogs for a single II1 factor M = B Γ  Γ coming from a Bernoulli
+action with B abelian. For simplicity, we will only describe the latter, although
+below we state and prove the former. Denote A = B Γ .
+   In this section, we prove that if D ⊂ M is a von Neumann subalgebra such that
+there exists a sequence x = (xn )n ∈ D ∩M ω on which the deformations θt converge
+uniformly but x ∈ / Aω  Γ, then a corner of D embeds into L(Γ).
+   This statement was inspired by an idea of J. Peterson. In the context when Γ is
+a free product group and the action of Γ on A is compact, he analyzed sequences
+1190                                  ADRIAN IOANA
+
+
+{xn }n ⊂ D ∩ M on which certain deformations converge uniformly in order to
+derive conjugacy results for D inside M (see [31], Theorem 4.1).
+   The proof of our result, rather than using arguments from [31], relies on Popa’s
+spectral gap argument ([39]).
+   Before continuing, we ﬁx some notation that we will use throughout the paper.
+Notation 3.1.
+• Let Γ1 , Γ2 be countable groups and B1 , B2 be abelian von Neumann algebras.
+• Consider the Bernoulli actions σi : Γi → Aut(BiΓi ) and denote Mi = BiΓ σi Γi .
+• Denote M = M1 ⊗M2 , A = B1Γ1 ⊗B2Γ2 and Γ = Γ1 × Γ2 .
+• Note that M = A σ Γ, where σ(γ1 , γ2 ) = σ1 (γ1 ) ⊗ σ2 (γ2 ).
+
+Theorem 3.2. Let M̃i = (Bi ∗ L(Z))Γ  Γ ⊃ Mi and {θti }t∈R ⊂ Aut(M̃i ) be deﬁned
+as in Section 1.5. Let M̃ = M̃1 ⊗M̃2 and for every t ∈ R, set θt = θt1 ⊗ θt2 ∈
+Aut(M̃ ). Let D ⊂ M be a von Neumann subalgebra and x ∈ D ∩ M ω satisfy
+limt→0 ||θt (x) − x||2 = 0. Then one of the following holds true:
+(1) x ∈ Aω  Γ.
+(2) D ≺M M1 ⊗L(Γ2 ) or D ≺M L(Γ1 )⊗M2 .
+
+   Here, we view θt as an automorphism of M̃ ω given by θt ((xn )n ) = (θt (xn ))n .
+Also, we denote by Aω  Γ the von Neumann algebra generated by Aω and {uγ }γ∈Γ
+inside M ω .
+   The proof of Theorem 3.2 is based on the following general technical result.
+
+Lemma 3.3. Let σ : Γ → Aut(Ã) be an action on a ﬁnite von Neumann algebra
+(Ã, τ ) which leaves invariant a von Neumann subalgebra A ⊂ Ã. Denote M = AΓ,
+M̃ = Ã  Γ. Assume that the Hilbert M –bimodule L2 (M̃ )  L2 (M ) is isomorphic
+        i∈I L ( M, eAi ), where Ai ⊂ M are von Neumann subalgebras such that for
+             2
+to
+every i ∈ I, we have Ai ⊂ A  Γi , for some ﬁnite subgroup Γi ⊂ Γ.
+    Let {θt }t∈R be a 1-parameter group of automorphisms of M̃ and β ∈ Aut(M̃ )
+such that β 2 = 1M̃ , β|M = 1M , βθt β = θ−t , for all t ∈ R. Let D ⊂ M be a von
+Neumann subalgebra. Assume that there exist no t = 0 and 0 = v ∈ M̃ such that
+θt (y)v = vy, for all y ∈ D. Then we have
+                                    √
+             ||x − EAω Γ (x)||2 ≤ 4 2 lim inf ||θt (x) − x||2 , ∀x ∈ D ∩ M ω .
+                                         t→0
+
+Proof of Lemma 3.3. Let x = (xn )n ∈ D ∩ M ω . After rescaling we may assume
+that ||x|| ≤ 1. Let y = x − EAω Γ (x) ∈ M ω . Since ||y|| ≤ 2, we can represent
+y = (yn )n , where yn ∈ M satisfy ||yn || ≤ 2, for all n. Assuming the conclusion is
+false, we can ﬁnd 0 < ε < ||y||
+                            √ 2 and t = 0 such that ||θt (x)−x||2 = limn→ω ||θt (xn )−
+                           4 2
+xn ||2 ≤ ε.
+   For u ∈ M , we denote δt (u) := θt (u) − EM (θt (u)) ∈ L2 (M̃ )  L2 (M ).
+Claim 1. For every u ∈ U(D) we have that ||[δt (u), y]||2 ≤ 8ε.
+Proof of Claim 1. Let u ∈ U(D). Since [u, x] = 0, by using an idea from [39], proof
+of Theorem 4.1, we have that
+(3.a)           ||[θt (u), x]||2 = ||[u, θ−t (x)||2 = ||[u, (θ−t (x) − x)]||2
+                      ≤ 2||θ−t (x) − x||2 = 2||x − θt (x)||2 ≤ 2ε.
+                        W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                        1191
+
+
+   Next, notice that EÃω Γ (x) = (EÃω Γ ◦ EM ω )(x) = EAω Γ (x). By combining
+this and the fact that θt (u) ∈ M̃ ⊂ Ãω  Γ with (3.a) we get that
+(3.b)
+ ||[θt (u), y]||2 = ||[θt (u), (x − EAω Γ (x))]||2
+                 ≤ ||[θt (u), x]||2 + ||θt (u)EAω Γ (x) − EAω Γ (x)θt (u)||2
+                 ≤ 2ε + ||EÃω Γ (θt (u)x − xθt (u))||2 ≤ 2ε + ||θt (u)x − xθt (u)||2 ≤ 4ε.
+   Finally, by using (3.b) we have that
+                    ||[δt (u), y]||2 ≤ 4ε + ||EM (θt (u))y − yEM (θt (u))||2
+                            = 4ε + ||EM ω (θt (u)y − yθt (u))||2 ≤ 8ε,
+and thus the claim is proven.                                                                                
+
+Claim 2. For every ξ, η ∈ L2 (M̃ )  L2 (M ), we have that limn→ω yn ξ, ηyn  = 0.
+                                                        
+Proof of Claim 2. Recall that L2 (M̃ )L2 (M ) = i∈I L2 ( M, eAi ). Since ||yn || ≤
+2, for all n, it is clearly suﬃcient to prove the claim for ξ and η of the form
+ξ = ξ1 eAi ξ2 ∈ L2 ( M, eAi ) and η = η1 eAi η2 ∈ L2 ( M, eAi ), for some i ∈ I,
+ξ1 , ξ2 , η1 , η2 ∈ M . But, in this case, if T r denotes the natural semi–ﬁnite trace on
+ M, eAi , then
+  | yn ξ, ηyn | = |T r(yn∗ η ∗ yn ξ)| = |T r(yn∗ η2∗ eAi η1∗ yn ξ1 eAi ξ2 )||
+                 = τ (EAi (ξ2 yn∗ η2∗ )EAi (η1∗ yn ξ1 ))| ≤ ||EAi (η2 yn∗ ξ2∗ )||2 ||EAi (η1∗ yn ξ1 )||2 .
+    This reduces the claim to showing that limn→ω ||EAi (η1∗ yn ξ1 )||2 = 0, for all i ∈ I,
+ξ1 , η1 ∈ M . To this end, let Γi ⊂ Γ be a ﬁnite group such that   Ai ⊂ A  Γi . Then,
+for every ζ ∈ M we have that ||EAi (ζ)||22 ≤ ||EAΓi (ζ)||22 = γ∈Γi ||EA (ζu∗γ )||22 .
+Hence, we can further reduce the claim to showing that limn→ω ||EA (η1∗ yn ξ1 )||2 = 0,
+for all ξ1 , η1 ∈ M . This in turn is an immediate consequence of the fact that
+y = (yn )n ⊥ Aω  Γ.                                                                     
+
+  Next, if u ∈ U(D), then by Claim 2 we get that δt (u)y ⊥ yδt (u). Using Claim 1
+we therefore derive that
+                       64ε2 ≥ ||[δt (u), y]||22 = ||δt (u)y||22 + ||yδt (u)||22 .
+In particular, we obtain that
+(3.c)                              8ε ≥ ||δt (u)y||2 , ∀u ∈ U(D).
+  Now, we use the same trick as in the proof of [39], Lemma 2.1. Since EM (θt (u)) ∈
+M , u ∈ M , y ∈ M ω we get that β(EM (θt (u))) = EM (θt (u)), β(u) = u and β(y) = y.
+Thus
+(3.d)          ||θ−t (u)y − EM (θt (u))y||2 = ||β(θ−t (u)y − EM (θt (u))y)||2
+                                                  = ||β(θ−t (u))y − EM (θt (u))y||2
+                                                  = ||θt (β(u))y − EM (θt (u))y||2
+                                                  = ||δt (u)y||2 ≤ 8ε, ∀u ∈ U(D).
+   By combining (3.c) and (3.d) we deduce that
+(3.e)                      ||θt (u)y − θ−t (u)y||2 ≤ 16ε, ∀u ∈ U(D).
+1192                                  ADRIAN IOANA
+
+
+   Thus we have that
+                                 1
+(3.f) τ (θt (u)yy ∗ θ−t (u∗ )) =  (||θt (u)y||22 + ||θ−t (u)y||22 − ||θt (u)y − θ−t (u)y||22 )
+                                 2
+                               ≥ ||y||22 − 128ε2 > 0
+
+If z = EM̃ (yy ∗ ) ∈ M̃ , then τ (θt (u)yy ∗ θ−t (u∗ )) = τ (θt (u)zθ−t (u∗ )); hence (3.f)
+implies that τ (θt (u)zθ−t (u∗ )) ≥ ||y||22 − 128ε > 0, for all u ∈ U(D). A standard
+averaging argument provides 0 = w ∈ M̃ such that θt (u)w = wθ−t (u), for all
+u ∈ U(D). Thus, if v = θt (w) = 0, then θ2t (u)v = vu, for all u ∈ U(D), which gives
+a contradiction.                                                                         
+
+Proof of Theorem 3.2. Assuming that (2) is false we will demonstrate that (1) holds
+true.
+   Set M = M̃1 ⊗M2 and observe that M ⊂ M ⊂ M̃ . Let θt := θt1 ⊗idM2 ∈
+Aut(M). Let β ∈ Aut(M̃1 ) be deﬁned as in Section 1.5. By Lemma 1.5.1 β  =
+β⊗idM2 ∈ Aut(M) satisﬁes
+                                                          
+                          = 1M , β  = 1M , β  θt β  = θ−t
+                                     2
+(3.g)                 β|M                                     , ∀t ∈ R.
+
+Denote A1 = B1Γ1 and A2 = B2Γ2 . Observe that we can write M = (A1 ⊗M2 )  Γ1 ,
+where Γ1 acts by Bernoulli shifts on A1 and trivially on M2 . Similarly, we have
+M = (M1 ⊗A2 )  Γ2 .
+Claim 1. There exists a family {Ci }i∈I of von Neumann subalgebras of M and a
+family {Γi }i∈I of ﬁnite subgroups of Γ1 such that Ci ⊂ (A1 ⊗M2 )  Γi , for all i ∈ I,
+and
+                                            
+                        L2 (M)  L2 (M ) =∼     L2 ( M, eCi ),
+                                                 i∈I
+
+as Hilbert M –bimodules.
+Proof of Claim 1. The proof of [8], Lemma 5 provides a family {Ai }i∈I of von
+Neumann subalgebras of M1 and a family {Γi }i∈I of ﬁnite subgroups of Γ1 such
+                                                             
+that Ai ⊂ A  Γi , for all i ∈ I, and L2 (M̃1 )  L2 (M1 ) ∼
+                                                           = i∈I L2 ( M1 , eAi ), as
+Hilbert M1 –bimodules. By letting Ci = Ai ⊗M2 ⊂ (A1  Γi )⊗M2 = (A1 ⊗M2 )  Γi
+and using the decomposition L2 (M)  L2 (M ) = (L2 (M̃1 )  L2 (M1 ))⊗L2 (M2 ), the
+claim follows.                                                                     
+
+   Now, recall that θt = θt1 ⊗ θt2 ∈ Aut(M̃ = M̃1 ⊗M̃2 ) and that M̃ ⊃ M ⊃ M .
+Claim 2. For every x ∈ M and all t ∈ R, we have that ||θt (x)−x||2 ≤ 2||θ 2t (x)−x||2 .
+
+Proof of Claim 2. Fix x ∈ M . We show ﬁrst that ||EM (θt (x))||2 ≥ ||EM (θt (x))||2 .
+Fix t ∈ R and for i ∈ {1, 2}, denote by Ti the bounded operator on L2 (Mi ) induced
+by EMi ◦ θti : Mi → Mi .
+   Then Ti is a contraction; hence Ti∗ Ti ≤ 1, as operators on L2 (Mi ). Also, we have
+that EM (θt (x)) = (T1 ⊗ 1)(x) and EM (θt (x)) = (T1 ⊗ T2 )(x). Our assertion now
+follows from the following estimate: ||(T1 ⊗ T2 )(x)||22 = (T1∗ T1 ⊗ T2∗ T2 )(x), x ≤
+ (T1∗ T1 ⊗ 1)(x), x = ||(T1 ⊗ 1)(x)||22 .
+   Next, since x ∈ M , by using (3.g) and [39], Lemma 2.1 we deduce that ||θt (x) −
+x||2 ≤ 2||θ t (x) − EM (θ t (x))||2 . In combination with the above assertion we get
+            2              2
+                          W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                        1193
+
+
+that
+        ||θt (x) − x||22 ≤ 4||θ t (x) − EM (θ t (x))||22 = 4(||θ t (x)||22 − ||EM (θ t (x))||22 )
+                                 2                2                  2                     2
+
+           ≤ 4(||x||22 − ||EM (θ 2t (x))||22 = 4||x − EM (θ 2t (x))||22 ≤ 4||θ 2t (x) − x||22 ,
+and the claim is proven.                                                                                   
+   Since x = (xn )n ∈ D ∩ M ω satisﬁes limt→0 ||θt (x) − x||2 = 0, by Claim 2 we con-
+clude that limt→0 ||θt (x) − x||2 = 0. Claim 1 says that we are in a position to apply
+Lemma 3.3 and deduce that one of the following happens: (xn )n ∈ (A1 ⊗M2 )ω  Γ1
+or there exists t = 0 and 0 = v ∈ M such that θt (y)v = vy, for all y ∈ D. If
+the latter is true, since θt = θt1 ⊗idM2 , Theorem 2.1 and Remark 2.2 imply that
+D ≺M L(Γ1 )⊗M2 . This contradicts our assumption that (2) is false, so we must
+have that
+(3.h)                                 (xn )n ∈ (A1 ⊗M2 )ω  Γ1 .
+  Now, let M = M1 ⊗M̃2 and θt =idM1 ⊗ θt2 ∈ Aut(M). By arguing in the same
+way as above and using the fact that (2) is false, we get that
+(3.i)                                 (xn )n ∈ (M1 ⊗A2 )ω  Γ2 .
+  Finally, we show that (3.h) and (3.i) together imply that (xn )n ∈ Aω  Γ.
+  For ﬁnite sets F1 ⊂ Γ1 and F2 ⊂ Γ2 , denote by QF1 and RF2 the orthogonal
+projections from L2 (M ) onto the closed linear span of {A1 uγ ⊗ M2 |γ ∈ F1 } and of
+{M1 ⊗ A2 uγ |γ ∈ F2 }, respectively.
+  Then (3.h) and (3.i) can be rewritten as
+           inf      lim ||xn − QF1 (xn )||2 = 0,            inf      lim ||xn − RF2 (xn )||2 = 0.
+    F1 ⊂Γ1 ﬁnite n→ω                                   F2 ⊂Γ2 ﬁnite n→ω
+
+Thus, we have that inf F1 ⊂Γ1 ,F2 ⊂Γ2 ﬁnite limn→ω ||xn − (RF2 ◦ QF1 )(xn )||2 = 0. Since
+RF2 ◦ QF1 is the orthogonal projection from L2 (M ) onto the closed linear span of
+{(A1 ⊗ A2 )uγ |γ ∈ F1 × F2 }, it follows that (xn )n ∈ Aω  Γ; therefore (1) holds
+true.                                                                                  
+Remark 3.4. In the sequel, we will only use the following corollary of Theorem
+3.2: let D ⊂ M be an abelian von Neumann subalgebra such that condition (2) is
+false and suppose that un ∈ L(Γ) is a sequence of unitaries which normalize D and
+satisfy ||EL(Γ1 ) (aun b)||2 , ||EL(Γ2 ) (aun b)||2 → 0, for every a, b ∈ L(Γ). Then for all
+x ∈ D we have that (un xu∗n )n ∈ Aω σ Γ. Since θt (un ) = un , for all t and n, this
+statement is indeed a consequence of Theorem 3.2.
+   This corollary can be alternatively proved by adapting Popa’s “clustering coef-
+ﬁcients” method (see [34]).
+   Following the strategy from [34], one ﬁrst shows that the Fourier coeﬃcients of
+                                                                      Γ \F     Γ \F
+xn = un xu∗n cluster (i.e., they asymptotically belong to B1 1 1 ⊗B2 2 2 for any
+ﬁnite sets F1 ⊂ Γ1 and F2 ⊂ Γ2 ). Second, one uses the fact that the clustering
+sequence (xn )n ∈ M ω commutes with elements y ∈ D which are “almost perpen-
+dicular” onto both M1 ⊗L(Γ2 ) and L(Γ2 )⊗M2 to conclude that (xn )n ∈ Aω σ Γ.
+   We end this section by showing that condition (2) in Theorem 3.2 can be ex-
+ploited to get information on the quasi–normalizer of D.
+   The next lemma is a straightforward generalization of [33], Theorem 3.1, but we
+include a proof for the reader’s convenience.
+1194                                    ADRIAN IOANA
+
+
+Proposition 3.5 ([33]). Let Γ  (X, μ) be a p.m.p. mixing action and denote
+M = L∞ (X)  Γ. Let N be a ﬁnite von Neumann algebra. Assume that D is
+a von Neumann subalgebra of M ⊗N such that D ≺M ⊗N L(Γ)⊗N . Denote by P
+the von Neumann algebra generated by the quasi–normalizer of D in M ⊗N . If
+D ⊀M ⊗N 1 ⊗ N , then P ≺M ⊗N L(Γ)⊗N .
+Proof. We ﬁrst claim that if p ∈ L(Γ)⊗N is a projection and D ⊂ p(L(Γ)⊗N )p is a
+unital von Neumann subalgebra such that D ⊀L(Γ)⊗N 1⊗N , then qNp(M ⊗N )p (D) ⊂
+p(L(Γ)⊗N )p. By [33], Section 3 (or [17], proof of Theorem 1.1) in order to prove
+the claim it suﬃces to show that for every ε > 0, η1 , . . . , ηk ∈ (M ⊗N )  (L(Γ)⊗N ),
+we can ﬁnd u ∈ U(D) such that ||EL(Γ)⊗N (ηi uηj∗ )||2 ≤ ε, for all i, j ∈ {1, . . . , k}.
+    Since EL(Γ)⊗N is L(Γ)⊗N –bimodular, by using Kaplansky’s density theorem
+it is enough to prove the last assertion for ηi ∈ L∞ (X) ⊗ 1 with τ (ηi ) = 0 and
+||ηi || ≤ 1.                               
+    Next, decompose u ∈ U(D) as u = γ uγ ⊗ xγ , where xγ ∈ N . Denote by α the
+induced action of Γ on L∞ (X). We have that
+                                             
+(3.j)             ||EL(Γ)⊗N (ηi uηj∗ )||22 =   |τ (ηi αγ (ηj∗ ))|2 ||xγ ||22 .
+                                               γ∈Γ
+
+   Since α is mixing and τ (ηi ) = 0, for all i, we can ﬁnd F ⊂ Γ ﬁnite such that
+                                      ε
+(3.k)             |τ (ηi αγ (ηj∗ ))| ≤ , ∀i, j ∈ {1, . . . , k}, ∀γ ∈ Γ \ F.
+                                      2
+Since D ⊀L(Γ)⊗N 1 ⊗ N , by Popa’s theorem we can ﬁnd u ∈ U(D) such that
+                                                                     ε
+(3.l)                     ||xγ ||22 =     ||E1⊗N (u(u∗γ ⊗ 1))||22 ≤ .
+                                                                       2
+                       γ∈F            γ∈F
+
+   As |τ (ηi αγ (ηj∗ ))| ≤ ||ηi || ||ηj || ≤ 1, for all γ ∈ Γ, it is clear that the combination
+of (3.j), (3.k) and (3.l) implies that ||EL(Γ)⊗N (ηi uηj∗ )||2 ≤ ε, for all i, j ∈ {1, . . . , k},
+as claimed.
+   Going back to the general case, let D be a von Neumann algebra such that
+D ≺M ⊗N L(Γ)⊗N but D ⊀M ⊗N 1 ⊗ N . By [45], Remark 3.8 we can ﬁnd non–zero
+projections q ∈ D, p ∈ L(Γ)⊗N , a ∗–homomorphism ψ : qDq → p(L(Γ)⊗N )p and
+a non–zero partial isometry v ∈ p(M ⊗N )q such that ψ(x)v = vx, for all x ∈ qDq,
+and ψ(qDq) ⊀L(Γ)⊗N 1 ⊗ N . By the ﬁrst part of the proof (applied to ψ(qDq))
+we deduce that ψ(qDq) ∩ p(L(Γ)⊗N )p ⊂ p(L(Γ)⊗N )p; hence vv ∗ ∈ p(L(Γ)⊗N )p.
+This further implies that vDv ∗ ⊂ L(Γ)⊗N . Since v ∗ v ∈ (qDq) ∩ q(M ⊗N )q, we
+can ﬁnd q  ∈ D ∩ (M ⊗N ) ⊂ P such that v ∗ v = qq  . Let u be any unitary element
+extending v. Then u(qDqq  )u∗ = vDv ∗ ⊂ L(Γ)⊗N .
+   Finally, since D is quasi–regular in P , by [33], Lemma 3.5 we get that qDqq 
+is quasi–regular in qq  P qq  . Also, from the hypothesis we have that no corner of
+qDqq  embeds into 1 ⊗ N . Thus, by the ﬁrst part of the proof, we deduce that
+u(qq  P qq  )u∗ ⊂ L(Γ)⊗N ; hence a corner of P embeds into L(Γ)⊗N .                           
+
+                              4. Lower bound on height
+   Let M = A  Γ be a II1 factor associated with a Bernoulli action. For every
+v ∈ L(Γ), we deﬁne the height of v as h(v) = maxγ∈Γ |τ (vu∗γ )|. Consider a sequence
+of elements {vn }n≥1 ⊂ (L(Γ))1 . In this section, we provide a set of conditions which
+guarantee that the heights of the vn ’s are uniformly bounded away from 0.
+                         W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                                   1195
+
+
+Theorem 4.1. Assume the notation from 3.1, i.e. Mi = BiΓi  Γi , M = M1 ⊗M2 ,
+                                          √ ⊂ (L(Γ))1 be a sequence for which there
+A = B1Γ1 ⊗B2Γ2 , Γ = Γ1 × Γ2 . Let {vn }n≥1
+exist C, c > 0 and x ∈ M such that C > 2c,
+(1) ||EAω Γ ((vn xvn∗ )n )||2 ≥ C,
+(2) ||EM1 ⊗L(Γ2 ) (x)||2 ≤ c and
+(3) ||EL(Γ1 )⊗M2 (x)||2 ≤ c.
+Then limn→ω h(vn ) > 0.
+                                    √
+Proof. Let ε > 0 such that C − 2c − 3ε > 0 and let x ∈ M satisfy conditions
+(1)–(3). The ﬁrst condition yields a ﬁnite set F ⊂ Γ such that if PF denotes the
+orthogonal projection from L2 (M ) onto the closed linear span of {Auγ |γ ∈ F },
+then
+(4.a)                                 lim ||PF (vn xvn∗ )||2 ≥ C − ε.
+                                     n→ω
+
+    Next, let E1 = EM1 ⊗L(Γ2 ) and E2 = EL(Γ1 )⊗M2 . Since E1 and E2 commute,
+                   M −E2 ))(x) satisﬁes y ⊥ M1 ⊗L(Γ2 ) and y ⊥ L(Γ1 )⊗M2 . Thus,
+y = ((idM −E1 )◦(id
+if we write y = γ∈Γ aγ uγ , where aγ ∈ A, then EB Γ1 ⊗1 (aγ ) = E1⊗B Γ2 (aγ ) = 0,
+                                                         1              2
+for all γ ∈ Γ.
+√ Also, conditions (2) and (3) yield ||x−y||2 = ||E1 (x)+(E2 (x)−(E1 ◦E2 )(x))||2 ≤
+   2c.
+    Let K ⊂ Γ be ﬁnite such that z = PK (y) satisﬁes ||z − y||2 ≤ ε.Let S1 ⊂
+Γ1 , S2 ⊂ Γ2 be ﬁnite such that if bγ = EB S1 ⊗B S2 (aγ ), then w =        γ∈K bγ uγ
+                                                  1    2
+satisﬁes ||w − z||2 ≤ ε.                                √
+    The triangle inequality implies that ||w − x||2 ≤ 2c + ||p||2 + 2ε and hence by
+(4.a) we have
+                                                       √
+(4.b)              lim ||PF (vn wvn∗ )||2 ≥ (C − ε) − ( 2c + 2ε) > 0.
+                      n→ω
+
+   Let S = S1 S1−1 × S2 S2−1 ⊂ Γ, where S1 S1−1 = {gh−1 |g, h ∈ S1 }. We claim that
+(4.c)                         τ (σγ (bg )b∗h ) = 0, ∀γ ∈ Γ \ S, ∀g, h ∈ K.
+   Indeed, let γ = (γ1 , γ2 ) ∈ Γ\S and assume that γ1 ∈          / S1 S1−1 (the case γ2 ∈  / S2 S2−1
+being analogous). Let g, h ∈ K. Since bh ∈ B1 ⊗B2 and γ1 S1 ∩ S1 = ∅, we have
+                                                          S1    Γ2
+
+EB γ1 S1 ⊗B Γ2 (bh ) = E1⊗B Γ2 (bh ) = E1⊗B S2 (ah ) = 0. Since σγ (bg ) ∈ B1γ1 S1 ⊗B2Γ2 , we
+   1       2                 2                   2
+derive that τ (σγ (bg )b∗h ) = τ (σγ (bg )EB γ1 S1 ⊗B Γ2 (bh )∗ ) = 0, which proves (4.c).
+                                               1        2
+   Next, ﬁx v    ∈ L(Γ) and estimate ||PF (vwv ∗ )||2 . Let δ = maxg,h∈K ||bg ||2 ||bh ||2
+and write v = γ∈Γ cγ uγ , where cγ ∈ C, for all γ ∈ Γ. Then
+                                                          
+       vwv ∗ =               cγ cγ  σγ (bg )uγgγ  −1 =     (          cγ ch−1 γg σγ (bg ))uh .
+                  γ,γ  ∈Γ,g∈K                                   h∈Γ γ∈Γ,g∈K
+
+   Thus,
+                                      
+        ||PF (vxv ∗ )||22 =                           cγ c(h−1 γg) cγ  c(h−1 γ  g ) τ (σγ  (b∗g )σγ (bg )),
+                              h∈F,γ,γ  ∈Γ,g,g  ∈K
+
+which by (4.c) is further equal to the real part of
+                    
+                              cγ c(h−1 γg) cγs−1 c(h−1 γs−1 g ) τ ((b∗g )σs (bg )).
+                γ∈Γ,s∈S,h∈F,g,g  ∈K
+1196                                       ADRIAN IOANA
+
+                              4
+Since Re(a1 a2 a3 a4 ) ≤ 14     i=1 |ai | , for every {ai }i=1
+                                         4                 4
+                                                                       ∈ C, the last term is ma-
+jorized by
+         δ         
+                                    (|cγ |4 + |c(h−1 γg) |4 + |cγs−1 |4 + |c(h−1 γs−1 g ) |4 )
+         4
+             γ∈Γ,s∈S,h∈F,g,g  ∈K
+                    δ                        
+                ≤     (1 + |S|)(1 + |F ||K|)   |cγ |4
+                    4
+                                                 γ∈Γ
+                 δ                                  
+                ≤ (1 + |S|)(1 + |F ||K|) max |cγ |2   |cγ  |2
+                 4                       γ∈Γ                γ ∈Γ
+                    δ
+                = (1 + |S|)(1 + |F ||K|)h(v)2 ||v||22 .
+                    4
+   Altogether, we have shown that there exists a constant κ > 0 such that h(v)||v||2
+≥ κ||PF (vwv ∗ )||2 , for all v ∈ L(Γ). Since ||vn || ≤ 1 we get that h(vn ) ≥
+κ||PF (vn wvn∗ )||2 , for all n, and (4.b) implies the conclusion of the theorem. 
+
+Remark 4.2. If M = A σ Γ is a II1 factor coming from a Bernoulli action, then
+the above proof shows the following: assume that {vn }n≥1 ⊂ (L(Γ))1 is a sequence
+for which there exists x ∈ M such that ||EAω Γ ((vn xvn∗ )n )||2 > ||EL(Γ) (x)||2 . Then
+limn→ω h(vn ) > 0.
+
+                     5. A conjugacy result for subalgebras
+   Let M = B Γ  Γ be a II1 factor coming from a Bernoulli action. In this section,
+we give a criterion for proving that a von Neumann subalgebra C of M has a
+corner which embeds into B Γ . More generally, our criterion applies to subalgebras
+of M ⊗N , where N is an arbitrary ﬁnite von Neumann algebra.
+   Before stating it we need to introduce some notation.
+Notation. We consider the orthogonal projections onto certain Hilbert subspaces
+of L2 (M ⊗N ). For subsets S, F and G of Γ we denote by:
+• PS the orthogonal projection onto the closed linear span of {B Γ uγ ⊗ N |γ ∈ S}.
+• HF the closed linear span of {B F uγ ⊗ N |γ ∈ Γ}.
+• QF the orthogonal projection onto HF .
+• Q0F := QF − Q∅ .
+• QGF := QF ∪G − QG the orthogonal projection onto HF := HF ∪G  HG .
+                                                        G
+
+Next, we record some useful boundedness and modularity properties of these pro-
+jections.
+Lemma 5.1. Let S, F, G ⊂ Γ be ﬁnite sets. Then PS commutes with QF , QG
+                                                                      F and
+
+  ||PS (x)|| ≤ |S|, ||(PS ◦ QF )(x)|| ≤ |S|, ||(PS ◦ QG
+                                                      F )(x)|| ≤ 2|S|, ∀x ∈ (M ⊗N )1 .
+
+If F contains SG, then QF (PS (x)y) = QF (PS (x))y for every x ∈ M ⊗N and
+y ∈ HG .
+Proof. The commutativity assertion is trivial. Let x ∈ M ⊗N with ||x|| ≤ 1. Write
+M ⊗N = (B Γ ⊗N ) ρ Γ, where Γ acts through Bernoulli action on B Γ and trivially
+on N . Decompose x = γ∈Γ xγ uγ , where xγ = EB Γ ⊗N (xu∗γ ). Then ||xγ || ≤ 1, for
+                                                       
+all γ ∈ Γ. Since PS (x) = γ∈S xγ uγ , (PS ◦ QF )(x) = γ∈S EB F ⊗N (xγ )uγ and
+QGF = QF ∪G − QG , the three inequalities follow.
+                       W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                1197
+
+                                                                      
+   For the last assertion, it suﬃces to show that if F ⊃ SG and if x = γ∈S xγ uγ
+          
+and y = g∈Γ yg ug with xγ ∈ B Γ ⊗N and yg ∈ B G ⊗N , for all γ ∈ S and g ∈ Γ,
+then QF (xy) = QF (x)y. Notice that if γ ∈ S, then ργ (yg ) ∈ B γG ⊗N ⊂ B F ⊗N ,
+for all g ∈ Γ. Thus, we have that
+               
+ QF (xy) =          EB F ⊗N (xγ ργ (yg ))uγg
+             γ∈S,g∈Γ
+               
+         =             EB F ⊗N (xγ )ργ (yg )uγg = QF (x)y.                                     
+             γ∈S,g∈Γ
+
+We are now ready to state and prove the main result of this section.
+Theorem 5.2. Let Γ be a countable group, B be a ﬁnite von Neumann algebra and
+denote M = B Γ  Γ. Let N be a ﬁnite von Neumann algebra and p ∈ M ⊗N be a
+projection. Let C ⊂ p(M ⊗N )p be a unital von Neumann subalgebra. Suppose that
+there exist a sequence {xn }n≥1 ⊂ U(p(M ⊗N )p) and ﬁnite subsets S, {Fn }n≥1 of Γ
+such that
+   • ||xn y − yxn ||2 → 0, for all y ∈ C,
+   • Fn → ∞, as n → ∞ (i.e. if γ ∈ Γ, then γ ∈   / Fn , for large enough n),
+   • supn≥1 |Fn | < ∞, and
+   • lim supn→∞ (||xn − Q0Fn (xn )||2 + 3||xn − PS (xn )||2 ) < ||p||2 .
+Then C ≺M ⊗N B Γ ⊗N .
+Proof. By replacing (xn )n with a subsequence, we may assume ||xn − Q0Fn (xn )||2
+≤ c1 and ||xn − PS (xn )||2 ≤ c2 , for all n, for some c1 , c2 ≥ 0 satisfying c1 + 3c2 <
+||p||2 . Let ε > 0 such that c = ||p||2 − (c1 + 3c2 + 11ε) > 0.
+   We begin with the following:
+Claim. Let y ∈ U(C) and G ⊂ Γ be a ﬁnite subset such that ||y − QG (y)||2 ≤ |S|   ε
+                                                                                    .
+Let Kn ⊂ Γ be a sequence of ﬁnite subsets such that ||y−PKn (y)||2 ≤ |S| and Kn Fn
+                                                                       ε
+
+is disjoint from G ∪ SG. Then we can ﬁnd N ≥ 1 such that ||QG∪SG  Kn Fn (xn )||2 ≥ c,
+for all n ≥ N .
+Proof of Claim. Let yn = (PKn ◦ QG )(y). Then ||yn − y||2 ≤ |S|
+                                                            2ε
+                                                                . Also, let xn =
+(PS ◦ QFn )(xn ). Since PS and QFn commute, we get that
+       0                        0
+
+
+(5.a)        ||xn − xn ||2 = ||xn − Q0Fn (xn ) + Q0Fn (xn − PS (xn ))||2 ≤ c1 + c2 .
+    Now, yn xn belongs to the closed linear span of {B G uk (B Fn  C1)uγ ) ⊗ N |k ∈
+Kn , γ ∈ S}. Since uk (B Fn  C1) ⊂ (B Kn Fn  C1)uk , for k ∈ Kn , we get that
+yn xn ∈ HK   G
+                n Fn
+                       (recall that HFG = HF ∪G  HG ). Since Kn Fn is disjoint from
+G ∪ SG, we get that yn xn ∈ HK      G∪SG
+                                       n Fn
+                                            .
+    Next, we estimate ||yxn − yn xn ||2 . Lemma 5.1 gives that ||xn || ≤ 2|S|; hence
+||y − yn ||2 ||xn || ≤ 4ε. By using the triangle inequality and (5.a) we get that
+(5.b)     ||yxn − yn xn ||2 ≤ ||y|| ||xn − xn ||2 + ||y − yn ||2 ||xn || ≤ c1 + c2 + 4ε.
+   Since yn xn ∈ HK G∪SG
+                       n Fn                               Kn Fn (yxn )||2 ≤ c1 + c2 + 4ε.
+                            , (5.b) implies that ||yxn − QG∪SG
+Since ||[xn , y]||2 → 0, we can ﬁnd N such that ||xn y −QG∪SG
+                                                           Kn Fn (xn y)||2 ≤ c1 +c2 +5ε,
+for all n ≥ N .
+   Since xn y ∈ U(p(M ⊗N )p), we get that
+(5.c)                   ||QG∪SG
+                           Kn Fn (xn y)||2 ≥ ||p||2 − (c1 + c2 + 5ε).
+1198                                       ADRIAN IOANA
+
+
+Using that ||PS (xn )|| ≤ |S| we get that ||xn y − PS (xn )yn ||2 ≤ ||xn − PS (xn )||2 ||y|| +
+||PS (xn )||||y − yn ||2 ≤ c2 + |S| |S|
+                                    2ε
+                                        = c2 + 2ε. Combining this inequality with (5.c)
+yields that
+(5.d)               ||QG∪SG
+                       Kn Fn (PS (xn )yn )||2 ≥ ||p||2 − (c1 + 2c2 + 7ε).
+
+   Since yn ∈ HG , Lemma 5.1 gives that QG∪SG                        G∪SG
+                                             Kn Fn (PS (xn )yn ) = QKn Fn (PS (xn ))yn
+and that ||QKn Fn (PS (xn ))|| ≤ 2|S|. Thus, since ||y|| ≤ 1, for all n ≥ N we have
+            G∪SG
+
+that
+
+      Kn Fn (xn )||2 ≥ ||QKn Fn (PS (xn ))||2 − c2
+   ||QG∪SG                G∪SG
+
+
+                           Kn Fn (PS (xn ))y||2 − c2
+                      ≥ ||QG∪SG
+                           Kn Fn (PS (xn ))yn ||2 − ||QKn Fn (PS (xn ))(yn − y)||2 − c2 .
+                      ≥ ||QG∪SG                        G∪SG
+
+
+   Since ||yn − y||2 ≤ |S|
+                        2ε
+                           , (5.d) implies that the last term is greater than or equal
+to ||p||2 − (c1 + 2c2 + 7ε) − 2|S| |S|
+                                    2ε
+                                       − c2 = c, as claimed.                        
+
+To prove the theorem, assume by contradiction that C ⊀M ⊗N B Γ ⊗N . By using
+the claim for all m ≥ 1 we will construct ﬁnite subsets Gm and {Km,n }n≥1 of Γ
+such that
+   (i) Km,n is disjoint from G1 , . . . , Gm , K1,n , . . . , Km−1,n , for all n ≥ 1,
+   (ii) supn≥1 |Km,n | < ∞ and
+                        Km,n (xn )||2 ≥ c.
+   (iii) lim inf n→∞ ||QGm
+
+
+   Before proving this statement let us show how it leads to a contradiction. First,
+(i) implies that for every m ≥ 1, the projections QG                  G2              Gm
+                                                              K1,n , QK2,n , . . . , QKm,n are mu-
+                                                               1
+
+                                      
+                                                                           
+tually orthogonal (since QG  G
+                          F QF  = 0, whenever F is disjoint from G, F and G ).
+Second, for every m ≥ 1 we have that
+                                                    
+                                                    m
+                    ||p||22 = lim inf ||xn ||22 ≥         lim inf ||QG           2
+                                                                     Kl,n (xn )||2 .
+                                                                      l
+                              n→∞                         n→∞
+                                                    l=1
+
+By (iii) this implies that ||p||22 ≥ mc2 , for all m ≥ 1, a contradiction.
+   So, we are left with proving the above statement. We proceed by using induction
+on m. For m = 1, if we let K1,n = Fn and G1 = ∅, then the statement is true
+by the hypothesis. Next, assume that we have constructed Gl , {Kl,n }n≥1 , for all
+l ≤ m − 1. Since supn≥1 |Kl,n | < ∞, for all l, and supn≥1 |Fn | < ∞ we get that
+                         L=         sup         |(Gl ∪ Kl,n )Fn−1 )| < ∞.
+                               n≥1, l≤m−1
+
+   Recall that M ⊗N = (B Γ ⊗N )  Γ. Since C ⊀M ⊗N B Γ ⊗N , by Theorem 1.3.2
+we can ﬁnd y ∈ U(C) such that for every ﬁnite set T ⊂ Γ of cardinality |T | ≤ L,
+we have that
+                                                                ε
+                                    ||EB Γ ⊗N (yu∗γ )||22 ) 2 ≤
+                                                            1
+(5.e)             ||PT (y)||2 = (                                    .
+                                                                2|S|
+                                          γ∈T
+
+    Now, let K, G ⊂ Γ be ﬁnite sets such that ||y − QG (y)||2 ≤ |S|  ε
+                                                                          and ||y −
+                                                          
+PK (y)||2 ≤ 2|S| . For every n ≥ 1, deﬁne Kn = K \ ( l≤m−1 (Gl ∪ Kl,n )Fn−1 ).
+               ε
+
+Since |K \ Kn | ≤ L, by (5.e) we deduce that ||PK (y) − PKn (y)||2 ≤ 2|S|
+                                                                       ε
+                                                                           and thus
+||y − PKn (y)||2 ≤ |S| , for all n ≥ 1. Since Fn → ∞, as n → ∞, we can ﬁnd s ≥ 1
+                    ε
+                    W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                         1199
+
+
+such that KFn ∩ (G ∪ SG) = ∅, for all n ≥ s. Thus, Kn Fn is disjoint from G ∪ SG,
+for all n ≥ s.
+   Altogether, the above claim yields that
+(5.f)                                   Kn Fn (xn )||2 ≥ c.
+                             lim inf ||QG∪SG
+                              n→∞
+
+    Finally, set Km,n = Kn Fn , for all n ≥ s, Km,n = ∅, for all n ≤ s − 1, and
+Gm = G ∪ SG. Then (5.f) can be rewritten as lim inf n→∞ ||QG          Km,n (xn )||2 ≥ c;
+                                                                       m
+
+
+hence (iii) is veriﬁed. Since |Km,n | ≤ |K||Fn | and supn≥1 |Fn | < ∞, we get that
+(ii) also holds true. Also, by deﬁnition it is clear that Km,n is disjoint from Gl and
+Kl,n , for all 1 ≤ l ≤ m − 1. This proves the above statement and the theorem. 
+
+                   6. A dichotomy result for subalgebras
+   In this section, we combine the results of the last four sections to prove Theorem
+F (which we restate below as Theorem 6.2): if D is an abelian subalgebra of M =
+B Γ  Γ whose normalizer has a “large intersection” with L(Γ), then a corner of D
+embeds into either B Γ or L(Γ). In the more general context, when M is a tensor
+product of two factors associated with Bernoulli actions, we obtain:
+Theorem 6.1. Assume the notation from 3.1, i.e. Mi = BiΓi σi Γi , M = M1 ⊗M2 ,
+A = B1Γ1 ⊗B2Γ2 and Γ = Γ1 × Γ2 . Let D ⊂ qM q be an abelian von Neumann
+subalgebra, for some projection q ∈ L(Γ). Denote Λ = NqM q (D) ∩ U(qL(Γ)q) and
+assume that Λ ⊀M L(Γ1 ) ⊗ 1 and Λ ⊀M 1 ⊗ L(Γ2 ). Then one of the following
+holds true:
+(1) D ∩ qM q is of type I and there exist a unitary u ∈ M and a projection q0 ∈ A
+such that uq0 u∗ = q and u(Aq0 )u∗ ⊂ D ∩ qM q.
+(2) D ≺M M1 ⊗L(Γ2 ) or D ≺M L(Γ1 )⊗M2 .
+Recall that Λ denotes the von Neumann algebra generated by Λ inside qL(Γ)q.
+Proof. We ﬁrst prove the theorem in the case q = 1. Assume that (2) is false. We
+will show that (1) holds true. By using the hypothesis and Theorem 1.3.1 (see the
+comment following it) we can ﬁnd a sequence {un }n≥1 ⊂ Λ such that
+(6.a)     ||EL(Γ1 ) (aun b)||2 → 0 and ||EL(Γ2 ) (aun b)||2 → 0, ∀a, b ∈ L(Γ).
+   Next, we claim that
+(6.b)                      (un xu∗n )n ∈ Aω σ Γ, ∀x ∈ D.
+To prove (6.b), let M̃ and {θt }t∈R ⊂ Aut(M̃ ) be deﬁned as in the statement of
+Theorem 3.2. Since θt|L(Γ) = id|L(Γ) and un ∈ L(Γ), we get that the θt converge
+uniformly to idM̃ on {un xu∗n }n≥1 . As D is abelian and un normalizes D, we deduce
+that (un xu∗n )n ∈ D ∩ M ω . Since (2) is assumed false, (6.b) follows from Theorem
+3.2.
+   Towards proving (1), let C = D ∩ M . Since D is abelian, we have that C  ∩ M ⊂
+C or, equivalently, C  ∩ M = Z(C). The main part of this proof consists of showing
+that
+(6.c)                     Cp ≺M B1Γ1 ⊗M2 , ∀p ∈ P(Z(C)).
+By symmetry, we will also get that Cp ≺M M1 ⊗B2Γ2 . Finally, we will combine
+these two statements to ﬁrst get that Cp ≺M A and then derive (1).
+1200                                      ADRIAN IOANA
+
+
+   First, we reduce (6.c) to a weaker statement. By Lemma 1.3.3, it suﬃces to prove
+(6.c) for projections p ∈ Z(C) which commute with the normalizer of C. Since Λ
+normalizes C, we get that [p, Λ] = 0. Since Λ ⊀L(Γ) L(Γ1 ) and Λ ⊀L(Γ) L(Γ2 ),
+[45], Lemma 4.2 implies that Λ ∩ M ⊂ L(Γ), so in particular p ∈ L(Γ).
+   Indeed, notice that if B1 ≃ B2 ≃ L∞ (X0 , μ0 ), then the action of Γ on A can be
+identiﬁed with the generalized Bernoulli action Γ  (X0 , μ0 )I , where I = Γ1  Γ2
+and (γ1 , γ2 ) · g1 = γ1 g1 , (γ1 , γ2 ) · g2 = γ2 g2 , for all γ1 , g1 ∈ Γ1 and γ2 , g2 ∈ Γ2 .
+By applying [45], Lemma 4.2 to I1 = ∅, we get our assertion. For not necessarily
+isomorphic B1 and B2 , it is not hard to adapt the proof of [45], Lemma 4.2 to prove
+our assertion.
+   Altogether, we get that it suﬃces to prove (6.c) for projections p ∈ Λ ∩ L(Γ) ∩
+Z(C).
+   For n ≥ 1, let vn = un p ∈ L(Γ). Since (2) is false, we can ﬁnd x ∈ U(D)
+such that ||EM1 ⊗L(Γ2 ) (xp)||2 ≤ 12 ||p||2 and ||EL(Γ1 )⊗M2 (xp)||2 ≤ 12 ||p||2 . Since
+p commutes with un ∈ Λ and x ∈ D, we get that vn (xp)vn∗ = un xu∗n p. Since
+(un xu∗n )n ∈ Aω  Γ and ||un xu∗n p||2 = ||p||2 , for all n, by applying Theorem 4.1
+we deduce that limn→ω h(vn ) > 0. By replacing un with a subsequence, (6.a) and
+(6.b) are preserved while we may assume that there is δ > 0 such that
+(6.d)                                  h(vn ) ≥ δ, ∀n ≥ 1.
+  For n ≥ 1, let γn = (γn1 , γn2 ) ∈ Γ = Γ1 × Γ2 such that |τ (vn u∗γn )| = h(vn ).
+We claim that γn1 → ∞. If not, then γn1 k = γ1 , for some increasing subsequence
+{nk }k≥1 of N and some γ1 ∈ Γ1 . But this would imply that
+ ||EL(Γ2 ) (unk p(u∗γ1 ⊗ 1))|2 = ||EL(Γ2 ) (vnk (u∗γ1 ⊗ 1))||2 ≥ τ (vnk u∗γn )| ≥ δ, ∀k ≥ 1
+                                                                               k
+
+
+in contradiction with (6.a). Similarly, it follows that γn2 → ∞.
+Given ﬁnite subsets F , S of Γ1 and T of Γ2 , we denote by:
+• KF the closed linear span of {(B1F  C1)uγ1 ⊗ M2 |γ1 ∈ Γ1 }.
+• Q0F the orthogonal projection from L2 (M ) onto KF .
+• PS the orthogonal projection onto the closed linear span of {B1Γ1 uγ1 ⊗M2 |γ1 ∈ S}.
+• RT the orthogonal projection onto the closed linear span of {M1 ⊗B2Γ2 uγ2 |γ2 ∈ T }.
+Claim 1. For every x ∈ (M )1 , every subset F ⊂ Γ1 and all n ≥ 1, we have that
+||vn xvn∗ − Q0γ 1 F (vn xvn∗ )||2 ≤ ||x − Q0F (x)||2 + ||p||22 − δ 2 .
+               n
+
+
+Proof of Claim 1. Recall that γn = (γn1 , γn2 ). Since uγn KF = Kγn1 F , vn ∈ L(Γ)
+and KF is a right L(Γ)–module, we get that uγn Q0F (x)vn∗ ∈ Kγn1 F . Then, since
+||τ (vn u∗γn )uγn || = |τ (vn u∗γn )| ≤ 1, the triangle inequality gives that
+        ||(τ (vn u∗γn )uγn )Q0F (x)vn∗ − vn xvn∗ ||2
+              ≤ ||(τ (vn u∗γn )uγn )(Q0F (x) − x)vn∗ ||2 + ||(τ (vn u∗γn )uγn − vn )xvn∗ ||2
+              ≤ ||Q0F (x) − x||2 + ||τ (vn u∗γn )uγn − vn ||2
+              = ||Q0F (x) − x||2 + (||vn ||22 − |τ (vn u∗γn )|2 ) 2 .
+                                                                  1
+
+
+
+
+   Together with (6.d) this implies the claim.                                                 
+
+   Since (2) is assumed false we can ﬁnd x ∈ U(D) such that ||EL(Γ1 )⊗M2 (x)||2 <
+2 (||p||2 −  ||p||22 − δ 2 ). If we enumerate Γ1 = {gi }i≥1 and let Fn = {gi }ni=1 , then
+1
+                       W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                 1201
+
+
+||EL(Γ1 )⊗M2 (x) − (x − Q0Fn (x))||2 → 0. Thus, we can ﬁnd a ﬁnite subset F ⊂ Γ1
+such that ||x − Q0F (x)||2 < 12 (||p||2 − ||p||22 − δ 2 ).
+   If we let xn = vn xvn∗ , by Claim 1 we get that
+                                             1
+(6.e)            ||xn − Q0γn1 F (xn )||2 <     (||p||2 +    ||p||22 − δ 2 ), ∀n ≥ 1.
+                                             2
+  Since p commutes with un , D and un normalizes D, we have that xn = vn xvn∗ =
+(un xu∗n )p ∈ U(Dp), for all n ≥ 1. Thus, we deduce that (xn )n ∈ U((Cp) ∩(pM p)ω ).
+By (6.a) we have that (xn )n = (un xu∗n p)n ∈ Aω σ Γ. Hence, we can ﬁnd a ﬁnite
+subset S ⊂ Γ1 such that lim supn→∞ ||xn − PS (xn )||2 < 16 (||p||2 − ||p||22 − δ 2 ). By
+combining this inequality with (6.e) we get that
+               lim sup (||xn − Q0γn1 F (xn )||2 + 3||xn − PS (xn )||2 ) < ||p||2 .
+                 n→∞
+
+Altogether, Theorem 5.2 yields that Cp ≺M B1Γ1 ⊗M2 . This ﬁnishes the proof of
+(6.c).
+
+Claim 2. Cp ≺M A = B1Γ1 ⊗B2Γ2 , for all p ∈ P(Z(C)).
+
+Proof of Claim 2. By (6.c), we have that Cp ≺M B1Γ1 ⊗M2 . Since C  ∩ M = Z(C),
+by Theorem 1.3.1 we can ﬁnd non–zero projections p0 ∈ Cp and q ∈ B1Γ1 ⊗M2 ,
+a ∗–homomorphism ψ : p0 Cp0 → q(B1Γ1 ⊗M2 )q and a non–zero partial isometry
+v ∈ qM p0 such that v ∗ v = p0 and ψ(x)v = vx, for all x ∈ p0 Cp0 . Thus, we have
+that
+(6.f)                             x = v ∗ ψ(x)v, ∀x ∈ p0 Cp0 .
+   Now, let z ≤ p be the central support of p0 in C. By symmetry, the proof of
+(6.c) implies that Cz ≺M M1 ⊗B2Γ2 . By reasoning as in the previous paragraph,
+we can ﬁnd non–zero projections p1 ∈ Cz and r ∈ M1 ⊗B2Γ2 , a ∗–homomorphism
+ρ : p1 Cp1 → r(M1 ⊗B2Γ2 )r and a non–zero partial isometry w ∈ rM p1 such that
+(6.g)                             x = w∗ ρ(x)w, ∀x ∈ p1 Cp1 .
+      Since p0 and p1 admit equivalent, non–zero subprojections, we can assume that
+(6.f) and (6.g) hold true for p0 = p1 ≤ p.
+      By Kaplansky’s density theorem we can ﬁnd ﬁnite subsets S ⊂ Γ1 , T ⊂ Γ2 and
+v  , w ∈ (M )1 satisfying ||v  −v||2 , ||w −w||2 ≤ ||p60 ||2 and v  = PS (v  ), w = RT (w ).
+Using (6.f), (6.g) and the triangle inequality it follows that
+                                                            ||p0 ||2
+(6.h)       ||x − PS −1 S (x)||2 , ||x − RT −1 T (x)||2 ≤            , ∀x ∈ U(p0 Cp0 ).
+                                                               3
+   Finally, (6.h) implies that ||x − (PS −1 S ◦ RT −1 T )(x)||2 ≤ 2||p30 ||2 , or equivalently,
+                                    √
+that ||(PS −1 S ◦ RT −1 T )(x)||2 ≥ 35 ||p0 ||2 , for all x ∈ U(p0 Cp0 ).
+   Since PS −1 S ◦ RT −1 T is precisely the orthogonal projection on the closed linear
+span of {Auγ |γ ∈ S −1 S × T −1 T }, by Theorem 1.3.1 we get that p0 Cp0 ≺M A.
+Thus, Cp ≺M A.                                                                               
+
+Claim 3. C is a type I algebra and there exists a unitary u ∈ M such that uAu∗ ⊂
+C.
+1202                                   ADRIAN IOANA
+
+
+Proof of Claim 3. The ﬁrst assertion follows from Claim 2. For the second asser-
+tion, let C0 be a maximal abelian subalgebra of C. Then C0 is maximal abelian
+in M . Indeed, C0 contains the center of C; hence it contains D and therefore
+C0 ∩ M ⊂ D ∩ M = C.
+   Next, let p ∈ P(Z(C)). By Claim 2, Cp ≺M A and therefore C0 p ≺M A. Since
+C0 p ⊂ pM p and A ⊂ M are maximal abelian, by [35], Theorem A.1 (see also [44],
+Lemma C.3) we can ﬁnd a non–zero projection p ∈ C0 p and a unitary v ∈ M such
+that C0 p ⊂ vAv ∗ . Let z be the central support of p in C. Since C is of type I,
+we have that C0 is regular in C, i.e. NC (C0 ) = C. It follows that           we can ﬁnd
+projections p1 , p2 , . . . ∈ C0 p and u1 , u2 , . . . ∈ NC (C0 ) such that z = i≥1 ui pi u∗i .
+   Further, since ui ∈ NC (C0 ) we get that C0 (ui pi u∗i ) = ui (C0 pi )u∗i ⊂ (ui v)A(ui v)∗ ,
+for all i. Since A is regular in M and M is a II1 factor, it follows that we can ﬁnd
+a unitary w ∈ M such that C0 z ⊂ wAw∗ . We have altogether shown that for every
+non–zero projection p ∈ Z(C), there is a non–zero projection z ∈ Z(C) with z ≤ p
+such that C0 z can be unitarily conjugated inside A.
+   Finally, let S be the set of families {pi }i∈I ⊂ P(Z(C)) of mutually orthogonal
+projections with the property that C0 pi ⊂ ui Au∗i , for some ui ∈ U(M ), for all
+i ∈ I. By the above    we get that if {pi }i∈I is a maximal element in S with respect
+to inclusion, then i∈I pi = 1. Using again the fact that A is regular in M , we
+deduce that C0 can be unitarily conjugated inside A. Since C0 is maximal abelian,
+we get that C0 = uAu∗ , for some u ∈ U(M ). This ends the proof of Claim 3 and
+of the case q = 1.                                                                             
+   In general, let D ⊂ qM q be a subalgebra as in the hypothesis and assume that
+(2) is false. Then (1) follows true by repeating the above proof once we show that
+(6.b) holds true in this context, i.e. (un xu∗n )n ∈ Aω σ Γ, for all x ∈ D and any
+sequence {un }n≥1 ⊂ Λ. To see this, let D0 ⊂ (1 − q)M (1 − q) be a unital, abelian
+von Neumann subalgebra such that D0 ⊀M M1 ⊗L(Γ2 ) and D0 ⊀M L(Γ1 )⊗M2 .
+Then D1 = D ⊕ D0 has the same property. Since D1 ⊂ M is unital and the θt
+converge uniformly to the identity on (un xu∗n )n ∈ D1 ∩ M ω , our claim follows from
+Theorem 3.2.                                                                         
+   Note that all of our results concerning tensor products of II1 factors associated
+with Bernoulli actions (Theorems 3.3, 4.1, 6.1) have straightforward counterparts
+for single such II1 factors. In this case, Theorem 6.1 reads as follows:
+Theorem 6.2. Let Γ be a countable group, B be an abelian von Neumann algebra
+and set M = B Γ σ Γ, A = B Γ . Let q ∈ L(Γ) be a projection and D ⊂ qM q
+be a unital abelian von Neumann subalgebra. Suppose that the group of unitary
+elements u ∈ qL(Γ)q that normalize D generates a diﬀuse von Neumann algebra.
+Then either:
+(1) D ∩ qM q is of type I and there exist a unitary u ∈ M and a projection q0 ∈ A
+such that uq0 u∗ = q and u(Aq0 )u∗ ⊂ D ∩ qM q or
+(2) D ≺M L(Γ).
+  We end this section by noticing that Theorem 6.2 can be used to give a proof of
+Popa’s conjugacy criterion for Bernoulli actions.
+Theorem 6.3 (Popa, [34], Theorem 0.7). Let Γ be a countable ICC group, B
+be a non–trivial abelian von Neumann algebra. Denote M = B Γ  Γ, A = B Γ and
+let q ∈ L(Γ) be a projection. Let ρ : Λ → Aut(C) be a free ergodic action of a
+                   W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                        1203
+
+
+countable group Λ on an abelian von Neumann algebra C. Denote N = C  Λ.
+Let θ : N → qM q be a ∗–isomorphism. Assume that θ(L(Λ)) ⊂ qL(Γ)q. Then
+q = 1 and there exist a unitary u ∈ M , a character η of Λ, a group isomorphism
+δ : Λ → Γ such that θ(C) = uAu∗ and θ(vλ ) = η(λ)uuδ(λ) u∗ , for all λ ∈ Λ.
+Proof. Denote D = θ(C). Since σ is mixing and D is regular in qM q, [33], Theorem
+3.1 implies that D ⊀M L(Γ). Since D is normalized by {θ(vλ )}λ∈Λ ⊂ qL(Γ)q and D
+is maximal abelian in qM q, Theorem 6.2 implies that there exists a unitary u ∈ M
+and a projection q0 ∈ A such that uq0 u∗ = q and D = u(Aq0 )u∗ . The conclusion
+now follows from [34], Theorem 5.2.                                             
+
+                 7. Popa’s conjugacy criterion for actions
+  In the proof of the strong rigidity results we will need the following version of
+Popa’s conjugacy criterion for actions.
+Theorem 7.1 ([34]). Let σ : Γ → Aut(A) and β : Λ → Aut(B) be two free, ergodic
+actions of two countable groups Γ and Λ on two abelian von Neumann algebras A
+and B. Assume that β is weakly mixing. Denote M = A σ Γ and N = B β Λ.
+Let {uγ }γ∈Γ ⊂ M and {vλ }λ∈Λ ⊂ N be the canonical unitaries implementing σ and
+β. Let p ∈ L(Γ) be a non–zero projection and assume that N is embedded (unitaly)
+inside pM p such that L(Λ) ⊂ pL(Γ)p. Suppose that there exists a partial isometry
+v ∈ M such that v ∗ v = p, vv ∗ = q ∈ A and vBv ∗ = Aq.
+   Then we can ﬁnd maps h : Λ → S 1 , δ : Λ → Γ and a unitary z ∈ L(Γ) such
+that vλ = h(λ)(zuδ(λ) z ∗ )p and [zuδ(λ) z ∗ , p] = 0, for all λ ∈ Λ. Let K = {γ ∈
+Γ|(zuγ z ∗ )p ∈ Cp} and Γ = {δ(λ)k|λ ∈ Λ, k ∈ K}. Then K, Γ are subgroups of Γ,
+|K| < ∞ and Γ normalizes K.
+   Moreover, we have that:
+• If Γ is torsion free, then h is a character and δ is a homomorphism. If in addition
+the restriction of σ to δ(Λ) is ergodic, then p = q = 1 and B = zAz ∗ .
+                                                                      ∗
+                              of σ to Γ is weakly mixing, then z pz ∈ L(K) ∩
+• In general, if the restriction
+Z(L(Γ )), z ∗ pz = |K|−1 k∈K χ(k)uk , for some character χ of K, and B =
+(zAK z ∗ )p, where AK = {a ∈ A|σk (a) = a, ∀k ∈ K}. In particular, τ (p)−1 = |K| is
+an integer.
+   The statement of this result is very close to that of Theorem 5.2 in [34]. However,
+rather than assuming that σ is mixing, as in [34], we only require that σ|δ(Λ) is
+ergodic (in the torsion free case) and weakly mixing (in general). This generalization
+will be essential for us, as we will later apply Theorem 7.1 to the action σ deﬁned
+in 3.1, for which the “global” condition σ is mixing fails. On the other hand, since
+σ is a concrete action (i.e., a product of two Bernoulli actions) it will be easy to
+verify the “local” condition that σ|δ(Λ) is weakly mixing.
+
+Proof. In the beginning of the proof we repeat part of Vaes’ proof of Popa’s criterion
+(see [44], Proposition 9.3) which streamlines the original argument from [34].
+   Identify A with L∞ (X, μ), where (X, μ) is a probability space. Let Y ⊂ X be a
+Borel set such that q = 1Y . Note that vvλ v ∗ ∈ U(qM q) normalizes Aq ∼  = L∞ (Y ),
+                                  
+for all λ ∈ Λ, and denote by β the associated action of Λ on Y . Since β  is
+isomorphic to β, we have that β  is weakly mixing. We consider the canonical
+embedding η : L∞ (X) σ Γ ⊂ L∞ (X, 2 (Γ)) given by η(auγ )(x) = a(x)uγ , for all
+1204                                             ADRIAN IOANA
+
+
+a ∈ L∞ (X), x ∈ X and γ ∈ Γ, as well as the embedding L(Γ) ⊂ 2 (Γ). Also, we
+view S 1 × Γ as a subgroup of U(L(Γ)), in the natural way.
+    Let w = τ (p) 2 η(v) ∈ L∞ (Y, 2 (Γ)). Since β is weakly mixing, [34], Lemma
+                    1
+
+
+4.4(i) implies that B = v ∗ Av is orthogonal to L(Γ). The same argument as in
+the proofs of [34], Lemma 6.1 and [44], Proposition 9.3 shows that every essential
+value w0 of the function w : Y → 2 (Γ) lies in L(Γ) and satisﬁes w0∗ w0 = p. Set
+                     ∗
+v  = vw0∗ , p = v  v  = w0 pw0∗ = w0 w0∗ , w = τ (p) 2 η(v  ) and notice that p is an
+                                                           1
+
+
+essential value of w . By replacing v with v  , p with p , vλ with w0 vλ w0∗ and B with
+w0 Bw0∗ , we may assume that p is an essential value of w, while the hypothesis is
+still satisﬁed. For the “new” v, p, vλ we will prove the conclusion for z = 1, which
+clearly ﬁnishes the proof.
+    Let λ ∈  Λ. Since vvλ v ∗ ∈ NqM q (Aq), we can ﬁnd aλ ∈ U(L∞ (Y )) such that
+vvλ v ∗ = aλ γ∈Γ 1{y|λ−1 y=γ −1 y} uγ , where we denote λy = βλ (y), for every y ∈ Y .
+              
+    Let ω = g∈Γ bg ug ∈ M , where bg ∈ A. Then
+                                  
+                   (vvλ v ∗ )ω =      aλ 1{y|λ−1 y=γ −1 y} (bg ◦ γ −1 )uγg .
+                                            γ,g∈Γ
+
+Thus, if we let c(λ, y) = aλ (y)uγ ∈ S 1 × Γ ⊂ U(L(Γ)), where γ ∈ Γ is the unique
+element such that γ −1 y = λ−1 y, then
+                                
+(7.a)       η((vvλ v ∗ )ω)(y) =     aλ (y)1{y|λ−1 y=γ −1 y} (y)bg (γ −1 y)uγg
+                                            γ,g∈Γ
+                         
+                                       −1
+        = (aλ (y)uγ )(         bg (λ        y)ug ) = c(λ, y)η(ω)(λ−1 y), for almost all y ∈ Y.
+                         g∈Γ
+
+   Since (vvλ v ∗ )v = vvλ and vλ ∈ L(Γ), by applying η and using (7.a), we get that
+(7.b)                c(λ, y)w(λ−1 y) = w(y)vλ , for almost all y ∈ Y .
+   Next, we use an argument due to Popa (see the proofs of [37], Proposition 3.5
+and [44], Lemma 4.8) to conclude the ﬁrst assertion of the theorem. If ε > 0, then,
+since p is an essential value of w, the set W = {y ∈ Y | ||w(y) − p||2 ≤ ε} has
+positive measure. Fix λ ∈ Λ. Since β  is weakly mixing, we can ﬁnd g ∈ Λ such
+that μ(gW ∩ W ) > 0 and μ((gλ−1 )W ∩ W ) > 0.
+   Let y ∈ gW ∩ W . Then ||w(y) − p||2 , ||w(g −1 y) − p||2 ≤ ε and by using (7.b) we
+deduce that
+            ||vg − c(g, y)p||2 = ||pvg − c(g, y)p||2
+                                  = ||(p − w(y))vg − c(g, y)(p − w(g −1 y))||2 ≤ 2ε.
+
+   Similarly, if z ∈ (gλ−1 )W ∩ W , then ||vgλ−1 − c(gλ−1 , z)p||2 ≤ 2ε. Since vλ =
+(vgλ−1 )∗ vg , the combination of the last two inequalities yields
+                                             ∗
+        ||vλ − pc(gλ−1 , z)∗ c(g, y)p|| = ||vgλ −1 vg − (c(gλ
+                                                              −1
+                                                                 , z)p)∗ c(g, y)p||2 ≤ 4ε.
+
+   Therefore, since c(gλ−1 , z)∗ c(g, y) ∈ S 1 ×Γ and ε > 0 is arbitrary, we can ﬁnd two
+sequences {tn }n≥1 ⊂ S 1 and {γn }n≥1 ⊂ Γ such that limn→∞ ||vλ −p(tn uγn )p||2 = 0.
+By passing to a subsequence we can assume that tn → t ∈ S 1 and either γn → γ ∈ Γ
+or γn → ∞, as n → ∞. If γn → ∞, then tn uγn converges weakly to 0, which
+would imply that vλ = 0, a contradiction. Thus, we get that γn → γ ∈ Γ; hence
+                      W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                             1205
+
+
+vλ = tpuγ p. Since vλ ∈ U(pM p), we must have that uγ commutes with p. We
+altogether deduce that there exist maps h : Λ → S 1 and δ : Λ → Γ such that
+(7.c)                  [uδ(λ) , p] = 0 and vλ = h(λ)uδ(λ) p, ∀λ ∈ Λ.
+   As in the hypothesis, denote K = {γ ∈ Γ|uγ p ∈ Cp} and Γ = {δ(λ)k|λ ∈ Λ, k ∈
+K}. Then K is ﬁnite and (7.c) implies that Γ is a subgroup of Γ which contains
+K as a normal subgroup. Notice also that the map Λ  λ → δ(λ)K ∈ Γ /K is a
+group isomorphism.
+   We can now prove the moreover assertions.
+• If Γ is torsion free, then K = {e} and (7.c) implies that δ is a homomorphism
+and h is a character.
+   Further, assume that σ|δ(Λ) is ergodic and let ε > 0. Let Wε be the set of y ∈ Y
+for which there exists u ∈ S 1 × Γ ⊂ U(L(Γ)) such that ||w(y) − up||2 ≤ ε. Since p
+is an essential value of w, we have that μ(Wε ) > 0. On the other hand, (7.b) and
+(7.c) imply that Wε is Λ–invariant. Indeed, if y ∈ Y, λ ∈ Λ and u ∈ S 1 × Γ, then
+u = h(λ)c(λ, y)∗ uuδ(λ) ∈ S 1 × Γ satisﬁes
+        ||w(λ−1 y) − u p||2 = ||c(λ, y)∗ w(y)vλ − h(λ)c(λ, y)∗ uuδ(λ) p||
+                             = ||c(λ, y)∗ w(y)vλ − c(λ, y)∗ upvλ ||2 = ||w(y) − up||2 .
+Since β  is ergodic, we get that Wε = Y . By reasoning as above we conclude that
+there exists a measurable map u : Y → S 1 × Γ such that w(y) = u(y)p, for a.e.
+y ∈Y.
+   But then (7.b) can be rewritten as c(λ, y)u(λ−1 y)p = h(λ)u(y)uδ(λ) p, for all
+λ ∈ Λ and for almost all y ∈ Y . Since c(λ, y)u(λ−1 y), h(λ)u(y)uδ(λ) ∈ S 1 × Γ, by
+using the fact that K = {e}, we get that
+(7.d)         c(λ, y)u(λ−1 y) = h(λ)u(y)uδ(λ) , ∀λ ∈ Λ and for almost all y ∈ Y.
+  Finally, let ω ∈ L2 (A σ Γ) ∼= L2 (X, 2 (Γ)) be deﬁned by ω(x) = u(x), if
+x ∈ Y and ω(x) = 0, otherwise. By using (7.a) and (7.d) we get that (vvλ v ∗ )ω =
+h(λ)ωuδ(λ) , for all λ ∈ Λ.
+  Since ω = qω and vvλ v ∗ ∈ U(qM q), we further derive that
+(7.e)                         ω ∗ ω = uδ(λ) (ω ∗ ω)u∗δ(λ) , ∀λ ∈ Λ.
+   By the deﬁnition of ω, we can ﬁnd a ∈ U(A) and a measurable partition
+                                                                           {Aγ }γ∈Γ
+of Y such that ω = a γ∈Γ 1Aγ uγ . Hence, we have that ω ∗ ω = γ∈Γ u∗γ 1Aγ uγ =
+                                                                     
+   γ∈Γ 1γ −1 Aγ ∈ A. Since σ|δ(Λ) is ergodic, by (7.e) we deduce that   γ∈Γ 1γ −1 Aγ ∈
+C1. This clearly implies that Y = X; hence p = q = 1. Also, we get that
+w(y) = u(y) ∈ S 1 × Γ, for almost all y ∈ X; thus v ∈ NM (A). This shows that
+B = A, which concludes the proof of the torsion free case.
+• The proof of the general case is an adaptation of arguments from [34], Section 6.
+                                                                                1
+Assume that σ|Γ is weakly mixing. Since p is an essential value for w = τ (p) 2 η(v),
+we can ﬁnd a decreasing sequence of non–zero projections {qn }n≥1 ⊂ Aq such that
+
+                    ||q  v − τ (p)− 2 q  p||2 ≤ 2−n−1 ||q  ||2 , ∀q  ∈ P(Aqn )
+                                    1
+(7.f)
+for every n ≥ 1 (see [34], Lemma 6.1).
+   Let us introduce some                     1 and λ ∈ Λ. Since p, vλ ∈ L(Γ)
+                          notation. Fix n ≥ 
+we can decompose p = γ∈Γ cγ uγ and vλ = γ∈Γ cλγ uγ , with cγ , cλγ ∈ C, for all
+1206                                      ADRIAN IOANA
+
+                                        
+γ ∈ Γ. Thus, we have that qn vλ qn = γ∈Γ cλγ σγ (qn )qn uγ . Also, we decompose
+               
+qn vvλ v ∗ qn = γ∈Γ aλ,n          λ,n
+                     γ uγ , with aγ   ∈ Aq.
+   Let Fn = {γ ∈ Γ|aγ = 0}. By using (7.f), [34], Lemma 6.3 gives that
+            λ         λ,n
+
+                                                   −1 λ
+(7.g)              γ | = σγ (qn )qn and |1 − τ (p)
+                 |aλ,n                               |cγ || ≤ 2−n , ∀γ ∈ Fnλ .
+   Note that since vλ = h(λ)uδ(λ) p and |h(λ)| = 1, we get that
+(7.h)                          |cλγ | = |cδ(λ)−1 γ |, ∀γ ∈ Γ, λ ∈ Λ.
+   Next, we prove the following:
+Claim. τ (p)−1 ∈ N and |cγ | ∈ {0, τ (p)}, for all γ ∈ Γ.
+
+Proof of Claim. Let n ≥ 1 and ε > 0. Set F = {γ ∈ Γ| |cγ | ≥ τ (p)            2 }. By (7.g), if
+                                                                    −1
+γ ∈ Fnλ , then |cλγ | ≥ τ (p)
+                          2   . Using  (7.h)  this shows that  δ(λ)    γ ∈ F  . In other words,
+Fn ⊂ δ(λ)F, for all λ ∈ Λ.
+  λ
+
+   Now, since vvλ v ∗ normalizes Aq we get that aλ,n       γ    are partial isometries in Aq.
+Thus, using the deﬁnitions of Fn , aγ and the fact that v ∗ qn v ∈ v ∗ (Aq)v = B we
+                                       λ    λ,n
+
+derive that
+                               
+                                                         ∗                     ∗     ∗ ∗
+                      γ |) =
+               τ (|aλ,n                 γ |) = ||qn vvλ v qn ||2 = τ (qn vvλ v qn vvλ v qn )
+                                   τ (|aλ,n                    2
+(7.i)
+         γ∈Fnλ                γ∈Γ
+
+                           = τ (vλ (v ∗ qn v)vλ∗ (v ∗ qn v)) = τ (βλ (v ∗ qn v) (v ∗ qn v)).
+   Combining (7.g) and (7.i) yields
+                
+(7.j)               τ (σγ (qn )qn ) = τ (βλ (v ∗ qn v) (v ∗ qn v)), ∀λ ∈ Λ.
+                   γ∈Fnλ
+
+   Recall that Λ ∼
+                 = Γ /K and let π : Γ → Λ be the projection given by π(δ(λ)k) = λ,
+for all λ ∈ Λ and k ∈ K. Let ρ : Γ → Aut(A⊗B) be the action deﬁned by
+ρg = σg ⊗ βπ(g) , for all g ∈ Γ . Since σ|Γ and β are both weakly mixing, we get
+that ρ is weakly mixing. Let τB denote the normalized trace on B, i.e. τB (p) = 1
+and τB (b) = τ (p)−1 τ (b), for all b ∈ B. Since ρ is weakly mixing, we can ﬁnd a
+sequence {gm }≥1 ⊂ Γ such that σgm (a) → τ (a) and βπ(gm ) (b) → τB (b), weakly, for
+all a ∈ A and b ∈ B, as m → ∞. We may clearly assume that gm = δ(λm )k, for
+some sequence {λm }m≥1 ⊂ Λ and k ∈ K. Thus, we have that σδ(λm ) (a) → τ (a)
+and βλm (b) → τB (b), weakly, for all a ∈ A, b ∈ B.
+   In particular, it follows that we can ﬁnd λ ∈ Λ such that
+(7.k)                  τ (σδ(λ)g (qn )qn ) ≤ (1 + ε)τ (qn )2 , ∀g ∈ F and
+                   τ (βλ (v ∗ qn v) (v ∗ qn v)) = τ (p)τB (βλ (v ∗ qn v) (v ∗ qn v))
+                    ≥ (1 − ε)τ (p)τB (v ∗ qn v)2 = (1 − ε)τ (p)−1 τ (qn )2 .
+   Since Fnλ ⊂ δ(λ)F , (7.j) and (7.k) together imply that (1 + ε)|Fnλ | |τ (qn )|2 ≥
+(1 − ε)τ (p)−1 τ (qn )2 . Hence, |Fnλ | ≥ (1 − ε)2 τ (p)−1 .
+   From this, (7.g) and (7.h) we deduce that the cardinality of the set Sn := {γ ∈
+Γ| |cγ | ≥ (1 − 2−n )τ (p)} is at least (1 − ε)2 τ (p)−1 . As ε > 0 is arbitrary, we get
+that |Sn | ≥ τ (p)−1 , for all n ≥ 1. Thus S = n≥1 Sn = {γ| ∈ Γ| |cγ | ≥ τ (p)} has
+                                                             
+cardinality at least τ (p)−1 . On the other hand, since γ∈Γ |cγ |2 = ||p||22 = τ (p),
+we get that |S| ≤ τ (p)−1 . The last two facts clearly give the claim.                
+                   W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                      1207
+
+
+   Going back to the proof of (2), notice that by combining the above claim and
+[34], Lemma 5.3  we can ﬁnd a ﬁnite group K  ⊂ Γ and a character χ of K  such
+             −1                                                    
+that p = |K |      k ∈K  χ(k )uk . Thus K = {γ ∈ Γ|uγ p ∈ Cp} = K and the last
+                                  
+
+part of the proof of [34], Theorem 5.2 (pages 439–441) gives the conclusion.  
+
+            8. Strong rigidity for embeddings of II1 factors
+   We are now ready to prove the main technical results of this paper. Let M =
+A σ Γ and N = D ρ Λ be the crossed product algebras associated with actions
+of countable groups Γ and Λ on abelian von Neumann algebras A and D. We say
+that an embedding Δ : N → M is standard if we can ﬁnd a subgroup Γ0 ⊂ Γ and
+a σ(Γ0 )–invariant subalgebra A0 ⊂ A such that, up to conjugation with a unitary
+element and modulo scalars, we have that Δ(Λ) = Γ0 and Δ(D) = A0 . In other
+words, a standard embedding arises from a “realization” of Λ as a subgroup Γ0 ⊂ Γ
+and of ρ as a quotient of σ|Γ0 .
+   Assume that Λ is a “rigid group” (e.g. Λ has property (T) or is a product
+of two non–amenable groups) and that σ is a Bernoulli action. Our ﬁrst result
+roughly says that any embedding Δ : N → M is standard unless it comes from an
+embedding of N into L(Γ). As we will see in Section 10, in certain situations (e.g.,
+if Γ = F2 × F2 ), we can rule out the appearance of such bad embeddings and thus
+we can completely describe the embeddings of N into M . This is why we use the
+phrase strong rigidity for embeddings to refer to the results of this section.
+Theorem 8.1. Let Γ be a torsion free, ICC, countable group, B be an abelian von
+Neumann algebra and denote M = B Γ  Γ. Let ρ : Λ → Aut(D) be a free action of
+a countable group Λ on an abelian von Neumann algebra D and denote N = Dρ Λ.
+Suppose that Λ admits an inﬁnite, almost normal subgroup Λ0 such that either
+(1) the inclusion (Λ0 ⊂ Λ) has the relative property (T) or
+(2) Λ0 is generated by two commuting subgroups Λ1 , Λ2 , with Λ1 non–amenable and
+Λ2 inﬁnite.
+    Let Δ : N → M be a ∗–homomorphism and suppose that Δ(N ) ⊀M L(Γ).
+    Then Δ must be unital and there exist a character η of Λ, a group homomorphism
+δ : Λ → Γ and a unitary u ∈ M such that Δ(D) ⊂ uAu∗ and Δ(vλ ) = η(λ)uuδ(λ) u∗ ,
+for all λ ∈ Λ.
+   Recall that a subgroup Λ0 of a countable group Λ is almost normal if λΛ0 λ−1 ∩Λ0
+has ﬁnite index in both λΛ0 λ−1 and Λ0 , for any λ ∈ Λ.
+   We are also able to prove a strong rigidity result for the embeddings of N into a
+tensor product M = M1 ⊗M2 of two II1 factors coming from Bernoulli actions. If
+we represent M as a crossed product A  Γ, as in 3.1, then our second result gives
+a list of assumptions which force an embedding Δ : N → M to be standard, in the
+sense from above.
+   This result will be crucial in deriving W ∗ –superrigidity (see Section 9).
+
+Theorem 8.2. In the context from 3.1, i.e., Mi = BiΓi  Γi , M = M1 ⊗M2 ,
+A = B1Γ1 ⊗B2Γ2 , Γ = Γ1 × Γ2 , assume that Γ is ICC (i.e. Γ1 , Γ2 are ICC).
+   Let ρ : Λ → Aut(D) be a free action of a countable group Λ on an abelian
+von Neumann algebra D and denote N = D ρ Λ. Suppose that Λ admits an
+inﬁnite, almost normal subgroup Λ0 such that the inclusion (Λ0 ⊂ Λ) has the relative
+property (T).
+1208                                ADRIAN IOANA
+
+
+   Let Δ : N → M be a ∗–homomorphism and suppose that:
+(1) Δ(L(Λ0 )) ⊀M L(Γ1 ) ⊗ 1 and Δ(L(Λ0 )) ⊀M 1 ⊗ L(Γ2 ).
+(2) Δ(N ) ⊀M L(Γ1 )⊗M2 and Δ(N ) ⊀M M1 ⊗L(Γ2 ).
+We have that
+• If Γ is torsion free, then Δ must be unital and we can ﬁnd a character η of Λ, a
+group homomorphism δ : Λ → Γ and a unitary u ∈ M such that Δ(D) ⊂ uAu∗ and
+Δ(vλ ) = η(λ)uuδ(λ) u∗ , for all λ ∈ Λ.
+• In general, we can ﬁnd a ﬁnite index subgroup Λ1 of Λ, a 1–1 map δ : Λ1 → Γ,
+u1 , . . . , un ∈ NM (A) and u ∈ U(M ) such that if we let Δ̃ = Ad(u) ◦ Δ : N → M ,
+then
+(a) Δ̃(D) ⊂ A, there exists a projection 0 = p ∈ A and aλi ∈ (A)1 , for all i ∈
+                                                              n
+{1, . . . , n}, λ ∈ Λ1 , such that p ≤ Δ̃(1) and pΔ̃(vλ ) =          λ
+                                                                i=1 ai uδ(λ) ui , for all
+λ ∈ Λ1 ,
+(b) there exists a ﬁnite subgroup K ⊂ Γ such that δ(λ) normalizes K and we have
+that δ(λλ )−1 δ(λ)δ(λ ) belongs to K, for all λ, λ ∈ Λ1 .
+If in addition max{|K| |K ﬁnite subgroup of Γ} < ∞, then τ (Δ(1)) ∈ l−1 N, where
+l is the least common multiple of |K| with K being a ﬁnite subgroup of Γ.
+
+   The conclusion of Theorem 8.2 (in the case when Γ has torsion) is rather involved
+and technical and might seem hard to work with.
+   However, it is manageable enough to be useful in applications. Thus, we will use
+it to prove W ∗ –superrigidity of Bernoulli actions of property (T) groups without
+assuming torsion freeness. This is of particular interest when applied to the linear
+groups SLn (Z), for n ≥ 3.
+   Theorem 8.1 can also be extended (just as Theorem 8.2) to cover groups with
+torsion. On the other hand, note that Theorem 8.1 applies to a larger class of groups
+Λ than Theorem 8.2. Let us explain why this diﬀerence appears. The ﬁrst step in
+the proofs of both Theorems 8.1 and 8.2 consists of showing that if Δ : N → M is
+an embedding, then L(Λ) is “absorbed” by L(Γ). When Λ has property (T) this
+is granted by Theorem 2.1, in both the contexts from Theorems 8.1 and 8.2. If
+Λ = Λ1 × Λ2 is a product of two non–amenable groups, the absorption result still
+holds in the context of Theorem 8.1 (by [39]). However, if M = M1 ⊗M2 is as in
+Theorem 8.2, then the absorption result fails in general. Indeed, one can easily
+construct a situation in which we have that L(Λ1 ) ⊂ M1 and L(Λ2 ) ⊂ M2 without
+having that L(Λ) is absorbed by L(Γ).
+   We ﬁrst prove Theorem 8.2. Since the proof of Theorem 8.1 is analogous to
+the proof of Theorem 8.2, we will only sketch it, leaving most of the details to the
+reader.
+
+Proof of Theorem 8.2. Let Δ : N → M be a ∗–homomorphism satisfying (1)–(2)
+and set q = Δ(1).
+   From now on, we identify N with Δ(N ) and forget about Δ. Since the inclusion
+(Λ0 ⊂ Λ) has the relative property (T), the inclusion (L(Λ0 ) ⊂ qM q) is rigid ([35]).
+By using (1) and the fact that Γ is ICC, Theorem 2.1 implies that we can ﬁnd a
+unitary u ∈ M such that u(qNqM q (L(Λ0 )) )u∗ ⊂ L(Γ). Since Λ0 is almost normal
+in Λ we deduce that
+
+(8.a)                              uL(Λ)u∗ ⊂ L(Γ).
+                      W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                       1209
+
+
+  Next, we claim that
+(8.b)                  D ⊀M L(Γ1 )⊗M2 and D ⊀M M1 ⊗L(Γ2 ).
+   Assume by contradiction that D ≺M L(Γ1 )⊗M2 . Since D is abelian, we can
+ﬁnd a non–zero projection r ∈ D ∩ qM q and a, b ∈ M such that (D)1 r ⊂
+a(L(Γ1 )⊗M2 )1 b. Recall that M1 = B1Γ1 Γ1 and let M̃1 ⊃ M1 , {θt1 }t∈R ⊂ Aut(M̃1 )
+be the weakly malleable deformations deﬁned in section 1.5. Set θt = θt1 ⊗ idM2 ∈
+Aut(M̃1 ⊗M2 ).
+   Let V be a ρ(Λ)–invariant, ||.||2 –dense subgroup of U(D). Then U = {vλ v|λ ∈
+Λ, v ∈ V} is a group of unitaries of N which generates N as a von Neumann
+algebra. By using (8.a) and the inclusion Vr ⊂ a(M2 )1 b, we get that Ur ⊂
+u∗ (L(Γ))1 ua(L(Γ1 )⊗M2 )1 b. Since θt |L(Γ1 )⊗M2 = idL(Γ1 )⊗M2 , we can ﬁnd t > 0
+such that ||θt (x)r − xr||2 ≤ ||r||
+                                2 , for all x ∈ U. Thus, for all x ∈ U we have that
+                                   2
+
+                             ||r||22
+ (θt (x)r − xr), xr ≥ −      2 ; hence
+
+                                                                           ||r||22
+         τ (x∗ θt (x)r) =  θt (x)r, xr = xr, xr +  (θt (x)r − xr), xr ≥      .
+                                                                             2
+   Since U is a group, by averaging (see e.g. the proof of Theorem 2.1) we deduce
+that there exists 0 = v ∈ qM such that vθt (x) = xv, for all x ∈ U. Since U  = N ,
+we get that vθt (x) = xv, for all x ∈ N.
+   The proof of Theorem 2.1 (see Remark 2.2) implies that N ≺M L(Γ1 )⊗M2 . This
+contradicts assumption (2); hence (8.b) is proven.
+   Further, by combining (8.a), (1) and (8.b), Theorem 6.1 implies that C = D ∩
+qM q is a type I von Neumann algebra and that we may assume that q = Δ(1) ∈ A
+and Aq ⊂ C.
+   Denote by Z the center of C.Since D is abelian, Z contains D. Since C is of
+type I we can decompose Z = i≥1 Zi , where the Zi are abelian von Neumann
+                            
+algebras, such that C =       i≥1 (Mni (C) ⊗ Zi ), for some (possibly ﬁnite) strictly
+increasing sequence 1 ≤ n1 < n2 < · · · . Since A ⊂ M is maximal abelian, we get
+that Aq is maximal abelian in C. Since, by a classical result, any two maximal
+                             I algebra are conjugate (see e.g. [44], Lemma C.2),
+abelian subalgebras of a type
+we may assume that Aq = i≥1 (Cni ⊗ Zi ), where Cni ⊂ Mni (C) is the subalgebra
+of diagonal matrices.
+   Now, since Λ = {vλ }λ∈Λ ⊂ U(qM q) normalizes D, it also normalizes C =
+D ∩ qM q and Z = Z(C). Moreover, Λ normalizes Mni (C) ⊗ Zi and Zi , for all
+i ≥ 1. Denote by α the action of Λ on Z given by αλ (z) = vλ zvλ∗ , for all λ ∈ Λ and
+z ∈ Z. Since α leaves Zi invariant, for all i ≥ 1, we can deﬁne an action β of Λ on
+C by letting             
+                   βλ =     (idMni (C) ⊗ αλ|Zi ) ∈ Aut(C), ∀λ ∈ Λ.
+                           i≥1
+   Let λ ∈ Λ. Since the automorphisms βλ and Ad(vλ ) of C are equal on its center,
+                                               ωλ ∈ C such that βλ = Ad(vλ ωλ ),
+Z, by [19], Corollary 9.3.5 we can ﬁnd a unitary
+as automorphisms of C. As β leaves Aq = i≥1 (Cni ⊗ Zi ) invariant, we get that
+      NqM q (Aq). Thus, we can ﬁnd zλ ∈ U(Aq) and Vλ ∈ NqM q (Aq) of the form
+vλ ωλ ∈
+Vλ = γ∈Γ pγ,λ uγ , where pγ,λ ∈ P(Aq), such that vλ ωλ = Vλ zλ .
+                                                                          ∗
+   We claim that Vλ Vλ = Vλλ , for all λ, λ ∈ Λ. To see this, let v = Vλλ  Vλ Vλ  ∈
+                                                          ∗            ∗ ∗
+U(qM q). Note that for all x ∈ Aq we have that Vλ xVλ = Vλ zλ xzλ Vλ = βλ (x).
+Using this fact, we immediately get that v ∈ (Aq) ∩qM q = Aq. On the other hand,
+1210                                     ADRIAN IOANA
+
+                       
+v is of the form v = γ∈Γ pγ uγ , for some pγ ∈ P(Aq) (this is because Vλ , Vλ and
+  ∗
+Vλλ  are of this form). By combining the last two observations we get that v = 1,
+
+as claimed.
+    We also claim that EA (Vλ ) = 0, for all λ ∈ Λ \ {e}. Otherwise, we can ﬁnd
+λ = e and a non–zero projection p ∈ Aq such that βλ (x) = x, for all x ∈ Ap. Thus,
+we can ﬁnd a non–zero projection p0 ∈ Z such that αλ (x) = x, for all x ∈ Zp0 .
+Since D ⊂ Z, we get that αλ (x)p0 = xp0 , for all x ∈ D. Let 0 = p1 ∈ D be the
+support projection of ED (p0 ). By projecting onto D and noticing that αλ|D = ρλ ,
+as automorphisms of D, we get that ρλ (x)p1 = xp1 , for all x ∈ D. This, however,
+contradicts the freeness of ρ.
+    Altogether, we proved that there exist wλ = ωλ zλ∗ ∈ U(C) such that Vλ = vλ wλ
+normalizes C, Aq and Z, Vλ Vλ = Vλλ and EA (Vλ ) = δλ,e q, for all λ, λ ∈ Λ.
+For i ≥ 1, let ei,1 , . . . , ei,ni ∈ Cni be the canonical projections. Then β ﬁxes
+pi,j := ei,j ⊗ 1 ∈ Cni ⊗ Zi .
+    Next, we prove the following:
+Claim 1. There exists a unitary v ∈ U(M ) such that vVλ v ∗ ∈ L(Γ), for all λ ∈ Λ.
+Proof of Claim 1. Let Q = {Vλ |λ ∈ Λ0 } and P = {Vλ |λ ∈ Λ} . Since the inclusion
+(Λ0 ⊂ Λ) has the relative property (T), by [35] the inclusion (Q ⊂ M ) is rigid.
+Since Λ0 is almost normal in Λ, we get that P ⊂ qNqM q (Q) . Since Γ is ICC, by
+Theorem 2.1, in order to prove the claim, it suﬃces to show that Q ⊀M L(Γ1 ) and
+Q ⊀M L(Γ2 ).
+   Let us show that Q ⊀M L(Γ1 ). Since L(Λ0 ) ⊀M L(Γ1 ), Theorem 1.3.1 gives a
+sequence {λn }n≥1 ⊂ Λ0 satisfying ||EL(Γ1 ) (xvλn y)||2 → 0, for all x, y ∈ M . We
+claim that
+(8.c)                sup ||EL(Γ1 ) (xvλn yaz)||2 → 0, ∀x, y, z ∈ M.
+                    a∈(A)1
+
+   Let a ∈ (A)1 . Since uL(Λ0 )u∗ ⊂ L(Γ), we can assume that             vλn ∈ L(Γ), for
+the purpose of proving (8.c). Then we can decompose vλn = γ∈Γ cn,γ uγ , where
+cn,γ ∈ C, for all n ≥ 1 and γ ∈ Γ. It is clearly enough to prove (8.c) when
+x = x0 ug , y = y0 uh , z = z0 uk , for some x0 , y0 , z0 ∈ (A)1 and g, h, k ∈ Γ. In this
+case, we have that
+                                  
+                    xvλn yaz =         cn,γ x0 σgγ (y0 )σgγh (az0 )ugγhk .
+                                   γ∈Γ
+
+Since a, x0 , y0 , z0 ∈ (A)1 , we get that |τ (x0 σgγ (y0 )σgγh (az0 ))| ≤ 1, for all γ ∈ Γ.
+Thus
+                                        
+       ||EL(Γ1 ) (xvλn yaz)||22 =                 |cn,γ |2 |τ (x0 σgγ (y0 )σgγh (az0 ))|2
+                                   γ∈g −1 Γ1 k−1 h−1
+                                          
+                               ≤                       |cn,γ |2 = ||EL(Γ1 ) (ug vλn uhk )||22 .
+                                   γ∈g −1 Γ1 k−1 h−1
+
+As we have that ||EL(Γ1 ) (ug vλn uhk )||2 → 0, (8.c) is therefore proven.
+    Next, ﬁx ε > 0 and x, y ∈ M . Let q0 ∈ C be a projection such that ||q0 − q||2 ≤
+                    k
+ε and Cq0 =            i=1 (Mni (C) ⊗ Zi ),
+                                         l
+                                            for some k ≥ 1. Remark that we can ﬁnd
+z1 , . . . , zl ∈ C such that (Cq0 )1 ⊂ j=1 (A)1 zj . Moreover, for every u ∈ U(C) we
+have that ||u(q − q0 )||2 = ||q − q0 ||2 ≤ ε. By using these facts and recalling that
+                    W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                           1211
+
+
+wλn ∈ U(C), we deduce that
+        ||EL(Γ1 ) (xVλn y)||2 = ||EL(Γ1 ) (xvλn wλn y)||2
+              ≤ ||EL(Γ1 ) (xvλn wλn (q − q0 )y)||2 + ||EL(Γ1 ) (xvλn (wλn q0 )y)||2
+                                 
+                                 l
+              ≤ ε||x|| ||y|| +        sup ||EL(Γ1 ) (xvλn azj y)||2   ∀n ≥ 1.
+                                 j=1 a∈(A)1
+
+This inequality in combination with (8.c) gives that lim supn→∞ ||EL(Γ1 ) (xVλn y)||2
+≤ ε. Since ε > 0 is arbitrary, we deduce that limn→∞ ||EL(Γ1 ) (xVλn y)||2 = 0, for
+all x, y ∈ M . Since {Vλn }n≥1 ⊂ U(Q), we get that Q ⊀M L(Γ1 ).                    
+  Next, recall that Vλ normalizes Aq and Vλ xVλ∗ = βλ (x), for all x ∈ Aq, λ ∈ Λ.
+Claim 2 ([34]). There exist a ﬁnite index subgroup Λ1 ⊂ Λ and a non–zero β(Λ1 )–
+invariant projection p ∈ Aq ∩ v ∗ L(Γ)v such that the restriction of the action β|Λ1
+to Ap is weakly mixing. Moreover, we have that p ≤ pi,j , for some i ≥ 1 and
+j ∈ {1, . . . , ni }.
+Proof of Claim 2. This claim follows from an argument of Popa (see the proofs of
+[34], Lemma 4.5 and [44], Theorem 9.1). Let A0 = Aq ∩ v ∗ L(Γ)v and note that
+q ∈ A0 . It is easy to see that A0 is a completely atomic, (abelian) von Neumann
+algebra. Since Vλ ∈ v ∗ L(Γ)v, for all λ ∈ Λ, we get that Vλ normalizes A0 ; hence A0
+is β–(globally) invariant. Let p ∈ A0 be a minimal projection. Then p is invariant
+under some ﬁnite index subgroup Λ1 of Λ. Denote Q1 := {Vλ |λ ∈ Λ1 } ⊂ qM q and
+notice that p ∈ Q1 ∩ qM q.
+   Towards proving that the restriction of β|Λ1 to Ap is weakly mixing, let H ⊂ Ap
+be a ﬁnite dimensional β(Λ1 )–invariant subspace. Since for every λ ∈ Λ1 and ξ ∈ H,
+we have that Vλ ξ = βλ (ξ)Vλ ⊂ HVλ and ξVλ = Vλ βλ−1 (ξ) ⊂ Vλ H, we derive that
+H is contained in the quasi–normalizer of Q1 p in pM p.
+   Since Q1 p ⊂ v ∗ L(Γ)v, while Q1 ⊀M L(Γ1 ) and Q1 ⊀M L(Γ2 ) (by the proof
+of Claim 1), [45], Lemma 4.2 gives that H ⊂ v ∗ L(Γ)v. Thus, we get that H ⊂
+Ap ∩ v ∗ L(Γ)v = A0 p. Since p is a minimal projection in A0 , we must have that
+H = Cp, which proves the weak mixingness assertion.
+   The moreover assertion is clear since pi,j is β–invariant, for all i ≥ 1, j ∈
+{1, . . . , ni }.                                                                   
+   To summarize, we have that
+   • {Vλ }λ∈Λ ⊂ v ∗ L(Γ)v ∩ U(qM q) normalizes Aq,
+   • p ∈ Aq ∩ v ∗ L(Γ)v commutes with Vλ , for all λ ∈ Λ1 , and
+   • the action Λ1  λ → βλ |Ap = Ad(Vλ p) ∈ Aut(Ap) is weakly mixing. Let
+p = vpv ∗ ∈ L(Γ) and Λ1 = {v(Vλ p)v ∗ }λ∈Λ1 ⊂ U(p L(Γ)p ). Then Λ1 acts on
+B = v(Ap)v ∗ ⊂ p (A σ Γ)p by conjugation and the resulting action (denoted β  )
+is weakly mixing. Moreover, we have that {B, Λ1 } ∼    = B β  Λ1 . Indeed, this is
+because EB (v(Vλ p)v ∗ ) = EAp (Vλ p) = EA (Vλ )p = 0, for all λ ∈ Λ1 \ {e}.
+   By applying Theorem 7.1 we can ﬁnd maps h : Λ1 → S 1 , δ : Λ1 → Γ and a
+unitary w ∈ L(Γ) such that [wuδ(λ) w∗ , p ] = 0 and
+(8.d)                  v(Vλ p)v ∗ = h(λ)(wuδ(λ) w∗ )p , ∀λ ∈ Λ1 .
+  Let K = {γ ∈ Γ|(wuγ w∗ )p ∈ Cp } and Γ = {δ(λ)k|λ ∈ Λ1 , k ∈ K}. Then
+K, Γ are subgroups of Γ, |K| < ∞ and Γ normalizes K. It is also clear that
+1212                                 ADRIAN IOANA
+
+
+δ(λλ )−1 δ(λ)δ(λ ) ∈ K, for all λ, λ ∈ Λ1 , thus proving condition (b) in the general
+case.
+    To show that σ|Γ is weakly mixing, let πi : Γ → Γi be the projection πi (γ1 , γ2 ) =
+γi . Then σ is the diagonal product of the generalized Bernoulli actions σi ◦ πi : Γ →
+Aut(BiΓi ). Thus, if σ|Γ is not weakly mixing, then either (σ1 ◦ π1 )|Γ or (σ2 ◦ π2 )|Γ
+is not weakly mixing. By [37], Lemma 4.5 we would get that some ﬁnite index
+subgroup Γ of Γ is contained in either Γ1 or Γ2 . By using (8.d), this would
+imply that a corner of Q1 = {Vλ |λ ∈ Λ1 } embeds into either L(Γ1 ) or L(Γ2 ), a
+contradiction, by the proof of Claim 1.
+    For the rest of the proof we analyze separately the case when Γ is torsion free
+and the general case:
+• If Γ is torsion free, then K = {e}, h is a character, δ is a 1–1 homomorphism
+and Γ = δ(Λ1 ). Since σ|δ(Λ1 ) is ergodic, by Theorem 7.1 we get that p = 1 and
+B = wAw∗ .
+    Since p ≤ q = Δ(1), Δ must be unital. Also, since by Claim 2 we have that
+p ≤ pi,j , for some i ≥ 1 and j ∈ {1, . . . , ni }, we deduce that C is abelian and
+Z = A = C. Moreover, we get that β|Λ1 is weakly mixing and hence β itself is
+weakly mixing. Thus, in Claim 2 and after we may take Λ1 = Λ. If z = v ∗ w, then
+z normalizes A and (8.d) can be rewritten as
+(8.e)                         Vλ = h(λ)zuδ(λ) z ∗ , ∀λ ∈ Λ.
+   Let θ = Ad(z) ∈ Aut(A). Then (8.e) implies that βλ = θ ◦ σδ(λ) ◦ θ −1 , for all
+λ ∈ Λ. In other words, the actions β and σ|δ(Λ) are conjugate.
+   Next, recall that vλ = Vλ wλ∗ , for all λ ∈ Λ, for some unitary wλ ∈ C = A. Since
+vλ vλ = vλλ and vλ = βλ (wλ∗ )Vλ , for all λ, λ ∈ Λ, we get that the map Λ  λ →
+βλ (wλ∗ ) ∈ U(A) is a 1–cocycle for β. By the proof of Claim 2, Q = {Vλ |λ ∈ Λ0 }
+satisﬁes Q ⊀M L(Γ1 ) and Q ⊀M L(Γ2 ). By reasoning as above we deduce that
+σ|δ(Λ0 ) is weakly mixing. Note that the inclusion (δ(Λ0 ) ⊂ δ(Λ)) has the relative
+property (T) and is almost normal. Finally, note that σ is s–malleable (see [37],
+section 4 for the deﬁnition and proof).
+   Altogether, we can apply Popa’s cocycle superrigidity theorem [37], Corollary
+5.2 and deduce that the action σ|δ(Λ) is Uf in –cocycle superrigid (in the sense of
+[37], 5.6.0). Thus, β|Λ is cocycle superrigid, so we can ﬁnd U ∈ U(A) and a
+character h of Λ such that β(λ)(wλ∗ )Vλ = h (λ)U Vλ U ∗ , for all λ ∈ Λ. Together
+with (8.e) this provides a character η = hh of Λ and W = U z ∈ NM (A) such that
+vλ = η(λ)W uδ(λ) W ∗ , for all λ ∈ Λ. As A = C ⊃ D, this gives the conclusion in
+the case when Γ is torsion free.
+• For general Γ, since σ|Γ is weakly mixing, by Theorem 7.1 we deduce that p0 =
+                                   
+w∗ p w is of the form p0 = |K|−1 k∈K χ(k)uk ∈ L(K), for some character χ of K,
+and that B = w(AK p0 )w∗ , where AK = {a ∈ A|σ(k)(a) = a, ∀k ∈ K}.
+   In particular, this shows that τ (p) = |K|−1 ∈ l−1 N, for every minimal projection
+p of Aq ∩ vL(Γ)v ∗ and so we get that τ (Δ(1)) = τ (q) ∈ l−1 N (if we assume that
+l < ∞).
+   Now, let z = v ∗ w. Then (8.d) implies that Vλ p = h(λ)z(uδ(λ) p0 )z ∗ , for all
+λ ∈ Λ1 . Also, since B = v(Ap)v ∗ = w(AK p0 )w∗ , we get that
+(8.f)                              Ap = z(AK p0 )z ∗ .
+   Next, let q0 ∈ A be a projection such that the projections {σ(k)(q0 )}k∈K form
+a partition of unity in A (here, we use the fact that K acts freely). Then it is easy
+                     W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                            1213
+
+
+to verify that ξ = |K| 2 p0 q0 is a partial isometry such that ξ ∗ ξ = q0 , ξξ ∗ = p0 and
+                         1
+
+
+AK p0 = ξ(Aq0 )ξ ∗ . Thus, (8.f) gives that zξ(Aq0 )(zξ)∗ = Ap and so we can ﬁnd
+η ∈ NM (A) extending the partial isometry zξ. Since ηξ ∗ = zp0 we get that
+(8.g)                        Vλ p = h(λ)η(ξ ∗ uδ(λ) ξ)η ∗ , ∀λ ∈ Λ1 .
+                                                                   
+   Recall that vλ = Vλ wλ∗ , where wλ ∈ U(C), and that C = i≥1 (Mni (C) ⊗ Zi ) ⊃
+      
+Aq = i≥1 (Cni ⊗ Zi ). Let i be such that p ≤ pi,j , for some j ∈ {1, . . . , ni }. Since
+Cni ⊗ Zi is regular in Mni (C) ⊗ Zi and Cni ⊗ Zi = Aqi , for           some qi ∈ P(Aq),
+we can ﬁnd u1 , . . . , um ∈ NM (A) such that(Mni (C) ⊗ Zi )1 ⊂ m        i=1 (A)1 ui . Since
+pC ⊂ Mni (C) ⊗ Zi , we derive that pwλ∗ ∈ m    i=1 (A) 1 u i , for all λ ∈  Λ1 . Combining
+this with (8.g), the deﬁnition of ξ and the fact that η normalizes A gives that
+                                                                  
+                                                                  m
+(8.h)                pvλ = (Vλ p)(pwλ∗ ) ∈ η(ξ ∗ uδ(λ) ξ)η ∗            (A)1 ui
+                                                                  i=1
+                               
+                                m
+                    ⊂ |K|                  (A)1 ηuk uδ(λ) uk η ∗ ui , ∀λ ∈ Λ1 .
+                             k,k ∈K i=1
+
+   Recall that N ⊂ qM q (unitally), D ⊂ Aq and p ∈ Aq. Finally, let Δ̃ =
+Ad(η ∗ )|N : N → M . Since δ(λ) normalizes K and η ∈ NM (A), (8.h) implies
+that
+                                  m
+               ∗
+             (η pη)Δ̃(vλ ) ∈ |K|      (A)1 uδ(λ) ukk η ∗ ui η, ∀λ ∈ Λ1 .
+                                     k,k ∈K i=1
+
+   Since Δ̃(D) ⊂ A, η ∗ pη ≤ Δ̃(1N ) = η ∗ qη and uk (k ∈ K), η, ui all normalize A,
+this completes the proof.                                                         
+Proof of Theorem 8.1. Let Δ : N → qM q be a unital ∗–homomorphism, for some
+q ∈ P(M ), and identify N with Δ(N ). Assume that N ⊀M L(Γ). Since D is
+regular in N and σ is mixing, by [33], Theorem 3.1 we get that D ⊀M L(Γ).
+   Further, we claim that we can ﬁnd u ∈ U(M ) such that uL(Λ)u∗ ⊂ L(Γ).
+   In case (a), this follows from Theorem 2.1, while in case (b) it follows from [39],
+Lemma 5.2 and [8], Theorem 3. By combining there two facts and Theorem 6.2 and
+by reasoning as in the proof of Theorem 8.2 (the torsion free case), the conclusion
+follows.                                                                            
+
+                                   9. W∗ –superrigidity
+  In this section we prove Theorem A. Let us ﬁrst restate it using the language of
+von Neumann algebras.
+Theorem 9.1. Let Γ be an ICC countable group which admits an inﬁnite, almost
+normal subgroup Γ0 such that the inclusion (Γ0 ⊂ Γ) has the relative property (T).
+Let B be a non–trivial abelian von Neumann algebra. Denote M = B Γ  Γ and
+A = BΓ.
+   Let ρ : Λ → Aut(C) be a free ergodic action of a countable group Λ on an abelian
+von Neumann algebra C. Denote N = C  Λ.
+   Let θ : N → qM q be a ∗–isomorphism, for some projection q ∈ M .
+   Then q = 1 and there exist a unitary u ∈ M , a character η of Λ, and a group
+isomorphism δ : Λ → Γ such that θ(C) = uAu∗ and θ(vλ ) = η(λ)uuδ(λ) u∗ , for all
+λ ∈ Λ.
+1214                                ADRIAN IOANA
+
+
+   Deﬁne the ∗–homomorphism Δ : N → N ⊗N by letting Δ(cvλ ) = cvλ ⊗ vλ , for
+all c ∈ C and λ ∈ Λ. Note that Δ has been introduced in the proof of [42], Lemma
+3.2.
+   Since N ∼= qM q, we can view Δ as a non–unital embedding of M into M ⊗M .
+In the proof of Theorem 9.1 we will apply Theorem 8.2 to Δ. We will then need
+certain properties of Δ, which we record in the following lemma.
+Lemma 9.2. Let Q ⊂ N be a von Neumann subalgebra. We have that:
+(1) If Δ(Q) ≺N ⊗N N ⊗ 1, then Q ≺N C.
+(2) If Δ(Q) ≺N ⊗N 1 ⊗ N , then Q is not diﬀuse.
+(3) If Δ(N ) ≺N ⊗N Q⊗N , then C ≺N Q.
+(4) If Δ(N ) ≺N ⊗N N ⊗Q, then L(Λ) ≺N Q. Moreover, if Δ(N )s ≺N ⊗N N ⊗Q,
+for every non–zero projection s ∈ Δ(N ) ∩ N ⊗N , then L(Λ)r ≺N Q, for every
+non–zero projection r ∈ L(Λ) ∩ N .
+Proof of Lemma 9.2. (1) Arguing by contradiction, if Q ⊀N C, we can ﬁnd a se-
+quence {un }n≥1 ⊂ U(Q) such that ||EC (aun b)||2 → 0, for all a, b ∈ N . We claim
+that
+(9.a)              ||EN ⊗1 (xΔ(un )y)||2 → 0, for all x, y ∈ N ⊗N.
+   Since EN ⊗1 is N ⊗ 1–bimodular, we may assume that x = 1 ⊗ aug , y = 1 ⊗ buh ,
+for some a, b ∈ C and g, h ∈ Λ. Then for all n ≥ 1, we have that
+                                 
+                     xΔ(un )y =     EC (un vλ∗ )vλ ⊗ avg vλ bvh .
+                                   λ∈Λ
+
+   Thus we get that ||EN ⊗1 (xΔ(un )y)||2 = |τ (aρh−1 (b)| ||EC (un vλ∗ )||2 → 0, which
+proves (9.a). Since un ∈ U(Q), (9.a) implies that Δ(Q) ⊀N ⊗N N ⊗ 1, and we are
+done.
+(2) The proof of this part is similar to the proof of (1), so we leave it as an exercise.
+(3) If Δ(N ) ≺N ⊗N Q⊗N , then Δ(C) ≺N ⊗N Q⊗N . The conclusion follows easily
+after noticing that Δ(C) = C ⊗ 1.
+(4) Arguing by contradiction, assume that L(Λ)r ⊀N Q, for some non–zero projec-
+tion r ∈ L(Λ) ∩ N . Since the group {vλ r}λ∈Λ generates L(Λ)r as a von Neumann
+algebra, we can ﬁnd a sequence {λn }n≥1 ⊂ Λ such that ||EQ (avλn rb)||2 → 0, for
+all a, b ∈ N .
+   Deﬁne s := 1 ⊗ r ∈ Δ(N ) ∩ N ⊗N . We claim that
+(9.b)                ||EN ⊗Q (xΔ(vλn )sy)||2 → 0, ∀x, y ∈ N ⊗N.
+    Since EN ⊗Q is N ⊗ 1–bimodular, we may take x = 1 ⊗ a, y = 1 ⊗ b, for some
+a, b ∈ N . Then EN ⊗Q (xΔ(vλn s)y) = vλn ⊗ EQ (avλn rb).
+    Since ||EQ (avλn rb)||2 → 0, this proves (9.b). Now, since Δ(vλn )s ∈ U(Δ(N )p),
+(9.b) implies that Δ(N )s ⊀N ⊗N N ⊗Q and our proof by contradiction is over. 
+Remark. The moreover part of (4) was ﬁrst noticed by Stefaan Vaes who pointed out
+to us that it can be used to simplify our initial proof of Theorem 9.1. Speciﬁcally,
+the moreover part of (4) enables us to avoid repeating the proof of Theorem 6.1 in
+the proof of Case (5) below.
+Proof of Theorem 9.1. Let θ : N → qM q be an isomorphism, for some q ∈ P(M ).
+Let t = τ (q)−1 and k ≥ t be an integer. View Ck as the algebra of diagonal matrices
+in Mk (C) and let r ∈ Ck ⊗ C be a projection of normalized trace kt in Mk (C) ⊗ C.
+                    W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                           1215
+
+
+Consider the ∗–homomorphism idMk (C) ⊗ Δ : Mk (C) ⊗ N → Mk (C) ⊗ (N ⊗N ) ∼          =
+(Mk (C) ⊗ N )⊗N . Since (idMk (C) ⊗ Δ)(r) = r ⊗ 1 and r(Mk (C) ⊗ N )r ∼ = N t , we get
+a unital ∗–homomorphism Δt : N t → N t ⊗N .
+    Fix an embedding N ⊂ N t and view Δt as a ∗–homomorphism Δt : N t →
+N ⊗N t . It is easy to see that Lemma 9.2 holds true if we replace N and Δ by N t
+   t
+
+and Δt , throughout. We denote by C t = r(Ck ⊗ C)r ⊂ N t . Observe that C t ⊂ N t
+is a Cartan subalgebra and that Δt (x) = x ⊗ q, for all x ∈ C t . For simplicity, we
+denote 1 ⊗ q by q. From now on, we identify N t ∼  = M (via θ t , the t–ampliﬁcation
+of θ) and view Δt as a ∗–homomorphism Δt : M → M ⊗M with Δt (1) = q.
+    To continue, assume for the moment that () there is a non–zero projection
+s ∈ Δt (M ) ∩q(M ⊗M )q such that Δt (M )s ⊀M ⊗M M ⊗L(Λ). Let Δ̃t : M → M ⊗M
+be given by Δ̃t (x) = Δt (x)s. Since Δ̃t (M ) ⊀M ⊗M M ⊗L(Λ), by applying Theorem
+8.2 to Δ̃t we conclude that we are in one of the following cases:
+(1) There exist a ﬁnite index subgroup Γ1 of Γ, a 1–1 map δ : Γ1 → Γ × Γ,
+u1 , . . . , un ∈ NM ⊗M (A⊗A) and u ∈ U(M ⊗M ) such that Δ̃ := Ad(u) ◦ Δ̃t : M →
+M ⊗M satisﬁes
+(a) Δ̃(A) ⊂ A⊗A, there exists 0 = p ∈ P(A⊗A) and aγi ∈ (A⊗A)1 , for all i ∈
+                                                              n      γ
+{1, . . . , n}, γ ∈ Γ1 such that p ≤ Δ̃(1) and pΔ̃(uγ ) =        i=1 ai uδ(γ) ui , for all
+γ ∈ Γ1 , and
+(b) there is a ﬁnite subgroup K of Γ × Γ such that δ(γγ  )−1 δ(γ)δ(γ  ) ∈ K and δ(γ)
+normalizes K, for all γ, γ  ∈ Γ1 .
+(2) Δ̃t (L(Γ0 )) ≺M ⊗M L(Γ) ⊗ 1.
+(3) Δ̃t (L(Γ0 )) ≺M ⊗M 1 ⊗ L(Γ).
+(4) Δ̃t (M ) ≺M ⊗M L(Γ)⊗M .
+    On the other hand, if () fails, then we are in the following case:
+(5) Δt (M )s ≺M ⊗M M ⊗L(Γ), for any non–zero projection s ∈ Δt (M ) ∩q(M ⊗M )q.
+For the rest of the proof, we analyze each one of these cases and show that they
+either lead to a contradiction or imply that () C t ≺M A or that () uL(Λ)u∗ ⊂
+L(Γ), for some u ∈ U(M ). If () holds, since C t and A are Cartan subalgebras of
+Nt ∼= M , [35], Theorem A.1 provides a unitary v ∈ M such that A = vC t v ∗ .
+   Popa’s cocycle/OE superrigidity theorems [37], 5.2 and 5.6 then imply that t = 1
+(thus q = 1) and that the isomorphism θ : N → M is of the desired form. If ()
+holds, then the conclusion follows from [34], Theorem 0.7 (see Theorem 6.3).
+Case (1). Let G be the set of all g ∈ Γ1 for which we can ﬁnd k ∈ K such that
+δ(g)k ∈ Γ × {e}. Since δ satisﬁes (b), G is a subgroup of Γ1 .
+   Let us prove that G is ﬁnite. If g ∈ G, then δ(g) ∈ (Γ × {e})K. Condition
+                                 
+(a) implies that pΔ̃(ug ) ∈ ni=1 k∈K (M ⊗A)1 uk ui . This shows in particular that
+Δ̃(L(G)) ≺M ⊗M M ⊗A. On the other hand, we may assume that (2) and (3)
+are false since these cases will be dealt with later. Since the inclusion Δ̃(L(Γ0 )) ⊂
+Δ̃(L(Γ)) is rigid and quasi–regular, by Theorem 2.1 we can ﬁnd a unitary v ∈ M ⊗M
+such that Δ̃(L(G)) ⊂ Δ̃(L(Γ)) ⊂ v(L(Γ)⊗L(Γ))v ∗ . The last two facts readily imply
+that Δ̃(L(G)) ≺M ⊗M L(Γ) ⊗ 1.
+   By the construction of Δ̃ it follows that Δt (L(G)) ≺M ⊗M L(Γ) ⊗ 1. But then
+Lemma 9.2 (1) (which holds for Δt ) yields that L(G) ≺M C t .
+   Further, by [45], Lemma 3.5 we deduce that C t ≺M L(G) ∩ M . If G is inﬁnite,
+then L(G) is diﬀuse. Hence, since σ is mixing, [33], Theorem 3.1 implies that
+1216                                       ADRIAN IOANA
+
+
+L(G) ∩ M ⊂ L(Γ). Thus, we would get that C t ≺M L(Γ). Since C t is regular in
+M , by applying [33], Theorem 3.1 (see also Lemma 3.4) we derive a contradiction.
+This shows that G is ﬁnite.
+  Using the fact that G is ﬁnite we next deduce the following claim:
+Claim. Let {xm }m≥1 ⊂ M be a sequence with ||xm || ≤ 1. Denote xγm = EA (xm u∗γ )
+and assume that ||xγm ||2 → 0, for all γ ∈ Γ. Then we have that
+(9.c)                 ||EM ⊗1 (ypΔ̃(xm )z)||2 → 0, for all y, z ∈ M ⊗M.
+Proof of the Claim. Let M1 = A  Γ1 . Since Γ1 has ﬁnite index in Γ, we may
+assume that xm ∈ M1 , for all m ≥ 1.
+   Since EM ⊗1 is M ⊗1–bimodular, we may assume that y = 1⊗aug and z = 1⊗buh ,
+for a, b ∈ A and g, h ∈ Γ. Then EM ⊗1 (yxz) = EM ⊗1 ((1 ⊗ aσg (b))x(1 ⊗ ugh ) for all
+x ∈ M ⊗M . Thus, to prove (9.c), we may assume that y ∈ A⊗A and z = ug , for
+some g ∈ Γ × Γ. Since
+  ||EM ⊗1 (ypΔ̃(xm )ug )||2 ≤ ||EM ⊗A (ypΔ̃(xm )ug )||2 ≤ ||y|| ||EM ⊗A (pΔ̃(xm )ug )||2
+(here we use that y ∈ M ⊗A), it is suﬃcient to prove that
+(9.d)                   ||EM ⊗A (pΔ̃(xm )ug )||2 → 0, for all g ∈ Γ × Γ.
+Now, (a) gives that
+                                                         n 
+                                                          
+               pΔ̃(xm ) =            Δ̃(xγm )pΔ̃(uγ ) =              Δ̃(xγm )aγi uδ(γ) ui .
+                              γ∈Γ1                        i=1 γ∈Γ1
+
+As Δ̃(xγm )aγi ∈ A⊗A, this identity implies that in order to get (9.d) it suﬃces to
+show that
+               
+(9.e)     ||          Δ̃(xγm )aγi EM ⊗A (uδ(γ) ui ug )||2 → 0, for all i ∈ {1, . . . , n}.
+               γ∈Γ1
+
+   To prove (9.e), ﬁx i ∈ {1, . . . , n} and denote v = ui ug . Since uδ(γ) v normalizes
+A⊗A we can ﬁnd pγ ∈ P(A⊗A) such that EM ⊗A (uδ(γ) v) = pγ uδ(γ) v. Since δ is
+1-1, the A⊗A–bimodules {(A⊗A)uδ(γ) v}γ∈Γ1 are mutually orthogonal.
+   Altogether, (9.e) can be rewritten as
+                      
+(9.f)                     τ (|Δ̃(xγm )|2 |aγi |2 pγ ) → 0, as m → ∞.
+                           γ∈Γ1
+                                                                   ∞
+   Next, we claim that           γ∈Γ1 τ (pγ ) < ∞. Identify A = L (X), where (X, μ)
+is a probability space. Then σ induces a free ergodic p.m.p. action Γ  X.
+On (X 2 , μ2 ) := (X × X, μ × μ) we consider the direct product action of Γ × Γ:
+(γ1 , γ2 ) ◦ (x1 , x2 ) = (γ1 x1 , γ2 x2 ). Let φ be the automorphism of X 2 given by
+vav ∗ = a ◦ φ−1 , for all a ∈ L∞ (X 2 ). Then pγ is precisely the characteristic function
+of the set of x ∈ X 2 satisfying (δ(γ) ◦ φ)−1 (x) ∈ (Γ × {e})x.
+   Hence, if we let Yγ = {x ∈ X 2 |φ−1 (x) ∈ (Γ × {e})δ(γ)x}, then τ (pγ ) = μ2 (Yγ ).
+If γ, γ  ∈ Γ satisfy μ2 (Yγ ∩ Yγ  ) > 0, then the freeness of the action Γ × Γ  X 2
+implies that (Γ × {e})δ(γ) ∩ (Γ × {e})δ(γ  ) = ∅. Thus δ(γ)δ(γ  )−1 ∈ Γ × {e}; hence
+    −1
+γγ  ∈ G. This shows                               
+                          that if2 Gδ(γ) ∩ Gδ(γ ) =  ∅, then μ2 (Yγ ∩ Yγ  ) = 0. Since δ
+is 1–1, it follows that γ∈Γ μ (Yγ ) ≤ |G|; hence γ∈Γ τ (pγ ) < ∞, as claimed.
+ To prove (9.f) and the claim, ﬁx ε > 0 and let F ⊂ Γ1 be ﬁnite such that
+   γ∈Γ1 \F τ (pγ ) < ε.
+                       W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                 1217
+
+
+   Since ||xγm ||, ||aγi ||, ||pγ || ≤ 1 and τ (|Δ̃(xγm )|2 ) = ||Δ̃(xγm )||22 ≤ ||xγm ||22 , we get
+that                                                              
+                                 τ (|Δ̃(xγm )|2 |aγi |2 pγ ) ≤ ε +   ||xγm ||22 .
+                        γ∈Γ1                                 γ∈F
+   Since ||xγm ||2 → 0 and ε > 0 is arbitrary, this indeed proves (9.f).                         
+   Recall that Δ̃(x) = uΔt (x)su∗ , for all x ∈ M , and that Δt (x) = (x ⊗ 1)q, for all
+x ∈ C t . Since p ≤ Δ̃(1) = usu∗ , it follows that u∗ pΔ̃(x)u = u∗ pu(x ⊗ 1) and hence
+that ||u∗ pΔ̃(x)u||2 = ||p||2 , for all x ∈ U(C t ). Then the above claim implies that
+we cannot ﬁnd a sequence {xm }m≥1 ⊂ U(C t ) such that ||EA (xm u∗γ )||2 → 0, for all
+γ ∈ Γ.
+   Thus C t ≺M A, which settles Case (1).
+Case (2). If Δ̃t (L(Γ0 )) ≺M ⊗M L(Γ) ⊗ 1, then Δt (L(Γ0 )) ≺M ⊗M L(Γ) ⊗ 1 and
+Lemma 9.2 (1) implies that L(Γ0 ) ≺M C t . Since Γ0 is inﬁnite, we derive a contra-
+diction by arguing as the proof of (1).
+Case (3). If Δ̃t (L(Γ0 )) ≺M ⊗M 1 ⊗ L(Γ), then Δt (L(Γ0 )) ≺M ⊗M 1 ⊗ L(Γ) and
+Lemma 9.2 (2) implies that L(Γ0 ) cannot be diﬀuse. This contradicts the fact that
+Γ0 is inﬁnite.
+Case (4). If Δ̃t (M ) ≺M ⊗M L(Γ)⊗M , then Δt (M ) ≺M ⊗M L(Γ)⊗M and Lemma
+9.1 (3) entails C t ≺M L(Γ). Since σ is mixing and C t is regular in M , [33], Theorem
+3.1 leads to a contradiction.
+Case (5). Assume that Δt (M )s ≺M ⊗M M ⊗L(Γ), for any non–zero projection
+s ∈ Δt (M ) ∩ q(M ⊗M )q. Then the moreover part of Lemma 9.2 (4) gives that
+L(Λ)r ≺M L(Γ), for any non–zero projection r ∈ L(Λ) ∩ N . Since Γ is ICC, by
+reasoning as in the end of the proof of Theorem 2.1 we can ﬁnd a unitary u ∈ M
+such that uL(Λ)u∗ ⊂ Γ.
+   This ﬁnishes the proof of the last case of Theorem 9.1.                           
+
+                                10. Further applications
+   In this section, we derive several applications of the results of Section 8.
+(I) Group von Neumann algebra decomposition. First, we use Theorem 8.2
+to provide a large class of II1 factors which cannot be decomposed as the group von
+Neumann algebra, L(G), of some countable group G.
+Corollary 10.1. Let Γ be a countable ICC group which admits an inﬁnite, almost
+normal subgroup Γ0 such that the inclusion (Γ0 ⊂ Γ) has the relative property (T).
+Assume that sup {|K| |K is a ﬁnite subgroup of Γ} is ﬁnite. Let l = l(Γ) be the least
+common multiple of |K|, with K ranging over all ﬁnite subgroups of Γ.
+   Let B be a non–trivial abelian von Neumann algebra. Set M = B Γ σ Γ and let
+p ∈ P(M ).
+   If τ (p) ∈ { 1l , 2l , . . . , ll }, then the II1 factor pM p is not isomorphic to a group von
+Neumann algebra. In particular, if Γ is torsion free (i.e. l = 1), then pM p is not
+isomorphic to a group von Neumann algebra, for any p = 1.
+Proof. Assume that pM p ∼                = N := L(G), for some projection p ∈ M and a countable
+(necessarily) ICC group G. In other words, we have that M ∼                     = N t , where t =
+     −1
+τ (p) .
+   Next, let Δ : N → N ⊗N be the ∗–homomorphism given by Δ(ug ) = ug ⊗ ug ,
+for all g ∈ G. By amplifying Δ (as in the proof of Theorem 9.1), we get a ∗–
+homomorphism Δt : N t → N t ⊗N t such that τ (Δt (1)) = τ (p). We continue with:
+1218                                ADRIAN IOANA
+
+
+Lemma 10.2. Let Q ⊂ N t be a not necessarily unital von Neumann subalgebra.
+Then we have the following:
+(1) If Δt (Q) ≺N t ⊗N t N t ⊗ 1 or Δt (Q) ≺N t ⊗N t 1 ⊗ N t , then Q cannot be diﬀuse.
+(2) If Δt (N t ) ≺N t ⊗N t Q⊗N t or Δt (N t ) ≺N t ⊗N t N t ⊗Q, then N t ≺N t Q.
+   The proof of this lemma is analogous to the proof of Lemma 9.1 and we therefore
+leave it as an exercise.
+   Now, since M ∼   = N t , we can view Δt as a ∗–homomorphism Δt : M → M ⊗M .
+Thus, we can apply Theorem 8.2 to Δt . Lemma 10.2 guarantees that conditions
+(1)–(2) from 8.2 are satisﬁed. Finally, by the last assertion of Theorem 8.2 we
+deduce that τ (p) = τ (Δt (1)) ∈ l−1 N, as claimed.                                  
+                                                                    
+Remarks 10.3. (1) Recall that AΓ = ( Γ A)Γ, where Γ acts on Γ A by shifting
+the copies of A, is the wreath product of two groups A and Γ. Corollary 10.1 implies
+that if n ≥ 3 and t ∈ (0, 1) \ Q, then L(Z  SLn (Z))t is not a group von Neumann
+algebra. Indeed, SLn (Z) is ICC and has property (T) by Kazhdan’s classical result
+([20]). Additionally, if m ≥ 3, then the kernel of the natural quotient SLn (Z) →
+SLn (Z/mZ) is a torsion free group. This shows that |K| ≤ |SLn (Z/mZ)|, for every
+ﬁnite subgroup K of SLn (Z).
+(2) The ﬁrst examples of II1 factors which are not group von Neumann algebras
+were exhibited by Connes by means of his χ(M ) invariant ([4]). Recently, Popa’s
+deformation/rigidity theory has been used to give new examples of such factors
+([17], [40]). In all of these cases, one moreover proves that the II1 factors involved
+do not have anti–automorphisms, i.e. M ∼     M op .
+                                            =
+(3) If M is as in Corollary 10.1, then pM p admits an involutary anti–automorphism,
+for every p ∈ P(M ). Indeed, the formula Φ(auγ ) = uγ −1 a, for a ∈ B Γ and γ ∈ Γ,
+deﬁnes an anti–automorphism of M . If we take p ∈ B Γ , then Φ(p) = p and
+Φp = Φ|pM p is an involutary anti–automorphism of pM p.
+   The ﬁrst examples of II1 factors which are not group von Neumann algebras and
+yet have anti–automorphisms have been constructed in [18]. We point out that,
+as opposed to our examples, the examples constructed in [18] have no involutary
+anti–automorphism.
+(II) Symmetry groups of II1 factors. Given a II1 factor M , there are three
+natural objects capturing the symmetries of M :
+    F(M ), the fundamental group of M , Out(M ), the outer automorphism group
+of M and Bimod(M ), the set of bi–ﬁnite Hilbert M –bimodules H, i.e. such that
+dim(M H), dim(HM ) < ∞.
+    The calculation of these invariants is an extremely challenging problem and it is
+only recently that explicit calculations were obtained for large families of II1 factors
+by using Popa’s deformation/rigidity theory. While there is, by now, an extensive
+literature on this problem (see e.g. the introduction of [45]), we only mention here
+that the existence of II1 factors M for which F(M ), Out(M ) and Bimod(M ) are
+trivial has been proven in [33], [17] and [46], respectively.
+    In this subsection, we consider three natural invariants for II1 factors which
+generalize the ones from above.
+Deﬁnition 10.4. Let M be a II1 factor. Then we deﬁne
+• Fs (M ), the fundamental semigroup of M , to be the set of t > 0 for which there
+exists a unital ∗–homomorphism θ : M → M t .
+                    W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                        1219
+
+
+• End(M ), the endomorphism semigroup of M , to be the set of unital ∗–homomor-
+phisms θ : M → M , and
+• LFBimod(M ) to be the set of left–ﬁnite Hilbert M –bimodules H, i.e. such that
+dim(M H) < ∞.
+   It is clear that Fs (M ) is a semigroup (with respect to multiplication) which
+contains F(M ). Thus, whenever F(M ) = (0, +∞) (e.g. if M is the hyperﬁnite II1
+factor), we get that Fs (M ) = (0, +∞). Also, we have that N ⊂ Fs (M ). Further-
+more, we have a dichotomy: either Fs (M ) ∩ (0, 1) = ∅ or Fs (M ) = (0, +∞). This
+is a consequence  of the following two facts: () if {tn }n≥1 ∈ Fs (M ) is a sequence
+such that t := n≥1 tn < ∞, then t ∈ Fs (M ), and () if s ∈ (0, 1), then every
+                               
+t > 0 can be written as t = n≥1 tn , with tn being a power of s, for all n.
+   Let us elaborate on the deﬁnition of LFBimod(M ). Any left–ﬁnite Hilbert M –
+bimodule H comes from a unital embedding of M into one of its ampliﬁcations ([5];
+see also [32]). Indeed, if t = dimM (H), then M  ∩B(H) ∼ = (M op )t and thus we obtain
+a unital ∗–homomorphism θ : M → M . Conversely, any unital ∗–homomorphism
+                                          t
+
+θ : M → M t induces a left–ﬁnite M –bimodule, which we denote by Hθ . For this,
+ﬁrst represent M t = p(Mn (C)⊗M )p, where n ≥ t is an integer and p ∈ Mn (C)⊗M
+has normalized trace equal to nt . Then set Hθ = (M1,n (C) ⊗ L2 (M ))p and deﬁne
+the left and right module actions by x · ξ = xξ and ξ · x = ξθ(x).
+   Note also that if H and K are two left–ﬁnite M –bimodules, then so is their
+Connes tensor product, H ⊗M K (see [32], 1.3.4).
+
+   As a consequence of Theorem 8.1 and of results from [28] we obtain the ﬁrst
+(partial) calculations of these invariants. We refer the reader to [28], 2.4. for the
+deﬁnition of the complete metric approximation property (abbreviated CMAP).
+
+Corollary 10.5. Let Γ1 , Γ2 be two ICC, torsion free groups, with Γ2 non–amenable.
+Assume that L(Γ1 ), L(Γ2 ) have the CMAP (e.g. Γ1 = Fm , Γ2 = Fn , for 2 ≤ m, n ≤
+∞) and set Γ = Γ1 × Γ2 .
+   Let B be a non–trivial abelian von Neumann algebra. Let σ : Γ → Aut(B Γ ) be
+the Bernoulli action. Denote M = B Γ  Γ and A = B Γ .
+   If θ : M → M t is a unital ∗–homomorphism for some t ≤ 1, then t = 1.
+Moreover, there exist a character η of Γ, an injective group morphism δ : Γ → Γ
+and a unitary u ∈ M such that θ(A) ⊂ uAu∗ and θ(uγ ) = η(γ)uuδ(γ) u∗ , for all
+γ ∈ Γ. In particular, every θ ∈ End(M ) is irreducible, i.e. θ(M ) ∩ M = C1.
+
+   In other words, if H is a Hilbert M –bimodule with dimM (H) ≤ 1, then we
+must have that dimM (H) = 1. Equivalently, Fs (M ) ∩ (0, 1) = ∅, i.e. M does not
+embed into M t , for t < 1. Moreover, Corollary 10.5 gives a description of End(M ).
+Roughly speaking, every endomorphism θ : M → M is determined by the following
+data:
+• a character η of Γ, a group embedding δ : Γ → Γ and
+• a “realization” of σ as a quotient of σ|δ(Γ) .
+   In view of Corollary 10.5, it seems reasonable to conjecture that there are II1
+factors M for which LFBimod(M ) is trivial, i.e. such that every left–ﬁnite Hilbert
+M –bimodule is isomorphic to L2 (M ) ⊗ 2n , for some n ≥ 1, where 2n is the Hilbert
+space of dimension n. In this case, we would necessarily have that Fs (M ) = N and
+End(M ) = Int(M ). To support our conjecture, we notice below that, for certain
+II1 factors M , LFBimod(M ) is “countably generated” (see Remark 10.8).
+1220                                   ADRIAN IOANA
+
+
+Proof of Corollary 10.5. By Theorem 8.1 (applied to the situation N = M ) we only
+need to argue that θ(M ) ⊀M L(Γ). If this were not the case, then, since L(Γ) has
+the CMAP and M is a factor, we would get that M ∼       = θ(M ) also has the CMAP.
+Notice that the restriction of σ to Γ2 can be seen as the Bernoulli action of Γ2
+on B̃ Γ2 , where B̃ = B Γ1 . Since Γ1 is inﬁnite we have that B̃ ∼ = L(Z) and thus
+M ⊃ B Γ σ|Γ2 Γ2 ∼  = L(Z  Γ2 ). Altogether, we would derive that L(Z  Γ2 ) has the
+CMAP. Since Γ2 is non–amenable, this contradicts [28], Corollary 2.12.
+   The irreducibility assertion follows easily from the ﬁrst part.                 
+(III) Group measure space decompositions of rigid factors. In this section,
+we consider II1 factors M which have property (T), in the sense of Connes–Jones
+[10]. Our main goal is to prove that M admits at most countably many group
+measure space decompositions (see Theorem 10.7). We start with the following
+lemma:
+Lemma 10.6. Let M and M be two separable II1 factors, with M having property
+(T). Let {Δi : M → M|i ∈ I} be an uncountable family of not necessarily unital
+∗–homomorphisms.
+• Then there exists an uncountable subset J of I such that for every i, j ∈ I we can
+ﬁnd 0 = v ∈ M satisfying v = Δi (1)vΔj (1) and Δi (x)v = vΔj (x), for all x ∈ M .
+• Assume moreover that Δi is irreducible (i.e. Δi (M ) ∩ Δi (1)MΔi (1) = CΔi (1)),
+for every i ∈ I. Then for all i, j ∈ J we have that τ (Δi (1)) = τ (Δj (1)) and that
+Δi = Ad(u) ◦ Δj , for some u ∈ U(M). In particular, the set {τ (Δi (1))|i ∈ I} is
+countable.
+  This lemma is proven by a separability argument going back to [6] (see also [32]).
+For completeness, let us sketch its proof.
+Proof. Let ε ∈ (0, 14 ). After replacing I with an uncountable subset, we can assume
+that τ (Δi (1)) ∈ ((1 − ε)t, t), for all i ∈ I, for some t ∈ (0, 1). Let p ∈ M be a
+projection of trace t. Since τ (Δi (1)) ≤ τ (p), we may assume that Δi (1) ≤ p, for all
+i ∈ I.
+   Next, for every i, j ∈ I, let Hi,j = L2 (Δi (1)MΔj (1)) and ξi,j = Δi (1)Δj (1) ∈
+Hi,j . Endow Hi,j with the Hilbert M –bimodule structure given by x · ξ · y =
+Δi (x)ξΔj (y). Then for every x ∈ U(M ), we have that
+       ||x · ξi,j − ξi,j · x|| = ||Δi (x)Δj (1) − Δi (1)Δj (x)||2
+                             ≤ ||Δi (x) − Δj (x)||2 + ||Δi (1) − p||2 + ||Δj (1) − p||2
+                                  √
+                             ≤ 2 εt + ||Δi (x) − Δj (x)||2 .
+                                           √           √
+   Also, it is easy to see that ||ξi,j || ≥ t(1 − 2 ε) > 0. Thus, we have that
+                                       √
+          ||x · ξi,j − ξi,j · x||     2 ε       ||Δi (x) − Δj (x)||2
+                                  ≤       √ +      √         √       , ∀x ∈ U(M ).
+                  ||ξi,j ||         1−2 ε             t(1 − 2 ε)
+  Since L2 (M) is a separable Hilbert space, this estimate implies that for every
+                                                                  ||x·ξi,j −ξi,j ·x||
+ﬁnite set F ⊂ U(M ) we can ﬁnd an uncountable set J ⊂ I such that      ||ξi,j ||      ≤
+  √
+   ε
+ 3 √
+1−2 ε
+      , for all x ∈ F and every i, j ∈ J. Thus, if we choose ε small enough, then
+property (T) guarantees that Hi,j has a central vector, for every i = j ∈ J ([10],
+[35]). In other words, we can ﬁnd v ∈ Δi (1)MΔj (1) such that Δi (x)v = vΔj (x),
+for all x ∈ M . This proves the ﬁrst assertion.
+                    W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                          1221
+
+
+   The second assertion is immediate once we notice that vv ∗ ∈ Δi (M ) ∩
+Δi (1)MΔi (1) and v ∗ v ∈ Δj (M ) ∩ Δj (1)MΔj (1).                     
+  We can now prove:
+Theorem 10.7. Let M be a property (T) II1 factor. Then
+(1) There exist at most countably many non–conjugate, free ergodic p.m.p. actions
+Γ  X such that M ∼  = L∞ (X)  Γ.
+(2) The set of t > 0 such that M t is isomorphic to the von Neumann algebra of a
+free ergodic p.m.p. action is countable.
+(3) The set of t > 0 such that M t is isomorphic to a group von Neumann algebra
+is countable.
+  Part (3) has been ﬁrst proven in [38], Section 4. Below, we give a proof relying
+on a completely diﬀerent argument.
+Proof. (1) Assume by contradiction that there exists an uncountable set I of mu-
+tually non–conjugate, free ergodic actions Γi  Xi such that M = L∞ (Xi )  Γi .
+For i ∈ I, deﬁne Δi : M → M ⊗M by Δi (auγ ) = auγ ⊗ uγ , for all a ∈ L∞ (Xi ) and
+every γ ∈ Γi .
+    By Lemma 10.6 we can ﬁnd an uncountable set J ⊂ I such that for every
+i, j ∈ J, there exist 0 = v ∈ M ⊗M satisfying Δi (x)v = vΔj (x), for all x ∈ M .
+Since Δi (a) = a, for all a ∈ L∞ (Xi ), we get that Δj (L∞ (Xi )) ≺M ⊗M M ⊗ 1.
+    Lemma 9.2 then gives that L∞ (Xi ) ≺M L∞ (Xj ). Since L∞ (Xi ) and L∞ (Xj )
+are Cartan subalgebras of M , [35], Theorem A.1 implies that they are unitarily
+conjugate. Therefore, the actions Γi  Xi and Γj  Xj are orbit equivalent ([43],
+[13]). Since M = L∞ (Xi )  Γi has property (T), Γi also has property (T), for every
+i ∈ I. Altogether, we have found an uncountable family of mutually non–conjugate,
+orbit equivalent, free ergodic actions of property (T) groups. This contradicts [41],
+Corollary 6.3.
+(2) Since property (T) for II1 factors is closed under ampliﬁcations, it suﬃces to
+show that the set I = {τ (p)| pM p is the von Neumann algebra of a free, ergodic
+action} is countable. Assume by contradiction that I is uncountable. For every
+t ∈ I, let pt ∈ M be a projection of trace t and let Γt  Xt be a free, ergodic
+action such that pt M pt = L∞ (Xt )  Γt . Deﬁne θt : pt M pt → pt M pt ⊗pt M pt by
+θt (auγ ) = auγ ⊗ uγ , for every a ∈ L∞ (Xt ) and γ ∈ Γt .
+    By taking ampliﬁcations we get a ∗–homomorphism Δt : M → M ⊗M satisfying
+τ (Δt (1)) = t. Since I is uncountable, Lemma 10.6 gives an uncountable set J ⊂ I
+such that for every s, t ∈ J there is 0 = v ∈ Δt (1)(M ⊗M )Δs (1) satisfying Δt (x)v =
+vΔs (x), for all x ∈ M .
+    By reasoning similarly to part (1), it follows that the actions Γt  Xt and
+Γs  Xs are stably orbit equivalent, for all s, t ∈ J. More precisely, if Rt denotes
+the equivalence relation induced by Γt  Xt , then Rtt ∼
+                                                         1     1
+                                                           = Rss , for all s, t ∈ J. Here,
+Rt denotes the t–ampliﬁcation of an equivalence relation R (for the deﬁnition, see
+e.g. [15], Section 4). Thus, if we ﬁx t ∈ J, then Rtt ∼
+                                                           s
+                                                             = Rs , for every s ∈ J.
+On the other hand, [15], Theorem 5.9 gives that the set {q > 0|Rqt is induced by
+a free action of a countable group} is countable. Thus, J must be countable, a
+contradiction.
+(3) It suﬃces to prove that I = {τ (p)|pM p is a group von Neumann algebra} is
+countable. For t ∈ I, let pt ∈ M be a projection of trace t and let Γt be a group such
+1222                                 ADRIAN IOANA
+
+
+that pt M pt = L(Γt ). Let θt : L(Γt ) → L(Γt )⊗L(Γt ) be given by θt (uγ ) = uγ ⊗ uγ ,
+for each γ ∈ Γt .
+   Since M is a factor, Γt is ICC. Thus, the set {(γgγ −1 , γhγ −1 )|γ ∈ Γt } is inﬁnite,
+for all (g, h) ∈ (Γt ×Γt )\{(e, e)}. This fact implies that θt (L(Γt )) ∩L(Γt )⊗L(Γt ) =
+C1, for all t. Since pt M pt = L(Γt ), by amplifying θt we get a ∗–homomorphism Δt :
+M → M ⊗M verifying τ (Δt (1)) = t and Δt (M ) ∩ Δt (1)(M ⊗M )Δt (1) = CΔt (1).
+   Finally, Lemma 10.6 implies that I = {τ (Δt (1))|t ∈ I} is countable.                
+Remarks 10.8. (1) Let M be a II1 factor. Recall that every left–ﬁnite M –bimodule
+is of the form Hθ , for some unital ∗–homomorphism θ : M → M t . Notice that
+Hθ is irreducible iﬀ θ(M ) ∩ M t = C1. Lemma 10.6 thus implies that if M has
+property (T), then there are only countably many irreducible left–ﬁnite Hilbert
+M –bimodules (up to isomorphism).
+(2) A II1 factor M is solid if A ∩ M is atomic, for any completely non–amenable
+von Neumann subalgebra A ⊂ M . N. Ozawa proved that L(Γ) is solid, for any
+hyperbolic group Γ ([27]). If M is a non–amenable solid factor, then θ(M ) ∩ M t is
+atomic, for every unital ∗–homomorphism θ : M → M t . This fact implies that any
+left–ﬁnite M –bimodule is the direct sum of countably many irreducible left–ﬁnite
+M –bimodules.
+(3) Let us explain how (1) and (2) imply that there are II1 factors M with “few”
+left–ﬁnite bimodules. Indeed, take M = L(Γ), for some hyperbolic, property (T)
+group Γ. Combining (1) and (2) yields that there exist a countable family of
+Hilbert M –bimodules {Hn }n≥1 such that every left–ﬁnite Hilbert M –bimodule H
+is the direct sum of some of the Hn ’s.
+(4) Finally, note that N. Ozawa has very recently shown that if Γ is a hyperbolic,
+property (T), ICC group (e.g. any ICC lattice Γ < Sp(1, n)), then L(Γ) is a property
+(T) II1 factor which does not admit a group measure space decomposition ([29]).
+(IV) II1 factors not isomorphic to twisted group von Neumann algebras.
+We end the paper by noticing that an extension of the results from Section 8 can
+be used to give examples of II1 factors that are not isomorphic to twisted group
+von Neumann algebras.
+   Let us begin by recalling the construction of the von Neumann algebra Lα (G)
+arising from a countable group G and a 2–cocycle α ∈ H2 (G, T), i.e. a map α :
+G × G → T satisfying () α(g, h)α(gh, k) = α(g, hk)α(h, k), for all g, h, k ∈ G.
+   First, the formula
+                           g (δh ) = α(g, h)δgh , ∀g, h ∈ G
+                          uα
+deﬁnes a projective unitary representation uα : G → U( 2 G), where {δh }h∈G is the
+usual orthonormal basis of 2 G. More precisely, uα   g uh = α(g, h)ugh , for all g, h ∈ G.
+                                                        α            α
+
+   Then Lα (G) is deﬁned as the von Neumann algebra generated by {uα        g }g∈G . Note
+that τ : Lα (G) → C given by τ (uα
+                                 g ) = δ g,e α(e, e) is a faithful normal  trace.
+   We continue with two useful facts about twisted group von Neumann algebras.
+Lemma 10.9. Let G be a countable group and α ∈ H2 (G, T) be a 2–cocycle. Let
+α ∈ H2 (G, T) be given by α(g, h) = α(g, h), for all g, h ∈ G. Then
+(1) The opposite von Neumann algebra Lα (G)op is isomorphic to Lα (G).
+(2) The map Δ : G → Lα (G)⊗Lα (G)⊗Lα (G) given by Δ(uα        g ) = ug ⊗ ug ⊗ ug , for
+                                                                     α    α    α
+
+every g ∈ G, extends to a unital ∗–homomorphism Δ : Lα (G) → Lα (G)⊗Lα (G)⊗
+Lα (G).
+                     W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                            1223
+
+
+Proof. (1) Denote β = α(e, e) and notice that the cocycle identity () implies that
+α(e, g) = β, for all g ∈ G.
+                                                  −1 α
+   Now, for every g ∈ G, deﬁne θ(uα g ) = βα(g, g   )ug−1 ∈ Lα (G).
+   We claim that θ extends to a ∗–isomorphism θ : Lα (G)op → Lα (G). To see this,
+it suﬃces to prove that θ is trace preserving and that θ(uα     α          α   α
+                                                            h ug ) = θ(ug )θ(uh ), for
+all g, h ∈ G. Fix g, h ∈ G.
+                                                           −1
+   The ﬁrst assertion holds because τ (θ(uα g )) = βα(g, g    )δg,e α(e, e) = δg,e β =
+τ (uα
+    g ).
+   For the second assertion, using the cocycle identity twice yields that
+(10.a)    α(h, g)α(hg, g −1 h−1 )α(g −1 , h−1 ) = α(h, h−1 )α(g, g −1 h−1 )α(g −1 , h−1 )
+                            = α(e, h−1 )α(g, g −1 )α(h, h−1 ).
+  Since
+                                                          −1 −1 α
+             θ(uα  α               α
+                h ug ) = α(h, g)θ(uhg ) = βα(h, g)α(hg, g   h )ug−1 h−1 ,
+while
+                                      −1
+              θ(uα     α      2
+                 g )θ(uh ) = β α(g, g    )α(h, h−1 )uα     α
+                                                     g −1 uh−1
+
+                            = β 2 α(g, g −1 )α(h, h−1 )α(g −1 , h−1 )uα
+                                                                      g −1 h−1 ,
+
+the second assertion follows by using (10.a).
+(2) Since Δ|G is clearly multiplicative and trace preserving, the conclusion follows.
+                                                                                   
+
+   Next, let us point out a generalization of the results from Section 8. Let Γ be
+a torsion free, ICC group which admits an inﬁnite almost normal subgroup such
+that the inclusion (Γ0 ⊂ Γ) has the relative property (T). Let B be a non–trivial
+abelian von Neumann algebra and deﬁne M = B Γ  Γ.
+   Theorems 8.1 and 8.2 classify embeddings of M into itself and into M ⊗M ,
+repsectively. A straightforward modiﬁcation of the proof of Theorem 8.2 shows
+                               n
+that the embeddings of M into i=1 M can be classiﬁed in a similar way, for every
+n ⩾ 1.
+Theorem 10.10. Let M = B Γ  Γ be as above and denote A = B Γ . Let Δ : M →
+M S be a ∗–homomorphism, for some ﬁnite set S, and suppose that:
+(1) Δ(L(Γ0 )) ⊀M S L(Γ)S\{s} , for any s ∈ S.
+(2) Δ(M ) ⊀M S L(Γ){s} ⊗M S\{s} , for any s ∈ S.
+Then Δ must be unital and we can ﬁnd a character η of Γ, group homomorphisms
+                                                                           ∗
+δs : Γ → Γ, for every s ∈ S, and a unitary u ∈ M such that uΔ(A)u ⊂ A and
+                                                      S                          S
+          ∗
+uΔ(uγ )u = η(γ)( s∈S uδs (γ) ), for every γ ∈ Γ.
+                                                            
+    Here we denote by M S the tensor product algebra         s∈S (M )s . For a subset
+                                                                
+  
+S ⊂ S and a von Neumann subalgebra Q ⊂ M , we view QS as a von Neumann
+subalgebra of M S , in the obvious way.
+    Finally, let us combine the last two results to give examples of II1 factors which
+are not isomorphic to twisted group von Neumann algebras.
+Corollary 10.11. Let M be as above and p ∈ M \ {1} be a projection. Then pM p
+is not isomorphic to Lα (G), for any countable group G and any α ∈ H2 (G, T).
+1224                                   ADRIAN IOANA
+
+
+Proof. Assume that pM p can be written as Lα (G), for some projection p ∈ M .
+Our goal is to prove that p = 1. First, by Remark 10.3 (3), we have that pM p
+is anti–isomorphic to itself, i.e. (pM p)op ∼
+                                            = pM p. On the other hand, part (1) of
+Lemma 10.9 gives that Lα (G)op ∼   = Lα (G). Altogether, we deduce the existence of
+a ∗–isomorphism θ : Lα (G) → Lα (G).
+   Next, let S = {1, 2, 3} and consider the ∗–homomorphism
+                                                                      3
+             Δ1 := (id ⊗ id ⊗ θ) ◦ Δ : Lα (G) → Lα (G)S =                   Lα (G),
+                                                                      i=1
+
+where Δ is as in Lemma 10.9 (2).
+                                g ) = ug ⊗ ug ⊗ θ(ug ), for all g ∈ G.
+  Concretely, we have that Δ1 (uα      α    α      α
+
+  To simplify notation, denote N = Lα (G). Since Δ1 comes from a “diagonal
+embedding” of G, we have the following:
+Claim. Let Q ⊂ N be a von Neumann subalgebra.
+(1) If Δ1 (Q) ≺N S N S\{s} , for some s ∈ S, then Q is not diﬀuse.
+(2) If Δ1 (N ) ≺N S Q{s} ⊗N S\{s} , then N ≺N Q.
+   The proof of this claim is analogous to the proof of Lemma 9.2 and so we leave
+the details to the reader.
+   Now, since N = pM p, by amplifying Δ1 : N → N S , we get a ∗–homomorphism
+Δ2 : M → M S , such that τ (Δ2 (1)) = τ (p)2 . By using the claim it is immediate that
+Δ2 satisﬁes conditions (1) and (2) in Theorem 10.10. Thus, by applying Theorem
+10.10 it follows that Δ2 is unital; hence p = 1.                                    
+   Acknowledgments. I would like to thank Jesse Peterson for explaining [31]
+and Sorin Popa for many useful suggestions. I am also grateful to Vaughan Jones
+for bringing to my attention the question that led to Corollary G, Stefaan Vaes for
+providing me with an argument which simpliﬁes the initial proof of Theorem 9.1 and
+the anonymous referee for several suggestions which helped improve the exposition.
+This paper was written while I was visiting the Department of Mathematics at
+UCLA.
+
+                                        References
+ [1] B. Bekka, P. de la Harpe, A. Valette: Kazhdan’s property (T), New Mathematical Mono-
+     graphs, 11. Cambridge University Press, Cambridge, 2008. MR2415834 (2009i:22001)
+ [2] N.P. Brown, N. Ozawa: C∗ -algebras and ﬁnite-dimensional approximations, Graduate Stud-
+     ies in Mathematics, 88. American Mathematical Society, Providence, RI, 2008. xvi+509 pp.
+     MR2391387 (2009h:46101)
+ [3] M. Burger: Kazhdan constants for SL(3, Z), J. Reine Angew. Math. 413 (1991), 36–67.
+     MR1089795 (92c:22013)
+ [4] A. Connes: Sur la classiﬁcation des facteurs de type II, C. R. Acad. Sci. Paris 281 (1975),
+     13–15. MR0377534 (51:13706)
+ [5] A. Connes: Correspondences, handwritten notes, 1980.
+ [6] A. Connes: A factor of type II1 with countable fundamental group, J. Operator Theory 4
+     (1980), no. 1, 151–153. MR587372 (81j:46099)
+ [7] A. Connes, J. Feldman, B. Weiss: An amenable equivalence relation is generated by a single
+     transformation, Ergodic Theory and Dynam. Systems 1 (1981), no. 4, 431–450. MR662736
+     (84h:46090)
+ [8] I. Chifan, A. Ioana: Ergodic Subequivalence Relations Induced by a Bernoulli Action, Geom.
+     Funct. Anal. Vol. 20 (2010) 53–67. MR2647134 (2011f:37008)
+ [9] A. Connes, V.F.R. Jones: A II1 factor with two non-conjugate Cartan subalgebras, Bull.
+     Amer. Math. Soc. 6 (1982), 211–212. MR640947 (83d:46074)
+                      W∗ –SUPERRIGIDITY FOR BERNOULLI ACTIONS                                1225
+
+
+[10] A. Connes, V.F.R. Jones: Property (T) for von Neumann algebras, Bull. London Math. Soc.
+     17 (1985), 57–62. MR766450 (86a:46083)
+[11] A. Furman: Orbit equivalence rigidity, Ann. of Math. (2) 150 (1999), 1083–1108. MR1740985
+     (2001a:22018)
+[12] A. Furman: A survey of Measured Group Theory, Geometry, Rigidity, and Group Ac-
+     tions, 296–374, The University of Chicago Press, Chicago and London, 2011, available at
+     arXiv:0901.0678.
+[13] J. Feldman, C.C. Moore: Ergodic equivalence relations, cohomology, and von Neumann al-
+     gebras, II, Trans. Amer. Math. Soc. 234 (1977), 325–359. MR0578730 (58:28261b)
+[14] A. Ioana: Rigidity results for wreath product II1 factors, J. Funct. Anal. 25 (2007) 763–791.
+     MR2360936 (2008j:46046)
+[15] A. Ioana: Cocycle superrigidity for proﬁnite actions of property (T) groups, Duke Math. J.
+     Volume 157, Number 2 (2011), 337–367.
+[16] A. Ioana: Non-orbit equivalent actions of Fn , Ann. Sci. Éc. Norm. Supér., 42, fascicule 4
+     (2009), 675–696. MR2568879 (2010k:37007)
+[17] A. Ioana, J. Peterson, S. Popa: Amalgamated free products of weakly rigid factors and cal-
+     culation of their symmetry groups, Acta Math. 200 (2008), no. 1, 85–153. MR2386109
+     (2009a:46119)
+[18] V.F.R. Jones: A II1 factor anti-isomorphic to itself but without involutory antiautomor-
+     phisms, Math. Scand. 46 (1980), no. 1, 103–117. MR585235 (82a:46075)
+[19] R.V. Kadison, J.R. Ringrose: Fundamentals of the theory of operator algebras. Vol. II, Aca-
+     demic Press, Orlando, 1986. MR859186 (88d:46106)
+[20] D. Kazhdan: Connection of the dual space of a group with the structure of its closed sub-
+     groups, Funct. Anal. and its Appl., 1 (1967), 63–65. MR0209390 (35:288)
+[21] Y. Kida: Measure equivalence rigidity of the mapping class group, Ann. of Math. (2) 171
+     (2010), No. 3, 1851–1901. MR2680399 (2011e:37009)
+[22] Y. Kida: Rigidity of amalgamated free products in measure equivalence theory, to appear in
+     J. Topology, preprint arXiv:0902.2888.
+[23] G. Margulis: Finitely-additive invariant measures on Euclidean spaces, Ergodic Theory and
+     Dynam. Systems 2 (1982), 383–396. MR721730 (85g:28004)
+[24] F. Murray, J. von Neumann: On rings of operators, Ann. of Math. (2) 37 (1936), 116–229.
+     MR1503275
+[25] F. Murray, J. von Neumann: On rings of operators. IV, Ann. of Math. (2) 44 (1943), 716–808.
+     MR0009096 (5:101a)
+[26] D. Ornstein, B. Weiss: Ergodic theory of amenable groups. I. The Rokhlin lemma., Bull.
+     Amer. Math. Soc. (N.S.) 1 (1980), 161–164. MR551753 (80j:28031)
+[27] N. Ozawa: Solid von Neumann algebras, Acta Math. 192 (2004), no. 1, 111–117. MR2079600
+     (2005e:46115)
+[28] N. Ozawa, S. Popa: On a class of II1 factors with at most one Cartan subalgebra, Ann. of
+     Math. (2) Vol. 172 (2010), No. 1, 713–749. MR2680430
+[29] N. Ozawa: Examples of groups which are not weakly amenable, preprint arXiv:1012.0613.
+[30] J. Peterson: L2 -rigidity in von Neumann algebras, Invent. Math. 175 (2009), no. 2, 417–433.
+     MR2470111 (2010b:46128)
+[31] J. Peterson: Examples of group actions which are virtually W*-superrigid, preprint
+     arXiv:1002.1745.
+[32] S. Popa: Correspondences, INCREST preprint 1986, unpublished.
+[33] S. Popa: Strong Rigidity of II1 Factors Arising from Malleable Actions of w-Rigid Groups.
+     I., Invent. Math. 165 (2006), 369–408. MR2231961 (2007f:46058)
+[34] S. Popa: Strong Rigidity of II1 Factors Arising from Malleable Actions of w-Rigid Groups.
+     II., Invent. Math. 165 (2006), 409–451. MR2231962 (2007h:46084)
+[35] S. Popa: On a class of type II1 factors with Betti numbers invariants, Ann. of Math. (2) 163
+     (2006), 809–889. MR2215135 (2006k:46097)
+[36] S. Popa: Some rigidity results for non-commutative Bernoulli shifts, J. Funct. Anal. 230
+     (2006), 273–328. MR2186215 (2007b:46106)
+[37] S. Popa: Cocycle and orbit equivalence superrigidity for malleable actions of w-rigid groups,
+     Invent. Math. 170 (2007), no. 2, 243–295. MR2342637 (2008f:37010)
+1226                                    ADRIAN IOANA
+
+
+[38] S. Popa: Deformation and rigidity for group actions and von Neumann algebras, In-
+     ternational Congress of Mathematicians. Vol. I, 445–477, Eur. Math. Soc., Zürich, 2007.
+     MR2334200 (2008k:46186)
+[39] S. Popa: On the superrigidity of malleable actions with spectral gap, J. Amer. Math. Soc. 21
+     (2008), 981–1000. MR2425177 (2009e:46056)
+[40] S. Popa, S. Vaes: Strong rigidity of generalized Bernoulli actions and computations of their
+     symmetry groups. Adv. Math. 217 (2008), no. 2, 833–872. MR2370283 (2009c:37004)
+[41] S. Popa, S. Vaes: On the fundamental group of II1 factors and equivalence relations arising
+     from group actions, Quanta of maths, 519–541, Clay Math. Proc., 11, Amer. Math. Soc.,
+     Providence, RI, 2010. MR2732063
+[42] S. Popa, S. Vaes: Group measure space decomposition of II1 factors and W*-superrigidity,
+     Invent. Math. 182 (2010), no. 2, 371–417. MR2729271
+[43] I.M. Singer: Automorphisms of ﬁnite factors, Amer. J. Math. 77 (1955), 117–133.
+     MR0066567 (16:597f)
+[44] S. Vaes: Rigidity results for Bernoulli actions and their von Neumann algebras (after Sorin
+     Popa), Séminaire Bourbaki. Vol. 2005/2006. Astérisque No. 311 (2007), Exp. No. 961, viii,
+     237–294. MR2359046 (2009k:46112)
+[45] S. Vaes: Explicit computations of all ﬁnite index bimodules for a family of II1 factors, Ann.
+     Sci. Éc. Norm. Supér. (4) 41 (2008), no. 5, 743–788. MR2504433 (2010k:46061)
+[46] S. Vaes: Factors of type II1 without non-trivial ﬁnite index subfactors, Trans. Amer. Math.
+     Soc. 361 (2009), no. 5, 2587–2606. MR2471930 (2010a:46146)
+
+  Department of Mathematics, UCLA, Los Angeles, California 91125 and IMAR, 21
+Calea Grivitei Street, 010702 Bucharest, Romania
+  E-mail address: adiioana@math.ucla.edu
+

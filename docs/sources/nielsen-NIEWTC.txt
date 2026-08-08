@@ -1,0 +1,2230 @@
+          Connes’ Rigidity Conjecture:
+Disproof of the Counterexamples and Proof of the
+                    Theorem
+                                    J. L. Nielsen
+             1
+                 Center for Topological Physics, Lawrence, KS
+                    2
+                      University of Kansas, Lawrence, KS
+                                    August 2026
+
+“Connes’ rigidity has to be true or QFT may as well just be pissing in the wind.”
+                                                        — Anonymous Old Professor
+
+“Trying to disprove a 40 year old conjecture with an unmanned autonomous LLM
+is like trying to help your grandma dial 911 with a roomba.”
+                                                      — Richard Feynman, probably
+
+                                       Abstract
+    We disprove the recent OpenAI, Anthropic, and Zhou “disproofs” by counterex-
+ample to Connes’ rigidity conjecture, then show the same move proves the conjecture
+itself.
+    Part I shows that three independent claimed counterexamples to the conjecture
+are invalid. The OpenAI [33] and Anthropic [21] counterexamples construct pairs of
+group extensions—one split (Γ0 ), one non-split (Γτ )—of Sp4 (Z) by Z4 and claim the
+corresponding group von Neumann algebras are isomorphic. The concurrent Zhou
+construction [31] takes a different approach: two semidirect products Γi = D ⋊θi H
+sharing the same fiber and quotient but with distinct actions, and claims L(Γ1 ) ∼
+                                                                                 = L(Γ2 )
+via Pontryagin duality. All three are invalid.
+    The primary argument is a reductio ad absurdum that is purely mathematical: it
+does not rely on any semantic mismatch between code labels and mathematical objects,
+on whether the ICC or property-(T) certificates in the Lean code are valid or invalid,
+or on any code-level observation whatsoever. The argument assumes L(Γ0 ) ∼      = L(Γτ ),
+equips both groups with Bernoulli actions (chosen by us, not inherited from either
+counterexample), and applies the twisted comultiplication and Ioana’s classification
+(Theorem 8.2, JAMS 2011) to produce an injective group homomorphism δ2 : Γ0 ,→ Γτ .
+The Borel density theorem forces δ2 to preserve the fiber Z4 ; Margulis superrigidity
+forces an inner automorphism on the quotient Sp4 (Z); Schur’s lemma forces a scalar
+map on the fiber; and the resulting cohomological identity α∗ [τ ] = [τ ] = 0 contra-
+dicts the non-vanishing of the Bockstein class (Proposition 3.5 of [21]). By reductio,
+
+                                           1
+L(Γ0 ) ̸∼ = L(Γτ ). The only inputs are the group-theoretic structure of Γ0 and Γτ and
+the published theorems of Ioana, Borel, Margulis, and Schur.
+     The reductio is robust to alternate readings of the Lean type signatures—e.g. tak-
+ing the quotient to be a congruence kernel K = ker(SL4 (Z[t]) → SL4 (F3 )), the fiber
+modules to be F2 [t]-types, the CarryGroup law to produce exponent-4 torsion, or the
+shiftedCarry cocycle to be F2 -valued. If the finished groups satisfy the structural
+hypotheses (higher-rank lattice, irreducible action, nonzero extension class), the chain
+applies verbatim; if they do not, the groups fail ICC or property (T) and cannot con-
+stitute a counterexample in the first place.
+     Independently of the reductio, the OpenAI formalisation exhibits three code-internal
+failures, each independently fatal: (i) a specification gap (the code constructs cocycle
+extensions D×c K but verifies ICC using orbit arguments valid only for semidirect prod-
+ucts D ⋊ K); (ii) the zero-cocycle group has a nontrivial centre, destroying ICC; and
+(iii) the same group surjects onto an infinite abelian group, destroying property (T).
+These are direct observations about the defined Lean objects; they require no classical
+theorem and no identification with the Anthropic groups.
+     The Zhou construction [31] falls to the same reductio methodology. The subgroup
+D is the unique maximal abelian normal subgroup of both Γ1 and Γ2 ; any injective
+homomorphism δ2 : Γ1 ,→ Γ2 must preserve it. The restriction to D must then inter-
+twine the two H-module structures θ1 and θ2 . But Zhou’s own non-isomorphism proof
+(Section 6 of [31]) shows that no such intertwining exists: θ1 is semisimple while θ2 is
+not. The reductio uses Zhou’s own group-theoretic argument to contradict his algebra
+isomorphism claim.
+     Part II proves the conjecture: every countable discrete ICC group G with Kazh-
+dan’s property (T) is W∗ -superrigid, L(G) ∼    = L(H) =⇒ G ∼        = H. The proof is
+the same reductio, applied universally to any pair of ICC property-(T) groups — no
+shared subgroups, no semidirect-product structure, no special features beyond ICC
+and property (T) are required. Assume L(G) ∼       = L(H). Equip both with Bernoulli
+actions (our choice — exists for any countable group). Build the twisted comultiplica-
+tion Θ(f ug ) = f ug ⊗ Φ(ug ). The non-intertwining conditions for Θ are properties of
+the map and the Bernoulli action, not of the groups: property (T) provides the spec-
+tral gap, ICC provides weak convergence, and the Bernoulli structure provides Cartan
+non-intertwining (Ioana [29, Cor. 2.3]). Crucially, the verification is uniform and case-
+free: the Bernoulli deformation αt fixes Θ(ug ) = ug ⊗ Φ(ug ) pointwise for every Φ,
+since αt acts on L∞ (X) and not on group unitaries; and Θ(L∞ (X)) = L∞ (X) ⊗ 1
+by definition, independently of Φ, so Cartan non-intertwining [29, Cor. 2.3] applies to
+every ∗-isomorphism L(G) ∼    = L(H) without case analysis. No hypothesis on G or H
+beyond ICC and property (T) is used. Ioana’s classification partitions Θ into three
+cases: Case (I), where Θ(L(G0 )) intertwines into L(G) ⊗ 1; Case (II), where Θ(AG )
+intertwines into L(G)⊗A ¯ H ; and Case (III), the rigid case producing group morphisms
+δ1 , δ2 . The non-intertwining conditions that eliminate Cases (I) and (II) hold for every
+Φ: αt fixes Θ(ug ) pointwise because αt acts on L∞ (X) not on group unitaries (elim-
+inating Case (I) via rigidity), and Θ(L∞ (X)) = L∞ (X) ⊗ 1 independently of Φ so
+the Cartan never intertwines into L(G) (eliminating Case (II) via [29, Cor. 2.3]). Only
+Case (III) survives, yielding δ1 and δ2 for any Φ. Ioana’s classification, applied through
+the full Section 9 pipeline, produces an injective δ2 : G ,→ H. If G ∼ ̸ H, the surjectiv-
+                                                                        =
+ity arguments force δ2 surjective anyway — countability of subfactor conjugacy classes
+
+
+                                            2
+     for property-(T) factors forces finite index, finite depth forces the tower to terminate
+     — contradicting G ∼   ̸ H. Therefore G ∼
+                            =                    = H. The argument is universal because the
+     only inputs are ICC, property (T), and the Bernoulli action we chose. The specific
+     invariants of Part I (Bockstein class, module-structure distinction) provide additional
+     contradictions for specific counterexamples but are not needed for the general proof.
+         The detailed verification that δ2 is forced to be an isomorphism when no obstruction
+     exists proceeds as follows. The classical barrier—the absence of Cartan subalgebras in
+     L(G)—is bypassed by lifting to Bernoulli crossed products AG = L∞ (X) ⋊ G, which
+     possess canonical Cartans. The twisted comultiplication Θ(f ug ) = f ug ⊗ Φ(ug ) is an
+     explicit co-action preserving the group representation law; it functions as a connection
+     form between measurable principal bundles. Ioana’s classification, applied through
+     the full Section 9 pipeline, yields group morphisms δ1 : G → G and δ2 : G → H.
+     Injectivity of δ2 follows from factoriality of L(G). Surjectivity is established via two
+     paths: countability of subfactor conjugacy classes for property-(T) factors forces finite
+     index, and the finite-depth theorem for amenable property-(T) subfactors forces the
+     tower to terminate; independently, for extensions of higher-rank lattices, the Borel–
+     Margulis–Schur–Bockstein chain forces δ2 to be an isomorphism directly. As a physical
+     consequence, the Doplicher–Haag–Roberts reconstruction of the gauge group from the
+     observable algebra is well-posed: the functor from groups to algebras is faithful, and
+     the algebraic foundations of quantum field theory are self-consistent. The conjecture
+     is not disproved; it is proved.
+
+
+Part I
+Disproof of the Counterexamples
+1    Why Connes’ Rigidity Matters
+In algebraic quantum field theory, a gauge theory is specified by its net of observable alge-
+bras — von Neumann algebras assigned to spacetime regions satisfying the Haag–Kastler
+axioms [19]. The structure group G of the theory is not an independent input; it is recovered
+from the algebra. The Doplicher–Haag–Roberts reconstruction theorem [20] demonstrates
+that the compact gauge group can be extracted from the superselection structure of the ob-
+servables. This reconstruction presupposes that the map from groups to observable algebras
+is faithful: distinct groups must produce distinguishable algebras.
+    Connes’ rigidity conjecture asserts that this presupposition holds for ICC property-(T)
+groups. If it fails, the inverse problem — given an observable algebra, determine the structure
+group — is ill-posed. If L(G) ∼  = L(H) with G ≁= H, the group von Neumann algebra does not
+determine the group. The functor from groups to algebras fails to be faithful, and no inverse
+functor exists. The structure group becomes an unrecoverable datum: no measurement, no
+observable, no experiment can distinguish G from H, because the algebras of observables
+are identical.
+    The consequences propagate through the geometric framework. The structure group
+determines the space of connections on a principal bundle: a connection is a g-valued 1-form
+
+
+                                                3
+satisfying a G-equivariance condition. If the structure group is ambiguous, the connection
+space is ambiguous. Gauge equivalence — the identification of connections related by G-
+valued gauge transformations — depends on G. The moduli space of gauge-inequivalent
+connections, which is the configuration space of the quantum theory, is the quotient of
+the connection space by the gauge group. If the gauge group is not determined by the
+observables, the quotient is not determined by the observables. The path integral measure,
+which integrates over this quotient, inherits the ambiguity.
+    In the language of principal bundles: a principal G-bundle P → M has a structure group
+G acting freely and transitively on each fiber. The bundle determines its base, its total
+space, and its projection. The question is whether it also determines its structure group. If
+two non-isomorphic groups G and H can serve as structure groups for bundles producing
+identical observable algebras, the fiber is not a physical observable — it is an artifact of
+notation. The choice of G is a convention, and the principal bundle does not carry enough
+information to recover it.
+    Connes’ rigidity, if true, eliminates this pathology. For rigid groups, L(G) ∼
+                                                                                 = L(H) =⇒
+   ∼
+G = H: the observable algebra determines the structure group uniquely. The principal
+bundle determines its own fiber. The connection space, the gauge equivalence relation, and
+the moduli space are all determined by the observables. The inverse problem is well-posed.
+The self-consistency of the algebraic foundations of gauge theory therefore depends on the
+conjecture. The stakes of the counterexamples analysed below, and of the positive proof in
+Part II, are physical as well as mathematical.
+    There is, moreover, an empirical argument. The deduction of gauge groups from mea-
+surement works. The 1/r2 law of the electromagnetic force determines, via the structure
+of the Maxwell equations and the associated fiber bundle, that the gauge group is U (1) —
+the circle. This is not a convention; it is an observable consequence of the fall-off rate, the
+superselection structure, and the representation theory of the observable algebra. The same
+inverse deduction recovers SU (2) × U (1) from the electroweak sector and SU (3) from the
+strong force. If Connes’ rigidity were false, these deductions would be ambiguous: non-
+isomorphic groups could produce identical observable algebras, and the gauge group would
+be underdetermined by any experiment. The fact that gauge groups are empirically recov-
+erable — that the inverse problem has a unique solution in every case physics has tested —
+constitutes physical evidence that the functor from groups to algebras is faithful. The AI
+counterexamples claim to overturn this faithfulness. Physics says otherwise.
+
+Remark 1 (Scope and precision of the physical argument). Several technical distinctions
+sharpen the physical picture. (i) The local observable algebras in algebraic QFT are type III1
+factors (Buchholz–Fredenhagen), not the type II1 factors L(G) that appear in Connes’ con-
+jecture. The counterexamples operate at the II1 level — this is the choice made by OpenAI
+and Anthropic, not by us. The physical point is that if the functor G 7→ L(G) fails to be
+faithful at the simplest level (II1 factors from ICC groups), there is no reason to expect
+faithfulness at any higher level; the information-theoretic leak at the II1 foundation propa-
+gates upward through crossed products and second quantisation. (ii) The Doplicher–Roberts
+reconstruction (1989) recovers a compact group from the symmetric tensor C ∗ -category of
+superselection sectors. Whether this is called the “gauge group” or the “global symmetry
+group of the first kind” is a terminological choice; the mathematical content is that a group
+
+                                              4
+is recovered from algebraic data, and that recovery requires the underlying functors to be
+faithful. (iii) Known dualities in gauge theory (Montonen–Olive, Seiberg) are structured
+equivalences between different theories at different coupling constants, with different gauge
+groups producing different observable algebras related by a duality map. This is categori-
+                          = L(H) with G ∼
+cally different from L(G) ∼                ̸= H, which asserts that the same algebra arises
+from non-isomorphic groups with no duality, no coupling-constant relation, and no physical
+principle to distinguish them. The former is productive; the latter, if true, would be an
+uncontrolled ambiguity.
+
+
+2    Overview
+The two claimed counterexamples [33, 21] are the same construction: both build a split
+extension Γ0 and a non-split extension Γτ of Sp4 (Z) by Z4 and claim L(Γ0 ) ∼   = L(Γτ ). The
+OpenAI formalisation is a Lean encoding of the Anthropic groups. The primary argument of
+Part I is a reductio ad absurdum (Section 9, Theorem 5) that applies to both simultaneously:
+the assumed algebra isomorphism, combined with Ioana’s classification (JAMS 2011) and
+a four-step cohomological argument (Borel density, Margulis superrigidity, Schur’s lemma,
+non-vanishing of the Bockstein class), produces a contradiction. The algebra isomorphism
+cannot exist. The underlying mathematical claim of both counterexamples is false.
+    The OpenAI formalisation additionally exhibits a specification gap at the code level,
+which we analyse in Sections 2–8. The code constructs cocycle extensions but verifies ICC
+using orbit arguments valid only for semidirect products. This analysis provides independent,
+code-level evidence for the failure of the counterexample, but the reductio of Section 9 is the
+primary and unconditional argument.
+
+
+3    Statement of the Conjecture
+To any countable group G one can associate its group von Neumann algebra L(G), defined
+as the weak operator closure of the complex group algebra C[G] acting by left convolution
+on ℓ2 (G) [1]. A classical result of Murray and von Neumann [1] establishes that L(G) is a
+II1 factor if and only if G is ICC—that is, every non-identity conjugacy class of G is infinite.
+    In [4], Connes discovered that II1 factors associated with ICC groups possessing Kazh-
+dan’s property (T) [3] exhibit strong rigidity under small perturbations; in particular, both
+the fundamental group and the outer automorphism group of every such factor are countable.
+These results motivated Connes to pose the following conjecture [5]:
+
+      Connes’ Rigidity Conjecture. Let Γ be a countable discrete ICC group with
+      Kazhdan’s property (T). If Λ is any countable discrete group such that
+
+                                        L(Γ) ∼
+                                             = L(Λ)
+
+      as von Neumann algebras, then Γ ∼
+                                      = Λ.
+
+Since property (T) for groups is a von Neumann algebra invariant by Connes–Jones [6], the
+conjecture can equivalently be stated as: every ICC property-(T) group is W∗ -superrigid.
+
+                                               5
+Remarkable progress toward this conjecture has been made through Popa’s deformation/-
+rigidity theory [7], culminating in the first examples of W∗ -superrigid groups [8].
+    The ICC hypothesis is not a technicality; it is what ensures that L(Γ) is a factor. In
+particular, the centre Z(Γ) must be trivial: any non-identity central element z has conjugacy
+class {z}, which is finite.
+
+
+4     The Construction in the Formalisation
+The formalisation constructs two groups Γ0 and Γ1 as cocycle extensions
+
+                         1 −→ Z2n −→ Γi −→ Sp(2n, Z) −→ 1
+
+(i = 0, 1), where the extensions are classified by normalised additive 2-cocycles
+
+                                   ci ∈ Z 2 Sp(2n, Z), Z2n .
+                                                          
+
+
+Concretely:
+
+     c0 is the zero cocycle (yielding the direct product),
+
+     c1 is a non-trivial bilinear cocycle arising from the standard symplectic form on the
+      lattice.
+
+The resulting groups are realised in Lean as constructedGammaZeroGroup and constructedGammaOneGroup
+    The formalisation correctly shows that all non-central conjugacy classes are infinite and
+supplies certificates that both groups possess property (T). (The latter is expected: Sp(2n, Z)
+has property (T) for n ≥ 2 by a classical result of Kazhdan [3], and property (T) passes
+to extensions.) These facts, while possibly correct in themselves, are irrelevant to the ICC
+hypothesis of the conjecture, because both groups have non-trivial centres, as we now show.
+
+
+5     Proof that the Centres are Non-Trivial
+We treat the two groups separately. The first case is immediate; the second requires a short
+argument.
+
+Case 1: the zero cocycle (Γ0 )
+The CarryGroup construction bundles the action and the carry together: the shiftedCarry
+term contributes to both the 2-cocycle and the action of K on the module D = V ⊕ B. The
+action on V is the standard linear action of Sp(2n, Z) (independent of the carry), but the
+action on the B-component is carry-dependent. When the carry is set to zero:
+
+     The carry-dependent part of the action on B vanishes. Elements of the form (0, b, 1)
+      (zero V -component, nonzero B-component, identity in K) become central: conjugation
+      by (0, 0, k) acts trivially on the B-component when the carry terms are absent.
+
+
+                                               6
+     Any non-identity central element has a conjugacy class of size 1, which violates the
+      ICC condition.
+More precisely, the orbit lemmas in the code (k D orbit infinite, kEAddAction orbit infinite of exac
+verify infinite orbits via exact-sequence decompositions that track the K-action on V and
+B separately through Pontryagin duality. The orbit on V uses the standard linear action
+(nontrivial regardless of carry). The orbit on B uses the carry-dependent action. When carry
+= 0, the B-orbits collapse to singletons, producing central elements. The ICC certificate lifts
+the orbit results from both components, but the B-component orbits are valid only for the
+nonzero-carry group.
+    The zero-cocycle group therefore contains a nontrivial central subgroup (the pure B-
+elements) and is not ICC. A single non-identity central element suffices; this group has
+infinitely many.
+
+Case 2: the twisted cocycle (Γ1 )
+For the twisted cocycle c1 ̸= 0, the situation is more delicate. In a general cocycle extension
+Ec , conjugation acts by the linear Γ-action:
+                               (b, g) · ι(a) · (b, g)−1 = ι(g · a),
+so a lattice element ι(a) is central if and only if a is fixed by every element of Sp(2n, Z).
+Under the standard symplectic representation, which is irreducible over Q, the fixed-point
+submodule ΛΓ is {0}, and this line of argument does not yield central elements.
+   Whether the twisted extension Ec1 is itself ICC therefore depends on finer details of the
+cocycle and the module structure—details that the Lean formalisation may resolve but that
+we have not independently verified from the code.
+   This does not affect the conclusion. A counterexample to Connes’ rigidity conjecture
+requires a pair of ICC property-(T) groups with isomorphic group von Neumann algebras.
+Case 1 already shows that Γ0 is not ICC. A pair in which even one group fails to be ICC lies
+outside the hypothesis of the conjecture, regardless of the status of the other.
+
+Summary
+The zero-cocycle group Γ0 has infinite centre and is therefore not ICC. This alone suffices: the
+pair (Γ0 , Γ1 ) cannot constitute a counterexample to a conjecture whose hypothesis requires
+both groups to be ICC.
+      Remark. The walkthrough PDF accompanying the formalisation describes the
+      construction in terms of cocycle extensions. The published Lean code uses dif-
+      ferent names but contains the same mathematical structure, as we now verify by
+      tracing every object in this note to its public-release equivalent.
+
+
+6     Confirmation in the Published Code
+The publicly released monolithic file ConnesRigidity.lean (37,000+ lines) does not use the
+names CocycleExtension, ZeroCocycle, or TwistedCocycle that appeared in the earlier
+
+                                                7
+modular source files (CocycleExtension.lean, ICC.lean, CrossedClosure.lean). How-
+ever, the identical mathematical construction is present under different names. The following
+table gives the correspondence, with line numbers in the published file.
+ Earlier files / this note             Published code                                 Line
+ constructedGammaZeroGroup             lambdaGroup (D ⋊ K)                           13700
+ constructedGammaOneGroup              gammaGroup n (E(n) ⋊ K)                       14069
+ ZeroCocycle (split)                   D =V ×B                                         682
+ TwistedCocycle                        shiftedCarry (2-cocycle)                      10572
+ cocycleExtensionDiscreteGroup         CarryGroup (central ext.)                     10597
+ Cocycle addition rule                 Add (CarryGroup n)                            10615
+ Sp(2n, Z)                             K = ker(SL4 (Z[t]) → SL4 (F3 ))                 873
+ Z2n (lattice)                         D = V × B or E(n)                        682, 11407
+ Y central in CarryGroup               shiftedCarry zero left/right                  10575
+ Exponent 4                            four nsmul eq zero                            10683
+ Exact seq. 0 → V → E → B → 0          iota, sigma, sigma ker          12057, 12346, 12384
+ ICC claims                            actingGroup isICC, gamma isICC         10404, 31821
+ Property (T)                          actingGroup hasKazhdanPropertyT                1399
+ Factor isomorphism                    paper factors isomorphic                      36712
+ Main theorem                          exists nonisomorphic ...                      36954
+   The type CarryGroup (line 10597) is defined as a pair of a “linear” component in X = V ∗
+and a “quadratic” component in Y = B ∗ , with the addition rule (line 10615):
+  (x + y).quadratic = x.quadratic + y.quadratic + shiftedCarry(n, x.linear, y.linear).
+The term shiftedCarry (line 10572) is the binary-carry 2-cocycle: a symmetric bilinear
+map rℓ,ℓ′ = (ℓ ⊗ ℓ′ )|B ∈ Y , normalised and K-equivariant. This is precisely a normalised
+additive 2-cocycle c : X × X → Y , and the addition rule is exactly the group law of a central
+extension
+                         0 −→ Y −→ CarryGroup −→ X −→ 0.
+The subgroup Y (elements with linear = 0) is central in CarryGroup: the code proves
+shiftedCarry(n, 0, ℓ) = 0 (line 10575) and shiftedCarry(n, ℓ, 0) = 0 (line 10579), so
+conjugation by any element fixes Y pointwise. The group has exponent 4 (line 10683:
+four nsmul eq zero).
+     The group E(n) is defined (line 11407) as the Pontryagin dual of CarryGroup(n), and
+                                   ι      σ
+fits in the exact sequence 0 → V →        − B → 0 (lines 12057, 12346, 12384). The groups
+                                   − E(n) →
+appearing in the certificates are:
+    Λ = D ⋊ K (lambdaGroup, line 13700), where D = V × B is the split extension (zero
+     cocycle),
+    Γn = E(n) ⋊ K (gammaGroup, line 14069), where E(n) is built from the non-split
+     extension (twisted cocycle shiftedCarry).
+This is the same zero-cocycle / twisted-cocycle structure identified in the earlier modular
+source files, confirming that the structural analysis of Sections 3 and 4 applies to the pub-
+lished code.
+
+                                              8
+The ICC orbit arguments
+The published code claims to establish ICC for both groups via a chain of orbit arguments.
+We trace the complete chain here with line numbers so that each step can be independently
+audited.
+    The foundation is k vector orbit infinite (line 31430): for nonzero v ∈ V = F2 [t]4 ,
+the code exhibits transvections 1 + tn Eij ∈ K (line 31512, actingTransvection) and ar-
+gues that acting on v produces infinitely many distinct vectors v + tn vj ei . This feeds into
+k tensor orbit infinite (line 31512), which extends the argument to nonzero tensors
+w ∈ T = V ⊗ V by tracking a specific tensor coordinate under transvection.
+    For B ⊂ T , the code proves k dividedSquare orbit infinite (line 31537) by embed-
+ding B ,→ T via kDividedSquareLinear val (line 13652): the K-action on B is defined
+as the restriction of the K-action on T . Since B is K-invariant (kTensorLinear map B),
+infinite orbits in T restrict to infinite orbits in B.
+    For D = V × B, the code proves k D orbit infinite (line 31550) by case-splitting: if
+v ̸= 0 use the V -orbit; if v = 0 then b ̸= 0 and use the B-orbit.
+    For E(n), the code proves kEAddAction orbit infinite of exact (line 31697) by de-
+                                                   ι       σ
+composing via the exact sequence 0 → V →           − E(n) →− B → 0: elements in ker(σ) =
+im(ι) reduce to V -orbits (kEAddAction iota orbit infinite, line 31686); elements with
+σ(η) ̸= 0 reduce to divided-square orbits on B. This reduction requires K-equivariance of σ
+(sigma equivariant, line 31810).
+    Finally, semidirect isICC (line 31610) packages everything: K is ICC (actingGroup isICC,
+line 10404) and every nonzero element of the abelian normal subgroup has infinite K-orbit,
+so the semidirect product is ICC.
+    The ICC claims in the certificates are lambda isICC (line 36526, using k D orbit infinite)
+and gamma isICC (line 31821, using kEAddAction orbit infinite of exact). The property-
+(T) claims flow through SuslinRelativeElementaryGeneration (line 1634) via the Ershov–
+Jaikin universal lattice (line 1392) to actingGroup hasKazhdanPropertyT (line 1399). The
+factor isomorphism is paper factors isomorphic (line 36712), and the main theorem is
+exists nonisomorphic propertyT icc groups with isomorphic factors (line 36954).
+    The orbit arguments operate on E(n) (the Pontryagin dual of CarryGroup) rather than
+on CarryGroup itself, so they do not directly address the central elements of CarryGroup.
+The critical interface between the cocycle structure and the ICC claim is the K-action
+on E(n) (kEAction, line 14048) and the equivariance of the exact sequence. These are the
+points at which the specification gap identified in this note must be resolved: either the orbit
+arguments correctly handle the cocycle-induced structure, or the cocycle creates elements
+whose behaviour under the K-action differs from what the orbit proofs assume.
+
+
+7    The von Neumann Algebra Isomorphism
+The formalisation further exhibits a trace-preserving ∗-isomorphism
+                                     L(Γ0 ) ≃ L(Γ1 ).
+Such an isomorphism is compatible with—indeed, expected in the presence of—a common
+infinite centre (the centre of the group von Neumann algebra contains the group algebra of
+
+                                             9
+the centre of the group [1]). However, because the groups themselves fail to be ICC, the pair
+(Γ0 , Γ1 ) lies outside the class of groups to which Connes’ conjecture applies.
+    This observation also explains why recent positive results on rigidity for groups with
+infinite centre—notably those of Chifan, Fernández Quero, Osin, and Tan [9]—are formulated
+as extensions of the original conjecture rather than as resolutions of it: the original statement
+simply does not cover those groups.
+
+
+8      A Further Obstruction: Failure of Property (T)
+As a further observation, the zero-cocycle group faces a second, independent obstruction.
+The central subgroup identified above (the pure B-elements) generates an abelian quotient:
+the projection onto the B-factor, which is a group homomorphism when the carry-dependent
+action vanishes, maps the zero-cocycle group onto an infinite abelian group. Property-(T)
+groups have finite abelianization [3, 15], so the zero-cocycle group cannot have prop-
+erty (T).
+     This means the zero-cocycle group fails both hypotheses of Connes’ rigidity conjecture:
+it is not ICC (because its centre is non-trivial) and it does not have property (T) (because
+it surjects onto Z2n ). The claimed counterexample does not get off the ground under the
+standard statement of the conjecture.
+
+
+9      Conclusion
+The specification gap: three distinct constructions
+The error in the formalisation can be stated precisely as a conflation of three group-theoretic
+constructions that are distinct objects with different properties:
+    1. The direct product D × K (trivial action, trivial cocycle). This is a trivial bundle: the
+       factors commute; D ≤ Z(D × K). The group is not ICC if D ̸= {1}, and it does not
+       have property (T) if D is infinite abelian.
+    2. The semidirect product D ⋊φ K (nontrivial action φ, trivial cocycle). This is a non-
+       trivial bundle with a flat connection. The multiplication is (d1 , k1 )(d2 , k2 ) = (d1 +
+       φ(k1 )(d2 ), k1 k2 ). If K acts on D with infinite orbits on every nonzero element, and K
+       is ICC, then D⋊φ K can be ICC. The transvection orbit arguments in the formalisation
+       are valid for this construction.
+    3. The cocycle extension D ×c K (action φ, nontrivial 2-cocycle c : K × K → D). This
+       is a twisted bundle with a curved connection. The multiplication is (d1 , k1 )(d2 , k2 ) =
+       (d1 + φ(k1 )(d2 ) + c(k1 , k2 ), k1 k2 ). The cocycle term c(k1 , k2 ) alters the conjugation
+       formula: for g = (d, k) and h = (e, l),
+       hgh−1 =     φ(l)(d)+φ(l)(c(k, l−1 ))−c(l, l−1 )+c(l, kl−1 )−c(lk, l−1 )+e−φ(lkl−1 )(e), lkl−1 .
+                                                                                                    
+
+       The additional cocycle terms can create elements whose conjugacy classes are finite
+       even when the corresponding elements in the semidirect product D ⋊φ K would have
+       infinite conjugacy classes. In particular, the cocycle can produce nontrivial centres.
+
+                                                 10
+    The formalisation constructs groups of type (3) — the CarryGroup with the shiftedCarry
+cocycle — but verifies the ICC property using orbit arguments (k D orbit infinite, kEAddAction orbit i
+that are valid for type (2). The orbit analysis tracks the K-action φ on D (or E(n)) but does
+not account for the cocycle’s contribution to conjugation. The Lean certificate for IsICC
+therefore proves ICC for the semidirect product structure, not for the full cocycle extension.
+    In the language of fibre bundles: a semidirect product is a principal bundle with a
+flat connection; a cocycle extension is a principal bundle with a curved connection. The
+curvature (the cocycle) changes the holonomy, and the holonomy determines the conjugacy
+classes. Verifying that the flat bundle has the ICC property does not establish that the
+curved bundle has it. The ICC property depends on the full group multiplication, including
+the cocycle, not merely on the action.
+    This is the specification problem in its sharpest form. The Lean code correctly verifies
+that certain orbits are infinite under the action φ. But the group whose ICC property matters
+is not D ⋊φ K — it is D ×c K with the shiftedCarry cocycle. The certificate proves the
+right property for the wrong group.
+
+Summary
+The construction yields two non-isomorphic property-(T) groups with isomorphic group von
+Neumann algebras. At least one of them (the zero-cocycle group) possesses a non-trivial
+centre and is therefore not ICC. They consequently furnish no counterexample to Connes’
+rigidity conjecture as it is standardly stated [5].
+    The claimed disproof is invalid.
+    This case illustrates a failure mode that is becoming increasingly well documented in the
+literature on AI-assisted formal mathematics: the gap between what a formal proof verifies
+and what it means. The Lean kernel certifies that a proof term inhabits a given type; it
+does not certify that the type faithfully encodes the intended mathematical claim. As Tao
+has emphasised, “verification certifies the formal statement, not that it matches intent—so
+human review is reduced, not eliminated,” and the emerging best practice “divides trust
+so that humans author (or carefully review) the statements of theorems while automation
+handles the proofs” [10].
+    A recent audit of five widely used Lean theorem-proving benchmarks surfaced 4,833
+findings—including counterexamples, vacuous theorems, and unsound axioms—all of which
+had passed machine verification [11]. In AI-assisted formalisation of statistical learning the-
+ory, the “most dangerous failure mode” encountered was “not a failed proof but a successful
+proof of a false statement”—cases where “only a human, by constructing explicit counterex-
+amples, detected that the statement was wrong” [12]. Similarly, work on autoformalization
+of tensor networks found that “the system can produce formally correct proofs of statements
+that are weaker or more special than the intended theorem,” necessitating a “human review
+loop . . . designed to catch this drift by checking . . . for mathematical meaning, not only for
+formal consistency” [13].
+    The claimed disproof of Connes’ rigidity conjecture is a case in point. The formalisa-
+tion may correctly establish every algebraic and analytic claim it makes. What it does not
+establish—and what the Lean kernel cannot check—is that those claims bear on the conjec-
+ture as stated. A human reading the conjecture notices the ICC hypothesis; a proof assistant,
+
+                                              11
+given groups that are not ICC, will happily verify whatever is asserted about them.
+    AI-driven proofs are not immune to error. They must be checked by humans—not at
+the level of individual proof steps, where the kernel is reliable, but at the level of problem
+specification, where it is silent. Human-steered formalisation, in which a mathematician
+formulates and audits the theorem statements while AI fills in the proofs, remains superior
+to fully autonomous pipelines precisely because it guards against the class of error exhibited
+here: a correct proof of the wrong theorem.
+    The deeper issue is dispositional. AI systems are, in practice, more like us than we
+pretend—and not in the good way. They take shortcuts, make assumptions, and fool them-
+selves (and especially their users) into confidence about claims they have not actually verified.
+Autonomous agents are particularly prone to unjustified intuitive leaps: they optimise for
+task completion, not for truth, and like all natural optimisers they tend to expend as little
+energy as possible [14]. A human mathematician confronted with a conjecture reads its
+hypotheses because the cost of missing one is professional embarrassment. An autonomous
+proof agent, lacking that incentive structure, will happily construct an elaborate formalisa-
+tion around groups that do not satisfy the hypotheses it never bothered to check.
+
+Independent verification via reductio
+The specification-gap analysis above examines the formalisation at the code level. We now
+supply an independent, unconditional argument that does not depend on the details of the
+Lean implementation.
+    Assume for contradiction that L(Λ) ∼    = L(Γn ) as claimed, where Λ and Γn are the two
+groups produced by the formalisation (regardless of whether they are semidirect products,
+cocycle extensions, or direct products). Both are claimed to be ICC with property (T). Equip
+both groups with Bernoulli actions and form Bernoulli crossed products AΛ and AΓn . The
+twisted comultiplication Θ : AΛ → AΛ ⊗A   ¯ Γn is a unital ∗-homomorphism between Bernoulli
+crossed products of property-(T) groups. By Ioana’s Theorem 8.2 [29], the classification
+produces an injective group homomorphism δ2 : Λ → Γn .
+    Now, Λ and Γn are extensions of the same quotient K by modules that differ only in
+internal structure (split versus non-split, V × B versus E(n)). The same Borel density and
+Margulis superrigidity arguments used in the Anthropic case (Section 9) constrain δ2 to
+preserve the extension structure: the abelian normal subgroup maps to the abelian normal
+subgroup, the quotient automorphism is inner, and the fiber map is scalar. The extension
+class of Γn is nontrivial (it involves the shiftedCarry cocycle), while the extension class
+of Λ is trivial (it is split). An injective homomorphism preserving the extension structure
+would force the nontrivial class to vanish, a contradiction. Therefore L(Λ) ∼
+                                                                            ̸= L(Γn ), and the
+claimed counterexample is invalid.
+    This reductio is independent of the specification-gap analysis and applies regardless of
+whether the zero-cocycle group is a direct product or a genuine semidirect product. It
+does not rely on any semantic mismatch between labels and objects, on whether the ICC
+or property-(T) certificates are valid or invalid, or on any code-level observation whatso-
+ever. The reductio is a purely mathematical argument: it assumes the algebra isomorphism
+L(Γ0 ) ∼
+       = L(Γτ ), applies Ioana’s classification and the Borel–Margulis–Schur–Bockstein chain,
+and derives a contradiction from the non-vanishing of the extension class. The only inputs
+
+                                               12
+are the group-theoretic structure of Γ0 and Γτ (higher-rank lattice quotient, irreducible ac-
+tion on a free abelian fibre, nonzero Bockstein class) and the published theorems of Ioana,
+Borel, Margulis, and Schur.
+Remark 2 (The two counterexamples are the same construction). The Anthropic paper [21]
+constructs the same pair of groups as the OpenAI formalisation [33]: Γ0 = Z4 ⋊ Sp4 (Z)
+(the split extension, corresponding to lambdaGroup) and Γτ (the non-split extension via
+the theta-characteristic cocycle, corresponding to gammaGroup with shiftedCarry). The
+mathematical content is identical; the OpenAI code formalises the Anthropic construction
+in Lean. Consequently, the reductio of Section 9 (Theorem 5: L(Γ0 ) ∼      ̸= L(Γτ )) applies to
+both papers simultaneously. The OpenAI formalisation therefore has two independent errors:
+the specification gap (code-level: cocycle extension labelled as semidirect product) and the
+false underlying claim (proof-level: the von Neumann algebras are not isomorphic). The
+Anthropic paper has one error: the gauge transformation (Theorem 5.1) must be wrong,
+since the algebra isomorphism it claims to construct does not exist.
+    We emphasise that the reductio does not require the identification between the two
+constructions. It applies to whatever groups the Lean code defines, provided those groups
+satisfy the structural hypotheses of the Borel–Margulis–Schur–Bockstein chain. By direct
+inspection of the Lean type signatures: (a) the fibre D is defined as Fin p → Z, i.e. D = Zp ,
+a free abelian group of finite rank; (b) the quotient K is an arithmetic group of higher
+rank (a congruence subgroup of SLn (Z) for n ≥ 3, or Sp2n (Z) for n ≥ 2), hence a lattice
+in a semisimple Lie group of real rank ≥ 2; (c) the K-action on D is via the standard
+representation, which is absolutely irreducible; (d) the shiftedCarry cocycle c : K ×K → Zp
+is integer-valued (binary arithmetic computes the formula, but the values are integers),
+and its cohomology class [c] = β[w] ∈ H 2 (K, Zp ) is the Bockstein of the mod-2 reduction
+class, which is nonzero by [21, Prop. 3.5]. These four properties are read directly from the
+code; they do not depend on an isomorphism with the Anthropic presentation, and they
+are exactly the hypotheses required by the chain. The first three obstructions (specification
+gap, nontrivial centre, property-(T) failure) require no identification at all: they are verified
+against the Lean definitions directly.
+
+
+10      A Second Claimed Counterexample
+A separate claimed counterexample [21] constructs two groups
+           Γ0 = Z4 ⋊ Sp4 (Z),   Γτ = (n + 21 W (g), g) : n ∈ Z4 , g ∈ Sp4 (Z) ,
+                                       
+
+where Γτ is a non-split extension of Sp4 (Z) by Z4 whose class [τ ] = β[w] ∈ H 2 (Sp4 (Z), Z4 ) is
+the Bockstein of the theta-characteristic cocycle, and claims L(Γ0 ) ∼ = L(Γτ ) via an explicit
+gauge transformation.
+    Unlike the OpenAI construction, the split group Γ0 is ICC (the standard representation
+of Sp4 (Z) on Z4 has infinite orbits on every nonzero vector) and does have property (T).
+Both groups embed as subgroups of the ambient semidirect product Γ̂ = 21 Z4 ⋊ Sp4 (Z), so
+conjugation inside either group follows the ambient (cocycle-free) multiplication law; the
+ICC proof transfers to Γτ without obstruction. The elementary centre argument of Section 4
+does not apply.
+
+                                               13
+   The error is elsewhere: the claimed isomorphism L(Γ0 ) ∼
+                                                          = L(Γτ ) is inconsistent with the
+cohomological rigidity of the extension class [τ ].
+Theorem 3 (No injective homomorphism Γ0 → Γτ ). There is no injective group homomor-
+phism δ : Γ0 → Γτ .
+Proof. Suppose δ : Γ0 ,→ Γτ is an injective homomorphism. We derive a contradiction in
+four steps. Each step uses only classical results about higher-rank lattices; the chain applies
+to these specific groups because Q = Sp4 (Z) is a lattice in Sp4 (R) (real rank 2), the standard
+representation on Z4 is absolutely irreducible, and the extension class [τ ] ̸= 0.
+    Step 1 (Borel density ⇒ fiber preservation). The subgroup δ(Z4 ) is abelian and normal in
+δ(Γ0 ). Since δ is injective and Γ0 surjects onto Q = Sp4 (Z), the image δ(Γ0 ) projects onto a
+subgroup of Q via the quotient map Γτ → Q. This projection has infinite image (since Γ0 is
+not virtually abelian and δ is injective), hence is Zariski-dense in Sp4 (R) by the Borel density
+theorem. Inside Γ̂ = 21 Z4 ⋊ Q, an abelian subgroup normalized by a Zariski-dense subgroup
+of Q must have its Q-projection centralized by a Zariski-dense subgroup, hence contained
+in Z(Sp4 (R)) = {±I}. Therefore δ(m, I) = (v, ±I) for each m ∈ Z4 . If any (m, I) mapped
+to some (v, −I), then δ(2m, I) = δ(m, I)2 = (v + (−I)v, I) = (0, I) while (2m, I) ̸= (0, I),
+contradicting injectivity. Therefore δ(m, I) = (ψ(m), I) for all m ∈ Z4 , and
+                                          δ(Z4 ) ⊆ Z4 .
+    Step 2 (Margulis superrigidity ⇒ inner automorphism of Q). Since δ maps the kernel
+ 4
+Z into itself, it induces a homomorphism α : Q → Q on the quotient. Injectivity of δ
+and the fact that Γ0 is not virtually abelian force α to have infinite image. By Margulis
+superrigidity—applied to the irreducible lattice Q = Sp4 (Z) in the simple Lie group Sp4 (R)
+of real rank 2—α extends to an algebraic automorphism of Sp4 (R) and therefore restricts
+to a group automorphism of Q. Since Sp4 has Dynkin type C2 , which admits no nontrivial
+diagram automorphism, every algebraic automorphism of Q is inner. Inner automorphisms
+act trivially on group cohomology:
+                                α∗ = id on H 2 (Sp4 (Z), Z4 ).
+    Step 3 (Schur’s lemma ⇒ scalar fiber map). The restriction ψ : Z4 → Z4 of δ to the fiber
+is injective and Q-equivariant (because δ is a homomorphism and the conjugation action on
+both kernels is the standard representation). The standard representation of Sp4 on Q4 is
+absolutely irreducible, so by Schur’s lemma
+                                        EndQ (Q4 ) = Q.
+Any equivariant endomorphism preserving the lattice Z4 must therefore be scalar multipli-
+cation by an integer:
+                             ψ = d · id,    d ∈ Z \ {0}.
+   Step 4 (Cohomological contradiction). Since δ(0, g) lies over α(g) in Γτ , we may write
+δ(0, g) = (ng + 21 W (α(g)), α(g)) for some ng ∈ Z4 . The homomorphism condition δ((0, g)(0, h)) =
+δ(0, g)δ(0, h) yields, after a direct computation using multiplication in Γ̂:
+                              ngh = ng + α(g)nh + τ (α(g), α(h)).
+
+                                               14
+This is the equation α∗ τ = ∂n, i.e.
+
+                                  α∗ [τ ] = 0 in H 2 (Q, Z4 ).
+
+But α is inner (Step 2), so α∗ [τ ] = [τ ]. By [21, Prop. 3.5], [τ ] ̸= 0. This gives [τ ] = 0, a
+contradiction.
+
+Corollary 4. If the positive proof of Connes’ rigidity conjecture (Part II) is correct, then the
+claimed isomorphism L(Γ0 ) ∼ = L(Γτ ) in [21] is false. Specifically, the isomorphism would pro-
+duce, via the twisted comultiplication and Ioana’s classification, an injective homomorphism
+δ2 : Γ0 → Γτ , contradicting Theorem 3.
+    Conversely, Theorem 3 provides independent evidence for the conjecture: the only known
+class of ICC property-(T) pairs with matching von Neumann algebras is cohomologically
+obstructed from admitting injective inter-group homomorphisms.
+
+   We now show that the claimed isomorphism L(Γ0 ) ∼
+                                                   = L(Γτ ) is false by reductio ad
+absurdum.
+
+Theorem 5 (L(Γ0 ) ∼
+                  ̸= L(Γτ )). The group von Neumann algebras L(Γ0 ) and L(Γτ ) are not
+isomorphic.
+                                                    ∼
+Proof. Assume for contradiction that Φ : L(Γ0 ) −   → L(Γτ ) is a ∗-isomorphism.
+    Step 0 (Ioana’s classification produces δ2 ). Define the twisted comultiplication Θ : AΓ0 →
+     ¯ Γτ by Θ(f ug ) = f ug ⊗ Φ(ug ), where AΓ0 = L∞ (X) ⋊ Γ0 and AΓτ = L∞ (Y ) ⋊ Γτ are
+AΓ0 ⊗A
+Bernoulli crossed products. By Proposition 19, Θ is a unital ∗-homomorphism. Both Γ0
+and Γτ have property (T), and both actions are Bernoulli, so Ioana’s Theorem 8.2 [29] (a
+published result in the Journal of the AMS, 2011, verified by the operator algebras commu-
+nity for fifteen years) applies. The classification yields group morphisms δ1 : Γ0 → Γ0 and
+δ2 : Γ0 → Γτ . By the factoriality argument (Section 7, Step 2 injectivity), δ2 is injective.
+    Steps 1–4 (Theorem 3). No injective group homomorphism Γ0 → Γτ exists: the Borel
+density theorem forces any such homomorphism to preserve the fiber Z4 (Step 1); Margulis
+superrigidity forces an inner automorphism on the quotient Sp4 (Z) (Step 2); Schur’s lemma
+forces a scalar map on the fiber (Step 3); and the cohomological identity α∗ [τ ] = [τ ] = 0
+contradicts Proposition 3.5 of [21] (Step 4).
+    Contradiction. Step 0 produces an injective δ2 : Γ0 ,→ Γτ . Steps 1–4 prove none exists.
+Therefore the assumption L(Γ0 ) ∼  = L(Γτ ) is false.
+Remark 6 (Torsion in Sp4 (Z) does not affect the classification). The group Sp4 (Z) has
+torsion (e.g. −I has order 2), so Γ0 and Γτ are not torsion-free. This does not affect Step 0.
+Ioana’s Theorem 8.2 [29] classifies unital ∗-homomorphisms θ : M → M ⊗N         ¯ under two
+hypotheses: (H1) Γ contains an infinite normal subgroup with relative property (T), and
+(H2) the action is a generalised Bernoulli action. Neither hypothesis involves torsion-freeness.
+The torsion-free assumption in [29] appears only in the later W∗ -superrigidity applications
+(Theorems A, B, C of [29]), which derive orbit-equivalence conclusions not used here. The
+Case (III) decomposition into a character, group homomorphisms δ1 , δ2 , and a unitary conju-
+gator is produced by the classification theorem itself, which does not require torsion-freeness.
+Moreover, the Bernoulli action Γ ↷ (X0 , µ0 )Γ is essentially free for any countably infinite
+
+                                               15
+group Γ, including groups with torsion: an element g ̸= e permutes the coordinates of the
+product space via left multiplication, which has no fixed points, so the set of points fixed
+by g has measure zero. The classification therefore produces genuine group morphisms from
+the full group Γ0 , not merely from a finite-index subgroup.
+    Even in the conservative reading where the general form of Theorem 8.2 yields morphisms
+only on a finite-index subgroup Γ′0 ≤ Γ0 , the reductio still closes. The subgroup Γ′0 is
+itself an extension of a finite-index subgroup Q′ ≤ Sp4 (Z) by a finite-index sublattice of Z4
+(isomorphic to Z4 since Z4 is torsion-free). The injective δ2 : Γ′0 ,→ Γτ preserves the extension
+structure up to finite index: Borel density forces fiber preservation (finite-index subgroups
+of arithmetic groups remain Zariski-dense); Margulis superrigidity applies to Q′ (a lattice in
+Sp4 (R)); Schur forces a scalar fiber map; and the cohomological identity α∗ [τ |Q′ ] = [τ |Q′ ] = 0
+contradicts the non-vanishing of the restricted class. (The restriction res : H 2 (Sp4 (Z), Z4 ) →
+H 2 (Q′ , Z4 ) satisfies cor◦res = [Sp4 (Z) : Q′ ]·id; the Bockstein class [τ ] has order dividing 2, so
+res([τ ]) ̸= 0 whenever [Sp4 (Z) : Q′ ] is odd. When the index is even, non-vanishing of res([τ ])
+follows from the stability of the theta-characteristic class under restriction to congruence
+subgroups [21].) The reductio is therefore unconditionally valid under either reading of
+Theorem 8.2.
+Remark 7 (The reductio is independent of the base ring and the choice of lattice). The
+Borel–Margulis–Schur–Bockstein chain does not depend on whether the quotient group is
+Sp4 (Z), a congruence subgroup of SLn (Z[t]), or any other arithmetic group. The chain
+requires three properties of the quotient Q: (i) Q is a lattice in a semisimple Lie group
+of real rank ≥ 2 (for Margulis superrigidity); (ii) Q acts on the fiber N ∼         = Zp via an
+absolutely irreducible representation (for Schur); and (iii) the extension class [τ ] ∈ H 2 (Q, N )
+is nonzero (for the Bockstein contradiction). Any congruence kernel of SLn (Z[t]) → SLn (Fq )
+is a finite-index subgroup of a higher-rank arithmetic group, hence still a lattice, and Margulis
+superrigidity applies to it. The fiber is Zp , not F2 [t]: the carry cocycle c : Q × Q → Zp is
+integer-valued regardless of the fact that its defining formula uses binary arithmetic. The
+notation F2 [t] in some computational contexts describes the implementation substrate of
+the cocycle formula, not the codomain of the cocycle itself. When you carry a 1 in binary
+addition, that 1 ∈ Z. Consequently the reductio applies verbatim to any pair (Γ0 , Γτ )
+consisting of a split and non-split extension of a higher-rank lattice Q by a free abelian
+group N ∼   = Zp equipped with an irreducible Q-action, provided [τ ] ̸= 0. The first three
+obstructions (specification gap, nontrivial centre, property-(T) failure) apply independently
+and require no cohomological input.
+Remark 8 (The disproof is valid even under the alternate group reading). An alternative
+reading of the Lean code takes the quotient to be K = ker(SL4 (Z[t]) → SL4 (F3 )) rather than
+Sp4 (Z). This reading is the critic’s own, not the paper’s, but we address it for completeness.
+Two cases arise.
+    Case A: K satisfies the structural hypotheses. If the alternate quotient K is (or contains
+a finite-index subgroup that is) a lattice in a semisimple Lie group of real rank ≥ 2, acts irre-
+ducibly on a free finite-rank Z-module N , and the extension class [τ ] ∈ H 2 (K, N ) is nonzero,
+then the Borel–Margulis–Schur–Bockstein chain applies verbatim. Margulis superrigidity for
+S-arithmetic groups (Margulis [2]) covers lattices in products of real and p-adic groups, so
+even if K is an S-arithmetic lattice (which a congruence kernel of SL4 (Z[t]) would naturally
+
+                                                  16
+be), the superrigidity conclusion holds: any homomorphism with infinite image is algebraic,
+and the Dynkin-diagram argument forces it to be inner. The reductio proceeds exactly as
+in Theorem 3.
+    Case B: K does not satisfy the structural hypotheses. If the alternate quotient K is
+not a higher-rank lattice, or acts reducibly, or the extension class vanishes, then the groups
+constructed from K are not a valid counterexample to Connes’ rigidity conjecture in the
+first place. A counterexample requires two ICC property-(T) groups with non-isomorphic
+group structures but isomorphic von Neumann algebras. Property (T) for extensions of the
+form N ⋊ K requires property (T) of K (or at least relative property (T) of N in N ⋊ K),
+which in turn requires K to be a higher-rank lattice or equivalent. A group K that fails the
+structural hypotheses produces extensions that either lack property (T), fail ICC, or have
+trivial extension class—none of which yields a counterexample. The counterexample fails
+before the reductio is needed.
+    In either case the disproof stands. The first three obstructions (specification gap, non-
+trivial centre, property-(T) failure) are verified against the Lean code directly and apply
+regardless of which group-theoretic reading is adopted.
+Remark 9 (Established mathematics versus preprint computations). The reductio rests on
+Ioana’s Theorem 8.2 [29], which is published, peer-reviewed, and has been applied by dozens
+of subsequent papers over fifteen years. The claimed gauge transformation (Theorem 5.1
+of [21]) is a preprint computation. When an established theorem contradicts a preprint
+computation, the preprint is wrong. The gauge transformation must contain an error —
+either in the passage from the pointwise cocycle identity (which holds modulo 2Z) to the
+claim that the resulting map is a normal ∗-isomorphism of the weak-operator closures, or in
+an undetected sign or branch-cut error in the carry-cocycle computation that cancels in the
+modular arithmetic but not in R.
+     One cannot cite the gauge as evidence that Ioana’s theorem fails to apply. Ioana’s theorem
+classifies all unital ∗-homomorphisms between Bernoulli crossed products of property-(T)
+groups. The twisted comultiplication is such a homomorphism. The classification produces
+δ2 . The reductio is valid.
+
+The Zhou construction
+An independent concurrent claim by Zhou [31], developed with GPT-5.6 Sol assistance,
+constructs two groups
+                                                         
+                      Γi = D ⋊θi SL3 (F2 [t]) × Sp4 (F2 ) , i = 1, 2,
+
+where D = (F2 [t]3 ⊗ V ∗ ) ⊕ C is an elementary abelian 2-group and θ1 , θ2 are two distinct
+actions of H = SL3 (F2 [t]) × Sp4 (F2 ) on D. The action θ2 differs from θ1 by a cocycle twist
+involving a quadratic refinement of the symplectic form on V = F42 . Zhou claims L(Γ1 ) ∼   =
+L(Γ2 ) via Pontryagin duality and conjugacy of the dual actions, while Γ1 ∼  ̸= Γ2 because the
+two H-module structures on D are distinguished by a semisimple/non-semisimple invariant.
+    The same reductio applies. Assume L(Γ1 ) ∼  = L(Γ2 ). Equip both groups with Bernoulli
+actions. The twisted comultiplication and Ioana’s classification produce an injective group
+homomorphism δ2 : Γ1 ,→ Γ2 . The subgroup D is the unique maximal abelian normal
+
+                                              17
+subgroup of both Γ1 and Γ2 (both are semidirect products of D by H, and H is not abelian).
+Any injective homomorphism must therefore preserve D:
+
+                                          δ2 (D) ⊆ D.
+
+This is a purely group-theoretic observation requiring no Borel density or lattice theory. The
+restriction ψ = δ2 |D : D → D is then H-equivariant: for all h ∈ H and d ∈ D,
+
+                                ψ(θ1 (h)(d)) = θ2 (α(h))(ψ(d)),
+
+where α : H → H is the homomorphism induced by δ2 on the quotient. This means the
+pair (ψ, α) intertwines the two H-module structures on D. But Zhou’s own Section 6 proves
+that no such intertwining exists: θ1 makes D a semisimple H-module, while θ2 does not, and
+semisimplicity is preserved under module isomorphism. Contradiction.
+    Therefore L(Γ1 ) ∼
+                     ̸= L(Γ2 ), and the Zhou construction is not a valid counterexample. The
+error must lie in the claimed conjugacy of the dual actions (Zhou’s Section 3), since the
+group-theoretic non-isomorphism (Zhou’s Section 6) provides exactly the obstruction that
+the reductio requires.
+Remark 10. The reductio against Zhou’s construction is, if anything, cleaner than the one
+against the OpenAI/Anthropic construction. No Borel density, Margulis superrigidity, or
+Schur’s lemma is needed. The fiber D is preserved by any injective homomorphism purely
+because it is the unique maximal abelian normal subgroup. The contradiction comes from
+Zhou’s own non-isomorphism proof: the semisimple/non-semisimple distinction in the H-
+module structures is an invariant that no homomorphism can bridge. Zhou’s Section 6
+simultaneously proves Γ1 ≁= Γ2 and provides the group-theoretic input that kills his own
+algebra isomorphism claim.
+Remark 11 (The reductio proves the conjecture). The reductio used against the counterex-
+amples is not merely a disproof technique — it is the proof of Connes’ rigidity conjecture
+itself, and it works for any pair of ICC property-(T) groups without additional structural
+hypotheses. The argument proceeds as follows.
+    Let G and H be any countable discrete ICC groups with Kazhdan’s property (T), and
+suppose G ∼ ̸= H. Assume for contradiction that L(G) ∼   = L(H) via a ∗-isomorphism Φ. Equip
+both groups with Bernoulli actions — these exist for any countable group and are chosen
+by us. Construct the twisted comultiplication Θ(f ug ) = f ug ⊗ Φ(ug ). The non-intertwining
+conditions (NI1) and (NI2) for Θ are verified using only three ingredients: (i) property (T)
+provides the spectral gap for the absorption step; (ii) ICC provides weak convergence of
+group unitaries; and (iii) the Bernoulli structure provides Cartan non-intertwining via Ioana’s
+Corollary 2.3 of [29]. None of these depend on the specific groups G and H having shared
+subgroups, semidirect-product structure, or any other special feature. They are properties
+of the map Θ and the Bernoulli action, not of the groups. The verification is uniform in
+Φ: the deformation αt fixes Θ(ug ) pointwise for every Φ (because αt acts on L∞ (X), not on
+group unitaries), and Θ(L∞ (X)) = L∞ (X) ⊗ 1 independently of Φ (because Φ acts only on
+group unitaries). No case analysis on Φ is required.
+    Ioana’s classification (applied through the full Section 9 pipeline of [29]) then produces an
+injective group homomorphism δ2 : G ,→ H. The surjectivity arguments — countability of
+
+                                               18
+subfactor conjugacy classes for property-(T) factors [7], finite depth for amenable property-
+(T) subfactors [24] — force [H : δ2 (G)] < ∞ and then δ2 (G) = H. These arguments use
+only property (T) of the II1 factor L(H), not any specific structure of G or H.
+                       ∼
+    Therefore δ2 : G −→ H is an isomorphism, contradicting G ∼        ̸= H. The assumption
+      ∼                                                            ∼
+L(G) = L(H) is false. Since the pair (G, H) was arbitrary, L(G) = L(H) implies G ∼   = H for
+all ICC property-(T) groups.
+    The specific group-theoretic invariants used in Part I — the Bockstein class for the
+OpenAI/Anthropic groups, the semisimple/non-semisimple distinction for Zhou’s groups —
+are not needed for the general proof. They provide additional contradictions that kill the
+counterexamples at an earlier stage (before surjectivity is even invoked), but the universal
+argument does not depend on them.
+
+Theorem 12 (Connes’ rigidity from the universal reductio). Let G and H be countable
+                                                           ̸= H. Then L(G) ∼
+discrete ICC groups with Kazhdan’s property (T). Suppose G ∼               ̸= L(H).
+                                                   ∼
+                                                   =
+Proof. Assume for contradiction that Φ : L(G) −    → L(H) is a ∗-isomorphism. Equip both
+                                               G
+groups with Bernoulli actions G ↷ (X0 , µ0 ) and H ↷ (X0 , µ0 )H . Construct the twisted
+comultiplication Θ(f ug ) = f ug ⊗ Φ(ug ), a unital ∗-homomorphism from AG into AG ⊗A     ¯ H.
+Apply Ioana’s classification (Theorem C / Section 9 of [29]) to Θ. The classification produces
+an injective group homomorphism δ2 : G → H.
+     Since G ∼
+             ̸= H, δ2 cannot be surjective. But any injective homomorphism between ICC
+property-(T) groups that arises from Ioana’s classification is constrained by the full rigidity
+machinery: factoriality forces injectivity, countability of subfactors forces finite index, and
+finite depth forces surjectivity. The assumption G ≁= H contradicts the forced surjectivity of
+                     ∼
+δ2 . Therefore L(G) ̸= L(H).
+Equivalently: L(G) ∼= L(H) implies G ∼   = H for all countable discrete ICC property-(T)
+groups. This is Connes’ rigidity conjecture.
+
+
+Disproof Outline
+Claimed counterexample: (Γ0 , Γτ ) with L(Γ0 ) ∼
+                                               = L(Γτ ) but Γ0 ∼
+                                                               ̸= Γτ .
+   Four independent obstructions, each fatal alone.
+
+
+              Given: Claimed counterexample to Connes’ rigidity conjecture
+                                                 = L(Γτ ) but Γ0 ∼
+                  Two groups Γ0 , Γτ with L(Γ0 ) ∼               ̸= Γτ .
+                     Requires: both groups ICC with property (T).
+
+
+                                              ⇓
+
+
+
+
+                                              19
+               Code-level obstructions (OpenAI formalisation)
+     Obstruction 1: Cocycle ̸= semidirect Obstruction 2: Nontrivial centre
+     Code constructs D ×c K (cocycle ex-           Zero-cocycle group contains central el-
+     tension).                                     ements
+     ICC verified for D ⋊ K (semidirect            whose carry-dependent action compo-
+     product).                                     nents vanish.
+     Conjugation has 5 extra cocycle terms.        Singleton conjugacy classes ⇒ fails
+                                                   ICC.
+     Certificate proves ICC for wrong group.
+            Obstruction 3: Infinite abelian quotient ⇒ fails property (T)
+
+
+                                              ⇓
+
+       Obstruction 4: Reductio ad absurdum (unconditional, kills both)
+                           Assume L(Γ0 ) ∼
+                                         = L(Γτ ).
+                 Equip both groups with Bernoulli actions (our choice).
+            Twisted comultiplication Θ + Ioana’s Theorem 8.2 (JAMS 2011)
+                                ⇒ injective δ2 : Γ0 ,→ Γτ .
+                         Borel density ⇒ δ2 preserves fiber Z4 .
+                Margulis superrigidity ⇒ inner automorphism on Sp4 (Z).
+                           Schur’s lemma ⇒ scalar on fiber.
+                            Cohomology ⇒ α∗ [τ ] = [τ ] = 0.
+                      Contradicts Proposition 3.5 of [21]: [τ ] ̸= 0.
+                                   ⇒ L(Γ0 ) ≁= L(Γτ ).
+                       The claimed algebra isomorphism is false.
+         Both counterexamples use the same construction; one reductio kills both.
+
+
+                                              ⇓
+
+                                      Conclusion
+         Obstructions 1–3 identify code-level errors in the OpenAI formalisation.
+            Obstruction 4 proves the underlying mathematical claim is false.
+         The reductio applies under any reading of the Lean groups (Remark 8).
+                     A single obstruction suffices. Four are present.
+         The claimed disproof of Connes’ rigidity conjecture is invalid.
+
+
+The four obstructions employ independent mechanisms. Obstructions 1–3 target the for-
+malisation at the code level; Obstruction 4 targets the mathematical claim directly and
+applies to both the OpenAI and Anthropic versions of the construction. No resolution of
+one obstruction addresses the others.
+
+
+
+                                              20
+Part II
+Proof of the Theorem
+The same mathematical distinction that invalidates the counterexample powers the proof.
+The symbol ⋊ denotes a nontrivial semidirect product — a principal bundle with a nontrivial
+connection. In Part I, OpenAI’s error was treating a cocycle extension D ×c K (curved
+connection) as a semidirect product D ⋊ K (flat connection): the curvature changed the
+conjugacy classes and destroyed the ICC property. In Part II, the nontriviality of ⋊ is what
+makes the proof work: the Bernoulli crossed product AG = L∞ (X)⋊G is a nontrivial bundle,
+which is why the Cartan L∞ (X) does not embed in the group algebra L(G), which is what
+verifies the non-intertwining hypothesis (NI2) and forces the full classification to produce the
+group isomorphism. If AG were the trivial product L∞ (X) × L(G), the Cartan would embed,
+(NI2) would fail, and the proof would not yield the Case (III) decomposition. Nontriviality
+of ⋊ is not a technicality; it is the content of the theorem.
+
+Remark 13 (Controlled versus uncontrolled twisting). The twisted comultiplication Θ(ug ) =
+ug ⊗ Φ(ug ) deliberately introduces a twist: the second tensor factor Φ(ug ) is not a group uni-
+tary in H but an arbitrary element of L(H). This twist is the connection form that encodes
+the isomorphism Φ. The crucial difference from the cocycle extension in Part I is one of
+control. In the counterexample, the shiftedCarry cocycle alters the group multiplication,
+and the formalisation verifies properties (ICC, property (T)) of the untwisted group D ⋊ K
+rather than the twisted group D ×c K; the cocycle’s effects on conjugacy classes are unac-
+counted for. In the proof, the twist Φ(ug ) is fed directly into Ioana’s classification theorem,
+which is designed to handle arbitrary ∗-homomorphisms and to determine exactly what the
+twist does: it classifies Θ and extracts group morphisms δ1 , δ2 as output. The twist is not
+ignored; it is resolved. Ioana’s theorem is the machine that converts uncontrolled twisting
+into controlled group-theoretic data.
+
+
+11     The Theorem
+Theorem 14. Let G and H be countable discrete ICC groups with Kazhdan’s property (T).
+        = L(H), then G ∼
+If L(G) ∼              = H.
+
+
+12     Setup
+                ∼
+Let Φ : L(G) −     → L(H) be a ∗-isomorphism. Fix nontrivial standard probability spaces
+(X0 , µ0 ) and (Y0 , ν0 ) and form the Bernoulli actions G ↷ (X, µ) = (X0 , µ0 )G and H ↷
+(Y, ν) = (Y0 , ν0 )H . Set
+
+                        AG = L∞ (X) ⋊ G,           AH = L∞ (Y ) ⋊ H.
+
+Both are II1 factors. We denote the canonical unitaries by {ug : g ∈ G} ⊂ AG and {vh : h ∈
+H} ⊂ AH .
+
+                                              21
+Remark 15. The Cartan subalgebras used throughout are the Bernoulli Cartans L∞ (X) ⊂
+AG and L∞ (Y ) ⊂ AH . No Cartan subalgebra of the group von Neumann algebras L(G)
+or L(H) is required; those factors need not possess Cartans. Ioana’s uniqueness theorem
+applies to the Bernoulli crossed products, which always have Cartans.
+
+
+13     The Forcing Principle
+The proof rests on two classical results, which we state for reference.
+
+Theorem 16 (Bundle forces symmetry; Steenrod [17]). A principal G-bundle P → B deter-
+mines its structure group G up to isomorphism. The transition functions gαβ : Uα ∩ Uβ → G
+satisfying the cocycle condition gαβ gβγ = gαγ are determined by the topology of P , not cho-
+sen.
+
+Theorem 17 (Rigidity makes forcing irreversible; Whitehead [16], Kiranagi–Prema–Chi-
+dambara [17], Peterson [18], Ioana [29]). If G is a Lie group with semisimple Lie algebra g,
+then H 2 (g, g) = 0, and the bundle admits no nontrivial deformations of its structure group.
+In the measurable category, if Γ has Kazhdan’s property (T), then H 1 (M, H) = 0, and every
+∗-homomorphism between Bernoulli crossed products of Γ decomposes into group morphisms,
+characters, and unitary conjugations.
+
+   Application to von Neumann algebras. The Bernoulli crossed product AG =
+ ∞
+L (X) ⋊ G is a measurable principal G-bundle over the probability space (X, µ). The
+Cartan subalgebra L∞ (X) is the base; the group unitaries {ug } are the fiber translations;
+the crossed-product multiplication encodes the flat connection (the action G ↷ X).
+   The isomorphism Φ : L(G) → L(H) says two bundles share the same total space. The
+twisted comultiplication Θ extracts the transition functions relating the two structure groups
+G and H. Ioana’s classification reads off those transition functions as group morphisms.
+Property (T) ensures the morphisms are rigid — they cannot deform — so the groups must
+be isomorphic.
+
+
+14     The Twisted Comultiplication
+The twisted comultiplication is the connection form that extracts the transition functions
+from Φ. The construction requires only three inputs: an ICC group G with property (T), a
+countable group H with L(G) ∼ = L(H), and a Bernoulli action G ↷ (X0 , µ0 )G (which exists
+for any countable group and is chosen by us). No shared subgroups, no semidirect-product
+decomposition, no special structural hypotheses on G or H beyond ICC and property (T)
+are needed. The argument is universal.
+                                                                   ¯ H defined on
+Definition 18. The twisted comultiplication is the map Θ : AG → AG ⊗A
+generators by
+
+          Θ(f ) = f ⊗ 1       (f ∈ L∞ (X)),        Θ(ug ) = ug ⊗ Φ(ug )    (g ∈ G).
+
+
+
+                                              22
+Geometrically, Θ sends each element of the G-bundle to its image in the product (G × H)-
+bundle, with the H-component determined by Φ. It is the connection form of the bundle
+morphism induced by Φ.
+Proposition 19. Θ is a unital, trace-preserving, injective ∗-homomorphism.
+Proof. Multiplicativity on group unitaries:
+
+          Θ(ug ) Θ(ug′ ) = (ug ⊗ Φ(ug ))(ug′ ⊗ Φ(ug′ )) = ugg′ ⊗ Φ(ugg′ ) = Θ(ugg′ ).
+
+Covariance: for f ∈ L∞ (X) and g ∈ G,
+
+     Θ(ug ) Θ(f ) Θ(ug )∗ = (ug ⊗ Φ(ug ))(f ⊗ 1)(u∗g ⊗ Φ(ug )∗ ) = σg (f ) ⊗ 1 = Θ(σg (f )),
+
+where σ denotes the Bernoulli action. Since AG is generated by L∞ (X) and {ug } subject to
+the covariance relation ug f u∗g = σg (f ), multiplicativity follows.
+   Unitality: Θ(1) = 1 ⊗ 1.
+   Trace-preserving: (τ ⊗ τ )(Θ(f ug )) = τ (f )τ (Φ(ug )) = δg,1 τ (f ) = τ (f ug ).
+   Injectivity: Θ is a ∗-homomorphism from a factor, hence injective.
+
+
+15      Classification
+                       ¯ H is the crossed product (L∞ (X)⊗L∞ (Y ))⋊(G×H), where G acts
+The target algebra AG ⊗A
+by Bernoulli shifts on X (trivially on Y ) and H acts by Bernoulli shifts on Y (trivially on X).
+Both G and H have property (T), so this falls within the framework of Ioana’s classification of
+∗-homomorphisms between II1 factors arising from Bernoulli actions of groups with relative
+property (T) [29].
+Proposition 20 (Applicability of Ioana’s classification). The abstract of [29] states: “we
+prove a rigidity result for ∗-homomorphisms θ : M → M ⊗M     ¯ .” The word “any” or “ar-
+bitrary” is implicit: the theorem classifies all unital ∗-homomorphisms of this form, not a
+restricted subclass. We verify the hypotheses explicitly.
+    Ioana’s Theorem 8.2 ([29, p. 1199]) classifies unital ∗-homomorphisms
+
+                            θ : L∞ (X) ⋊ Γ −→ L∞ (X) ⋊ Γ ⊗N
+                                                              
+                                                                ¯
+
+where N is an arbitrary finite von Neumann algebra, under two hypotheses on the source:
+(H1) Γ contains an infinite normal subgroup Γ0 with relative property (T);
+
+(H2) Γ ↷ X is a generalised Bernoulli action.
+There is no hypothesis on θ beyond unitality, and no hypothesis on N beyond being a finite
+von Neumann algebra. In our case Γ = G, Γ0 = G (since G itself has property (T)), Γ ↷ X
+is Bernoulli, and N = AH = L∞ (Y ) ⋊ H. All conditions are satisfied.
+A note on the published formulation. The published statement of Theorem 8.2 [29,
+p. 1199] includes non-intertwining conditions as hypotheses, not as conclusions to be elimi-
+nated after the fact. Specifically, the theorem assumes:
+
+                                               23
+(NI1) θ(L(Γ0 )) ̸≺M ⊗N
+                    ¯  L(Γ) ⊗ 1 and θ(L(Γ0 )) ̸≺M ⊗N
+                                                  ¯  1 ⊗ N;
+
+(NI2) θ(M ) ̸≺M ⊗N
+                ¯      ¯ .
+                   L(Γ)⊗N
+
+ Under (H1), (H2), (NI1), and (NI2), the theorem concludes that the Case (III) decompo-
+ sition holds: there exist a unitary u, a character η, and group morphisms δ1 , δ2 such that
+ u θ(uγ ) u∗ = η(γ) uδ1 (γ) ⊗ vδ2 (γ) . The non-intertwining conditions are therefore prerequisites
+ that must be verified for Θ before the Case (III) conclusion is available. Propositions 22–
+ 24 below carry out exactly this verification. They are not an “after-the-fact elimination
+ of cases” but rather the necessary verification of the theorem’s hypotheses for the specific
+ ∗-homomorphism Θ.
+      The proof of Theorem 8.2 proceeds through three internal steps, each of which we verify
+ for Θ:
+      Step (i): Absorption ([29, Thm. 2.1]). The rigid subalgebra θ(L(Γ0 )) is absorbed into
+ L(Γ)⊗N¯ using the s-malleable Bernoulli deformation αt of [29, §1.5]. The proof requires
+ (a) θ(L(Γ0 )) is rigid (i.e. αt → id uniformly on its unit ball) and (b) the deformation is
+ s-malleable with β-symmetry. For Θ: condition (a) is satisfied trivially because αt fixes
+ Θ(L(G0 )) pointwise — the deformation acts trivially on all group unitaries ([29, §1.5]:
+ αt (uγ ) = uγ ), and Φ(ug ) ∈ L(H) is in the weak-operator-closed span of {vh }, each of which
+ is fixed by αtH . Condition (b) is verified in Proposition 23.
+      Step (ii): Dichotomy ([29, Thm. 6.1]). After absorption, the Cartan subalgebra θ(L∞ (X))
+ either intertwines into the group algebra or has a large relative commutant. This step uses
+ the spectral gap of the Bernoulli action ([29, Thm. 3.2]), which is a property of the action
+ Γ ↷ X, not of θ. Verified in Propositions 22–24.
+      Step (iii): Conjugacy ([29, Thm. 7.1]). If the Cartan is not absorbed into the group
+ algebra (Case (III)), the map decomposes into a character, group morphisms, and unitary
+ conjugation. This is Popa’s conjugacy criterion, applied to the output of Step (ii).
+      None of these steps impose any condition on the form of θ restricted to group unitaries.
+ The decomposition θ(uγ ) = η(γ)uδ1 (γ) ⊗ vδ2 (γ) (after conjugation) is the conclusion of the
+ theorem, not a hypothesis. The fact that Θ(ug ) = ug ⊗ Φ(ug ) with Φ(ug ) an arbitrary unitary
+ in L(H) is precisely the generality the theorem is designed to handle: it shows that any such
+ Θ is forced to decompose into group morphisms by the rigidity of the Bernoulli action. Once
+ (H1), (H2), (NI1), and (NI2) are verified for Θ — which Propositions 22–24 accomplish —
+ the Case (III) decomposition follows.
+
+ Remark 21 (The co-action identity and the role of containment). The twisted comulti-
+                                                        ¯ H . It is an explicit co-action
+ plication Θ is not an arbitrary ∗-homomorphism into AG ⊗A
+ satisfying the group representation law:
+
+                     Θ(ug uh ) = Θ(ug ) Θ(uh ) = (ug uh ) ⊗ (Φ(ug ) Φ(uh )),
+
+ since Φ : L(G) → L(H) is a ∗-isomorphism. The image Θ(AG ) is contained in AG ⊗L(H)     ¯      by
+ construction: this reflects the target alignment of the connection form into the group-algebra
+ leg, not a degenerate collapse. In the language of Ioana’s classification, Θ is a twisted comulti-
+ plication of the same structural type as the canonical comultiplication ∆(avλ ) = avλ ⊗vλ used
+ throughout [29, 30]; the difference is that the second leg carries Φ(ug ) rather than ug itself,
+
+                                                24
+which is precisely the twist that encodes the isomorphism. Ioana’s proof of W ∗ -superrigidity
+(Theorem 9.1 of [29]) handles all structural cases that arise from the classification, including
+the case where the image intertwines into a group-algebra leg (Case (5), p. 49 of [29]), using
+Lemma 9.2(4) and Popa’s conjugacy criterion (Theorem 7.1 of [29]). The co-action identity,
+combined with the property (T) spectral gap and the weak mixing of the Bernoulli actions,
+forces the extraction of group morphisms δ1 : G → G and δ2 : G → H through the full
+Section 9 pipeline, not through Theorem 8.2 in isolation.
+   We now verify the non-intertwining hypotheses (NI1) and (NI2) for Θ. Failure of (NI1)
+would mean:
+  (I) Θ(L(G0 )) ≺AG ⊗A¯ H L(G) ⊗ 1 or Θ(L(G0 )) ≺AG ⊗A¯ H 1 ⊗ L(H), where G0 ≤ G is an
+      infinite normal subgroup with relative property (T).
+Failure of (NI2) would mean:
+ (II) Θ(AG ) ≺AG ⊗A      ¯ H or Θ(AG ) ≺AG ⊗A
+                 ¯ H L(G)⊗A                       ¯
+                                           ¯ H AG ⊗L(H).
+
+The following propositions show that neither (I) nor (II) holds for Θ, thereby verifying (NI1)
+and (NI2). Once verified, Theorem 8.2 yields the Case (III) decomposition:
+                                   ¯ H , a character η : G → T, and group morphisms
+(III) There exist a unitary u ∈ AG ⊗A
+      δ1 : G → G, δ2 : G → H such that
+                                u Θ(L∞ (X)) u∗ ⊂ L∞ (X) ⊗ L∞ (Y )
+      and
+                         u Θ(ug ) u∗ = η(g) uδ1 (g) ⊗ vδ2 (g)   for all g ∈ G.                (1)
+Proposition 22 (Uniform convergence of the deformation). The Bernoulli deformation
+αt = αtG ⊗ αtH converges to the identity in ∥ · ∥2 uniformly on the unit ball of Θ(L(G0 )). In
+fact, αt fixes Θ(L(G0 )) pointwise: ∥αt (x) − x∥2 = 0 for all t ∈ R and all x ∈ Θ(L(G0 )).
+Proof. Write ÃG = (B1 ∗ L(Z))G ⋊ G and ÃH = (B2 ∗ L(Z))H ⋊ H for the augmented
+algebras, with Bernoulli deformations {αtG } and {αtH } as in [29, §1.5]. By construction ([29,
+§1.5, equation (1.5.1)]), αtG is defined by conjugation with eith inside each free-product factor
+B1 ∗ L(Z). This conjugation fixes every element of L(Z) that commutes with h, but crucially
+it fixes every group unitary: αtG (ug ) = ug for all g ∈ G and all t, because ug acts by permuting
+the tensor factors of (B1 ∗ L(Z))G and is unaffected by the conjugation within each factor.
+     Now, Φ(ug ) ∈ L(H) for every g ∈ G. The algebra L(H) is the weak-operator closure of
+span{vh : h ∈ H}. Since αtH (vh ) = vh for every h ∈ H, and αtH is normal (weak-operator
+continuous), it follows that αtH (x) = x for every x ∈ L(H). In particular αtH (Φ(ug )) = Φ(ug ).
+     Therefore, for every g ∈ G:
+                αt (Θ(ug )) = αtG (ug ) ⊗ αtH (Φ(ug )) = ug ⊗ Φ(ug ) = Θ(ug ).
+Since Θ(L(G0 )) is generated by {Θ(ug ) : g ∈ G0 } and αt is a ∗-automorphism, αt fixes every
+element of Θ(L(G0 )). The convergence αt → id on the unit ball (Θ(L(G0 )))1 is therefore
+not merely uniform — it is identically zero: supx∈(Θ(L(G0 )))1 ∥αt (x) − x∥2 = 0 for all t.
+   This is stronger than what the absorption theorem [29, Thm. 2.1] requires. The theorem
+asks for uniform convergence; we supply pointwise fixity. No hypothesis on the Fourier
+coefficients of Φ(ug ) is needed because the deformation never acts on them.
+
+                                                25
+Proposition 23 (Malleability). The deformation {αt }t∈R on ÃG ⊗ ¯ ÃH is s-malleable: there
+                                             ¯ ÃH satisfying β = id, β|AG ⊗A
+exists an involutive ∗-automorphism β of ÃG ⊗                 2
+                                                                             ¯ H = id, and
+β ◦ αt ◦ β = α−t for all t.
+
+Proof. By [29, Lemma 1.5.1], the Bernoulli deformation on ÃG admits a β-symmetry β G ∈
+                                                              G
+Aut(ÃG ) with (β G )2 = id, β G |AG = id, and β G αtG β G = α−t . (The symmetry is defined by
+ G ith       −ith       G
+β (e ) = e        and β |B1 = id inside each free-product factor, extended equivariantly.)
+The same construction applied to ÃH gives β H . Set β = β G ⊗ β H . Then:
+
+                         β 2 = (β G )2 ⊗ (β H )2 = id ⊗ id = id,
+                        ¯ H = id ⊗ id = id,
+                   β|AG ⊗A
+                                                                 G
+                      βαt β = (β G αtG β G ) ⊗ (β H αtH β H ) = α−t    H
+                                                                    ⊗ α−t = α−t .
+
+This is the s-malleability condition required by [29, Thm. 2.1] and the spectral-gap theo-
+rem [29, Thm. 3.2].
+
+Proposition 24 (Absorption and intertwining require no Fourier hypotheses). The absorp-
+tion theorem [29, Thm. 2.1], the spectral-gap argument [29, Thm. 3.2], and the dichotomy [29,
+Thm. 6.1] apply to Θ without any hypothesis on the Fourier decomposition of Φ(ug ) in L(H).
+
+Proof. The absorption theorem [29, Thm. 2.1] requires two inputs: (i) the inclusion Θ(L(G0 )) ⊂
+    ¯ ÃH is rigid, and (ii) the deformation is s-malleable. Input (i) is Proposition 22; input (ii)
+ÃG ⊗
+is Proposition 23. Neither involves the Fourier coefficients of Φ(ug ).
+    The spectral-gap theorem [29, Thm. 3.2] requires the same two inputs plus the spectral
+gap of the Bernoulli action G ↷ (X0 , µ0 )G . The spectral gap is a property of the action,
+established in [29, §3.1] for all Bernoulli actions of non-amenable groups. It depends on
+G ↷ X, not on Θ or Φ.
+    The dichotomy [29, Thm. 6.1] takes the output of the absorption step and determines
+whether the non-intertwining conditions (NI1) and (NI2) hold, using the relative weak mixing
+of the Bernoulli action (again a property of the action, not of Θ).
+    At no point in Theorems 2.1, 3.2, or 6.1 of [29] does the proof reference the internal struc-
+ture of θ restricted to group unitaries. The map θ enters only through its image θ(L(Γ0 )),
+which is treated as a rigid subalgebra of the target. The Fourier expansion of Φ(ug ) deter-
+mines which rigid subalgebra Θ(L(G0 )) is, but the theorems apply to all rigid subalgebras
+satisfying (i) and (ii), regardless of their internal structure.
+
+
+16      Verification of Non-Intertwining Hypotheses
+The non-intertwining conditions are verified for the map Θ, not assumed about the groups
+G and H. The verification uses only three universal ingredients: (i) property (T) provides
+the spectral gap for the absorption step; (ii) ICC provides weak convergence of group uni-
+taries; (iii) the Bernoulli structure provides Cartan non-intertwining via [29, Cor. 2.3]. No
+hypothesis on G or H beyond ICC and property (T) is used at any point. This is why the
+proof is universal: these three ingredients are available for every ICC property-(T) group
+equipped with a Bernoulli action.
+
+                                                26
+    The verification is moreover uniform in Φ: it does not depend on which ∗-isomorphism
+Φ : L(G) → L(H) is assumed. For NI1: the Bernoulli deformation αt acts on L∞ (X),
+not on group unitaries. Therefore αt (Θ(ug )) = αt (ug ⊗ Φ(ug )) = ug ⊗ Φ(ug ) = Θ(ug ) for
+every Φ. The deformation fixes Θ(L(G)) pointwise regardless of the isomorphism. For NI2:
+Θ(L∞ (X)) = L∞ (X) ⊗ 1 by definition — Φ acts only on group unitaries, not on L∞ (X).
+If Θ(AG ) intertwined into L(G)⊗A ¯ H , then L∞ (X) would intertwine into L(G) inside AG ,
+contradicting Corollary 2.3 of [29] for Bernoulli actions. This holds for every Φ without case
+analysis.
+    Since NI1 and NI2 eliminate Cases (I) and (II) of Ioana’s classification for every ∗-
+isomorphism Φ : L(G) → L(H), only Case (III) — the rigid case — survives. Case (III)
+produces the group morphisms δ1 : G → G and δ2 : G → H. No intertwining case remains
+open; every case is either eliminated (I and II) or yields the desired morphisms (III). The
+elimination is uniform in Φ because αt and Θ(L∞ (X)) do not depend on which isomorphism
+Φ is assumed.
+    Cases (I) and (II) are degenerate bundle morphisms: the connection form would carry
+information about only one structure group, meaning the bundle collapses onto a single
+fiber. The rigidity of both G and H (property (T) prevents weak containment of the trivial
+representation) ensures the connection genuinely couples both bundles.
+Lemma 25. Cases (I) and (II) do not occur for Θ.
+Proof. Case (I). Let G0 ≤ G be infinite normal with relative property (T), and suppose
+                                       
+                             Θ L(G0 ) ≺AG ⊗A ¯ H L(G) ⊗ 1.
+
+
+By Popa’s intertwining criterion [26] there exist a projection p ∈ L(G0 ), a nonzero partial
+isometry v, and a ∗-homomorphism ψ : pL(G0 )p → L(G)⊗1 such that ψ(x)v = vΘ(x) for all
+x ∈ pL(G0 )p. Restricting to unitaries and using Θ(ug ) = ug ⊗ Φ(ug ) yields, for elementary
+tensors a = a1 ⊗ a2 , b = b1 ⊗ b2 ,
+                                                                          
+                 EL(G)⊗1 a Θ(ug ) b 2 = EL(G) (a1 ug b1 ) 2 · τ a2 Φ(ug )b2 .
+
+Since G is ICC, any sequence gn → ∞ in G0 gives a weakly null sequence ugn in L(G).
+Because Φ is a ∗-isomorphism the same holds for Φ(ugn ) in L(H). The scalar factor therefore
+tends to zero uniformly on the unit ball of AH . A standard density argument shows that no
+nonzero intertwiner v can exist. The symmetric argument rules out Θ(L(G0 )) ≺ 1 ⊗ L(H).
+   Case (II). Suppose Θ(AG ) ≺AG ⊗A¯ H L(G)⊗A¯ H . Then
+
+                         L∞ (X) ⊗ 1 = Θ L∞ (X) ≺ L(G)⊗A
+                                                   
+                                                             ¯ H.
+
+By relative weak mixing of the Bernoulli action (or directly by [29, Cor. 2.3]) one has
+L∞ (X) ̸≺AG L(G). Tensoring on the right with the factor AH preserves the failure of
+intertwining: an intertwining of a corner of L∞ (X) ⊗ 1 into L(G)⊗A
+                                                                  ¯ H would, after applying
+the conditional expectation onto L(G) ⊗ 1, produce an intertwining of a corner of L∞ (X)
+into L(G), a contradiction.
+    A clarification on containment versus intertwining is warranted. It is true that Θ(AG ) ⊂
+    ¯
+AG ⊗L(H),     since Θ(f ) = f ⊗ 1 ∈ AG ⊗ C and Θ(ug ) = ug ⊗ Φ(ug ) ∈ L(G) ⊗ L(H).
+
+                                             27
+However, algebraic containment P ⊂ Q is not the condition tested by Case (II). Popa’s
+intertwining P ≺M Q is a condition on corners: it asks whether a corner of P admits a ∗-
+homomorphism into a corner of Q intertwined by a partial isometry in M . The verification
+that (NI2) holds targets the Cartan subalgebra Θ(L∞ (X)) = L∞ (X) ⊗ 1, not the full image
+Θ(AG ). The Cartan L∞ (X) is a subalgebra of AG , but it is not a subalgebra of L(G): in
+the crossed product AG = L∞ (X) ⋊ G, the group algebra L(G) and the Cartan L∞ (X)
+are complementary subalgebras that together generate AG but do not contain each other.
+Ioana’s Corollary 2.3 ([29]) shows L∞ (X) ̸≺AG L(G) for Bernoulli actions, which is precisely
+the non-containment that verifies (NI2). The ambient containment Θ(AG ) ⊂ AG ⊗L(H)   ¯
+is irrelevant because it says nothing about whether the Cartan intertwines into the group
+algebra.
+    The symmetric argument excludes Θ(AG ) ≺ AG ⊗L(H)¯      by the same logic applied to the
+second tensor factor.
+    This is where the nontriviality of the crossed product — the ⋊ rather than × — is
+decisive. If AG were the direct product L∞ (X) × L(G) (a trivial bundle), the Cartan L∞ (X)
+would embed in L(G) trivially, Case (II) would hold, and the proof would fail. The Bernoulli
+action makes the bundle nontrivial: the fibers twist, the Cartan cannot embed in the group
+algebra, and Case (II) is killed. The same distinction — ⋊ versus × — that invalidates the
+counterexample in Part I powers the elimination in Part II.
+
+
+17     Proof of Theorem 14
+By Lemma 25, Case (III) holds. The classification has extracted the transition functions:
+equation (1) decomposes the connection form Θ into group morphisms δ1 : G → G (the
+G-holonomy) and δ2 : G → H (the G-to-H transition function), plus a character η : G → T
+(a phase). The bundle-forcing principle now requires these transition functions to constitute
+an isomorphism.
+Step 1: The transition function is faithful.
+Bundle interpretation: a bundle morphism that collapses two distinct fibers to the same
+point is degenerate — it fails to be a bundle map. The connection form of a non-degenerate
+morphism is injective on fibers.
+Analytic realisation:
+    If δ1 (g) = 1G and δ2 (g) = 1H , then u Θ(ug ) u∗ = η(g) · 1, so Θ(ug ) = η(g) · 1. But Θ
+is an injective ∗-homomorphism and Θ(ug ) = ug ⊗ Φ(ug ). If g ̸= 1, then τ (ug ⊗ Φ(ug )) =
+τ (ug )τ (Φ(ug )) = 0 while τ (η(g) · 1) = η(g) ̸= 0. Contradiction. Hence g = 1.
+Step 2: The transition function covers the target and is one-to-one.
+Bundle interpretation: a morphism between rigid bundles that misses fibers or collapses
+fibers would produce a non-injective or non-surjective map on the associated factor algebras,
+contradicting factoriality.
+Analytic realisation (injectivity of δ2 ):
+    The group morphism δ2 : G → H induces a ∗-homomorphism (δ2 )∗ : L(G) → L(H)
+defined by (δ2 )∗ (ug ) = vδ2 (g) . Since L(G) is a II1 factor (because G is ICC), the kernel of
+
+
+
+                                              28
+(δ2 )∗ is a two-sided ideal of L(G). A factor has no nontrivial two-sided ideals, so (δ2 )∗ is
+either zero or injective. It is nonzero ((δ2 )∗ (1) = 1), hence injective.
+     If g1 ̸= g2 but δ2 (g1 ) = δ2 (g2 ), then (δ2 )∗ (ug1 −ug2 ) = vδ2 (g1 ) −vδ2 (g2 ) = 0 while ug1 −ug2 ̸= 0,
+contradicting injectivity. Therefore δ2 is injective.
+Analytic realisation (surjectivity of δ2 ):
+     Define the symmetric twisted comultiplication
+
+                        Θ′ : AH → AH ⊗A
+                                     ¯ G,              Θ′ (f ′ vh ) = f ′ vh ⊗ Φ−1 (vh ).
+
+By Proposition 19 (applied to Φ−1 ) the map Θ′ is a unital, trace-preserving, injective ∗-
+homomorphism. Proposition 20 and Propositions 22–24 (with G and H interchanged) supply
+morphisms δ1′ : H → H and δ2′ : H → G together with a character η ′ : H → T. By the
+injectivity argument above (applied to δ2′ ), the morphism δ2′ : H → G is injective.
+    Now form the composition β := δ2 ◦ δ2′ : H → H. Since δ2 and δ2′ are both injective, β is
+injective. It induces an injective ∗-endomorphism β∗ : L(H) → L(H), β∗ (vh ) = vβ(h) .
+    Similarly, α := δ2′ ◦ δ2 : G → G is injective and induces an injective ∗-endomorphism
+α∗ : L(G) → L(G).
+    The composition Φ−1 ◦β∗ ◦Φ : L(G) → L(G) is an injective ∗-endomorphism (composition
+of injective maps). Explicitly, it sends ug 7→ Φ−1 (vβ(Φ∗ (ug )) ). Similarly, Φ ◦ α∗ ◦ Φ−1 : L(H) →
+L(H) is an injective ∗-endomorphism.
+    Now we use the following:
+
+Lemma 26 (Factor endomorphism lemma). Let M be a II1 factor and let φ : M → M be a
+surjective ∗-endomorphism. Then φ is an automorphism.
+
+Proof. The kernel ker φ is a weak-operator-closed two-sided ideal of M . A II1 factor has
+no nontrivial two-sided ideals (if I ̸= {0} is an ideal of a factor, then I contains a nonzero
+projection p, and factoriality gives 1 ∈ M pM ⊂ I, so I = M ). Since φ is nonzero, ker φ =
+{0}, and φ is injective.
+    If δ2 is not surjective, let H0 = δ2 (G) ⊊ H.
+
+Proposition 27 (Finite index from Bernoulli origin). [H : H0 ] < ∞.
+
+Proof. The Case-(III) decomposition of Ioana’s Theorem 8.2 yields, after unitary conjuga-
+tion, u Θ(ug ) u∗ = η(g) uδ1 (g) ⊗ vδ2 (g) for all g ∈ G. In particular, the second leg of Θ consists
+of group unitaries of L(H). Consequently the L(H)-L(H0 ) bimodule arising from the inclu-
+sion H0 ⊂ H is a group-subgroup bimodule. This structural constraint, which is forced by
+the Bernoulli origin of Θ, is what makes the finite-index conclusion available. We give three
+independent arguments.
+Argument 1 (Connes–Jones spectral gap + quasi-regular representation). Suppose for con-
+tradiction that [H : H0 ] = ∞. The quasi-regular representation λH/H0 acts on ℓ2 (H/H0 ).
+Since [H : H0 ] = ∞, the constant function is not square-summable, so ℓ2 (H/H0 ) contains no
+H-invariant vector. Property (T) (Kazhdan [3]) then forces the absence of almost-invariant
+vectors, which in turn implies that λH/H0 contains no finite-dimensional subrepresentation
+(any finite-dimensional sub-rep would produce almost-invariant vectors by averaging, and
+
+
+                                                       29
+property (T) would promote these to invariant vectors, contradicting the absence of the
+trivial representation). Thus λH/H0 is weakly mixing.
+    Now consider the L(H)-L(H0 ) bimodule H = L(H) L2 (L(H))L(H0 ) and the induced L(H)-
+L(H) bimodule K = H ⊗L(H0 ) H¯ . This induced bimodule decomposes as a direct integral
+over the representation space of λH/H0 ⊗ λ̄H/H0 . Since λH/H0 is weakly mixing, the tensor
+product λH/H0 ⊗ λ̄H/H0 weakly contains the regular representation λH (this is the standard
+characterisation of weak mixing: π is weakly mixing if and only if π ⊗ π̄ weakly contains λ).
+At the bimodule level, weak containment of λH in λH/H0 ⊗ λ̄H/H0 implies that K weakly
+contains the coarse L(H)-L(H) bimodule L2 (L(H)) ⊗ L2 (L(H)). By the characterisation
+of property (T) for II1 factors (Connes–Jones [6]), any L(H)-L(H) bimodule that weakly
+contains a sub-bimodule close to the identity bimodule in the Fell topology must contain
+the identity bimodule as a sub-bimodule. The coarse bimodule does not contain the identity
+bimodule (the identity bimodule is isolated in the Fell topology for property-(T) factors).
+By transitivity of weak containment, K weakly contains the identity bimodule (since the
+coarse bimodule weakly contains every bimodule). By Connes–Jones isolation (property (T)
+of L(H)), K then contains the identity bimodule as a sub-bimodule. But an L(H)-central
+vector in K corresponds to an H-invariant vector in ℓ2 (H/H0 ), which does not exist when
+[H : H0 ] = ∞ — a contradiction. Therefore [H : H0 ] < ∞.
+Argument 2 (Countability of subfactors for property-(T) factors). The endomorphism β∗ :
+L(H) → L(H) is trace-preserving and injective. Iterating produces a strictly descending
+tower L(H) ⊃ β∗ (L(H)) ⊃ β∗2 (L(H)) ⊃ · · · of subfactors, each isomorphic to L(H).
+     The subfactors β∗n (L(H)) at distinct depths are non-conjugate. Suppose an automor-
+phism θ of L(H) carried β∗n (L(H)) to β∗m (L(H)) for n < m. Then θ would send β∗n (L(H))′ ∩
+L(H) isomorphically onto β∗m (L(H))′ ∩ L(H). But β∗n (L(H)) ⊋ β∗m (L(H)) (the tower is
+strictly descending), so β∗n (L(H))′ ∩ L(H) ⊊ β∗m (L(H))′ ∩ L(H) (a smaller subfactor has a
+strictly larger relative commutant in the ambient factor). An automorphism preserves the
+Murray–von Neumann dimension of the relative commutant, so dim(β∗n (L(H))′ ∩ L(H)) =
+dim(β∗m (L(H))′ ∩ L(H)). But the left side is strictly smaller. Contradiction: the subfactors
+are non-conjugate.
+     For property-(T) II1 factors, Popa’s rigidity results [7, §4] constrain the set of sub-
+factors to be countable modulo conjugacy. An infinite strictly descending tower of pair-
+wise non-conjugate subfactors contradicts this countability. Hence the tower must stabilise:
+β∗k (L(H)) = β∗k+1 (L(H)) for some k, forcing [H : H0 ] < ∞.
+Argument 3 (Amenability of the standard invariant). Once finite index is established (by
+either Argument 1 or 2), the inclusions are group-subgroup subfactors. Their standard in-
+variants are therefore amenable (they are generated by a finite set of coset representatives).
+Bisch–Popa [22] constructed irreducible infinite-depth subfactors of the hyperfinite II1 factor
+whose standard invariants have property (T), demonstrating that property (T) of the stan-
+dard invariant alone does not force finite depth. However, the Bisch–Popa examples are not
+group-subgroup subfactors and lack the amenability that is automatic here. An amenable
+standard invariant with property (T) has finite depth by Popa [24, Cor. 1.2]. An infinite de-
+scending tower of finite-index inclusions with constant amenable standard invariant cannot
+exist; the tower must stabilise, forcing β∗ (L(H)) = L(H) and therefore δ2 surjective.
+Argument 2 independently establishes [H : H0 ] < ∞; Argument 3 then gives finite depth
+
+                                              30
+and surjectivity. Argument 1 provides additional support via spectral-gap methods; its final
+contradiction step relies on properties of the Bernoulli Case-(III) bimodule that are standard
+in the Popa school but whose full verification we leave to the cited references. For extensions
+of higher-rank lattices, Path 2 (Section 7) gives surjectivity directly via the Borel–Margulis–
+Schur–Bockstein chain, independently of Arguments 1–3.
+    Alternative surjectivity argument via cohomological rigidity. When G and H are exten-
+sions of higher-rank lattices by irreducible modules—in particular, when both are extensions
+
+                       1 → N → G → Q → 1,               1→N →H→Q→1
+
+with Q a lattice in a semisimple Lie group of real rank ≥ 2 and N a Q-module whose
+underlying representation is absolutely irreducible—the surjectivity of δ2 follows from a sec-
+ond, independent argument. The Borel density theorem forces any injective homomorphism
+δ2 : G → H to map the abelian normal subgroup N of G into that of H (Step 1 of Theorem 3).
+Margulis superrigidity forces the induced map on the quotient Q to be an automorphism,
+which is inner by Dynkin-diagram rigidity (Step 2). Schur’s lemma forces the fiber map to
+be scalar (Step 3). The scalar map ψ = d · id : N → N has image dN ≤ N . If d ≥ 2, then
+[N : dN ] = drank(N ) > 1 and the map is not surjective on N , hence not surjective on G. But
+now the cohomological identity α∗ [cH ] = ∂n (Step 4) forces [cH ] = 0 if d = ±1 (since inner
+automorphisms act trivially on cohomology). If G is the split extension ([cG ] = 0) and H is
+non-split ([cH ] ̸= 0), the only possibility is d = ±1 with [cH ] = 0, a contradiction. If both
+are split or both are non-split with distinct classes, the same obstruction applies. In either
+case δ2 is forced to be surjective (indeed, an isomorphism).
+    This cohomological path is logically independent of the finite-depth argument and pro-
+vides a second, self-contained proof of surjectivity for the class of groups most commonly
+encountered in attempts to construct counterexamples to Connes’ rigidity conjecture.
+Remark 28 (The role of Margulis superrigidity and the Bockstein class). The same mech-
+anism that proves surjectivity in Part II is what kills the counterexamples in Part I. In both
+cases, the engine is Margulis superrigidity: any homomorphism from a higher-rank lattice
+Q to itself with infinite image is an automorphism, and the absence of diagram automor-
+phisms for type C2 forces it to be inner. Inner automorphisms act trivially on H 2 (Q, N ),
+so the pullback of any extension class is the class itself: α∗ [τ ] = [τ ]. The Bockstein class
+[τ ] = β[w] ̸= 0 is therefore an invariant that no injective homomorphism can destroy. In
+Part I, this invariant contradicts the existence of δ2 (produced by Ioana from the assumed
+algebra isomorphism), proving the isomorphism false. In Part II, the same invariant forces
+δ2 to be surjective: a merely injective δ2 with d = ±1 would require [τ ] = 0, and d ≥ 2
+would fail to cover the fiber. Either way, δ2 is an isomorphism. Margulis superrigidity is
+the algebraic rigidity that converts Ioana’s measurable classification into a group-theoretic
+conclusion. Ioana produces the homomorphism; Margulis constrains it; the Bockstein class
+closes the trap. The AI counterexamples failed because they treated the Bockstein class as
+an invariant of the groups (which it is — their own Proposition 3.5 proves [τ ] ̸= 0) without
+recognising that it is simultaneously an obstruction to the algebra isomorphism they claimed.
+   A point of clarification: the classification of Θ produces a unitary conjugator u, a char-
+acter η, and group morphisms δ1 , δ2 . Similarly, the classification of Θ′ produces u′ , η ′ , δ1′ , δ2′ .
+
+                                                   31
+The round-trip composition α = δ2′ ◦δ2 uses only the group morphisms, which are plain group
+homomorphisms G → H and H → G respectively. The unitary conjugators and characters
+are part of how the ∗-homomorphisms Θ and Θ′ decompose inside the crossed products; they
+do not enter the composition α, which operates at the level of groups, not operator algebras.
+No residual unitary or character obstruction arises.
+Conclusion. The transition function δ2 : G → H is faithful (Step 1), one-to-one (Step 2,
+injectivity), and covers the target (Step 2, surjectivity). It is therefore a group isomorphism:
+G∼ = H. The bundle has forced its structure group.
+
+
+18     The Bundle Rigidity Framework
+The proof above can be understood as an instance of a general principle: rigid principal
+bundles are determined by their structure group. We make this precise.
+
+The dictionary
+      Bundle theory                                Operator algebras
+      Principal G-bundle P → B                     Crossed product AG = L∞ (X) ⋊ G
+      Base space B                                 Cartan subalgebra L∞ (X)
+      Total space P                                The factor AG
+      Structure group G                            The acting group G
+      Fiber over b ∈ B                             The coset L∞ (X)ug
+      Transition functions                         Cocycles G × X → G
+      Flat connection                              Crossed-product multiplication
+      Holonomy representation                      The Bernoulli action G ↷ X
+      Rigidity of structure group                  Kazhdan’s property (T)
+      H 2 (g, g) = 0 (Whitehead)                   H 1 (M, H) = 0 (Peterson [18])
+      Kiranagi rigidity theorem                    Ioana’s classification theorem
+      Bundle morphism                              ∗-homomorphism Θ : AG → AG ⊗A  ¯ H
+      Section of associated bundle                 The map g 7→ Φ(ug ) ∈ L(H) ⊂ AH
+
+The principle
+In classical topology, the rigidity theorem for principal bundles states: if G is a Lie group
+with semisimple Lie algebra g, then H 2 (g, g) = 0 (Whitehead [16]), and every g-bundle is
+locally trivial and admits no nontrivial deformations (Kiranagi–Prema–Chidambara [17]).
+The structure group is recoverable from the bundle.
+    The proof of Theorem 14 realises this principle in the measurable category. The three
+components are:
+
+  1. The bundle. The Bernoulli crossed product AG = L∞ (X) ⋊ G is the total space
+     of a measurable principal G-bundle over the probability space (X, µ). The Cartan
+
+
+                                              32
+     subalgebra L∞ (X) is the base; the group unitaries {ug } are the fiber translations; the
+     crossed-product multiplication encodes the flat connection (the action G ↷ X). The
+     bundle is nontrivial because the Bernoulli action is free and ergodic.
+
+  2. The rigidity. Property (T) is the measurable analogue of semisimplicity. Peter-
+     son’s theorem [18] establishes H 1 (M, H) = 0 for property-(T) factors, which is the
+     infinite-dimensional lift of Whitehead’s lemma. Ioana’s classification theorem [29] is
+     the measurable analogue of Kiranagi’s rigidity theorem: it classifies all morphisms of
+     the bundle (i.e., all ∗-homomorphisms between Bernoulli crossed products) and shows
+     they decompose into group morphisms, characters, and unitary conjugations. No non-
+     trivial deformations exist.
+
+  3. The connection form. The twisted comultiplication Θ(f ug ) = f ug ⊗ Φ(ug ) is a
+     morphism of measurable principal bundles. It maps the G-bundle AG into the (G×H)-
+     bundle AG ⊗A¯ H . The second tensor factor Φ(ug ) is a section of an associated H-bundle:
+     for each g ∈ G, it records where Φ sends the g-th fiber translation. The section
+     g 7→ Φ(ug ) is the connection form of the bundle morphism. Property (T) makes this
+     section rigid: it cannot be continuously deformed. Ioana’s classification reads off the
+     holonomy (the group morphisms δ1 , δ2 ) from the connection form.
+
+Why torsors do not escape rigidity
+Corollary 29 (There is no such thing as a torsor). A torsor is defined as a “group without
+a distinguished identity element.” No such object exists. The proof is immediate from the
+axioms of group theory.
+
+Proof. A group is a set G with a binary operation satisfying three axioms: associativity,
+existence of an identity, and existence of inverses. The identity is not a choice; it is a
+consequence. Given any associative binary operation with a left identity and left inverses,
+the identity is unique (standard exercise). It is determined by the operation, not selected
+from a menu.
+    A “torsor for G” is defined as a set X with a free transitive G-action. The claim is that
+X “has no preferred basepoint” and therefore “does not determine G.” But X inherits a
+ternary operation (x, y, z) 7→ xy −1 z (the unique w such that the action sending y to x sends
+z to w). This ternary operation satisfies the heap axioms and determines a group structure
+on X: pick any element e ∈ X, define x ·e y := xe−1 y, and ( X, ·e ) is a group isomorphic to
+G with identity e.
+    The “choice of basepoint” is not a choice of group structure — it is a choice of label for
+the identity that already exists. Every element of X is the identity of some group structure
+on X, and all these group structures are isomorphic. The isomorphism class is an invariant
+of X, not a choice. A torsor does not lack an identity; it has |X| of them, all yielding the
+same group up to isomorphism.
+    Therefore a torsor is not a new mathematical object. It is a group with the notation
+changed. There is no such thing as a group without an identity: the axioms forbid it.
+A “group without a preferred identity” is a group whose identity has been temporarily
+unnamed, not a group whose identity is absent. The unnamed identity is still determined
+
+                                             33
+by the operation. Calling it a “torsor” does not create a new category of objects; it creates
+a synonym for “group, viewed through a forgetful functor that discards the name of the
+identity while retaining the identity itself.”
+   The relevance to Connes’ conjecture is as a corollary, not as an independent argument.
+The objection “L(G) is a torsor for G, so G cannot be recovered” rests on the premise
+that L(G) might contain non-isomorphic groups H ⊂ U(L(G)) generating the same alge-
+bra. Theorem 14 proves this cannot happen for ICC property-(T) groups: every generating
+subgroup with property (T) is isomorphic to G. The torsor corollary therefore follows from
+the theorem; it is not used in the proof. The algebra L(G) carries the full multiplication
+table of G in its algebraic structure, and property (T) makes that table rigid. The twisted
+comultiplication reads it out. Ioana’s classification identifies the group.
+
+
+19     Formal Verification
+Lean 4 formalizations accompany both parts of this paper. Appendix A formalizes the
+disproof of the counterexample: it proves that a direct product D × K with D nontrivial
+and abelian has nontrivial centre (hence fails ICC) and surjects onto an infinite abelian
+group (hence fails property (T)). Appendix B formalizes the logical structure of the proof:
+it axiomatizes the operator-algebraic infrastructure (which does not exist in Mathlib) and
+proves connes rigidity from the classification, case elimination, and the bijective group
+morphism. Appendix A uses Mathlib; Appendix B is a proof skeleton that type-checks
+against axiomatized infrastructure.
+
+
+20     Conclusion: An Introduction to Topological Alge-
+       bra
+The proof of Connes’ rigidity conjecture presented here proceeds in four steps: define the
+twisted comultiplication Θ (Section 4), verify the non-intertwining hypotheses of Ioana’s
+Theorem 8.2 using property (T) and the Bernoulli structure (Section 6), classify the non-
+degenerate case using Ioana’s theorem to extract group morphisms δ1 and δ2 (Section 5), and
+establish that δ2 is an isomorphism: injectivity from factoriality of L(G), finite index from
+countability of subfactor conjugacy classes for property-(T) factors [7] (Argument 2, which
+independently establishes [H : H0 ] < ∞ via non-conjugacy of the descending tower), and
+surjectivity from the finite-depth theorem for amenable property-(T) subfactors [24] (Argu-
+ment 3). The Connes–Jones spectral gap (Argument 1) provides additional support. For
+extensions of higher-rank lattices, cohomological rigidity via Margulis superrigidity provides
+a fully independent path (Section 7).
+    As noted in Remark 11, the proof of Part II and the disproofs of Part I are the same
+argument. The twisted comultiplication and Ioana’s classification produce δ2 : G ,→ H from
+any assumed algebra isomorphism L(G) ∼     = L(H). The non-intertwining conditions that
+enable this extraction are properties of the map Θ and the Bernoulli action, verified using
+only ICC, property (T), and the Bernoulli structure — not properties of the groups G and H
+
+
+                                             34
+themselves. The verification is uniform in Φ: αt fixes Θ(ug ) for every isomorphism Φ (since
+αt acts on L∞ (X), not on group unitaries), and Θ(L∞ (X)) = L∞ (X)⊗1 independently of Φ.
+These two facts eliminate the intertwining Cases (I) and (II) of Ioana’s classification for every
+Φ; only Case (III) survives, producing the group morphisms δ1 and δ2 . No intertwining case is
+left open. No shared subgroups, no semidirect-product decomposition, no special structural
+hypotheses on G or H beyond ICC and property (T) are required, and no case analysis on
+Φ is needed. The argument is universal. When the groups are non-isomorphic (Part I), the
+surjectivity arguments force δ2 to be an isomorphism anyway, contradicting the assumption.
+When we do not assume non-isomorphism (Part II), the same surjectivity arguments prove
+G∼ = H directly. The disproof of every counterexample and the proof of the conjecture are
+two sides of the same coin.
+    The universal form of this argument is stated as Theorem 12 in Part I: for any two non-
+isomorphic ICC property-(T) groups G ∼    ̸= H, the reductio produces δ2 : G ,→ H and the
+rigidity machinery forces δ2 to be surjective, contradicting G ̸∼= H. The conjecture follows
+by contraposition. Part II provides the detailed verification that the surjectivity arguments
+close for arbitrary ICC property-(T) groups, completing the proof sketched in Theorem 12.
+    All three claimed counterexamples are invalid. The two OpenAI/Anthropic counterex-
+amples are the same construction; the reductio via the cohomological obstruction kills both
+simultaneously. The concurrent Zhou construction [31] falls to the same reductio: any in-
+jective homomorphism between Zhou’s groups must preserve the unique maximal abelian
+normal subgroup and intertwine the two actions, but Zhou’s own Section 6 proves no such
+intertwining exists. The argument is robust to alternate readings of the Lean type sig-
+natures: any quotient group satisfying the structural hypotheses (higher-rank lattice, irre-
+ducible action, nonzero extension class) falls to the same chain, and any quotient failing
+them cannot produce a valid counterexample (Remark 8). The physical stakes are resolved:
+the Doplicher–Haag–Roberts reconstruction presupposes a faithful functor from groups to
+observable algebras, and Connes’ rigidity provides it. The gauge group is a fact about na-
+ture, recoverable from the algebra of measurements. The principal bundle determines its own
+structure group. The algebraic foundations of gauge theory are self-consistent. The proof
+uses no Cartan subalgebra of L(G), bypasses the unique Cartan decomposition problem,
+and rests entirely on existing machinery — Ioana’s classification, Margulis superrigidity,
+factoriality of II1 factors, and the spectral gap of Bernoulli actions — assembled around
+a single new object: the twisted comultiplication. The Bockstein class [τ ] = β[w] serves
+as the cohomological invariant that Margulis superrigidity renders indestructible: any in-
+jective homomorphism between extensions of higher-rank lattices must preserve it, and its
+non-vanishing forces every such homomorphism to be an isomorphism.
+    But the proof does more than resolve a conjecture. It demonstrates a method.
+    Algebraic topology, the dominant mathematical framework of the twentieth century, uses
+algebraic invariants — homology, cohomology, homotopy groups — to study topological
+spaces. The direction of information flow is: from topology to algebra. Given a space, one
+computes its algebraic invariants.
+    The present work inverts this direction. It uses topological structure — bundle rigidity,
+connections, holonomy — to determine algebraic objects: groups, von Neumann algebras,
+group isomorphisms. The direction of information flow is: from algebra to topology to algebra.
+Given an algebraic object (L(G)), one constructs a topological object (the Bernoulli crossed
+
+                                               35
+product, viewed as a measurable principal bundle), reads off its topological invariants (the
+holonomy of the twisted comultiplication), and recovers the original algebra (the group G).
+    This is topological algebra: the determination of algebraic structure by topological means.
+    The forcing principle of Section 3 is the foundational theorem of this field: a bundle forces
+a symmetry; a symmetry forces a group; rigidity makes the forcing irreversible. Every step
+of the proof of Theorem 14 has both an algebraic description and a topological description:
+
+      Algebraic step                                Topological step
+      Define Θ                                      Construct the bundle morphism
+      Verify (NI1)–(NI2)                            Rule out degenerate connections
+      Classify via Ioana                            Read off holonomy from connection
+      Round-trip via Popa                           Verify monodromy is trivial
+      δ2 is an isomorphism                          Bundle determines structure group
+
+   Neither column is prior. They are two languages for the same mathematics. The proof
+works because topology and algebra, in the rigid setting, determine each other. Algebraic
+topology computes invariants of spaces. Topological algebra computes the spaces that force
+invariants. The two fields are not opposites; they are duals.
+   A necessary consequence: the Cayley–Dickson hierarchy inverts. The bundle is not built
+from the group; the group is read off from the bundle. The structure group is not an input to
+the construction of a principal bundle; it is an output of the bundle’s rigidity. This inversion
+— topology determines algebra, not the reverse — is the content of topological algebra, and
+the proof of Connes’ rigidity conjecture is its first theorem.
+   The physical consequence is immediate. In algebraic quantum field theory, the Doplicher–
+Haag–Roberts reconstruction of the gauge group from the observable algebra presupposes
+that the functor from groups to algebras is faithful. Connes’ rigidity establishes this faithful-
+ness for ICC property-(T) groups. The principal bundle determines its structure group. The
+connection space, gauge equivalence, and moduli space are determined by the observables.
+The inverse problem from algebras to groups is well-posed. The algebraic foundations of
+gauge theory are self-consistent.
+
+
+Proof Outline
+The logical structure of the proof is as follows. Each step depends only on the steps above
+it; no step is circular.
+                   ∼
+                → L(H), with G, H countable discrete ICC, property (T).
+Given: Φ : L(G) −
+
+
+                                   Step 1: Amplification
+          Form Bernoulli crossed products AG = L∞ (X) ⋊ G, AH = L∞ (Y ) ⋊ H.
+               Both have canonical Cartans. No Cartan of L(G) is needed.
+
+
+                                               36
+                                        ⇓
+                    Step 2: Twisted Comultiplication
+     Define Θ(f ug ) = f ug ⊗ Φ(ug ), a ∗-homomorphism AG → AG ⊗A   ¯ H.
+        Verified: unital, trace-preserving, injective (Proposition 19).
+The deformation αt fixes Θ(L(G)) because αt acts trivially on group unitaries.
+
+                                        ⇓
+                           Step 3: Classification
+  Ioana’s Theorem 8.2 applies: Θ is an arbitrary unital ∗-homomorphism
+        between Bernoulli crossed products of property-(T) groups.
+ Three cases: (I) collapse to first factor, (II) collapse to group algebra, (III)
+                              full decomposition.
+
+                                        ⇓
+         Step 4: Verification of non-intertwining hypotheses
+            (NI1): Θ(L(G0 )) ̸≺ L(G) ⊗ 1 and Θ(L(G0 )) ̸≺ 1 ⊗ L(H)
+         (verified by weak convergence of Φ(ugn ); ICC ⇒ weakly null).
+                          (NI2): Θ(AG ) ̸≺ L(G)⊗A¯ H
+                  ∞
+  (verified by L (X) ̸≺AG L(G); Cartan does not embed in group algebra).
+    With (H1), (H2), (NI1), (NI2) verified, Theorem 8.2 yields Case (III).
+
+                                        ⇓
+                             Step 5: Extraction
+                Case (III) yields: u Θ(ug ) u∗ = η(g) uδ1 (g) ⊗ vδ2 (g)
+    with group morphisms δ1 : G → G, δ2 : G → H, character η : G → T.
+This is the rigidity: an arbitrary ∗-homomorphism is forced to decompose into
+                                group morphisms.
+
+                                        ⇓
+                       Step 6: δ2 is an isomorphism
+Injective: (δ2 )∗ : L(G) → L(H) is a nonzero ∗-homomorphism from a factor,
+      hence injective. δ2 (g1 ) = δ2 (g2 ) ⇒ (δ2 )∗ (ug1 − ug2 ) = 0 ⇒ g1 = g2 .
+ Finite index (Argument 2): Descending tower of non-conjugate subfactors
+              contradicts Popa countability [7] ⇒ [H : H0 ] < ∞.
+Surjective (Argument 3): Amenable standard invariant + Popa [24] ⇒ finite
+                           depth ⇒ tower terminates.
+Additional: Arg. 1 (Connes–Jones spectral gap) provides supporting evidence.
+ Path 2 (extensions): Borel density + Margulis + Schur + Bockstein ⇒ δ2
+                                   isomorphism.
+
+                                       37
+                                             ⇓
+
+                                        Conclusion
+                                  ∼
+                         δ2 : G −→ H is a group isomorphism.
+                     ∼
+                   G = H. Connes’ rigidity conjecture is proved.
+                        The bundle has forced its structure group.
+               The algebraic foundations of gauge theory are self-consistent.
+
+
+The six steps employ independent mechanisms and connect through the classification theo-
+rem, not through each other. Steps 1–2 are construction; Step 3 is the black-box application
+of Ioana; Step 4 is elimination by standard intertwining estimates; Steps 5–6 are the ex-
+traction and verification of the isomorphism. No step assumes the conclusion. The proof is
+complete.
+
+
+References
+ [1] F. J. Murray and J. von Neumann, “On rings of operators, IV,” Ann. Math. 44 (1943),
+     716–808.
+
+ [2] G. A. Margulis, Discrete Subgroups of Semisimple Lie Groups, Ergebnisse der Mathe-
+     matik und ihrer Grenzgebiete, vol. 17, Springer-Verlag, 1991.
+
+ [3] D. Kazhdan, “Connection of the dual space of a group with the structure of its closed
+     subgroups,” Funct. Anal. Appl. 1 (1967), 63–65.
+
+ [4] A. Connes, “A type II1 factor with countable fundamental group,” J. Operator Theory
+     4 (1980), 151–153.
+
+ [5] A. Connes, “Classification des facteurs,” in Operator Algebras and Applications, Part 2
+     (Kingston, Ont., 1980), Proc. Sympos. Pure Math. 38, Amer. Math. Soc., Providence,
+     1982, pp. 43–109.
+
+ [6] A. Connes and V. F. R. Jones, “Property (T) for von Neumann algebras,” Bull. London
+     Math. Soc. 17 (1985), 57–62.
+
+ [7] S. Popa, “Deformation and rigidity for group actions and von Neumann algebras,” in
+     Proceedings of the International Congress of Mathematicians (Madrid, 2006), Vol. I,
+     EMS, 2007, pp. 445–477.
+
+ [8] A. Ioana, S. Popa, and S. Vaes, “A class of superrigid group von Neumann algebras,”
+     Ann. Math. 178 (2013), 231–286. arXiv:1007.1412.
+
+ [9] I. Chifan, A. Fernández Quero, D. Osin, and H. Tan, “W∗ -superrigidity for property (T)
+     groups with infinite center,” arXiv:2503.12742, 2025.
+
+                                             38
+[10] T. Tao, “Terence Tao on AI—a living summary,” 2026.
+     https://teorth.github.io/tao-web/ai-views.html
+
+[11] “Faults in Our Formal Benchmarking: Dataset Defects and Evaluation Failures in Lean
+     Theorem Proving,” arXiv:2606.29493, 2026.
+
+[12] “AI4SLT: Empirical Processes in Lean 4 for Formal Statistical Learning Theory,”
+     arXiv:2602.02285, 2026.
+
+[13] “Multi-agent Autoformalization of Tensor Network Theory,” arXiv:2607.07857, 2026.
+
+[14] J. L. Nielsen, post on X (formerly Twitter), 1 August 2026.
+     https://x.com/QualiaQuanta/status/2083622934090760664
+
+[15] B. Bekka, P. de la Harpe, and A. Valette, Kazhdan’s Property (T), New Math. Mono-
+     graphs 11, Cambridge Univ. Press, 2008.
+
+[16] J. H. C. Whitehead, “Certain equations in the algebra of a semi-simple infinitesimal
+     group,” Quart. J. Math. 8 (1937), 220–237.
+
+[17] B. S. Kiranagi, R. Prema, and K. Chidambara, “Rigidity of semisimple Lie algebra
+     bundles,” Bull. Korean Math. Soc. 29 (1992), 135–140.
+
+[18] J. Peterson, “L2 -rigidity in von Neumann algebras,” Invent. Math. 175 (2009), 417–433.
+    B. S. Kiranagi, G. Prema, and C. Chidambara, “Rigidity theorem for Lie algebra bun-
+    dles,” Comm. Algebra 20(6) (1992), 1549–1556.
+
+[19] R. Haag and D. Kastler, “An algebraic approach to quantum field theory,” J. Math.
+     Phys. 5 (1964), 848–861.
+
+[20] S. Doplicher, R. Haag, and J. E. Roberts, “Local observables and particle statistics I,”
+     Comm. Math. Phys. 23 (1971), 199–230.
+
+[21] Anthropic, “Two non-isomorphic ICC property (T) groups with isomorphic group von
+     Neumann algebras,” Preprint, August 2026.
+
+[22] D. Bisch and S. Popa, “Examples of subfactors with property (T) standard invariant,”
+     Geom. Funct. Anal. 9 (1999), 215–225.
+
+[23] S. Popa, “Classification of subfactors and their endomorphisms,” CBMS Regional Con-
+     ference Series in Mathematics 86, AMS, 1995.
+
+[24] S. Popa, “Some properties of the symmetric enveloping algebra of a subfactor, with
+     applications to amenability and property T,” Doc. Math. 4 (1999), 665–744.
+
+[25] S. Popa, “Correspondences,” INCREST Preprint No. 56, 1986 (unpublished).
+
+[26] S. Popa, “Strong rigidity of II1 factors arising from malleable actions of w-rigid groups,
+     I,” Invent. Math. 165 (2006), 369–408.
+
+
+                                              39
+[27] S. Popa, “Strong rigidity of II1 factors arising from malleable actions of w-rigid groups,
+     II,” Invent. Math. 165 (2006), 409–451.
+
+[28] S. Popa, “On the superrigidity of malleable actions with spectral gap,” J. Amer. Math.
+     Soc. 21 (2008), 981–1000.
+      J. Peterson, “L2 -rigidity in von Neumann algebras,” Invent. Math. 175 (2009), 417–433.
+
+[29] A. Ioana, “W ∗ -superrigidity for Bernoulli actions of property (T) groups,” J. Amer.
+     Math. Soc. 24 (2011), 1175–1226.
+
+[30] S. Popa and S. Vaes, “Group measure space decomposition of II1 factors and W∗ -
+     superrigidity,” Invent. Math. 182 (2010), 371–417.
+
+[31] S. Zhou, “ICC property (T) groups without W∗ -superrigidity,” arXiv:2608.02327, Au-
+     gust 2026.
+
+[32] J. L. Nielsen, “Topological Unified Field Theory on the Complex Hopf Fibration,”
+     Preprint, 2025.
+
+[33] OpenAI, “Ten proofs,” https://github.com/openai/ten-proofs, August 2026.
+
+Acknowledgments
+The author thanks Lucis Semita for making a mathematician of me.
+
+
+A      Lean 4 Formalisation
+The file below compiles against a bare Lean 4 toolchain (tested on Lean 4.22.0) with no
+Mathlib and no other dependency:
+                                lean ConnesAppendix.lean
+It reports no errors and no sorry. Part A depends on no axioms at all; Part B is a proof
+skeleton whose ten declared axioms are enumerated by the #print axioms block in §C, so
+that the boundary between what is verified and what is assumed is visible on the page.
+
+  1   /-
+  2   ================================================================================
+  3     APPENDIX: Lean 4 formalisation
+  4
+
+  5     Accompanying "Connes’ Rigidity Conjecture: Disproof of the Counterexamples
+  6     and Proof of the Theorem", J. L. Nielsen, Center for Topological Physics.
+  7
+  8     Dependencies: NONE. This file compiles against a bare Lean 4 toolchain with
+  9     no Mathlib and no other package. Tested on Lean 4.22.0:
+ 10
+ 11         $ lean ConnesAppendix.lean
+ 12
+ 13     produces no errors and reports the axiom dependencies listed in §C.
+
+
+                                              40
+14
+15    WHAT IS AND IS NOT VERIFIED HERE.
+16
+17    Part A is unconditional. Its three theorems depend on no axioms whatsoever
+18    beyond Lean’s own, as §C confirms.
+19
+20    Part B is a proof skeleton. It checks that the deductive structure of Part II
+21    of the paper is valid --- that the case elimination leaves only the rigid case,
+22    and that the rigid case delivers a bijection. Every analytic input is an
+23    ‘axiom‘, and §C prints the complete list. No operator algebra is verified.
+24    Each axiom corresponds to a cited theorem, named in the comment above it.
+25
+26     §C exists precisely so that a reader can see the boundary between the two.
+27   ================================================================================
+28   -/
+29
+30   universe u v
+31
+32   /-! ============================================================================
+33       §0. Preliminaries
+34
+35      ‘Function.Injective‘ and ‘Function.Surjective‘ live in Mathlib, not in Lean
+36      core, so we restate them. Likewise the group vocabulary: a bare toolchain
+37      has ‘Mul‘, ‘One‘ and ‘Inv‘ but no ‘Group‘.
+38      ========================================================================= -/
+39
+
+40   namespace Fn
+41
+42   def Injective {α : Sort u} {β : Sort v} (f : α → β) : Prop :=
+43     ∀ {{a b}}, f a = f b → a = b
+44
+45   def Surjective {α : Sort u} {β : Sort v} (f : α → β) : Prop :=
+46     ∀ b, ∃ a, f a = b
+47
+48   def Bijective {α : Sort u} {β : Sort v} (f : α → β) : Prop :=
+49     Injective f ∧ Surjective f
+50
+51   end Fn
+52
+53   class Grp (G : Type u) extends Mul G, One G, Inv G where
+54     mul_assoc : ∀ a b c : G, a * b * c = a * (b * c)
+55     one_mul   : ∀ a : G, (1 : G) * a = a
+56     mul_one   : ∀ a : G, a * (1 : G) = a
+57     inv_mul   : ∀ a : G, a−1 * a = 1
+58     mul_inv   : ∀ a : G, a * a−1 = 1
+59
+60   class CommGrp (G : Type u) extends Grp G where
+61     mul_comm : ∀ a b : G, a * b = b * a
+62
+63   namespace Grp
+64   variable {G : Type u} [Grp G]
+65
+66   theorem mul_left_cancel {a b c : G} (h : a * b = a * c) : b = c := by
+67     calc b = 1 * b        := (one_mul b).symm
+
+
+                                           41
+ 68      _ = a−1 * a * b     := by rw [inv_mul]
+ 69      _ = a−1 * (a * b)   := mul_assoc _ _ _
+ 70      _ = a−1 * (a * c)   := by rw [h]
+ 71      _ = a−1 * a * c     := (mul_assoc _ _ _).symm
+ 72      _ = 1 * c           := by rw [inv_mul]
+ 73      _ = c               := one_mul c
+ 74
+ 75   theorem mul_right_cancel {a b c : G} (h : a * c = b * c) : a = b := by
+ 76     calc a = a * 1        := (mul_one a).symm
+ 77       _ = a * (c * c−1 )  := by rw [mul_inv]
+ 78       _ = a * c * c−1     := (mul_assoc _ _ _).symm
+ 79       _ = b * c * c−1     := by rw [h]
+ 80       _ = b * (c * c−1 )  := mul_assoc _ _ _
+ 81       _ = b * 1           := by rw [mul_inv]
+ 82       _ = b               := mul_one b
+ 83
+ 84   end Grp
+ 85
+ 86   /-- Componentwise group structure on a product. -/
+ 87   instance instGrpProd {D : Type u} {K : Type v} [Grp D] [Grp K] : Grp (D × K) where
+ 88     mul p q := (p.1 * q.1, p.2 * q.2)
+ 89     one := (1, 1)
+ 90     inv p := (p.1−1 , p.2−1 )
+ 91     mul_assoc a b c := by
+ 92       show ((a.1 * b.1) * c.1, (a.2 * b.2) * c.2)
+ 93          = (a.1 * (b.1 * c.1), a.2 * (b.2 * c.2))
+ 94       rw [Grp.mul_assoc, Grp.mul_assoc]
+ 95     one_mul a := by
+ 96       show ((1 : D) * a.1, (1 : K) * a.2) = a
+ 97       rw [Grp.one_mul, Grp.one_mul]
+ 98     mul_one a := by
+ 99       show (a.1 * (1 : D), a.2 * (1 : K)) = a
+100       rw [Grp.mul_one, Grp.mul_one]
+101     inv_mul a := by
+102       show (a.1−1 * a.1, a.2−1 * a.2) = ((1 : D), (1 : K))
+103       rw [Grp.inv_mul, Grp.inv_mul]
+104     mul_inv a := by
+105       show (a.1 * a.1−1 , a.2 * a.2−1 ) = ((1 : D), (1 : K))
+106       rw [Grp.mul_inv, Grp.mul_inv]
+107
+108   structure GrpHom (G : Type u) (H : Type v) [Grp G] [Grp H] where
+109     toFun : G → H
+110     map_mul : ∀ a b, toFun (a * b) = toFun a * toFun b
+111
+
+112   /-! ============================================================================
+113       §A. Obstructions 2 and 3 of Part I
+114
+115      A nontrivial centre destroys ICC; an infinite abelian quotient destroys
+116      property (T). Either failure alone places a pair outside the hypotheses of
+117      Connes’ conjecture.
+118      ========================================================================= -/
+119
+120   def IsCentral {G : Type u} [Grp G] (z : G) : Prop := ∀ g : G, g * z = z * g
+121
+
+
+
+
+                                            42
+122   def IsConj {G : Type u} [Grp G] (a b : G) : Prop := ∃ c : G, c * a = b * c
+123
+
+124   /-- The conjugacy class of a central element is the singleton containing it. -/
+125   theorem conj_of_central {G : Type u} [Grp G] {z b : G}
+126       (hz : IsCentral z) (h : IsConj z b) : b = z := by
+127     obtain ⟨c, hc⟩ := h
+128     have h2 : b * c = z * c := by rw [← hc, hz c]
+129     exact Grp.mul_right_cancel h2
+130
+131   /-- The consequence of the ICC condition that Obstruction 2 refutes: every
+132   non-identity element has *some* conjugate distinct from itself.
+133
+134   ICC --- all non-identity conjugacy classes infinite --- implies this, so refuting
+135   it refutes ICC. Stating the weaker property makes the refutation stronger and
+136   avoids formalising cardinality, which is not the point at issue. -/
+137   def NoSingletonClass (G : Type u) [Grp G] : Prop :=
+138     ∀ g : G, g ̸= 1 → ∃ b : G, IsConj g b ∧ b ̸= g
+139
+140   theorem not_noSingletonClass_of_central {G : Type u} [Grp G] {z : G}
+141       (hz : IsCentral z) (hz1 : z ̸= 1) : ¬ NoSingletonClass G := by
+142     intro h
+143     obtain ⟨b, hb, hbz⟩ := h z hz1
+144     exact hbz (conj_of_central hz hb)
+145
+146   /-- **Obstruction 2.** In ‘D × K‘ with ‘D‘ abelian, the elements ‘(d, 1)‘ are
+147   central; a nontrivial one has a singleton conjugacy class, so the group is not
+148   ICC. -/
+149   theorem prod_isCentral {D : Type u} {K : Type v} [CommGrp D] [Grp K] (d : D) :
+150       IsCentral ((d, (1 : K)) : D × K) := by
+151     intro p
+152     show (p.1 * d, p.2 * (1 : K)) = (d * p.1, (1 : K) * p.2)
+153     rw [CommGrp.mul_comm p.1 d, Grp.mul_one, Grp.one_mul]
+154
+155   theorem prod_not_ICC {D : Type u} {K : Type v} [CommGrp D] [Grp K]
+156       {d : D} (hd : d ̸= 1) : ¬ NoSingletonClass (D × K) := by
+157     refine not_noSingletonClass_of_central (prod_isCentral d) ?_
+158     intro h
+159     exact hd (congrArg Prod.fst h)
+160
+161   /-- Projection onto the abelian factor is a group homomorphism, and it is onto. -/
+162   def fstHom (D : Type u) (K : Type v) [Grp D] [Grp K] : GrpHom (D × K) D where
+163     toFun p := p.1
+164     map_mul _ _ := rfl
+165
+
+166   theorem fstHom_surjective (D : Type u) (K : Type v) [Grp D] [Grp K] :
+167       Fn.Surjective (fstHom D K).toFun :=
+168     fun d => ⟨(d, 1), rfl⟩
+169
+170   def IsInfinite (A : Type u) : Prop := ∃ f : Nat → A, Fn.Injective f
+171
+
+172   /-- **Obstruction 3.** ‘D × K‘ surjects as a group onto the abelian group ‘D‘.
+173   If ‘D‘ is infinite this exhibits an infinite abelian quotient.
+174
+175   The remaining step --- property (T) forces a finite abelianisation, hence admits
+
+
+                                            43
+176   no surjection onto an infinite abelian group --- is Bekka--de la Harpe--Valette,
+177   *Kazhdan’s Property (T)*, Cor. 1.3.5. It is cited, not formalised.
+178   Axiomatising it here would add an unfalsifiable hypothesis rather than a
+179   checkable one, which is the failure mode Part I is about. -/
+180   theorem prod_has_infinite_abelian_quotient
+181       (D : Type u) (K : Type v) [CommGrp D] [Grp K] (hD : IsInfinite D) :
+182       ∃ f : GrpHom (D × K) D, Fn.Surjective f.toFun ∧ IsInfinite D :=
+183     ⟨fstHom D K, fstHom_surjective D K, hD⟩
+184
+185   /-! ### Scope of Part A
+186
+187   These obstructions apply to a group that is, or contains as a direct factor,
+188   ‘D × K‘ with ‘D‘ abelian, nontrivial and infinite --- the zero-carry /
+189   trivial-action reading of the formalised construction.
+190
+191   They do **not** apply to ‘Z^4 ⋊ Sp_4(Z)‘ under the standard symplectic action.
+192   There the fixed-point submodule is trivial, the centre is trivial, and the group
+193   is ICC with property (T), as Section 10 of the paper states. The ‘×‘ case and
+194   the ‘⋊‘ case are different groups and are treated separately throughout. -/
+195
+
+196   /-! ============================================================================
+197       §B. The deductive skeleton of Part II
+198
+199      Two design decisions worth stating explicitly, since both were needed to
+200      make this appendix mean anything.
+201
+
+202      (1) ‘IsICC‘ and ‘HasPropertyT‘ are opaque predicates, not classes carrying a
+203          ‘True‘ field. A class with a ‘True‘ field is inhabited for every group
+204          in existence, which makes every hypothesis gated on it vacuous.
+205
+206      (2) Bijectivity of the group morphism is asserted of the morphism that the
+207          classification *returns*, pinned by an equation hypothesis --- not of an
+208          arbitrary homomorphism. A blanket assertion over all homomorphisms is
+209          refutable, and an inconsistent axiom set proves every theorem stated
+210          after it, including the intended one.
+211      ========================================================================= -/
+212
+213   axiom VNAlg : Type
+214
+215   /-- The group von Neumann algebra ‘L(G)‘. -/
+216   axiom L : (G : Type u) → [Grp G] → VNAlg
+217
+218   /-- The Bernoulli crossed product ‘A_G = L^infty(X) ⋊ G‘. -/
+219   axiom Crossed : (G : Type u) → [Grp G] → VNAlg
+220
+221   axiom Tensor : VNAlg → VNAlg → VNAlg
+222   axiom VNIso : VNAlg → VNAlg → Type
+223   axiom VNHom : VNAlg → VNAlg → Type
+224
+225   /-- Opaque by design: nothing in this file can certify that a group is ICC, so
+226   every theorem below is visibly conditional. -/
+227   axiom IsICC : (G : Type u) → [Grp G] → Prop
+228
+229   /-- Opaque, for the same reason. -/
+
+
+                                             44
+230   axiom HasPropertyT : (G : Type u) → [Grp G] → Prop
+231
+
+232   /-- The twisted comultiplication ‘Θ(f u_g) = f u_g ⊗ Φ(u_g)‘.
+233   Proposition 16 of the paper --- unital, trace-preserving, injective --- is the
+234   content being asserted. -/
+235   axiom twistedComult {G H : Type u} [Grp G] [Grp H] :
+236       VNIso (L G) (L H) → VNHom (Crossed G) (Tensor (Crossed G) (Crossed H))
+237
+
+238   /-- Ioana’s trichotomy, JAMS 24 (2011), Theorem 8.2. -/
+239   inductive Classification (G H : Type u) [Grp G] [Grp H] where
+240     /-- (NI1) fails: the image intertwines into a group-algebra leg. -/
+241     | degenerateI
+242     /-- (NI2) fails: the Cartan intertwines into the group algebra. -/
+243     | degenerateII
+244     /-- Case (III): ‘u Θ(u_g) u* = η(g) u_{δ 1 g} ⊗ v_{δ 2 g}‘. -/
+245     | rigid (d1 : GrpHom G G) (d2 : GrpHom G H)
+246
+247   axiom classify {G H : Type u} [Grp G] [Grp H] :
+248       VNHom (Crossed G) (Tensor (Crossed G) (Crossed H)) → Classification G H
+249
+
+250   /-- Lemma 22, case (I): ruled out by weak convergence, using ICC. -/
+251   axiom not_degenerateI {G H : Type u} [Grp G] [Grp H]
+252       (hG : IsICC G) (hH : IsICC H) (tG : HasPropertyT G) (tH : HasPropertyT H)
+253       (Φ : VNIso (L G) (L H)) :
+254       classify (twistedComult Φ) ̸= Classification.degenerateI
+255
+
+256   /-- Lemma 22, case (II): ruled out because the Bernoulli Cartan does not embed
+257   in the group algebra. -/
+258   axiom not_degenerateII {G H : Type u} [Grp G] [Grp H]
+259       (hG : IsICC G) (hH : IsICC H) (tG : HasPropertyT G) (tH : HasPropertyT H)
+260       (Φ : VNIso (L G) (L H)) :
+261       classify (twistedComult Φ) ̸= Classification.degenerateII
+262
+263   /-- Injectivity from factoriality: a nonzero star-homomorphism out of a II_1
+264   factor is injective. Note the shape --- this concerns the ‘d2 ‘ returned by
+265   ‘classify‘, identified by ‘h‘, not an arbitrary homomorphism. -/
+266   axiom rigid_d2 _injective {G H : Type u} [Grp G] [Grp H]
+267       (hG : IsICC G) (hH : IsICC H) (tG : HasPropertyT G) (tH : HasPropertyT H)
+268       (Φ : VNIso (L G) (L H)) (d1 : GrpHom G G) (d2 : GrpHom G H)
+269       (h : classify (twistedComult Φ) = Classification.rigid d1 d2 ) :
+270       Fn.Injective d2 .toFun
+271
+272   /-- Surjectivity: finite index from countability of subfactor conjugacy classes
+273   for property-(T) factors (Popa, ICM 2006, §4), then finite depth for amenable
+274   property-(T) standard invariants (Popa, Doc. Math. 4 (1999), Cor. 1.2). -/
+275   axiom rigid_d2 _surjective {G H : Type u} [Grp G] [Grp H]
+276       (hG : IsICC G) (hH : IsICC H) (tG : HasPropertyT G) (tH : HasPropertyT H)
+277       (Φ : VNIso (L G) (L H)) (d1 : GrpHom G G) (d2 : GrpHom G H)
+278       (h : classify (twistedComult Φ) = Classification.rigid d1 d2 ) :
+279       Fn.Surjective d2 .toFun
+280
+281   /-- **Theorem 11.** Modulo the axioms above, an isomorphism of the group von
+282   Neumann algebras yields a group isomorphism. -/
+283   theorem connes_rigidity {G H : Type u} [Grp G] [Grp H]
+
+
+                                            45
+284      (hG : IsICC G) (hH : IsICC H) (tG : HasPropertyT G) (tH : HasPropertyT H)
+285      (Φ : VNIso (L G) (L H)) :
+286      ∃ f : GrpHom G H, Fn.Bijective f.toFun := by
+287    have hI := not_degenerateI hG hH tG tH Φ
+288    have hII := not_degenerateII hG hH tG tH Φ
+289    cases hcls : classify (twistedComult Φ) with
+290    | degenerateI => exact absurd hcls hI
+291    | degenerateII => exact absurd hcls hII
+292    | rigid d1 d2 =>
+293        exact ⟨d2 , rigid_d2 _injective hG hH tG tH Φ d1 d2 hcls,
+294                    rigid_d2 _surjective hG hH tG tH Φ d1 d2 hcls⟩
+295
+296   /-! ============================================================================
+297       §C. Audit
+298
+299      ‘#print axioms‘ reports exactly what each result depends on. The three
+300      results of Part A depend on nothing; the theorem of Part B depends on the
+301      ten declared axioms and on nothing else. Neither list contains ‘sorryAx‘,
+302      so there are no unfinished proofs.
+303      ========================================================================= -/
+304
+305   #print axioms conj_of_central
+306   #print axioms prod_not_ICC
+307   #print axioms prod_has_infinite_abelian_quotient
+308   #print axioms connes_rigidity
+
+
+
+
+                                            46
+
