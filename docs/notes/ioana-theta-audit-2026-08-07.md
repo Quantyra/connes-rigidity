@@ -116,3 +116,9 @@ Update `S006Status` to `.noGo` with comment pointing at this memo. Keep interfac
 3. **Nielsen Part I code objections** — separate card, Lean object map.  
 4. Do **not** publish “Connes proved” or “CE dead via Nielsen reductio.”  
 5. Optional metalogic Zenodo still INTEGRITY-only.
+
+
+## Lean export
+
+- 
+ielsenTheta_blocks_ioana82_hyp2 in Quantyra-Connes-Rigidity-Lean NielsenThetaBlock`n- Bridge axiom only: image_subseteq_M1_LH_negates_niRight`n
