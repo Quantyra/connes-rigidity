@@ -4,3 +4,7 @@ Thumbs.db
 *.log
 __pycache__/
 .venv/
+docs/sources/openai-ten-proofs/
+docs/sources/ioana-0910.3900.*
+docs/sources/ioana-1007.1408.pdf
+docs/sources/ioana-1010.5195.pdf

@@ -1,0 +1,1081 @@
+                                               ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY
+
+
+                                                                                   SHUOXING ZHOU
+
+
+                                                  Abstract. We construct two explicit countable discrete groups Γ1 and Γ2 that are both
+                                                  ICC and have Kazhdan’s property (T). Although Γ1 and Γ2 are not isomorphic as groups,
+                                                  their group von Neumann algebras are isomorphic: L(Γ1 ) ∼  = L(Γ2 ). This provides a
+                                                  counterexample to Connes’ rigidity conjecture for ICC property (T) groups. This result
+                                                  was obtained with assistance from GPT-5.6 Sol, independently of and concurrently with
+                                                  work by OpenAI [Ope26].
+arXiv:2608.02327v1 [math.OA] 3 Aug 2026
+
+
+
+
+                                                                                 1. Introduction
+                                             In 1980, Alain Connes proved that if Γ is a countable ICC (infinite conjugacy classes)
+                                          group with property (T), then both the outer automorphism group Out(L(Γ)) and the
+                                          Murray–von Neumann fundamental group F(L(Γ)) are countable [Con80]. This was one
+                                          of the first manifestations of the property (T) as a rigidity phenomenon for von Neumann
+                                          algebras and suggested that L(Γ) might retain substantial information about Γ.
+                                             At that time, the main known examples of infinite discrete groups with property (T)
+                                          came from lattices in semisimple Lie groups, with higher rank lattices forming the central
+                                          motivating class. For higher rank lattices, the strong rigidity theorems of Mostow and
+                                          Margulis [Mos73, Mar91] show that if Γi < Gi , i = 1, 2, are irreducible higher rank lattices
+                                          in connected semisimple real Lie groups with trivial center and no nontrivial compact factors,
+                                          then an isomorphism Γ1 ∼  = Γ2 forces an isomorphism G1 ∼    = G2 . Thus higher rank lattices
+                                          provided a natural model for the idea that a sufficiently rigid analytic invariant might retain
+                                          the underlying group.
+                                             Against this background, Connes proposed the following bold conjecture [Con82].
+
+                                          Connes’ rigidity conjecture for ICC property (T) groups. Every countable ICC
+                                          property (T) group Γ is W∗ -superrigid: if Λ is a countable discrete group such that
+                                          L(Λ) ∼              ∼ Γ as groups.
+                                               = L(Γ), then Λ =
+                                             An early rigidity result illustrating the information retained by group factors was obtained
+                                          by Cowling–Haagerup [CH89]. They proved that if Γ is a lattice in Sp(n, 1)/{±1}, with
+                                          n ≥ 2, then n is determined by the group factor L(Γ). Beginning in the early 2000s, Popa’s
+                                          deformation/rigidity theory produced decisive advances in the classification of group and
+                                          group measure space von Neumann algebras [Pop06a, Pop06b]. This program also yielded
+                                          W∗ -superrigidity results for group actions, notably Ioana’s theorem for Bernoulli actions of
+                                          property (T) groups [Ioa11]. At the level of group factors themselves, the first W∗ -superrigid
+                                          groups were constructed by Ioana–Popa–Vaes [IPV13]. Later, Chifan–Ioana–Osin–Sun
+                                          constructed the first W∗ -superrigid groups with property (T) [CIOS23]. Subsequent work
+                                          developed this circle of ideas in several directions, including rigidity of outer automorphisms
+                                          and embeddings, cocycle-twisted and virtual W∗ -superrigidity, and W∗ -superrigidity for
+                                          groups with infinite center [CIOS26a, DV25a, CIOS26b, CFQT24, DV25b, CFQOT26].
+                                                                                            1
+2                                     SHUOXING ZHOU
+
+
+   In the decades after Connes formulated the conjecture, the class of known property (T)
+groups expanded far beyond higher rank lattices, and the original conjecture came to be
+regarded as too broad in its full generality. At the same time, positive W∗ -rigidity results
+typically relied on substantial additional algebraic, geometric, or deformation-theoretic
+structure. It therefore became natural to distinguish the original conjecture, formulated for
+arbitrary ICC property (T) groups, from the more geometric rigidity problem for higher rank
+lattices. This motivates the following more focused version of Connes’ conjecture, formulated
+by Houdayer [Hou23].
+Connes’ rigidity conjecture for higher rank lattices. For i = 1, 2, let Gi be a connected
+simple real Lie group with trivial center and rkR (Gi ) ≥ 2, and let Γi < Gi be a lattice. If
+       = L(Γ2 ), then G1 ∼
+L(Γ1 ) ∼                 = G2 as Lie groups.
+   This version is weaker than the restriction of Connes’ original conjecture to higher rank
+lattices, but it retains the geometric rigidity suggested by the theorems of Mostow and
+Margulis. The original conjecture should therefore be viewed not merely as a prediction
+awaiting a yes-or-no answer, but as a guiding problem that led to increasingly precise forms
+of W∗ -rigidity.
+   The present work starts from the possibility that property (T), once separated from
+the geometric structure of higher rank lattices, may be insufficient by itself to enforce
+W∗ -superrigidity. Our main result confirms this possibility by disproving Connes’ original
+conjecture.
+Theorem A. There exist explicitly defined countable discrete groups Γ1 and Γ2 such that:
+   (1) both Γ1 and Γ2 have Kazhdan’s property (T);
+   (2) both groups are ICC;
+   (3) Γ1 ∼
+          ̸ Γ2 ;
+           =
+   (4) there is a ∗-isomorphism
+                                   L(Γ1 ) ∼
+                                          = L(Γ2 )
+        between their group von Neumann algebras.
+Independent and concurrent work. On August 1, 2026, OpenAI publicly announced
+a disproof of Connes’ rigidity conjecture produced by an internal version of Astra, its
+next major model [Ope26, Chapter 4]. The present construction was developed with the
+assistance of GPT-5.6 Sol, and a preliminary proof manuscript had been assembled by July
+27, 2026. The two works were developed independently and concurrently, as is also recorded
+in [Ope26, Chapter 4, p. 110, Acknowledgments]. The OpenAI binary-carry construction
+produces a countably infinite family of pairwise nonisomorphic, mutually commensurable
+ICC property (T) groups with isomorphic group von Neumann algebras.
+   Both constructions exploit the same general principle. Let H be a countable discrete
+group, let Di be a countable discrete abelian group for i = 1, 2, and let θi : H ↷ Di be an
+action by automorphisms for i = 1, 2. Denote by αi : H ↷ (D  b i , µ ) the induced action on
+                                                                    D
+                                                                    bi
+the Pontryagin dual equipped with its Haar probability measure. Fourier transform gives
+                              L(Di ⋊θi H) ∼
+                                          = L∞ (D
+                                                b i ) ⋊α H.
+                                                        i
+
+
+Consequently, the semidirect products Di ⋊θi H may have isomorphic group von Neumann
+algebras whenever αi : H ↷ (Db i , µ ) are conjugate as nonsingular probability-space actions,
+                                    D
+                                    bi
+even if the conjugating map does not preserve the compact abelian group structures. This is
+the common mechanism underlying both counterexamples.
+                  ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                         3
+
+
+   In the OpenAI construction, the acting group H is kept fixed while the discrete abelian
+kernels Di are changed. The basic pair is distinguished by torsion: D1 has exponent two,
+whereas D2 contains elements of order four. By taking H to be torsion-free, every finite-order
+element of Di ⋊θi H belongs to Di . Hence D1 ⋊θ1 H has no elements of order four, whereas
+D2 ⋊θ2 H does, so the two groups are not isomorphic. Shifted versions of the binary-carry
+construction, together with an additional finite-orbit invariant, distinguish the resulting
+countably infinite family.
+   In the present construction, by contrast, both the quotient group H and the elementary
+abelian normal subgroup D are kept fixed. We change only the two actions θi : H ↷ D
+defining the semidirect products Γi = D ⋊θi H. The induced actions on D   b are conjugate as
+nonsingular H-actions through a quadratic fiber shear, but the two H-module structures
+on D remain different. The nonisomorphism of Γ1 and Γ2 is detected by a semisimple–
+nonsemisimple distinction between these two H-module structures of D.
+
+AI use statement. The construction underlying the main result of this paper was found
+mainly by GPT-5.6 Sol, Codex, and the Danus multi-agent research system [LGS+ 26], under
+the author’s mathematical guidance. Lean 4.32.1 was used to formally check selected parts
+of the argument. The resulting material was subsequently reorganized, revised, and checked
+by the author. All mathematical statements, proofs, references, and final editorial decisions
+remain the sole responsibility of the author.
+
+Acknowledgements. The author would like to thank Professor Cyril Houdayer and Profes-
+sor Yi-Jun Yao for many valuable comments on this paper. The author also thanks Soham
+Chakraborty for carefully reading the manuscript.
+
+                                         Contents
+  1    Introduction                                                                         1
+  2    Construction of the two groups                                                       3
+  3    Isomorphism of the group von Neumann algebras                                        6
+  4    Property (T)                                                                         8
+  5    The ICC property                                                                    15
+  6    The groups are not isomorphic                                                       17
+  7    Completion of the proof                                                             20
+
+
+
+
+                         2. Construction of the two groups
+   Let k = Z/2Z be the field with two elements. Throughout, all tensor products are taken
+over k. Put
+                                  R = k[t],    A = R3 .
+Let Flip : A ⊗ A → A ⊗ A : a ⊗ b 7→ b ⊗ a be the flip map and put
+                                      C = (A ⊗ A)Flip .
+Define the diagonal map
+                              ∆ : A −→ C,       ∆(a) = a ⊗ a.
+The group SL3 (R) acts diagonally on A ⊗ A and hence on C.
+4                                            SHUOXING ZHOU
+
+
+Lemma 2.1. There is a surjective SL3 (R)-equivariant linear map
+                                                δ : C −→ A
+such that
+                                δ(∆(a)) = a                     (a ∈ A).
+Moreover, the square tensors ∆(a) span C.
+Proof. Choose a total order on the standard k-basis
+                                     B = {tn ej : n ≥ 0, 1 ≤ j ≤ 3}
+of A. The fixed space C has basis
+                      {b ⊗ b : b ∈ B} ∪ {b ⊗ b′ + b′ ⊗ b : b, b′ ∈ B, b < b′ }.
+Define δ on this basis by
+                             δ(b ⊗ b) = b,           δ(b ⊗ b′ + b′ ⊗ b) = 0.
+Expansion in characteristic two gives δ(∆(a)) = a. Furthermore,
+                           ∆(b + b′ ) + ∆(b) + ∆(b′ ) = b ⊗ b′ + b′ ⊗ b,
+so the square tensors span the displayed basis of C. For l ∈ SL3 (R),
+                                 δ(l∆(a)) = δ(∆(la)) = la = lδ(∆(a)).
+Since the square tensors span C, this proves SL3 (R)-equivariance. Surjectivity follows from
+δ(∆(a)) = a.                                                                               □
+    Let V = k 4 with coordinates
+                                            v = (a1 , b1 , a2 , b2 )
+and standard symplectic form
+                                 ω(v, w) = a1 b′1 + b1 a′1 + a2 b′2 + b2 a′2 .
+Thus, with respect to the ordered symplectic basis
+            e1 = (1, 0, 0, 0),    f1 = (0, 1, 0, 0),       e2 = (0, 0, 1, 0),    f2 = (0, 0, 0, 1),
+the matrix of ω is                                                 
+                                               0       1    0     0
+                                             1        0    0     0
+                                          J =
+                                                                   .
+                                               0       0    0     1
+                                               0       0    1     0
+The symplectic group of (V, ω) is
+               Sp(V, ω) = {q ∈ GLk (V ) : ω(qv, qw) = ω(v, w) for all v, w ∈ V }.
+Equivalently, in the above basis,
+                                 Sp(V, ω) = {q ∈ GL4 (k) : q T Jq = J}.
+Put
+                                  Q = Sp(V, ω) = Sp4 (k)
+and consider the quadratic refinement
+                                           r0 (v) = a1 b1 + a2 b2 .
+For functions on V , use the left action
+                                          (q · f )(v) = f (q −1 v).
+                     ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                                       5
+
+
+Define
+                                          ℓq = q · r0 − r0          (q ∈ Q).
+   Recall that, for a Q-module M , a map c : Q → M , q 7→ cq , is a 1-cocycle if cpq = p · cq + cp
+for all p, q ∈ Q.
+Lemma 2.2. Each ℓq is a linear functional in V ∗ , and the map q 7→ ℓq is a 1-cocycle, i.e.,
+                                         ℓpq = p · ℓq + ℓp          (p, q ∈ Q).
+Proof. For a function r : V → k satisfying r(0) = 0, write
+                                    Br (v, w) = r(v + w) − r(v) − r(w)
+for its polarization. If v = (a1 , b1 , a2 , b2 ) and w = (a′1 , b′1 , a′2 , b′2 ), then direct expansion gives
+                         Br0 (v, w) = r0 (v + w) − r0 (v) − r0 (w)
+                                         = a1 b′1 + b1 a′1 + a2 b′2 + b2 a′2 = ω(v, w).
+For q ∈ Q, the definition of the action and the linearity of q −1 give
+                       Bq·r0 (v, w) = r0 (q −1 (v + w)) − r0 (q −1 v) − r0 (q −1 w)
+                                         = Br0 (q −1 v, q −1 w)
+                                         = ω(q −1 v, q −1 w) = ω(v, w),
+where the last equality follows from q ∈ Sp(V, ω). Hence
+                                     Bℓq = Bq·r0 − Br0 = ω − ω = 0.
+Moreover, ℓq (0) = 0, so Bℓq = 0 says precisely that
+                              ℓq (v + w) = ℓq (v) + ℓq (w)              (v, w ∈ V ).
+Thus ℓq is additive and therefore k-linear. Finally,
+                 ℓpq = pq · r0 − r0 = p · (q · r0 − r0 ) + (p · r0 − r0 ) = p · ℓq + ℓp .
+                                                                                                            □
+   Let
+                             D = (A ⊗ V ∗ ) ⊕ C,               H = SL3 (R) × Q.
+                                ∗
+The action of H on A ⊗ V            is
+                                          (l, q) · (a ⊗ φ) = la ⊗ (q · φ).
+Define two actions on the elementary abelian group D by
+                                                           
+(2.1)                   θ1 (l, q)(u, c) = (l, q) · u, l · c ,
+                                                                               
+(2.2)                         θ2 (l, q)(u, c) = (l, q) · u + lδ(c) ⊗ ℓq , l · c .
+Lemma 2.3. The maps θ1 and θ2 are actions of H on D.
+Proof. Only θ2 needs checking. Let h = (l, p) and h′ = (l′ , q). Using δ(l′ c) = l′ δ(c) and the
+fact that the SL3 (R)- and Q-actions on A ⊗ V ∗ commute, we obtain
+                θ2 (h)θ2 (h′ )(u, c) = (ll′ , pq) · u + ll′ δ(c) ⊗ (p · ℓq + ℓp ), ll′ c
+                                                                                        
+
+                                            = θ2 (ll′ , pq)(u, c)
+by Lemma 2.2.                                                                                               □
+6                                          SHUOXING ZHOU
+
+
+    Let Di denote D with the action θi , and define
+                                                     
+(2.3)                   Γi = Di ⋊θi SL3 (R) × Sp4 (k) ,              i = 1, 2.
+
+Every constituent in (2.3) is countable, and Q = Sp4 (k) is finite. Thus both Γi are countable
+discrete groups.
+
+               3. Isomorphism of the group von Neumann algebras
+   For any countable discrete k-module M , regard (M, +) as a countable discrete abelian
+group and let Mc be the Pontryagin dual. For χ ∈ M  c and m ∈ M , χ(m) ∈ S 1 satisfies
+      2
+χ(m) = χ(2m) = χ(0) = 1, so χ(M ) ⊆ {±1}. Since the map k = Z/2Z → {±1} given by
+s 7→ (−1)s is an isomorphism from the additive group of k onto {±1}, every character of
+M corresponds uniquely to a k-linear functional on M . We may therefore identify M
+                                                                                 c with
+Homk (M, k).
+   Under the pairing
+                         ⟨z, a ⊗ φ⟩ = φ(z(a)),            z ∈ Homk (A, V ),
+                               ∗
+the Pontryagin dual of A ⊗ V       is
+                                          Z = Homk (A, V ).
+Let
+                            C
+                            b = Homk (C, k),      Db = Z × C,
+                                                            b
+with their natural compact product topologies.
+   For
+                                   x, x′ ∈ Homk (A, k),
+regard x ⊗ x′ as an element of C
+                               b by restricting the tensor-product functional on A ⊗ A to
+             Flip
+C = (A ⊗ A) . Write z ∈ Z in coordinates as
+                              z(a) = (x1 (a), x2 (a), x3 (a), x4 (a))
+and define
+(3.1)                          R(z) = x1 ⊗ x2 + x3 ⊗ x4 ∈ C.
+                                                          b
+On square tensors,
+(3.2)                                   R(z)(∆(a)) = r0 (z(a)).
+The map R : Z → C   b is continuous because evaluation on a fixed c ∈ C depends on only
+finitely many coordinates of z. It is also SL3 (R)-equivariant: with the inverse-dual actions
+on Z and C,b
+(3.3)                        R(z ◦ l−1 )(c) = R(z)((l−1 ⊗ l−1 )c).
+It suffices to verify this on the spanning square tensors, where it follows from (3.2).
+   For h ∈ H, let αi,h be the inverse dual transformation
+                             αi,h (χ) = χ ◦ θi (h)−1           (χ ∈ D).
+                                                                    b
+
+For l ∈ SL3 (R) and (z, y) ∈ Db = Z × C,   b the two transformations coincide:
+                           αi,(l,1) (z, y) = z ◦ l−1 , y ◦ (l−1 ⊗ l−1 ) .
+                                                                       
+
+For q ∈ Q,
+                                        α1,(1,q) (z, y) = (qz, y),
+                   ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                          7
+
+
+where (qz)(a) = q(z(a)).
+  Since θ2 is a group action,
+                                  θ2 (1, q)−1 = θ2 (1, q −1 ),
+and therefore for (u, c) ∈ D = (A ⊗ V ∗ ) ⊕ C
+                          θ2 (1, q)−1 (u, c) = q −1 · u + δ(c) ⊗ ℓq−1 , c .
+                                                                         
+
+             b =Z ×C
+For (z, y) ∈ D     b and (u, c) ∈ D, the dual pairing is
+                                    (z, y)(u, c) = ⟨z, u⟩ + y(c).
+It follows that
+                   α2,(1,q) (z, y) (u, c) = (z, y) θ2 (1, q)−1 (u, c)
+                                                                    
+
+                                         = ⟨z, q −1 · u⟩ + ⟨z, δ(c) ⊗ ℓq−1 ⟩ + y(c)
+                                                                    
+                                         = ⟨qz, u⟩ + ℓq−1 z(δ(c)) + y(c).
+Define Jq (z) ∈ C
+                b = Homk (C, k) by
+                                                            
+(3.4)                               Jq (z)(c) = ℓq−1 z(δ(c)) .
+Then the preceding computation becomes
+                                                                  
+                      α2,(1,q) (z, y) (u, c) = ⟨qz, u⟩ + y + Jq (z) (c),
+and hence
+                                                                 
+(3.5)                            α2,(1,q) (z, y) = qz, y + Jq (z) .
+Lemma 3.1. For every q ∈ Q and z ∈ Z,
+                                      Jq (z) = R(qz) − R(z).
+Proof. For a ∈ A, by (3.2),
+                          Jq (z)(∆(a)) = ℓq−1 (z(a))
+                                         = r0 (qz(a)) − r0 (z(a))
+                                         = R(qz)(∆(a)) − R(z)(∆(a)).
+Since ∆(A) spans C by Lemma 2.1, the two functionals agree on all of C.                      □
+   Define the fiber shear
+(3.6)                          b −→ D,
+                            F :D    b           F (z, y) = (z, y + R(z)).
+Proposition 3.2. The map F is a Haar-measure-preserving homeomorphism and
+                                 F α1,h F −1 = α2,h        (h ∈ H).
+Proof. The inverse of F is F −1 (z, y) = (z, y − R(z)). Since C     b is a Z/2Z-module, one also
+has F −1 = F . Thus continuity of R makes F a homeomorphism. For q ∈ Q, Lemma 3.1
+and (3.5) give
+                       F α1,(1,q) F −1 (z, y) = F α1,(1,q) z, y − R(z)
+                                                                        
+                                                                  
+                                              = F qz, y − R(z)
+                                                                          
+                                              = qz, y − R(z) + R(qz)
+                                                                
+                                              = qz, y + Jq (z)
+                                               = α2,(1,q) (z, y).
+8                                             SHUOXING ZHOU
+
+
+    For l ∈ SL3 (R),
+       F α1,(l,1) F −1 (z, y) = F α1,(l,1) z, y − R(z)
+                                                      
+                                                                     
+                              = F z ◦ l−1 , y − R(z) ◦ (l−1 ⊗ l−1 )
+                                                       
+                                                                                             
+                              = z ◦ l−1 , y ◦ (l−1 ⊗ l−1 ) − R(z) ◦ (l−1 ⊗ l−1 ) + R(z ◦ l−1 )
+                                                         
+                              = z ◦ l−1 , y ◦ (l−1 ⊗ l−1 )
+                           = α2,(l,1) (z, y),
+where the fourth equality follows from (3.3).
+  Since SL3 (R) and Q generate H, strict conjugacy follows for every h ∈ H.
+  Let µZ and µCb be the Haar probability measures and put µD         b = µZ ⊗ µCb. For every
+bounded Borel function g,
+                    Z                Z Z
+                        g ◦ F dµD
+                                b=          g(z, y + R(z)) dµCb(y) dµZ (z)
+                     Db              ZZ ZCb
+                                  =         g(z, y) dµCb(y) dµZ (z),
+                                      Z C b
+because translation by R(z) preserves Haar measure on each C-fiber.
+                                                                  b                       □
+
+Remark 3.3. The map R is generally quadratic rather than additive, so F need not be a
+compact-group automorphism. The proof uses only that F is a Haar-preserving homeomor-
+phism and a strict conjugacy of the two actions.
+Proposition 3.4. There is a ∗-isomorphism
+                                   L(Γ1 ) ∼
+                                          = L(Γ2 ).
+Proof. Let Di denote D with the action θi . Then for i = 1, 2,
+                                              Γi = Di ⋊ H.
+Fourier transform on the discrete abelian group Di gives
+                                   = L(Di ) ⋊ H ∼
+                            L(Γi ) ∼            = L∞ (D
+                                                      b i , µ ) ⋊ H.
+                                                             D
+                                                             b   i
+
+            b 1 , µ ) → (D
+Define F : (D               b 2 , µ ) as in (3.6). Then by Proposition 3.2, we have that F is an
+                   D
+                   b1              D
+                                   b2
+H-equivariant measure-preserving isomorphism between nonsingular H-spaces. Therefore,
+we have
+                   L(Γ1 ) ∼
+                          = L∞ (D  b 1, µ ) ⋊ H ∼
+                                         D
+                                                        b 2, µ ) ⋊ H ∼
+                                                  = L∞ (D     D
+                                                                      = L(Γ2 ).
+                                         b1                   b 2
+
+                                                                                                  □
+
+                                         4. Property (T)
+  Let EL3 (R) denote the subgroup of GL3 (R) generated by the elementary matrices I +rEij ,
+where i, j ∈ {1, 2, 3}, i ̸= j, and r ∈ R.
+Proposition 4.1. For R = k[t], one has
+                                         SL3 (R) = EL3 (R),
+and this group has property (T).
+                   ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                       9
+
+
+Proof. For i, j ∈ {1, 2, 3} with i ̸= j and r ∈ R, let
+                                       eij (r) = I + rEij .
+By definition, EL3 (R) is generated by these elementary matrices. Since every eij (r) has
+determinant one,
+                                    EL3 (R) ≤ SL3 (R).
+   Conversely, R = k[t] is a Euclidean domain, with the degree as a Euclidean function, and
+its only unit is 1. Before applying the Euclidean algorithm, observe that both row additions
+and row interchanges can be performed using elementary matrices. Left multiplication by
+I + f Eij performs the row operation
+                                    rowi 7−→ rowi +f rowj .
+Moreover, in characteristic two,
+                                                          
+                             0 1     1        1  1       0  1   1
+                                  =                                .
+                             1 0     0        1  1       1  0   1
+Embedding this identity into any two coordinates of a 3 × 3 matrix shows that every row
+interchange is also a product of elementary matrices.
+   Now let g ∈ SL3 (R) and write its first column as (a, b, c)T . Expanding det(g) = 1 along
+the first column produces x, y, z ∈ R such that
+                                       ax + by + cz = 1.
+Thus
+                                          (a, b, c) = R.
+The Euclidean algorithm, implemented by row additions and row interchanges, therefore
+transforms the first column into (1, 0, 0)T . Hence there exists a product u1 of elementary
+matrices such that                                   
+                                             1 x1 x2
+                                  u1 g = 0 a1 a2  .
+                                             0 a3 a4
+Since every elementary matrix has determinant one,
+                                                          
+                                                    a a2
+                              1 = det(u1 g) = det 1          .
+                                                    a3 a4
+Thus the lower-right 2 × 2 block belongs to SL2 (R). Applying the Euclidean algorithm to its
+first column, using only operations on the second and third rows, reduces that column to
+(1, 0)T . The determinant condition then forces the lower-right entry to be 1, and one final
+row addition clears its remaining off-diagonal entry. Consequently, another product u2 of
+elementary matrices gives                              
+                                              1 x1 x2
+                                  u2 u1 g = 0 1      0 .
+                                             0 0      1
+Adding x1 times the second row and x2 times the third row to the first row reduces this
+matrix to I. We have therefore found u1 , u2 , u3 ∈ EL3 (R) such that
+                                         u3 u2 u1 g = I.
+The inverse of an elementary matrix is elementary, so
+                                  g = u−1 −1 −1
+                                       1 u2 u3 ∈ EL3 (R).
+10                                         SHUOXING ZHOU
+
+
+Therefore
+                                         SL3 (R) = EL3 (R).
+   The ring R is a finitely generated commutative unital ring. Ershov–Jaikin-Zapirain–
+Kassabov [EJZK17, Theorem 1.1 and Section 1.2] therefore proves the property (T) of the
+elementary Chevalley group EL3 (R). The asserted property (T) for SL3 (R) follows from the
+equality just proved.                                                                   □
+     For a, b ∈ A, let
+                            β(a, b) = a ⊗ b + b ⊗ a ∈ C = (A ⊗ A)Flip .
+Then
+                                 ∆(a + b) = ∆(a) + ∆(b) + β(a, b).
+For i = 1, 2, 3, let ei ∈ A = R3 be
+                             e1 = (1, 0, 0), e2 = (0, 1, 0), e3 = (0, 0, 1).
+Lemma 4.2. For N ≥ 1, let
+                             PN = spank {1, t, . . . , tN −1 } ⊂ R = k[t].
+For {s, j, m} = {1, 2, 3}, set
+                               Us,N = {es + f ej + hem : f, h ∈ PN }
+and
+                   CN = spank {∆(v) : v ∈ U1,N ∪ U2,N ∪ U3,N }.
+                   S
+Then CN ⊂ CN +1 and N ≥1 CN = C.
+Proof. The space C has the basis displayed in the proof of Lemma 2.1. We obtain its members
+from chart squares. For pairwise distinct i, j, m and w = f ej , expansion in characteristic
+two gives
+                         ∆(w) = ∆(ei + w) + ∆(ei ) + ∆(em + w) + ∆(em )
+(4.1)                             + ∆(ei + em + w) + ∆(ei + em ).
+Every square on the right lies in a chart for sufficiently large N . For pairwise distinct i, j, m,
+                         β(f ei , hej ) = ∆(em + f ei + hej ) + ∆(em + f ei )
+(4.2)                                    + ∆(em + hej ) + ∆(em ),
+while
+(4.3)                     β(f ei , hei ) = ∆((f + h)ei ) + ∆(f ei ) + ∆(hei ).
+The squares in (4.3) lie in the union by (4.1). Taking f and h to be monomials produces
+every diagonal and symmetric cross member of the basis of C.                         □
+   Recall that a Boolean polynomial in n variables over k = Z/2Z is a polynomial function
+on k n , or equivalently an element of k[x1 , . . . , xn ]/(x21 − x1 , . . . , x2n − xn ). Every function
+k n → k admits a unique square-free representative, called its algebraic normal form, and
+its degree is the largest number of distinct variables occurring in a monomial with nonzero
+coefficient. For example, r0 (a1 , b1 , a2 , b2 ) = a1 b1 + a2 b2 is a Boolean polynomial of degree
+two. The Hamming weight of a Boolean polynomial P is the cardinality of its support,
+namely
+                         wt(P ) := | supp(P )| = |{x ∈ k n | P (x) = 1}|.
+                  ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                          11
+
+
+For v ∈ k n , the directional derivative of P in the direction v is the Boolean polynomial ∆v P
+defined by
+                                 (∆v P )(x) := P (x + v) − P (x).
+If P has degree at most r, then ∆v P has degree at most r − 1.
+Lemma 4.3. Let P : k n → k be a nonzero Boolean polynomial of algebraic degree at most
+two. Then
+                       wt(P ) = |{x ∈ k n : P (x) = 1}| ≥ 2n−2 .
+Proof. If P is affine, it is either the constant one function or has weight 2n−1 . Otherwise,
+P is of algebraic degree 2. Choose i =    ̸ j such that the coefficient of xi xj in the unique
+square-free representative of P is one. Since
+                            ∆ei (xi xj ) = (xi + 1)xj − xi xj = xj ,
+the coefficient of xj in ∆ei P is one. Hence
+                                ∆ei P (x) = P (x + ei ) − P (x)
+is a nonconstant affine function, and therefore
+                               {x ∈ k n | ∆ei P (x) = 1} = 2n−1 .
+Moreover,
+                           ∆ei P (x + ei ) = P (x + 2ei ) − P (x + ei )
+                                            = P (x) − P (x + ei )
+                                            = P (x + ei ) − P (x)
+                                            = ∆ei P (x).
+Here we used char(k) = 2. Thus ∆ei P is constant on every pair {x, x + ei }. Since each pair
+                           n−1
+has two elements, exactly 2 2 = 2n−2 of these pairs satisfy ∆ei P = 1. On each such pair,
+                                    P (x + ei ) − P (x) = 1,
+and hence
+                                 {P (x), P (x + ei )} = {0, 1}.
+Therefore exactly one endpoint of each of these 2n−2 pairs belongs to supp(P ), so
+                                X
+                     wt(P ) =         {x, x + ei } ∩ supp(P ) ≥ 2n−2 .
+                                {x,x+ei }
+
+                                                                                             □
+
+   As in Section 3, for every countable discrete k-module M we continue to identify its
+Pontryagin dual Mc with Homk (M, k). Under this identification, the trivial character is the
+zero functional.
+Proposition 4.4. If µ is an SL3 (R)-invariant Borel probability measure on C,
+                                                                           b then
+
+(4.4)                                          b | χ(∆(e1 )) = 1}.
+                           b \ {0}) ≤ 12 µ{χ ∈ C
+                         µ(C
+If ν is an SL3 (R)-invariant Borel probability measure on A,
+                                                          b then
+
+(4.5)                                            b | ψ(e1 ) = 1}.
+                             b \ {0}) ≤ 12 ν{ψ ∈ A
+                           ν(A
+12                                       SHUOXING ZHOU
+
+
+Proof. Let PN and Us,N be as in Lemma 4.2. Then through the map
+                 f = aN −1 tN −1 + ... + a0 ∈ PN 7→ (a0 , a1 , ..., aN −1 ) ∈ k N ,
+we have PN ∼
+           = k N as k-modules. We also have Us,N = ∼ PN ⊕ PN ∼= k 2N .
+  For χ ∈ C
+          b = Homk (C, k), the function
+                                                            
+                           (f, h) 7−→ χ ∆(es + f ej + hem )
+on the chart Us,N ∼
+                  = k 2N is a Boolean polynomial of degree at most two in the 2N coefficients
+of f and h. Define
+                                                                     
+                                        3
+                                   1   X     X
+                   BN (χ) =                     1{ρ∈Cb|ρ(∆(v))=1} (χ) .
+                               3 · 22N s=1
+                                              v∈Us,N
+
+If χ does not annihilate CN = spank {∆(U1,N ∪ U2,N ∪ U3,N )}, at least one of the three chart
+polynomials is nonzero, so Lemma 4.3 gives BN (χ) ≥ 1/12.
+   Every v ∈ Us,N belongs to the SL3 (R)-orbit of e1 : an even coordinate permutation first
+sends e1 to es , and the elementary matrices
+                                    I + f Ejs ,      I + hEms
+then produce es + f ej + hem . Since ∆(lv) = l∆(v), invariance of µ gives
+                       Z
+                           BN (χ) dµ(χ) = µ{χ ∈ C  b | χ(∆(e1 )) = 1}.
+                         C
+                         b
+Therefore,
+                      µ{χ ∈ C b | χ(∆(e1 )) = 1} ≥ 1 µ(C b \ Ann(CN )),
+                                                   12
+where Ann(CN ) = {χ ∈ C   b | χ|C = 0}. Lemma 4.2 gives Ann(CN ) ↘ {0}, so continuity
+                                  N
+from above proves (4.4).
+   Dualizing the SL3 (R)-equivariant surjection
+                                           δ : C −→ A
+gives the injective equivariant map
+                                     b −→ C,
+                                δb : A    b          δ(ψ)
+                                                     b    = ψ ◦ δ.
+It preserves nonzero elements and satisfies δ(ψ)(∆(e
+                                            b        1 )) = ψ(e1 ). Applying (4.4) to (δ)∗ ν
+                                                                                       b
+proves (4.5).                                                                             □
+
+  Choose a basis φ1 , . . . , φ4 of V ∗ = (k 4 )∗ . Restricted to SL3 (R), both Di have the same
+module structure
+                                 Di = (A ⊗ V ∗ ) ⊕ C =  ∼ A⊕4 ⊕ C.
+Define detector elements
+                    dr = (e1 ⊗ φr , 0)    (1 ≤ r ≤ 4),       d5 = (0, ∆(e1 )).
+
+Corollary 4.5. For every SL3 (R)-invariant Borel probability measure µ on D
+                                                                          ci ,
+                                            5
+                                            X
+(4.6)                      ci \ {0}) ≤ 12
+                         µ(D                            ci | χ(dr ) = 1}.
+                                                  µ{χ ∈ D
+                                            r=1
+                   ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                            13
+
+
+Proof. Under
+                                        D  ∼ (A)
+                                        ci =  b 4 × C,
+                                                    b
+write
+                                  χ = (ψ1 , . . . , ψ4 , η) ∈ D
+                                                              ci .
+For 1 ≤ r ≤ 4, let µr be the pushforward of µ under the projection χ 7→ ψr , and let µ5
+be its pushforward under the projection χ 7→ η. Since these coordinate projections are
+SL3 (R)-equivariant, every µr is SL3 (R)-invariant. Set
+                  mr = µr (Ab \ {0}) (1 ≤ r ≤ 4),                      b \ {0}),
+                                                              m5 = µ5 (C
+and
+                         pr = µ{χ ∈ D ci | χ(dr ) = 1} (1 ≤ r ≤ 5).
+Proposition 4.4, applied to the corresponding marginal, gives
+                                    mr ≤ 12pr     (1 ≤ r ≤ 5).
+            ̸ 0 if and only if at least one of its five coordinates is nonzero. Hence the union
+Moreover, χ =
+bound gives
+                                             X 5            X5
+                             µ(Dci \ {0}) ≤       mr ≤ 12      pr ,
+                                               r=1             r=1
+which is (4.6). No independence assumption is used.                                             □
+Proposition 4.6. For i = 1, 2, the pair
+                                       (Di ⋊ SL3 (R), Di )
+has relative property (T).
+Proof. Assume that a unitary representation π : Gi = Di ⋊ SL3 (R) → U(K) has almost
+invariant unit vectors ξn . We only need to prove that the Di -fixed subspace of K is nonzero.
+Let Pfix be the orthogonal projection onto the SL3 (R)-fixed subspace. Property (T) of
+SL3 (R) implies
+                                     ∥(1 − Pfix )ξn ∥ −→ 0.
+Indeed, otherwise, after passing to a subsequence, there would exist δ0 > 0 such that
+                                       ∥(1 − Pfix )ξn ∥ ≥ δ0
+for every n. Define
+                                     (1 − Pfix )ξn
+                             ζn =                     ∈ Ran(1 − Pfix ).
+                                    ∥(1 − Pfix )ξn ∥
+Since Pfix commutes with π(h) for every h ∈ SL3 (R), for every finite subset F ⊆ SL3 (R) we
+have
+                                                1
+                      max∥π(h)ζn − ζn ∥ ≤          max∥π(h)ξn − ξn ∥ −→ 0.
+                       h∈F                     δ0 h∈F
+Thus (ζn ) is a sequence of almost invariant unit vectors for the restriction of π to Ran(1−Pfix ),
+whereas
+                                   Ran(1 − Pfix )SL3 (R) = {0}.
+This contradicts property (T) of SL3 (R). Hence
+                                                   Pfix ξn
+                                          ηn =
+                                                  ∥Pfix ξn ∥
+is eventually defined, is SL3 (R)-fixed, and satisfies ∥ηn − ξn ∥ → 0. For each fixed d ∈ Di ,
+                      ∥π(d)ηn − ηn ∥ ≤ 2∥ηn − ξn ∥ + ∥π(d)ξn − ξn ∥ −→ 0.
+14                                     SHUOXING ZHOU
+
+
+     Since Gi is countable, the closed invariant subspace generated by
+                                   {π(g)ηn : g ∈ Gi , n ≥ 1}
+is separable; restrict the unitary representation to it if necessary. Since Di is abelian, the
+spectral theorem provides a projection-valued Borel measure E on D    ci = Homk (Di , k) such
+that                               Z
+                            π(d) =       (−1)χ(d) dE(χ),    d ∈ Di .
+                                     Dbi
+Thus, for every Borel set B ⊆ D ci , the operator E(B) is the orthogonal projection onto the
+spectral subspace corresponding to B. In particular, E({0}) is the orthogonal projection
+onto the Di -fixed subspace.
+   Define a Borel probability measure µn on D    ci by
+                                    µn (B) = ⟨E(B)ηn , ηn ⟩
+for every Borel set B ⊆ D
+                        ci . The covariance relation
+                                  E(h · B) = π(h)E(B)π(h)∗
+and the SL3 (R)-invariance of ηn imply that
+                             µn (h · B) = ⟨E(h · B)ηn , ηn ⟩
+                                       = ⟨π(h)E(B)π(h)∗ ηn , ηn ⟩
+                                       = ⟨E(B)ηn , ηn ⟩ = µn (B)
+for every h ∈ SL3 (R). Thus µn is exactly SL3 (R)-invariant.
+   Each dr has order two, and therefore
+                                          Z                   2
+                      ∥π(dr )ηn − ηn ∥2 =      (−1)χ(dr ) − 1 dµn (χ)
+                                           Dbi
+                                                   ci | χ(dr ) = 1}.
+                                        = 4µn {χ ∈ D
+Set
+                                               ci | χ(dr ) = 1}.
+                                pr,n = µn {χ ∈ D
+Since (ηn ) is almost invariant under Gi , we have
+                                      1
+                                pr,n = ∥π(dr )ηn − ηn ∥2 −→ 0
+                                      4
+for every 1 ≤ r ≤ 5. On the other hand, Corollary 4.5 gives
+                                                     5
+                                                     X
+                                    ci \ {0}) ≤ 12
+                                µn (D                      pr,n → 0.
+                                                     r=1
+
+Hence
+                                                      ci \ {0}) → 1.
+                           ⟨E({0})ηn , ηn ⟩ = 1 − µn (D
+In particular, E({0}) ̸= 0 and the Di -fixed subspace is nonzero.                           □
+     The following lemma is well known; see, for example, [BR95, Proposition 1.3].
+Lemma 4.7. Let G be a countable discrete group and let N ◁ G. If (G, N ) has relative
+property (T) and G/N has property (T), then G has property (T).
+Proposition 4.8. Both Γ1 and Γ2 have property (T).
+                   ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                          15
+
+
+Proof. Apply Lemma 4.7 to
+                                       Di ◁ Di ⋊ SL3 (R).
+Proposition 4.6 supplies relative property (T), and the quotient is SL3 (R), which has property
+(T) by Proposition 4.1. Hence Di ⋊ SL3 (R) has property (T). It is normal of finite index in
+Γi , and
+                                    Γi / Di ⋊ SL3 (R) ∼
+                                                       
+                                                         = Q.
+Property (T) of Di ⋊ SL3 (R) implies relative property (T) for
+                                                         
+                                        Γi , Di ⋊ SL3 (R) ,
+because a Γi -almost-invariant sequence is almost invariant for the subgroup. The finite group
+Q has property (T), so a second application of Lemma 4.7 proves the result.                  □
+
+                                      5. The ICC property
+Lemma 5.1. The group SL3 (R) is ICC.
+Proof. Suppose g ∈ SL3 (R) has finite conjugacy class. Then the centralizer CSL3 (R) (g) has
+finite index. For any r, s ∈ {1, 2, 3} with r ̸= s, put
+                                     Urs = {I + f Ers : f ∈ R},
+which is a subgroup of SL3 (R). Since CSL3 (R) (g) has finite index in SL3 (R), we have
+                    [Urs : Urs ∩ CSL3 (R) (g)] ≤ [SL3 (R) : CSL3 (R) (g)] < ∞.
+Since Urs =∼ (R, +) is infinite, the intersection Urs ∩ CSL (R) (g) is nontrivial. Hence it
+                                                           3
+contains I + f Ers for some nonzero f ∈ R. Commutation and the domain property give
+gErs = Ers g. Thus g commutes with every off-diagonal matrix unit and is scalar. The only
+unit of R is one, so g = I.                                                              □
+Lemma 5.2. Every nonzero element of Di has an infinite SL3 (R)-orbit.
+Proof. First suppose a ∈ A = R3 has finite orbit. With the same argument as in the proof of
+Lemma 5.1, its stabilizer has finite index, and contains I + f Ers for some nonzero f for each
+r ̸= s. The identity (I + f Ers )a = a gives f as = 0, hence as = 0. Varying s gives a = 0.
+    For C = (A ⊗ A)Flip , identify
+                             A ⊗ A = k[t]3 ⊗ k[t]3 ∼= M3 (k[t1 , t2 ])
+by
+                          (f (t)er ) ⊗ (g(t)es ) 7−→ f (t1 )g(t2 )Ers .
+The diagonal action of uf = I + f Ers is
+                               P 7−→ (I + f (t1 )Ers )P (I + f (t2 )Esr ).
+If P = (Prs )3×3 ∈ M3 (k[t1 , t2 ]) has finite orbit, its stabilizer meets Urs in a finite-index
+additive subgroup and therefore contains parameters f of arbitrarily high degree. Hence we
+can choose f with
+                        d = deg(f ) > max{deg(Prs ) | 1 ≤ r, s ≤ 3},
+where deg(Prs ) denotes the total (t1 , t2 )-degree of Prs . The invariance uf · P = P gives
+(5.1)                 f (t1 )Ers P + f (t2 )P Esr + f (t1 )f (t2 )Ers P Esr = 0.
+The (r, r)-entry of (5.1) is
+(5.2)                       f (t1 )Psr + f (t2 )Prs + f (t1 )f (t2 )Pss = 0.
+16                                        SHUOXING ZHOU
+
+
+If Pss ̸= 0, then by our choice of f , the total (t1 , t2 )-degrees satisfy
+
+                     deg(f (t1 )f (t2 )Pss ) ≥ 2d > deg(f (t1 )Psr + f (t2 )Prs ).
+
+This contradicts (5.2). Hence Pss = 0. Since
+
+                                        Ers P Esr = Pss Err ,
+
+the term f (t1 )f (t2 )Ers P Esr in (5.1) vanishes, and that equation reduces to
+
+                                   f (t1 )Ers P + f (t2 )P Esr = 0.
+
+         ̸ 0, by our choice of f , the first term has t1 -degree strictly larger than the second
+If Ers P =
+term, which is impossible. Thus Ers P = 0, and then P Esr = 0. Hence row s and column s
+vanish. Varying s gives P = 0. Therefore every nonzero element of C has infinite orbit.
+   Finally, since SL3 (R) acts trivially on V ∗ , its action on A ⊗ V ∗ is the direct sum of four
+copies of its action on A. The SL3 (R)-action on Di = (A ⊗ V ∗ ) ⊕ C is independent of i.
+Every nonzero element of Di has a nonzero component in either one of the four copies of
+A or in C. Since every such nonzero component has an infinite orbit, so does the original
+element.                                                                                       □
+
+Proposition 5.3. Both Γ1 and Γ2 are ICC.
+
+Proof. Let
+                               γ = (d; (l, q)) ∈ Di ⋊ (SL3 (R) × Q)
+
+be nontrivial. If l ̸= I, since SL3 (R) is ICC by Lemma 5.1, the projection of its conjugacy
+class to SL3 (R) contains the infinite conjugacy class of l. If l = q = I, then d = ̸ 0 and
+conjugation by SL3 (R) produces the infinite orbit of Lemma 5.2.
+   It remains to take l = I and q ̸= I. The natural action of Q = Sp4 (k) on V ∗ = (k 4 )∗ is
+faithful, so choose φ ∈ V ∗ with
+                                         ψ = (1 − q)φ ̸= 0.
+
+For a ∈ A, let xa = (a ⊗ φ, 0) ∈ Di = (A ⊗ V ∗ ) ⊕ C. The C-coordinate is zero, so in both
+actions
+                                   (1 − θi (1, q))xa = (a ⊗ ψ, 0).
+
+Write γ = (d; (1, q)). Using the multiplication rule in the semidirect product, conjugation by
+(xa ; 1) gives
+                         (xa ; 1)γ(xa ; 1)−1 = (xa ; 1)(d; (1, q))(−xa ; 1)
+                                                                              
+                                            = d + xa − θi (1, q)xa ; (1, q)
+                                                                     
+                                            = d + (a ⊗ ψ, 0); (1, q) .
+
+Hence different values of a give different conjugates. Since A = R3 is infinite, the family
+
+                                  (xa ; 1)γ(xa ; 1)−1 a ∈ A
+                                 
+
+
+is infinite. Therefore the conjugacy class of γ is infinite.                                  □
+                   ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                               17
+
+
+                            6. The groups are not isomorphic
+Lemma 6.1. The group SL3 (R) has no nontrivial abelian normal subgroup.
+                                                       ̸ s, and put uf = I + f Ers . Since
+Proof. Let B ◁ SL3 (R) be abelian and let b ∈ B. Fix r =
+u−1
+ f  =  uf in characteristic two, normality and commutativity imply
+                                       b(uf buf ) = (uf buf )b.
+Expanding gives
+(6.1)                              f X + f 2Y = 0        (f ∈ R),
+where
+                   X = b2 Ers + Ers b2 ,   Y = bErs bErs + Ers bErs b.
+Taking f = 1 and f = t in (6.1), we obtain
+                            (t2 + t)Y = t(X + Y ) + (tX + t2 Y ) = 0.
+Hence Y = 0 and then X = 0.
+  Since Ers bErs = bsr Ers , the identity Y = 0 becomes
+                                      bsr (bErs + Ers b) = 0.
+If bsr ̸= 0, the domain property gives bErs +Ers b = 0, but its (s, s)-entry is bsr , a contradiction.
+Hence every off-diagonal entry of b is zero. Write b = diag(λ1 , λ2 , λ3 ). Since b ∈ SL3 (R),
+λ1 λ2 λ3 = det b = 1. Thus each λi is a unit of R. Since the only unit of R = (Z/2Z)[t] is 1,
+we obtain b = I.                                                                                    □
+   Recall that an elementary abelian group is an abelian group in which all elements
+other than the identity have the same order.
+Lemma 6.2. The group Q = Sp4 (k) has no nontrivial normal elementary abelian subgroup
+of exponent two.
+Proof. We first show that Q acts transitively on V \{0}. Let v, w ∈ V \{0}. By nondegeneracy
+of the symplectic form, both v and w can be completed to symplectic bases of V . The linear
+map sending the first symplectic basis to the second preserves the symplectic form and hence
+belongs to Q. In particular, it sends v to w. Hence the natural Q-module V is simple, and
+its action is faithful.
+   Now let L ◁ Q be an elementary abelian subgroup of exponent two. Since L is finite
+abelian with exponent two, we have L ∼  = (Z/2Z)n for some n ≥ 0. Since V = k 4 = (Z/2Z)4 ,
+                                     |V \ {0}| = 24 − 1 = 15.
+The group L acts on this set, and every orbit has cardinality
+                                         |L · v| = [L : Lv ],
+which is a power of two since |L| = 2n . If there were no fixed nonzero vector, every orbit
+would have even cardinality, contradicting the fact that their disjoint union has cardinality
+15. Hence there exists 0 ̸= v ∈ V such that lv = v for any l ∈ L. Equivalently,
+                          V L := {v ∈ V | lv = v for every l ∈ L} ̸= 0.
+  We claim that V L is Q-invariant. Indeed, if v ∈ V L , q ∈ Q, and l ∈ L, then normality of
+L gives q −1 lq ∈ L, and therefore
+                                     l(qv) = q(q −1 lq)v = qv.
+18                                        SHUOXING ZHOU
+
+
+Thus qv ∈ V L . Since V L is a nonzero Q-invariant subspace and V is simple, we have
+                                              V L = V.
+Consequently, every element of L acts trivially on V . The action of Q on V is faithful, so
+L = {I}.                                                                                 □
+Proposition 6.3. The subgroup Di is characteristic in Γi , i.e., α(Di ) = Di for any
+α ∈ Aut(Γi ). In the quotient
+                                  Γi /Di ∼
+                                         = SL3 (R) × Q,
+the subgroup Q is characteristic.
+Proof. Let E ◁ Γi be elementary abelian of exponent two. Its image in SL3 (R) × Q has
+abelian normal projection to SL3 (R) and normal elementary abelian projection to Q. Both
+projections are trivial by Lemmas 6.1 and 6.2. Hence E ⊆ Di . Since Di itself is also
+elementary abelian of exponent two, it is the unique largest such normal subgroup, which
+will be globally preserved by any α ∈ Aut(Γi ). Hence Di is characteristic in Γi .
+   Lemma 5.1 implies that SL3 (R) has no nontrivial finite normal subgroup. Every finite
+normal subgroup of SL3 (R) × Q therefore projects trivially to SL3 (R) and is contained in Q.
+Thus Q is the unique largest finite normal subgroup of the quotient and is characteristic. □
+   Recall that, for a Q-module M , a map c : Q → M , q 7→ cq , is a 1-cocycle if cpq = p·cq +cp
+for all p, q ∈ Q. It is a 1-coboundary if there exists m ∈ M such that cq = q ·m−m for every
+q ∈ Q. Recall from Lemma 2.2 that, for v = (a1 , b1 , a2 , b2 ) ∈ V = k 4 and r0 (v) = a1 b1 + a2 b2 ,
+the map q 7→ ℓq := q · r0 − r0 is a 1-cocycle with values in V ∗ .
+Lemma 6.4. The cocycle ℓq = q · r0 − r0 is not a coboundary.
+Proof. Suppose ℓq = q · λ − λ for some λ ∈ V ∗ and every q ∈ Q. Then q · λ − λ = q · r0 − r0 ,
+i.e., q · (r0 − λ) = r0 − λ. Hence r0 − λ is Q-invariant and vanishes at zero. Transitivity
+of the Q-action on V \ {0} makes r0 − λ = 0 or 1V \{0} . Recall that the polarization of a
+function r : V → k satisfying r(0) = 0 is
+                               Br (v, w) = r(v + w) − r(v) − r(w).
+It measures the failure of r to be additive. Since λ is linear, Bλ = 0, and hence
+                                     Br0 −λ = Br0 − Bλ = ω.
+    The zero function has zero polarization, so r0 − λ cannot be identically zero. For the
+second possibility, suppose that r0 − λ = 1V \{0} . Choose distinct nonzero vectors u, w ∈ V
+such that ω(u, w) = 0; for example, one may take u = e1 and w = e2 in a symplectic basis
+(e1 , f1 , e2 , f2 ). Since u ̸= w and char(k) = 2, we have u + w ̸= 0. Therefore
+                   B1V \{0} (u, w) = 1V \{0} (u + w) − 1V \{0} (u) − 1V \{0} (w)
+                                   = 1 − 1 − 1 = 1.
+This contradicts
+                                Br0 −λ (u, w) = ω(u, w) = 0.
+Thus neither possibility can occur.                                                                □
+  Recall that a Q-module M is semisimple if and only if every Q-submodule N ⊆ M
+admits a Q-invariant complement L with M ∼
+                                         = N ⊕ L as Q-modules; equivalently, every
+short exact sequence
+                           0 −→ N −→ M −→ M/N −→ 0
+                  ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                        19
+
+
+splits Q-equivariantly, i.e., there exists a Q-module homomorphism s : M/N → M such
+that πM/N ◦ s = idM/N .
+   Define the Q-module
+(6.2)                    Eℓ = V ∗ ⊕ k,        q · (φ, s) = (qφ + sℓq , s).
+It fits into
+(6.3)                           0 −→ V ∗ −→ Eℓ −→ k −→ 0.
+Any k-linear splitting σ : k → Eℓ has the form σ(s) = (sλ, s) for some λ ∈ V ∗ . Since Q acts
+trivially on k, the splitting is Q-equivariant if and only if
+                           (q · λ + ℓq , 1) = q · σ(1) = σ(1) = (λ, 1)
+for every q ∈ Q. This is equivalent to ℓq = q · λ − λ. Thus the extension (6.3) splits if and
+only if ℓ is a coboundary. Lemma 6.4 therefore shows that the extension is nonsplit. In
+particular, Eℓ is not semisimple as a Q-module.
+Proposition 6.5. The groups Γ1 and Γ2 are not isomorphic.
+Proof. As a Q-module,
+                                     D1 = (A ⊗ V ∗ ) ⊕ C,
+where Q acts naturally on V ∗ and trivially on A and C. The symplectic form identifies V
+and V ∗ equivariantly, so V ∗ is simple as a Q-module. After choosing bases of A and C, the
+module D1 is an algebraic direct sum of copies of the simple modules V ∗ and k. Thus D1 is
+semisimple as a Q-module.
+   Choose a k-linear section s : A → C of δ. No SL3 (R)-equivariance is needed. Since Q acts
+trivially on C, the action θ2 gives a Q-module isomorphism
+(6.4)                               D2 ∼
+                                       = (A ⊗ Eℓ ) ⊕ ker(δ).
+Indeed, under C = ker(δ) ⊕ s(A), the Q-action on (A ⊗ V ∗ ) ⊕ s(A) ⊂ (A ⊗ V ∗ ) ⊕ C = D2 is
+                q · (u, s(a)) = (qu + δ(s(a)) ⊗ ℓq , s(a)) = (qu + a ⊗ ℓq , s(a)),
+which is precisely the tensor product A ⊗ (V ∗ ⊕ k) = A ⊗ Eℓ of the trivial Q-module A and
+the Q-module Eℓ = (V ∗ ⊕ k) as in (6.2). Hence
+                   D2 ∼= (A ⊗ V ∗ ) ⊕ (s(A) ⊕ ker(δ)) ∼
+                                                      = (A ⊗ Eℓ ) ⊕ ker(δ).
+  After choosing a basis of A, the nonsplit module Eℓ occurs as a direct summand of D2 . If
+D2 were semisimple, then its direct summand Eℓ would be semisimple, contradicting the
+nonsplitting of (6.3). Therefore D2 is not semisimple.
+  Suppose that α : Γ1 → Γ2 is an isomorphism. By Proposition 6.3, Di is the unique largest
+normal elementary abelian subgroup of exponent two in Γi . Since this property is preserved
+under group isomorphisms,
+                                        α(D1 ) = D2 .
+Hence α induces an isomorphism
+                                      α : Γ1 /D1 −→ Γ2 /D2 .
+Using the canonical identifications
+                                      Γi /Di ∼
+                                             = SL3 (R) × Q,
+we regard α as an automorphism of SL3 (R) × Q. Since Q is characteristic in this quotient,
+we have α(Q) = Q. Thus β := α|Q ∈ Aut(Q).
+20                                        SHUOXING ZHOU
+
+
+   Let T = α|D1 : D1 → D2 . Since D1 and D2 are k-vector spaces with k = Z/2Z, the group
+isomorphism T is automatically k-linear. For q ∈ Q, let
+                            qe = (0; (1, q)) ∈ Γ1 = D1 ⋊ (SL3 (R) × Q).
+                     q ) in the quotient is (1, β(q)), there exists cq ∈ D2 such that
+Since the image of α(e
+                                         q ) = (cq ; (1, β(q))).
+                                       α(e
+For every d ∈ D1 , we therefore have
+                                 T θ1 (1, q)d = α qe d qe−1
+                                                           
+
+                                                = α(e           q )−1
+                                                    q ) T (d) α(e
+                                                = θ2 (1, β(q))T (d).
+In the last equality, the factor cq ∈ D2 has no effect because D2 is abelian, so conjugation
+by cq acts trivially on D2 .
+   Let β ∗ D2 denote the pullback of the Q-module D2 along β, namely the module D2 with
+the Q-action
+                                      q ∗ d = θ2 (1, β(q))d.
+The preceding identity says precisely that
+                                          T : D1 −→ β ∗ D2
+is a Q-module isomorphism. Since β is an automorphism of Q, the modules D2 and β ∗ D2
+have exactly the same invariant subspaces and are therefore semisimple simultaneously. It
+follows that the semisimplicity of D1 would imply the semisimplicity of D2 , contradicting
+the semisimple–nonsemisimple distinction established above. Hence Γ1 ≠∼ Γ2 .            □
+
+                                7. Completion of the proof
+Proof of Theorem A. The explicit semidirect products in (2.3) are countable. Proposition 4.8
+proves property (T), and Proposition 5.3 proves ICC. Proposition 6.5 gives Γ1 ̸∼= Γ2 , while
+Proposition 3.4 supplies a ∗-isomorphism between their group von Neumann algebras. All
+four assertions of the theorem follow.                                                    □
+
+                                            References
+[BR95]    Teresa Bates and Guyan Robertson. Positive definite functions and relative property (T) for
+          subgroups of discrete groups. Bulletin of the Australian Mathematical Society, 52(1):31–39,
+          1995. doi:10.1017/S000497270001443X.
+[CFQOT26] Ionuţ Chifan, Adriana Fernández Quero, Denis Osin, and Hui Tan. W∗ -superrigidity for property
+          (T) groups with infinite center. Adv. Math., 496:Paper No. 110979, 39, 2026. URL: https://doi-
+          org.proxy.rubens.ens.fr/10.1016/j.aim.2026.110979, doi:10.1016/j.aim.2026.110979.
+[CFQT24] Ionuţ Chifan, Adriana Fernández Quero, and Hui Tan. Rigidity results for group von neumann
+          algebras with diffuse center, 2024. URL: https://arxiv.org/abs/2403.01280, arXiv:2403.
+          01280.
+[CH89]    Michael Cowling and Uffe Haagerup. Completely bounded multipliers of the Fourier algebra of
+          a simple Lie group of real rank one. Invent. Math., 96(3):507–549, 1989. URL: https://doi-
+          org.proxy.rubens.ens.fr/10.1007/BF01393695, doi:10.1007/BF01393695.
+[CIOS23]  Ionuţ Chifan, Adrian Ioana, Denis Osin, and Bin Sun. Wreath-like products of groups and
+          their von Neumann algebras I: W∗ -superrigidity. Ann. of Math. (2), 198(3):1261–1303, 2023.
+          URL: https://doi-org.proxy.rubens.ens.fr/10.4007/annals.2023.198.3.6, doi:10.4007/
+          annals.2023.198.3.6.
+                    ICC PROPERTY (T) GROUPS WITHOUT W∗ -SUPERRIGIDITY                                    21
+
+
+[CIOS26a]   Ionuţ Chifan, Adrian Ioana, Denis Osin, and Bin Sun. Wreath-like products of groups
+            and their von Neumann algebras II: outer automorphisms. Duke Math. J., 175(2):287–
+            359, 2026. URL: https://doi-org.proxy.rubens.ens.fr/10.1215/00127094-2025-0028, doi:
+            10.1215/00127094-2025-0028.
+[CIOS26b]   Ionuţ Chifan, Adrian Ioana, Denis Osin, and Bin Sun. Wreath-like products of groups and
+            their von Neumann algebras III: embeddings. Comm. Math. Phys., 407(2):Paper No. 38,
+            24, 2026. URL: https://doi-org.proxy.rubens.ens.fr/10.1007/s00220-025-05508-x, doi:
+            10.1007/s00220-025-05508-x.
+[Con80]     A. Connes. A factor of type II1 with countable fundamental group. J. Operator Theory, 4(1):151–
+            153, 1980.
+[Con82]     Alain Connes. Classification des facteurs. In Operator Algebras and Applications, Part 2
+            (Kingston, Ont., 1980), volume 38 of Proceedings of Symposia in Pure Mathematics, pages
+            43–109. American Mathematical Society, Providence, RI, 1982.
+[DV25a]     Milan Donvil and Stefaan Vaes. W∗ -superrigidity for cocycle twisted group von Neumann
+            algebras. Invent. Math., 240(1):193–260, 2025. URL: https://doi-org.proxy.rubens.ens.fr/
+            10.1007/s00222-025-01320-5, doi:10.1007/s00222-025-01320-5.
+[DV25b]     Milan Donvil and Stefaan Vaes. W∗ -superrigidity for groups with infinite center. Adv. Math.,
+            480:Paper No. 110527, 63, 2025. URL: https://doi-org.proxy.rubens.ens.fr/10.1016/j.aim.
+            2025.110527, doi:10.1016/j.aim.2025.110527.
+[EJZK17]    Mikhail Ershov, Andrei Jaikin-Zapirain, and Martin Kassabov. Property (T ) for groups graded
+            by root systems. Mem. Amer. Math. Soc., 249(1186):v+135, 2017. URL: https://doi-org.
+            proxy.rubens.ens.fr/10.1090/memo/1186, doi:10.1090/memo/1186.
+[Hou23]     Cyril Houdayer. Noncommutative ergodic theory of higher rank lattices. In ICM—International
+            Congress of Mathematicians. Vol. 4. Sections 5–8, pages 3202–3223. EMS Press, Berlin,
+            [2023] ©2023. URL: https://doi-org.proxy.rubens.ens.fr/10.4171/ICM2022/39, doi:10.
+            4171/ICM2022/39.
+[Ioa11]     Adrian Ioana. W ∗ -superrigidity for Bernoulli actions of property (T) groups. J. Amer. Math.
+            Soc., 24(4):1175–1226, 2011. URL: https://doi-org.proxy.rubens.ens.fr/10.1090/S0894-
+            0347-2011-00706-6, doi:10.1090/S0894-0347-2011-00706-6.
+[IPV13]     Adrian Ioana, Sorin Popa, and Stefaan Vaes. A class of superrigid group von Neumann algebras.
+            Ann. of Math. (2), 178(1):231–286, 2013. URL: https://doi-org.proxy.rubens.ens.fr/10.
+            4007/annals.2013.178.1.4, doi:10.4007/annals.2013.178.1.4.
+[LGS+ 26]   Jihao Liu, Guoxiong Gao, Zeming Sun, Bin Wu, Shurui Liu, Jiedong Jiang, Haocheng Ju,
+            Leheng Chen, Ronnie Cheng, Xiping Zhang, and Bin Dong. Danus: Orchestrating mathematical
+            reasoning agents with fact-graph memory, 2026. URL: https://arxiv.org/abs/2607.06447,
+            arXiv:2607.06447.
+[Mar91]     G. A. Margulis. Discrete subgroups of semisimple Lie groups, volume 17 of Ergebnisse der
+            Mathematik und ihrer Grenzgebiete (3) [Results in Mathematics and Related Areas (3)]. Springer-
+            Verlag, Berlin, 1991. doi:10.1007/978-3-642-51445-6.
+[Mos73]     G. D. Mostow. Strong rigidity of locally symmetric spaces, volume No. 78 of Annals of Mathe-
+            matics Studies. Princeton University Press, Princeton, NJ; University of Tokyo Press, Tokyo,
+            1973.
+[Ope26]     OpenAI. Ten advances in mathematics and theoretical computer science, August 2026. Chapter 4:
+            A Counterexample to Connes’s Rigidity Conjecture. URL: https://cdn.openai.com/pdf/ten-
+            proofs-oai.pdf.
+[Pop06a]    Sorin Popa. Strong rigidity of II1 factors arising from malleable actions of w-rigid groups. I.
+            Invent. Math., 165(2):369–408, 2006. URL: https://doi-org.proxy.rubens.ens.fr/10.1007/
+            s00222-006-0501-4, doi:10.1007/s00222-006-0501-4.
+[Pop06b]    Sorin Popa. Strong rigidity of II1 factors arising from malleable actions of w-rigid groups. II.
+            Invent. Math., 165(2):409–451, 2006. URL: https://doi-org.proxy.rubens.ens.fr/10.1007/
+            s00222-006-0502-3, doi:10.1007/s00222-006-0502-3.
+
+  École Normale Supérieure, Département de mathématiques et applications, 45 rue d’Ulm, 75230
+Paris Cedex 05, FRANCE
+  Email address: shuoxing.zhou@ens.psl.eu
+
