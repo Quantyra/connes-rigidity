@@ -1,0 +1,22 @@
+{
+  "title": "Refutation of the Nielsen Ioana+Θ Reductio (v0.1.1-report)",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "creators": [
+    {
+      "name": "Fredriksen, Daniel Eric",
+      "affiliation": "Quantyra Inc"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "version": "0.1.1-report",
+  "keywords": [
+    "connes-rigidity",
+    "ioana",
+    "operator-algebras",
+    "quantyra",
+    "audit",
+    "nielsen"
+  ],
+  "description": "<p><strong>Bounded public report (v0.1.1).</strong> Refutation of J. L. Nielsen's application of Ioana's Theorem 8.2 (JAMS 2011) to the twisted comultiplication Θ(f u_g)=f u_g ⊗ Φ(u_g). By construction im(Θ) ⊆ A_G ⊗̄ L(H), so Ioana hypothesis (2) fails and the reductio does not obtain rigid-case group morphisms from that application.</p><p><strong>Not asserted:</strong> Connes rigidity true or false; validity of OpenAI or Zhou counterexamples; full formalization of Ioana (2011).</p><p>Companion Lean package: Quantyra/connes-rigidity-lean tag <code>v0.1.1-obstruction</code>. Quantyra-authored report text CC-BY-4.0; third-party source PDFs in <code>docs/sources/</code> remain under their original rights and are pins only.</p>"
+}

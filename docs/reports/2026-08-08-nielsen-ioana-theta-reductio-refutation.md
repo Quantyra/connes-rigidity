@@ -4,8 +4,8 @@
 **Date:** 2026-08-08  
 **Authors:** Daniel Eric Fredriksen (Quantyra); orchestrated audit with machine-checked Lean core  
 **Status:** Public bounded report  
-**Lean artifact:** https://github.com/Quantyra/connes-rigidity-lean (tag `v0.1.0-obstruction`)  
-**Science repo:** https://github.com/Quantyra/connes-rigidity  
+**Lean artifact:** https://github.com/Quantyra/connes-rigidity-lean (tag `v0.1.1-obstruction`)  
+**Science repo:** https://github.com/Quantyra/connes-rigidity (tag `v0.1.1-report`)  
 
 ---
 
@@ -87,22 +87,24 @@ For a *-homomorphism into a tensor product of two Bernoulli crossed products \(M
 ## 5. Lean artifact
 
 Repository: [Quantyra/connes-rigidity-lean](https://github.com/Quantyra/connes-rigidity-lean)  
-Release tag: `v0.1.0-obstruction`  
-Module: `ConnesRigidity.NielsenThetaBlock`
+Release tag: `v0.1.1-obstruction`  
+Modules: `ConnesRigidity.NielsenThetaImage`, `ConnesRigidity.NielsenThetaBlock`
 
 | Declaration | Content |
 |-------------|---------|
-| `Ioana82Hyp2` | Abstract shape of Thm 8.2 hypothesis (2) |
-| `image_subseteq_M1_LH_blocks_ioana82_hyp2` | Containment blocks hyp (2) |
-| `nielsenTheta_blocks_ioana82_hyp2` | Main audit theorem on Nielsen setups |
-| `nielsenTheta_no_rigid_licensed_by_hyp2` | If rigid output ⇔ hyp2, none under Θ |
+| `nielsen_theta_by_construction_lands_in_bad_leg` | **Classical import only:** Nielsen NIEWTC definitional Θ package and by-construction image containment as a semantic situation (not a Lean construction of \(A_G\bar\otimes L(H)\)) |
+| `nielsen_theta_by_construction_blocks_ioana82_hyp2` | **Proved:** from that import, Ioana 8.2 hyp (2) fails |
+| `nielsen_theta_by_construction_no_rigid_output_licensed_by_hyp2` | **Proved:** rigid output is not licensed by that failed application |
+| `intertwinesIntoConditionOne_of_le` | **Proved:** containment + nonzero unit ⇒ condition-(1) intertwiner (Popa bridge not axiomatized) |
+| `image_subseteq_M1_LH_blocks_ioana82_hyp2` | **Proved:** semantic containment blocks hyp (2) |
 
-**Single bridge axiom:** `image_subseteq_M1_LH_negates_niRight`  
-(containment in the bad leg ⇒ negation of the corresponding non-intertwining predicate).
+**Axiom profile of main exports:** only  
+`nielsen_theta_by_construction_lands_in_bad_leg` + standard Lean foundations (`propext`, `Classical.choice`, `Quot.sound`).  
+The former custom Popa bridge axiom `image_subseteq_M1_LH_negates_niRight` is **removed**.
 
 **CI:** `lake build`, no `sorry`/`admit`, axiom register check.
 
-**Build pin:** git SHA `06ee23555a7bb5915fefe622ef6c6f4f7d619009` (pre-tag tip; tag points at release commit).
+**Build pin:** git SHA of tag `v0.1.1-obstruction` (release commit on `main` at/after `939f6e4dde123d7a94677085a2ffb8acfe9089ea`).
 
 ---
 
@@ -110,13 +112,15 @@ Module: `ConnesRigidity.NielsenThetaBlock`
 
 | Role | Verdict |
 |------|---------|
-| Proof-adversarial | PASS |
-| Non-claims boundary | PASS |
-| Lean/build/audit | PASS |
+| Proof-adversarial | PASS (after metadata/report alignment) |
+| Non-claims boundary | PASS (after §5 refresh) |
+| Package/metadata | PASS (after v0.1.1 alignment) |
+| Lean/build/audit | PASS at `939f6e4` |
 
 Planning packets:  
 - `Quantyra-Jenny-Planning` — `docs/claim-boundary-packets/2026-08-07-connes-audit-s006-nogo.md`  
-- `docs/claim-boundary-packets/2026-08-08-reductio-goal-complete.md`
+- `docs/claim-boundary-packets/2026-08-08-reductio-goal-complete.md`  
+- `docs/claim-boundary-packets/2026-08-08-reductio-v0.1.1-freeze.md`
 
 ---
 
@@ -141,15 +145,18 @@ The Nielsen **Ioana+Θ reductio is refuted** as an application of Ioana’s Theo
 
 ## 9. Citation
 
-Please cite the Lean software release `v0.1.0-obstruction` and this report path in [Quantyra/connes-rigidity](https://github.com/Quantyra/connes-rigidity):
+Please cite the Lean software release `v0.1.1-obstruction` and this report path in [Quantyra/connes-rigidity](https://github.com/Quantyra/connes-rigidity):
 
 `docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md`
 
-**DOIs (published):**
+**DOIs:**
 
 | Artifact | DOI |
 |----------|-----|
-| Science report / repo | [10.5281/zenodo.21845587](https://doi.org/10.5281/zenodo.21845587) |
-| Lean obstruction package | [10.5281/zenodo.21845589](https://doi.org/10.5281/zenodo.21845589) |
+| Science report (concept) | [10.5281/zenodo.21845586](https://doi.org/10.5281/zenodo.21845586) |
+| Science report v0.1.0 (historical) | [10.5281/zenodo.21845587](https://doi.org/10.5281/zenodo.21845587) |
+| Lean package (concept) | [10.5281/zenodo.21845588](https://doi.org/10.5281/zenodo.21845588) |
+| Lean v0.1.0-obstruction (historical) | [10.5281/zenodo.21845589](https://doi.org/10.5281/zenodo.21845589) |
+| Lean/science v0.1.1 | pending Zenodo version DOIs after GitHub release |
 
 **License:** Apache-2.0 (code); report text © Quantyra Inc., released with the science repository.

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this report, please cite it using the metadata from this file."
+title: "Refutation of the Nielsen Ioana+Θ Reductio"
+type: report
+authors:
+  - family-names: Fredriksen
+    given-names: Daniel Eric
+    affiliation: "Quantyra Inc"
+url: "https://github.com/Quantyra/connes-rigidity"
+repository-code: "https://github.com/Quantyra/connes-rigidity"
+license: CC-BY-4.0
+version: "0.1.1-report"
+keywords:
+  - Connes rigidity
+  - Ioana
+  - operator algebras
+  - Quantyra
+  - Nielsen
+abstract: >-
+  Bounded public report: Nielsen's application of Ioana's Theorem 8.2
+  (JAMS 2011) to the twisted comultiplication Θ fails because hypothesis
+  (2) is violated by the by-construction containment im(Θ) ⊆ A_G ⊗̄ L(H).
+  Does not prove or refute Connes rigidity and does not settle OpenAI or
+  Zhou counterexamples. Companion Lean tag v0.1.1-obstruction. Concept DOI
+  10.5281/zenodo.21845586; historical v0.1.0 version DOI 10.5281/zenodo.21845587.
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21845586"
+    description: "Concept DOI (all versions)"
