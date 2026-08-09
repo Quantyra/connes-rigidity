@@ -153,10 +153,13 @@ Please cite the Lean software release `v0.1.1-obstruction` and this report path 
 
 | Artifact | DOI |
 |----------|-----|
-| Science report (concept) | [10.5281/zenodo.21845586](https://doi.org/10.5281/zenodo.21845586) |
+| Science report (concept — cite for all versions) | [10.5281/zenodo.21845586](https://doi.org/10.5281/zenodo.21845586) |
+| Science report **v0.1.1** (this version) | [10.5281/zenodo.21859308](https://doi.org/10.5281/zenodo.21859308) |
 | Science report v0.1.0 (historical) | [10.5281/zenodo.21845587](https://doi.org/10.5281/zenodo.21845587) |
-| Lean package (concept) | [10.5281/zenodo.21845588](https://doi.org/10.5281/zenodo.21845588) |
+| Lean package (concept — cite for all versions) | [10.5281/zenodo.21845588](https://doi.org/10.5281/zenodo.21845588) |
+| Lean **v0.1.1-obstruction** (this version) | [10.5281/zenodo.21859309](https://doi.org/10.5281/zenodo.21859309) |
 | Lean v0.1.0-obstruction (historical) | [10.5281/zenodo.21845589](https://doi.org/10.5281/zenodo.21845589) |
-| Lean/science v0.1.1 | pending Zenodo version DOIs after GitHub release |
 
-**License:** Apache-2.0 (code); report text © Quantyra Inc., released with the science repository.
+**Preferred citation DOIs:** concept DOIs above for “the work”; version DOIs for this exact freeze.
+
+**License:** Report text CC-BY-4.0 (Quantyra-authored); Lean code Apache-2.0; third-party source PDFs under original rights (pins only).

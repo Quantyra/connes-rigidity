@@ -1,12 +1,14 @@
-# Zenodo / release status — science satellite
+# Zenodo status — connes-rigidity (science)
 
-| Item | Status |
-|------|--------|
-| Report | `docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md` |
-| GitHub | https://github.com/Quantyra/connes-rigidity |
-| Release tag | `v0.1.0-report` |
-| **Zenodo version DOI** | **[10.5281/zenodo.21845587](https://doi.org/10.5281/zenodo.21845587)** |
-| Lean companion DOI | [10.5281/zenodo.21845589](https://doi.org/10.5281/zenodo.21845589) |
-| Claim class | bounded report — Nielsen Ioana+Θ reductio refuted only |
+## Concept DOI (stable cite-all-versions)
+**10.5281/zenodo.21845586** — https://doi.org/10.5281/zenodo.21845586
 
-Do not invent further DOIs; record concept DOI here if Zenodo lists one separately.
+## Versions
+| Version | Version DOI | Git tag | Notes |
+|---------|-------------|---------|-------|
+| 0.1.0-report | 10.5281/zenodo.21845587 | v0.1.0-report | Initial bounded report |
+| **0.1.1-report** | **10.5281/zenodo.21859308** | **v0.1.1-report** | Paper-strength Lean pin; metadata |
+
+## Companion Lean
+- Concept: 10.5281/zenodo.21845588
+- v0.1.1-obstruction: 10.5281/zenodo.21859309
