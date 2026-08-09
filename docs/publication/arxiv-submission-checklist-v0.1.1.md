@@ -45,7 +45,7 @@ Connes rigidity; Ioana theorem; twisted comultiplication; Popa intertwining; Lea
 - Markdown (long form): `docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md`
 - **arXiv TeX (A001-style):** `docs/notes/nielsen-ioana-theta-reductio-arxiv.tex`
 - **Rendered PDF:** `docs/notes/nielsen-ioana-theta-reductio-arxiv.pdf`
-- **PDF SHA-256:** `C573090FE2AA13661229D4C75E88A61476762310350A62DBBB3E90DEFF920E60`
+- **PDF SHA-256:** `3EEFD3127C27E7C35769D9773E7FE521A4281E04780C40CBA033434BDA889D03`
 - **Pages:** 4 (after quality-gap close: notation, Popa cite, Lean verify recipe, Remarks)
 - **Build:** two-pass `pdflatex`; packages `array`, `seqsplit`, `xurl` (margin-safe hashes/paths)
 
