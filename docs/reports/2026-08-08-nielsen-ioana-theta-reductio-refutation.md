@@ -104,7 +104,7 @@ The former custom Popa bridge axiom `image_subseteq_M1_LH_negates_niRight` is **
 
 **CI:** `lake build`, no `sorry`/`admit`, axiom register check.
 
-**Build pin:** git SHA of tag `v0.1.1-obstruction` (release commit on `main` at/after `939f6e4dde123d7a94677085a2ffb8acfe9089ea`).
+**Build pin:** git SHA `c1e6dfb7347261336714e57de86e6f25c7627461` (tag `v0.1.1-obstruction`).
 
 ---
 
