@@ -1,0 +1,228 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{url}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\do\/\do\-\do\.\do\_\do\~\do\=\do\&\do\?\do\%}
+\def\UrlFont{\ttfamily}
+\makeatother
+\usepackage[hidelinks,breaklinks]{hyperref}
+\hypersetup{
+  pdftitle={Refutation of a Nielsen application of Ioana's Theorem 8.2 to a twisted comultiplication},
+  pdfauthor={Daniel Eric Fredriksen},
+  pdfsubject={Bounded obstruction to a Nielsen Ioana+Theta reductio},
+  pdfkeywords={Connes rigidity, Ioana theorem, twisted comultiplication, Popa intertwining, Lean 4}
+}
+\newcommand{\filepath}[1]{\path{#1}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{Refutation of a Nielsen application of Ioana's Theorem~8.2\\
+to a twisted comultiplication}
+\author{Daniel Eric Fredriksen\\
+Quantyra Inc.\\
+\url{https://github.com/Quantyra/connes-rigidity}}
+\date{9 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We examine J.~L.~Nielsen's argument that applies Ioana's Theorem~8.2
+(J.~Amer.\ Math.\ Soc.\ 24 (2011)) to the twisted comultiplication
+\[
+\Theta(f u_g)=f u_g\otimes\Phi(u_g)
+\]
+built from an assumed $*$-isomorphism $\Phi\colon L(G)\to L(H)$, in order
+to obtain injective group morphisms and run a reductio related to Connes'
+rigidity conjecture. We show that this application does not go through: by
+construction,
+\[
+\Theta(A_G)\subseteq A_G\,\bar\otimes\, L(H),
+\]
+which is the forbidden tensor leg in Ioana's hypothesis~(2). Consequently
+Theorem~8.2 does not license the rigid-case output for this map, and the
+reductio that depends on that output does not start. The argument is
+supported by primary-source pins of Nielsen NIEWTC and Ioana JAMS~2011, and
+by a machine-checked Lean~4 packaging (release
+\texttt{v0.1.1-obstruction}) that imports one classical Nielsen
+by-construction package and proves failure of hypothesis~(2) and
+non-licensing of rigid output for that application. We do not claim that
+Connes' rigidity conjecture is true or false, and we do not validate or
+refute the OpenAI or Zhou counterexample constructions.
+\end{abstract}
+
+\noindent\textbf{MSC 2020:} 46L10, 46L35, 22D25, 03B35.\\
+\textbf{Suggested arXiv categories:} math.OA (primary); math.GR (secondary).\\
+\textbf{Science package:} tag \texttt{v0.1.1-report}; version DOI\\
+\url{https://doi.org/10.5281/zenodo.21859308};\\
+concept DOI \url{https://doi.org/10.5281/zenodo.21845586}.\\
+\textbf{Lean package:} tag \texttt{v0.1.1-obstruction}; version DOI\\
+\url{https://doi.org/10.5281/zenodo.21859309};\\
+concept DOI \url{https://doi.org/10.5281/zenodo.21845588}.
+
+\section{Introduction and non-claims}
+
+Connes' rigidity conjecture (ICC + property~(T) form) asserts that if $G$ and
+$H$ are countable discrete ICC groups with Kazhdan's property~(T) and
+$L(G)\cong L(H)$, then $G\cong H$. Nielsen proposes a reductio that assumes
+$L(G)\cong L(H)$, equips $G$ with a Bernoulli action, forms the crossed product
+$A_G=L^\infty(X)\rtimes G$, builds a twisted comultiplication $\Theta$ from
+$\Phi$, and applies Ioana's classification to extract group morphisms, then
+derives a contradiction (Part~I against claimed counterexamples; Part~II as a
+universal proof of the conjecture).
+
+\paragraph{In scope.}
+Nielsen's use of $\Theta$ together with Ioana's Theorem~8.2 to obtain an
+injective morphism $\delta_2$---the load-bearing step of that reductio---and a
+machine-checked packaging of the obstruction logic.
+
+\paragraph{Out of scope (explicit non-claims).}
+\begin{itemize}
+\item Connes rigidity true or false.
+\item Validity or invalidity of OpenAI \texttt{ten-proofs} or Zhou
+  arXiv:2608.02327 as counterexamples.
+\item Full formalization of Ioana~(2011) or of group von Neumann algebras
+  $L(\Gamma)$ in mathlib.
+\item Lean construction of the spatial tensor product $A_G\bar\otimes L(H)$,
+  Bernoulli crossed products, or the W$^*$-closed range of a concrete $\Theta$.
+\end{itemize}
+
+\section{Ioana's hypothesis~(2)}
+
+Ioana's Theorem~8.2 concerns a unital $*$-homomorphism into a tensor product of
+two Bernoulli crossed products $M=M_1\bar\otimes M_2$. The rigid/standard
+conclusion requires non-intertwining hypotheses, including~(2):
+\begin{align*}
+\theta(N)&\nprec_M L(\Gamma_1)\bar\otimes M_2,\\
+\theta(N)&\nprec_M M_1\bar\otimes L(\Gamma_2).
+\end{align*}
+(See Ioana~\cite{Ioana2011}, Theorem~8.2.)
+
+\section{The obstruction}
+
+\begin{theorem}[Bounded obstruction]
+\label{thm:main}
+Identify Nielsen's $\Theta\colon A_G\to A_G\bar\otimes A_H$ with Ioana's
+$\theta\colon N\to M_1\bar\otimes M_2$ by
+$N=A_G$, $M_1=A_G$, $M_2=A_H$, $\Gamma_2=H$.
+By Nielsen's definition
+\[
+\Theta(f u_g)=f u_g\otimes\Phi(u_g),\qquad \Phi(u_g)\in L(H),
+\]
+one has the containment
+\[
+\Theta(A_G)\subseteq A_G\,\bar\otimes\, L(H)=M_1\bar\otimes L(\Gamma_2).
+\]
+Containment of the image in $M_1\bar\otimes L(\Gamma_2)$ implies that it is not
+the case that $\theta(N)\nprec M_1\bar\otimes L(\Gamma_2)$ (Popa's intertwining
+relation $\prec$ from inclusion of the image). Therefore Ioana's hypothesis~(2)
+fails for this $\Theta$, and Theorem~8.2 does not supply the rigid-case group
+morphisms from this application. The reductio that requires $\delta_2$ from that
+step does not start.
+\end{theorem}
+
+\begin{remark}[Nielsen's own text]
+Nielsen records the containment into the group-algebra leg and treats it as
+``target alignment'' (NIEWTC, Remark~21). Under Ioana's published wording, that
+containment is a failed hypothesis~(2), not a harmless alignment. Nielsen also
+claims non-intertwining conditions~(NI1)--(NI2) hold uniformly via deformation
+and Cartan arguments; even granting those for other legs, they do not remove the
+literal containment that negates the second conjunct of hypothesis~(2).
+\end{remark}
+
+\section{Lean packaging}
+
+Companion repository
+\url{https://github.com/Quantyra/connes-rigidity-lean},
+tag~\texttt{v0.1.1-obstruction}.
+Build pin:
+{\footnotesize\path{c1e6dfb7347261336714e57de86e6f25c7627461}}.
+
+{\small
+\begin{center}
+\begin{tabular}{@{}p{0.42\textwidth}p{0.50\textwidth}@{}}
+\hline
+Declaration & Role \\
+\hline
+\path{nielsen_theta_by_construction_lands_in_bad_leg}
+  & Classical import: Nielsen definitional package and by-construction
+    containment as a semantic situation \\
+\path{nielsen_theta_by_construction_blocks_ioana82_hyp2}
+  & Proved: hypothesis~(2) fails \\
+\path{nielsen_theta_by_construction_no_rigid_output_licensed_by_hyp2}
+  & Proved: rigid output not licensed by that application \\
+\path{intertwinesIntoConditionOne_of_le}
+  & Proved: containment $+$ nonzero unit $\Rightarrow$ condition-(1)
+    intertwiner \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+\paragraph{Axiom profile of the main exports.}
+Only the classical import
+\path{nielsen_theta_by_construction_lands_in_bad_leg}
+together with standard Lean foundations (\texttt{propext},
+\texttt{Classical.choice}, \texttt{Quot.sound}).
+The former custom Popa bridge axiom has been removed; the containment-to-intertwiner
+direction is proved on the semantic condition-(1) interface.
+
+\paragraph{CI.}
+\texttt{lake build}; no \texttt{sorry}/\texttt{admit}; axiom/opaque register
+check.
+
+\section{Primary sources}
+
+\begin{itemize}
+\item Nielsen, \emph{Connes' Rigidity Conjecture\ldots} (NIEWTC), Aug~2026;
+  PDF SHA-256
+  {\footnotesize\path{9529E43EBFF1E38A808397DA0C0FC56CABCB71C41B622FABA54B6B57573D3884}}.
+\item Ioana, JAMS~24 (2011), DOI
+  \href{https://doi.org/10.1090/S0894-0347-2011-00706-6}{10.1090/S0894-0347-2011-00706-6};
+  PDF SHA-256
+  {\footnotesize\path{0EF129649596FC6BDF36A7ADA3C1972CF1B20FB838D5E560D1FCACCEF21501E3}}.
+\end{itemize}
+
+\section{Conclusion}
+
+The Nielsen Ioana$+\Theta$ reductio is refuted as an application of Ioana's
+Theorem~8.2: the map $\Theta$ is built so that a mandatory non-intertwining
+hypothesis fails. Remaining open by design: whether Connes' conjecture holds,
+and whether any particular counterexample construction is correct.
+
+\begin{thebibliography}{9}
+
+\bibitem{Ioana2011}
+A.~Ioana,
+\emph{$W^*$-superrigidity for Bernoulli actions of property~(T) groups},
+J.~Amer.\ Math.\ Soc.\ \textbf{24} (2011), 1175--1226.
+\href{https://doi.org/10.1090/S0894-0347-2011-00706-6}{doi:10.1090/S0894-0347-2011-00706-6}.
+
+\bibitem{Nielsen2026}
+J.~L.~Nielsen,
+\emph{Connes' Rigidity Conjecture and the Failure of Recent
+Counterexamples} (NIEWTC), Aug~2026.
+Local pin SHA-256
+{\footnotesize\path{9529E43EBFF1E38A808397DA0C0FC56CABCB71C41B622FABA54B6B57573D3884}}.
+
+\bibitem{QuantyraLean}
+D.~E.~Fredriksen,
+\emph{connes-rigidity-lean v0.1.1-obstruction},
+Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.21859309}{doi:10.5281/zenodo.21859309}
+concept
+\href{https://doi.org/10.5281/zenodo.21845588}{doi:10.5281/zenodo.21845588}.
+
+\bibitem{QuantyraReport}
+D.~E.~Fredriksen,
+\emph{Refutation of the Nielsen Ioana$+\Theta$ Reductio},
+Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.21859308}{doi:10.5281/zenodo.21859308};
+concept
+\href{https://doi.org/10.5281/zenodo.21845586}{doi:10.5281/zenodo.21845586}.
+
+\end{thebibliography}
+
+\end{document}

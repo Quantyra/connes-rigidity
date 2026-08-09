@@ -42,15 +42,19 @@ OpenAI or Zhou counterexample constructions.
 Connes rigidity; Ioana theorem; twisted comultiplication; Popa intertwining; Lean 4; formal verification
 
 ## Body source
-Primary markdown (canonical):
-`docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md`
+- Markdown (long form): `docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md`
+- **arXiv TeX (A001-style):** `docs/notes/nielsen-ioana-theta-reductio-arxiv.tex`
+- **Rendered PDF:** `docs/notes/nielsen-ioana-theta-reductio-arxiv.pdf`
+- **PDF SHA-256:** `180885D6AA3A46E0FA43CF2BB02433D1840B107CDC09E7EBE0F7E19EBFBA5BC2` (rebuild may change; re-hash before upload)
+- **Build:** two-pass `pdflatex` (same as Jacobian–Weyl `REPRODUCING.md`)
 
-Convert to PDF via preferred pipeline (pandoc/LaTeX). Ensure:
-- [ ] DOI table uses v0.1.1 version + concept DOIs
-- [ ] Lean declaration names match `NielsenThetaImage` exports
-- [ ] Non-claims section intact in PDF
-- [ ] No third-party PDF dumps attached as “our” content
-- [ ] Bibliography: Ioana DOI 10.1090/S0894-0347-2011-00706-6; Nielsen NIEWTC pin; Zenodo DOIs
+Ensure before upload:
+- [x] DOI table uses v0.1.1 version + concept DOIs
+- [x] Lean declaration names match `NielsenThetaImage` exports
+- [x] Non-claims section intact in PDF
+- [x] No third-party PDF dumps attached as “our” content
+- [x] Bibliography: Ioana DOI; Nielsen NIEWTC pin; Zenodo DOIs
+- [ ] Re-hash PDF after any final TeX edit; attach PDF to GitHub release
 
 ## Quality bar (lane) — all required
 - [x] Four-role freeze (proof-adversarial, non-claims, package/metadata, Lean/build)
