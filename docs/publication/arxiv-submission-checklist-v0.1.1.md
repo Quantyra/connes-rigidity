@@ -1,6 +1,6 @@
 # arXiv submission checklist — Nielsen reductio refutation v0.1.1
 
-**Status:** Ready for Dan human approval  
+**Status:** Dan APPROVED 2026-08-09 — ready to upload  
 **Category suggestion:** `math.OA` (Operator Algebras); secondary `math.GR` optional  
 **License on arXiv:** match report CC-BY-4.0 or arXiv default + note Zenodo CC-BY-4.0  
 
@@ -65,8 +65,9 @@ Ensure before upload:
 - [x] `#print axioms` profile disclosed
 - [x] GitHub releases cut
 - [x] Zenodo concept + version DOIs live
-- [ ] Dan final approval for arXiv upload
+- [x] Dan final approval for arXiv upload (2026-08-09)
 - [ ] ORCID works import (version DOIs)
+- [ ] arXiv upload completed (record id here: ________)
 
 ## Comments to moderator (optional)
 Bounded audit note in math.OA: obstruction to a specific published application of Ioana Thm 8.2; companion Lean formalization on Zenodo; no claim on Connes T/F.
