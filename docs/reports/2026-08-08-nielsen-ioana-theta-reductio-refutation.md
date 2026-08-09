@@ -154,8 +154,10 @@ Please cite the Lean software release `v0.1.1-obstruction` and this report path 
 | Artifact | DOI |
 |----------|-----|
 | Science report (concept — cite for all versions) | [10.5281/zenodo.21845586](https://doi.org/10.5281/zenodo.21845586) |
-| Science report **v0.1.1** (this version) | [10.5281/zenodo.21859308](https://doi.org/10.5281/zenodo.21859308) |
+| Science report **v0.1.2** (PDF top-level; current) | [10.5281/zenodo.21859653](https://doi.org/10.5281/zenodo.21859653) |
+| Science report v0.1.1 (historical zip) | [10.5281/zenodo.21859308](https://doi.org/10.5281/zenodo.21859308) |
 | Science report v0.1.0 (historical) | [10.5281/zenodo.21845587](https://doi.org/10.5281/zenodo.21845587) |
+| **Primary PDF** | [nielsen-ioana-theta-reductio-arxiv.pdf](https://zenodo.org/records/21859653/files/nielsen-ioana-theta-reductio-arxiv.pdf) |
 | Lean package (concept — cite for all versions) | [10.5281/zenodo.21845588](https://doi.org/10.5281/zenodo.21845588) |
 | Lean **v0.1.1-obstruction** (this version) | [10.5281/zenodo.21859309](https://doi.org/10.5281/zenodo.21859309) |
 | Lean v0.1.0-obstruction (historical) | [10.5281/zenodo.21845589](https://doi.org/10.5281/zenodo.21845589) |

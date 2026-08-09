@@ -1,15 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this report, please cite it using the metadata from this file."
-title: "Refutation of the Nielsen Ioana+Θ Reductio"
+title: "Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication"
 type: report
 authors:
   - family-names: Fredriksen
     given-names: Daniel Eric
     affiliation: "Quantyra Inc"
-url: "https://github.com/Quantyra/connes-rigidity"
+url: "https://doi.org/10.5281/zenodo.21859653"
 repository-code: "https://github.com/Quantyra/connes-rigidity"
 license: CC-BY-4.0
-version: "0.1.1-report"
+version: "0.1.2-report"
 keywords:
   - Connes rigidity
   - Ioana
@@ -17,17 +17,16 @@ keywords:
   - Quantyra
   - Nielsen
 abstract: >-
-  Bounded public report: Nielsen's application of Ioana's Theorem 8.2
-  (JAMS 2011) to the twisted comultiplication Θ fails because hypothesis
-  (2) is violated by the by-construction containment im(Θ) ⊆ A_G ⊗̄ L(H).
-  Does not prove or refute Connes rigidity and does not settle OpenAI or
-  Zhou counterexamples. Companion Lean tag v0.1.1-obstruction
-  (DOI 10.5281/zenodo.21859309). Version DOI 10.5281/zenodo.21859308;
-  concept DOI 10.5281/zenodo.21845586.
+  Bounded public report: Ioana's Theorem 8.2 (JAMS 2011) does not apply to the
+  twisted comultiplication Θ(f u_g)=f u_g ⊗ Φ(u_g) because hypothesis (2) fails
+  by the by-construction containment im(Θ) ⊆ A_G ⊗̄ L(H). Does not prove or
+  refute Connes rigidity and does not settle OpenAI or Zhou counterexamples.
+  Companion Lean tag v0.1.1-obstruction (DOI 10.5281/zenodo.21859309).
+  Version DOI 10.5281/zenodo.21859653; concept DOI 10.5281/zenodo.21845586.
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.21859308"
-    description: "Version DOI v0.1.1-report"
+    value: "10.5281/zenodo.21859653"
+    description: "Version DOI v0.1.2-report (PDF top-level)"
   - type: doi
     value: "10.5281/zenodo.21845586"
     description: "Concept DOI (all versions)"

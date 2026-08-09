@@ -9,7 +9,8 @@
 |--------|-----|
 | Science git | `dda001b` / tag `v0.1.1-report` |
 | Lean git | `c1e6dfb` / tag `v0.1.1-obstruction` |
-| Science version DOI | https://doi.org/10.5281/zenodo.21859308 |
+| Science version DOI (current, PDF) | https://doi.org/10.5281/zenodo.21859653 |
+| Science version DOI (v0.1.1 zip) | https://doi.org/10.5281/zenodo.21859308 |
 | Science concept DOI | https://doi.org/10.5281/zenodo.21845586 |
 | Lean version DOI | https://doi.org/10.5281/zenodo.21859309 |
 | Lean concept DOI | https://doi.org/10.5281/zenodo.21845588 |
