@@ -14,8 +14,8 @@
 | Lean version DOI | https://doi.org/10.5281/zenodo.21859309 |
 | Lean concept DOI | https://doi.org/10.5281/zenodo.21845588 |
 
-## Title (suggested)
-Refutation of a Nielsen application of Ioana’s Theorem 8.2 to a twisted comultiplication
+## Title (camera-ready)
+Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication
 
 ## Abstract (camera-ready, ≤~1920 chars)
 We examine J. L. Nielsen’s argument that applies Ioana’s Theorem 8.2
@@ -45,16 +45,18 @@ Connes rigidity; Ioana theorem; twisted comultiplication; Popa intertwining; Lea
 - Markdown (long form): `docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md`
 - **arXiv TeX (A001-style):** `docs/notes/nielsen-ioana-theta-reductio-arxiv.tex`
 - **Rendered PDF:** `docs/notes/nielsen-ioana-theta-reductio-arxiv.pdf`
-- **PDF SHA-256:** `180885D6AA3A46E0FA43CF2BB02433D1840B107CDC09E7EBE0F7E19EBFBA5BC2` (rebuild may change; re-hash before upload)
-- **Build:** two-pass `pdflatex` (same as Jacobian–Weyl `REPRODUCING.md`)
+- **PDF SHA-256:** `C573090FE2AA13661229D4C75E88A61476762310350A62DBBB3E90DEFF920E60`
+- **Pages:** 4 (after quality-gap close: notation, Popa cite, Lean verify recipe, Remarks)
+- **Build:** two-pass `pdflatex`; packages `array`, `seqsplit`, `xurl` (margin-safe hashes/paths)
 
 Ensure before upload:
 - [x] DOI table uses v0.1.1 version + concept DOIs
 - [x] Lean declaration names match `NielsenThetaImage` exports
+- [x] Module paths + tag tree URL + cold-clone verify commands
 - [x] Non-claims section intact in PDF
 - [x] No third-party PDF dumps attached as “our” content
-- [x] Bibliography: Ioana DOI; Nielsen NIEWTC pin; Zenodo DOIs
-- [ ] Re-hash PDF after any final TeX edit; attach PDF to GitHub release
+- [x] Bibliography: Ioana DOI; Popa 2006; Nielsen NIEWTC pin; Zenodo DOIs
+- [x] Re-hash PDF after quality-gap TeX edit; attach PDF+TeX to GitHub release
 
 ## Quality bar (lane) — all required
 - [x] Four-role freeze (proof-adversarial, non-claims, package/metadata, Lean/build)
