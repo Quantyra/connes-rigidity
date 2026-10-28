@@ -1,6 +1,6 @@
-# Verification record — v0.1.3-report candidate
+# Verification record — prepared v0.1.3-report
 
-Date: 2026-10-28. **Author verification only; independent publication gate pending.** This file is the public-safe closeout surface to update after independent reviews. It is not a final-review PASS or a fresh Lean build certificate.
+Date: 2026-10-28. **Prepared, unreleased version; publication gate pending.** This public-safe record distinguishes completed independent reviews at their exact commits from pending checks of the prepared artifacts. It is not an aggregate PASS or a fresh Lean build certificate.
 
 ## Source and version checks
 
@@ -30,13 +30,15 @@ Final packaging normalizes the three source-package inputs to LF using scoped `.
 
 **Nonfatal environment diagnostic:** both Tectonic invocations printed `Fontconfig error: Cannot load default config file: No such file: (null)`. The bundled TeX fonts loaded, both builds completed, and visual inspection found no missing glyphs. This diagnostic is recorded rather than hidden. Build logs and page renders remain outside the public repository.
 
+Prepared-artifact check (28 October 2026, successor to `bdbb133`): both the manuscript build and a fresh four-member ZIP extraction used `tectonic --keep-logs --only-cached nielsen-ioana-theta-reductio-arxiv.tex` in separate private directories and exited 0. All six pages matched in extracted text and 1.5x RGB pixels; all six were visually inspected. No unresolved references/citations, box warnings or missing-character diagnostics were found. The Fontconfig diagnostic above recurred in both builds. These are author artifact checks; independent final artifact delta reviews remain pending.
+
 ## Lean source inspection and coverage
 
 Repository: https://github.com/Quantyra/connes-rigidity-lean
 Tag: `v0.1.1-obstruction`
 Exact peeled SHA: `c1e6dfb7347261336714e57de86e6f25c7627461`.
 
-`git ls-remote` confirmed the tag target. A private, no-checkout clone was used for `git show <SHA>:<module-path>` source inspection. No Lean source was modified and **no local Lean build was run**. The independent Lean auditor must supply current build and dependency-closure evidence; the author does not infer a fresh compilation result from historical metadata.
+`git ls-remote` confirmed the tag target. A private, no-checkout clone was used for `git show <SHA>:<module-path>` source inspection. No Lean source was modified and **no local Lean build was run**. The independent Lean auditor verified historical full CI run [31303253077](https://github.com/Quantyra/connes-rigidity-lean/actions/runs/31303253077), job 93219377213, at the exact anchor: 3188 jobs including the root and cited targets, with source-hole and register checks. This historical verification does not supply the pending fresh declaration-level kernel evidence.
 
 | Claim / scope | Coverage | Exact module and declaration at the pinned SHA | Limitation |
 |---|---|---|---|
@@ -51,22 +53,28 @@ The source-inspected bridge uses the supported algebra's nonzero local unit for 
 
 ## Author repair provenance — 28 October 2026
 
-This repair follows independent reviews of preserved commit `7ee23d1dc88f435725cfc20e576d49a5d30a58a2`: proof-adversarial REVISE (M1), non-claims PASS with two minors, and package/metadata PASS. Those verdicts apply to the old candidate only. The revised candidate still requires affected-role review and parent gate resolution; fresh kernel verification is being handled separately. No final release cleanup or approval is claimed.
+This repair follows independent reviews of preserved commit `7ee23d1dc88f435725cfc20e576d49a5d30a58a2`: proof-adversarial REVISE (M1), non-claims PASS with two minors, and package/metadata PASS. Those verdicts apply to the old candidate only. Subsequent independent rechecks resolved the findings as recorded below; final artifact delta reviews and fresh kernel verification remain pending. No release approval is claimed.
 
 M1: abstract, Section 6, declaration table and coverage row now explicitly distinguish the `Unit`/`True` placeholder and definitional licensing from the classical obstruction and Ioana's conclusion. L1: scope separates obtaining a morphism from Nielsen's subsequent injectivity argument. L2: the long-report conclusion now says “does not go through” for this application; historical filenames are retained. N1: the local analytic witness target is consistently B. N2: both-target citation adds Nielsen p.24 Case (II) and p.27. N4: the existing unit witness explicitly explains why right-target non-intertwining is false here. Non-claims minor 2: the obsolete bridge entry has a dated superseded notice and current-coverage link, with historical text preserved.
 
 N3: the parent checked the [official Annals page](https://annals.math.princeton.edu/2006/163-3/p03) and [official PDF](https://annals.math.princeton.edu/wp-content/uploads/annals-v163-n3-p03.pdf), confirming 163 (2006), 809–899, DOI 10.4007/annals.2006.163.809. The correct bibliography is retained; Ioana Theorem 1.3.1 remains the direct criterion citation and Popa remains “see also”.
 
-All new private author receipts are under `paper-revision-20261028/author-repair/`; prior candidate receipts are untouched. The new PDF and ZIP replace only the working candidate paths, with old bytes preserved in Git. The rebuilt source bundle is checked against LF-normalized Git source bytes, then built in a fresh directory and compared page-by-page for text and pixels. No Lean or cloud commands were run by the author.
+Private author receipts and prior candidate evidence are preserved outside the public repository. The new PDF and ZIP replace only the working candidate paths, with old bytes preserved in Git. The rebuilt source bundle is checked against LF-normalized Git source bytes, then built in a fresh directory and compared page-by-page for text and pixels. No Lean or cloud commands were run by the author.
 
-## Independent gate — update on closeout
+## Independent gate — prepared artifacts
 
-| Role | Current verdict | Evidence |
+These are recorded independent verdicts, not author signoff of successor bytes.
+
+| Role / check | Recorded verdict | Scope and remaining work |
 |---|---|---|
-| Proof-adversarial | PENDING | Parent-coordinated review of committed candidate |
-| Non-claims | PENDING | Parent-coordinated review of committed candidate |
-| Package/metadata | PENDING | Parent-coordinated review of committed candidate |
-| Lean/build/audit | PENDING | Exact pinned SHA, build, proof-hole and axiom closure, statement match required |
-| Human approval | PENDING | Historical August approval does not apply |
+| Proof-adversarial | PASS at `bdbb133e0accf4754da419aa8341ee1b1f3be844` | Earlier placeholder finding and companion licensing qualification resolved; final artifact delta review pending |
+| Non-claims | PASS at `8eb09837d2c29d932d91b2b712f1008da4f7cb6b` | Both earlier minors resolved; subsequent companion qualification and final artifact delta review pending |
+| Package/metadata | PASS at `bdbb133e0accf4754da419aa8341ee1b1f3be844` | Independent four-member ZIP rebuild matched all six pages in text and pixels; final artifact delta review pending |
+| Lean source-to-paper comparison | PASS at `bdbb133e0accf4754da419aa8341ee1b1f3be844` | Semantic interface, classical import, placeholder and definitional licensing limits confirmed; final delta review pending |
+| Historical exact-anchor build | Independently verified at `c1e6dfb7347261336714e57de86e6f25c7627461` | Historical full build and source/register checks; not a fresh kernel audit |
+| Lean/build/audit final gate | REVISE; fresh GCP kernel evidence pending | Earlier attempt stopped during setup before any Lean job; fresh declaration-level type/proof/axiom evidence and independent acceptance remain required |
+| Final artifact delta reviews | PENDING | Exact diff, regenerated PDF/TeX/ZIP identities, metadata and build-provenance assertions require independent checks |
 
-Aggregate: **not approved for public freeze**. No publication, push, tag, release, upload or outreach occurred in the author phase. Remaining work: independent reviews, resolution of findings, gate-approved finalization and any subsequent DOI/approval updates.
+The prepared artifact delta removes transient review wording from the manuscript and attributes historical verification without claiming a fresh build. Mathematical claims, citations, Lean anchor and qualifications are unchanged. Author typesetting and bundle checks do not confer reviewer PASS on these new bytes.
+
+Aggregate: **not approved for public freeze**. Version production is already authorized; ordinary GitHub release remains subject to the required publication gates, without an additional human-approval prerequisite. ArXiv submission and outreach require separate human approval. No push, tag, release, upload or outreach occurred in this preparation. Later accepted gate evidence and status can be recorded without changing the manuscript artifacts.

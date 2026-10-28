@@ -17,12 +17,13 @@ keywords:
   - Quantyra
   - Nielsen
 abstract: >-
-  Bounded report candidate: Ioana's Theorem 8.2 (JAMS 2011) does not apply to the
+  Bounded report: Ioana's Theorem 8.2 (JAMS 2011) does not apply to the
   twisted comultiplication Θ(f u_g)=f u_g ⊗ Φ(u_g) because hypothesis (2) fails
   by the by-construction containment im(Θ) ⊆ A_G ⊗̄ L(H). Does not prove or
   refute Connes rigidity and does not settle OpenAI or Zhou counterexamples.
   Companion Lean tag v0.1.1-obstruction (DOI 10.5281/zenodo.21859309).
-  Local review candidate dated 2026-10-28; no version DOI or release date.
+  Prepared, unreleased version dated 2026-10-28; publication gate pending.
+  No version DOI or release date.
   Corrects the theorem summary and responds to the 49-page Nielsen Section 21
   and retained Section 9 appeal. Concrete image situation is classically
   imported; the semantic containment-to-intertwining consequence is proved.

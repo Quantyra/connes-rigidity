@@ -1,6 +1,8 @@
 Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication
 Daniel Eric Fredriksen — v0.1.3-report — 28 October 2026
-LOCAL REVIEW CANDIDATE. Not approved for submission or release.
+Prepared manuscript source for v0.1.3-report.
+For publication-gate status and verification provenance, see:
+https://github.com/Quantyra/connes-rigidity/blob/main/docs/publication/verification-v0.1.3.md
 
 This archive contains the complete manuscript source, an inline bibliography,
 source identity/page anchors and these build instructions. No external figures,
@@ -28,6 +30,7 @@ reviewed PDF and archive bytes. The source bundle is for typesetting this paper,
 not for reproducing the companion Lean build or redistributing cited sources.
 
 Historical v0.1.2-report DOI 10.5281/zenodo.21859653 identifies the previous
-version, not this candidate. No DOI has been assigned to v0.1.3-report.
+version, not these revised bytes. No DOI has been assigned to v0.1.3-report.
 Lean v0.1.1-obstruction at c1e6dfb7347261336714e57de86e6f25c7627461
-retains its historical identity; independent review of this candidate is pending.
+retains its historical identity. The science concept DOI
+10.5281/zenodo.21845586 identifies all versions.

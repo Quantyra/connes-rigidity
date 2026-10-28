@@ -2,7 +2,7 @@
 
 Science / reconstruction satellite for the Quantyra Jenny Connes rigidity audit.
 
-## Current candidate: v0.1.3-report — 28 October 2026
+## Prepared version: v0.1.3-report — 28 October 2026
 
 **Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication**, Daniel Eric Fredriksen.
 
@@ -13,7 +13,7 @@ Science / reconstruction satellite for the Quantyra Jenny Connes rigidity audit.
 
 This revision corrects our overstatement of Theorem 8.2's input and injectivity conclusion, addresses all three defenses in Nielsen's 49-page Section 21, and separately compares the hypotheses of the retained Section 9 appeal. The existing containment-to-intertwining obstruction remains bounded to this theorem application.
 
-**Local review candidate only.** Four independent reviews and final human approval are pending. No candidate tag, release, upload or version DOI exists. Historical approval does not approve these bytes.
+**Prepared, unreleased version; publication gate pending.** Completed reviews and remaining fresh-kernel and final artifact delta checks are recorded in the [verification record](docs/publication/verification-v0.1.3.md). No tag, release, upload or version DOI exists for this version. Production of this version is authorized; arXiv submission and outreach require separate human approval. Historical approval does not approve these bytes.
 
 ## Historical deposit and Lean companion
 

@@ -1,6 +1,6 @@
-# Submission checklist — v0.1.3-report candidate
+# Submission checklist — prepared v0.1.3-report
 
-Date: 2026-10-28. **Local candidate; not approved for submission or publication.** The previous checklist and Dan's August approval are historical only. No new DOI, release or tag has been created.
+Date: 2026-10-28. **Prepared, unreleased version; publication gate pending.** The previous checklist and Dan's August approval are historical only. No new DOI, release or tag has been created.
 
 Title: **Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication**
 Author: Daniel Eric Fredriksen, Quantyra Inc.
@@ -17,7 +17,7 @@ License: CC-BY-4.0 for Quantyra-authored manuscript and documentation.
 - [Verification record and Lean coverage matrix](verification-v0.1.3.md)
 - [Primary-source identities and page anchors](../sources/nielsen-2026-10-28-identity.md)
 
-The immutable candidate is the science commit containing these artifacts; record its exact SHA in the parent review packet. The manifest uses file hashes rather than a self-referential commit hash. Proposed version: `v0.1.3-report`. The canonical remote was fetched and checked: main was `c2d61f5179507af2c2184d837ee9458e8d766a57`; latest remote tag was `v0.1.1-report`; the subsequent public deposit is v0.1.2-report. No existing version is overwritten.
+The immutable candidate is the science commit containing these artifacts; record its exact SHA in the parent review packet. The manifest uses file hashes rather than a self-referential commit hash. Prepared version: `v0.1.3-report`. The canonical remote was fetched and checked: main was `c2d61f5179507af2c2184d837ee9458e8d766a57`; latest remote tag was `v0.1.1-report`; the subsequent public deposit is v0.1.2-report. No existing version is overwritten.
 
 ## Author checks completed
 
@@ -28,7 +28,7 @@ The immutable candidate is the science commit containing these artifacts; record
 - [x] Existing containment witness, Lean anchors, classical import and non-claims preserved.
 - [x] Tectonic build and clean extraction/rebuild of the source bundle succeeded; references and layout checked; all six pages visually inspected.
 - [x] Historical source pins retained; no new raw third-party PDF or private runtime logs bundled.
-- [x] Citation and Zenodo metadata identify a candidate with no new DOI; historical DOI explicitly historical.
+- [x] Citation and Zenodo metadata identify a prepared, unreleased version with no new DOI; historical DOI explicitly historical.
 
 ## Repair status — 28 October 2026
 
@@ -37,17 +37,20 @@ The immutable candidate is the science commit containing these artifacts; record
 - [x] Non-claims minors: explicit placeholder coverage and dated historical bridge notice.
 - [x] N3 parent primary-source confirmation retained: Popa pp.809–899; direct Ioana criterion citation unchanged.
 
-Prior reviews apply to commit `7ee23d1dc88f435725cfc20e576d49a5d30a58a2`, preserved in Git. These are author repairs, not reviewer signoff. Affected-role re-review, fresh kernel evidence and the parent four-role gate remain pending.
+Early findings at `7ee23d1dc88f435725cfc20e576d49a5d30a58a2` remain preserved in Git and are resolved by the recorded rechecks below. Final artifact delta reviews, fresh kernel evidence and the parent four-role gate remain pending; author preparation is not reviewer signoff.
 
 ## Required closeout — pending
 
-- [ ] Proof-adversarial review at the candidate commit.
-- [ ] Non-claims review at the candidate commit.
-- [ ] Package/metadata review at the candidate commit.
+- [x] Proof-adversarial PASS at `bdbb133e0accf4754da419aa8341ee1b1f3be844`; earlier blocking finding resolved.
+- [x] Non-claims PASS at `8eb09837d2c29d932d91b2b712f1008da4f7cb6b`; both earlier minors resolved.
+- [x] Package/metadata PASS at `bdbb133e0accf4754da419aa8341ee1b1f3be844`.
+- [x] Source-to-paper comparison PASS at `bdbb133e0accf4754da419aa8341ee1b1f3be844`.
+- [x] Historical full build and source/register checks independently verified at the unchanged Lean anchor.
+- [ ] Independent final artifact delta reviews of the prepared commit and regenerated artifacts.
 - [ ] Independent Lean/build/audit evidence at `c1e6dfb7347261336714e57de86e6f25c7627461`, including build, proof-hole/axiom closure and statement-match checks.
 - [ ] Resolve blocking findings; rebuild/re-hash changed artifacts and rerun affected roles.
 - [ ] Parent records exact reviewed commit, four role verdicts, and aggregate decision in its publication packet; mirror public-safe closeout in `verification-v0.1.3.md`.
-- [ ] Final human approval for the revised artifact; no inherited arXiv approval.
-- [ ] Separately authorized finalization: push/tag/release/upload only after gates. Record a new DOI only if actually issued; do not assign the v0.1.2 DOI to new bytes.
+- [ ] Separate human approval before arXiv submission or outreach; neither is part of version production.
+- [ ] Ordinary GitHub release only after required gates; no additional human approval is a prerequisite for already-authorized version production. No publication action is part of this preparation. Record a new DOI only if actually issued; do not assign the v0.1.2 DOI to new bytes.
 
 Historical science DOI: https://doi.org/10.5281/zenodo.21859653 (v0.1.2-report). Science concept DOI: https://doi.org/10.5281/zenodo.21845586. Lean v0.1.1-obstruction DOI: https://doi.org/10.5281/zenodo.21859309.
