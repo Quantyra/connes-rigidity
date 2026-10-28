@@ -120,5 +120,7 @@ Update `S006Status` to `.noGo` with comment pointing at this memo. Keep interfac
 
 ## Lean export
 
+> **Historical / superseded notice — 28 October 2026.** The original bridge-axiom description below is retained as historical content. The current release proves the semantic containment bridge; see the [current coverage matrix](../publication/verification-v0.1.3.md#lean-source-inspection-and-coverage) for the exact declarations, classical import and placeholder-output limitations.
+
 - 
 ielsenTheta_blocks_ioana82_hyp2 in Quantyra-Connes-Rigidity-Lean NielsenThetaBlock`n- Bridge axiom only: image_subseteq_M1_LH_negates_niRight`n

@@ -164,7 +164,7 @@ Historical planning packets remain the August 7 audit and August 8 closeout/v0.1
 
 ## 8. Conclusion
 
-The Nielsen **Ioana+Θ reductio is refuted** as an application of Ioana’s Theorem 8.2: the map \(\Theta\) is built so that a mandatory non-intertwining hypothesis fails.
+The Nielsen **Ioana+Θ reductio does not go through** as an application of Ioana’s Theorem 8.2: the map \(\Theta\) is built so that a mandatory non-intertwining hypothesis fails.
 
 **Remaining open (by design, out of this report’s success criterion):** whether Connes’ conjecture holds; whether any particular counterexample construction is correct.
 

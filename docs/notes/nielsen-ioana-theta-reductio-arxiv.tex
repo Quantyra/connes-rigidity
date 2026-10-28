@@ -50,8 +50,9 @@ Section~9 appeal by comparing the required hypotheses. The argument is
 supported by primary-source pins of Nielsen NIEWTC and Ioana JAMS~2011, and
 by a machine-checked Lean~4 packaging (release
 \texttt{v0.1.1-obstruction}) that imports one classical Nielsen
-by-construction package and proves failure of hypothesis~(2) and
-non-licensing of rigid output for that application. We do not claim that
+by-construction package and proves semantic hypothesis~(2) failure. Its
+non-licensing export is a definitional consequence for a placeholder output,
+not a formalization of Ioana's conclusion or injectivity. We do not claim that
 Connes' rigidity conjecture is true or false, and we do not validate or
 refute the OpenAI or Zhou counterexample constructions.
 \end{abstract}
@@ -102,8 +103,9 @@ classification to extract group morphisms, and derives a contradiction
 conjecture).
 
 \paragraph{In scope.}
-Nielsen's use of $\Theta$ with Ioana's Theorem~8.2 to obtain an injective
-morphism $\delta_2$---the load-bearing step of that reductio---and a
+Nielsen's use of $\Theta$ with Ioana's Theorem~8.2 to obtain a morphism
+$\delta_2$, subsequently argued by Nielsen to be injective---the load-bearing
+step of that reductio---and a
 machine-checked packaging of the obstruction logic.
 
 \paragraph{Out of scope (explicit non-claims).}
@@ -159,13 +161,13 @@ one has the containment
 \[
 \Theta(A_G)\subseteq A_G\,\bar\otimes\, L(H)=M_1\bar\otimes L(\Gamma_2).
 \]
-If a unital image sits inside a von Neumann subalgebra $Q\subseteq M$, then the
-image intertwines into $Q$ in Popa's sense: in the corner criterion take
+If a unital image sits inside a von Neumann subalgebra $B\subseteq M$, then the
+image intertwines into $B$ in Popa's sense: in the corner criterion take
 both projections equal to $1$, the inclusion homomorphism, and the nonzero
 partial isometry $v=1$. The relation $\psi(x)v=vx$ is then immediate
 (\cite[Theorem~1.3.1(1), p.~1184]{Ioana2011}; see also \cite{Popa2006}).
-Thus one does not have $\theta(N)\nprec_M Q$. Taking
-$Q=M_1\bar\otimes L(\Gamma_2)$ shows that the second conjunct of Ioana's
+Thus one does not have $\theta(N)\nprec_M B$. Taking
+$B=M_1\bar\otimes L(\Gamma_2)$ shows that the second conjunct of Ioana's
 hypothesis~(2) fails for this $\Theta$. Therefore Theorem~8.2 does not supply
 the rigid-case group morphisms from this application. The reductio that requires
 $\delta_2$ from that step does not start.
@@ -179,8 +181,8 @@ Definition~8 (p.~21) retains the same formula for $\Theta$ and ambient
 $A_G\bar\otimes A_H$. Remark~11 (p.~23; formerly Remark~21 in the
 46-page source) and Lemma~14 (pp.~26--27) acknowledge the containment
 $\Theta(A_G)\subseteq A_G\bar\otimes L(H)$.
-Nielsen does name both mixed targets and explicitly claims to exclude the
-right one. The issue is that asserted exclusion despite the admitted
+Nielsen does name both mixed targets (p.~24, Case~(II); p.~27) and explicitly
+claims to exclude the right one. The issue is that asserted exclusion despite the admitted
 containment, not a simple omission of the right target.
 
 \paragraph{The targets are different.}
@@ -193,7 +195,8 @@ But the corner criterion permits the unit witness just given.
 Moreover, $\Theta(L^\infty(X))=L^\infty(X)\otimes1$ lies inside the
 right mixed target: the Cartan images are not symmetric between the two
 Bernoulli factors. An argument about the left mixed target cannot establish
-the required non-intertwining into the right mixed target.
+the required non-intertwining into the right mixed target: it is false here
+by the unit witness.
 
 \paragraph{The three defenses in Section~21 (pp.~37--39).}
 Remark~13 (pp.~37--38) invokes deformation fixity of $\Theta(u_g)$ and
@@ -271,6 +274,15 @@ The containment bridge is in
 The cited release is historical \cite{QuantyraLean}; no fresh Lean build is
 claimed here, and the independent audit for this revision is pending.
 
+In Lean, \lean{IoanaRigidOutput} is a placeholder: its carrier is
+\texttt{Unit} and its injectivity field is \texttt{True}. It contains no actual
+group homomorphism or injectivity data. Licensing is \emph{defined} as
+\texttt{hyp2.holds} together with \texttt{Nonempty} of this placeholder output.
+The non-licensing export is therefore a direct consequence of semantic
+hypothesis~(2) failure; it formalizes neither Ioana's conclusion nor injectivity.
+This abstract record is separate from the classical hypothesis failure
+established in Section~3.
+
 {\small
 \begin{center}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.46\textwidth}
@@ -284,7 +296,8 @@ Declaration & Role \\
 \lean{nielsen\_theta\_by\_construction\_blocks\_ioana82\_hyp2}
   & \textbf{Proved:} hypothesis~(2) fails \\[0.35em]
 \lean{nielsen\_theta\_by\_construction\_no\_rigid\_output\_licensed\_by\_hyp2}
-  & \textbf{Proved:} rigid output not licensed by that application \\[0.35em]
+  & \textbf{Proved (definitional):} placeholder output not licensed by
+    semantic hypothesis~(2) \\[0.35em]
 \lean{intertwinesIntoConditionOne\_of\_le}
   & \textbf{Proved:} containment $+$ nonzero unit $\Rightarrow$ condition-(1)
     intertwiner \\

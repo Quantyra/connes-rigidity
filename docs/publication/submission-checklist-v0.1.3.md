@@ -30,6 +30,15 @@ The immutable candidate is the science commit containing these artifacts; record
 - [x] Historical source pins retained; no new raw third-party PDF or private runtime logs bundled.
 - [x] Citation and Zenodo metadata identify a candidate with no new DOI; historical DOI explicitly historical.
 
+## Repair status — 28 October 2026
+
+- [x] M1 placeholder/definitional qualification in abstract, Section 6, table and coverage record.
+- [x] L1/L2 scope and conclusion alignment; N1 witness notation; N2 exact pages; optional N4 witness clarification.
+- [x] Non-claims minors: explicit placeholder coverage and dated historical bridge notice.
+- [x] N3 parent primary-source confirmation retained: Popa pp.809–899; direct Ioana criterion citation unchanged.
+
+Prior reviews apply to commit `7ee23d1dc88f435725cfc20e576d49a5d30a58a2`, preserved in Git. These are author repairs, not reviewer signoff. Affected-role re-review, fresh kernel evidence and the parent four-role gate remain pending.
+
 ## Required closeout — pending
 
 - [ ] Proof-adversarial review at the candidate commit.

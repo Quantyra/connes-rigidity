@@ -8,23 +8,24 @@
   "pages": 6,
   "files": {
     "docs/notes/nielsen-ioana-theta-reductio-arxiv.tex": {
-      "sha256": "0A7178D4D945C75A74AF3ED2B701DC66F4807C80A705A31160765E064EC89EAC",
-      "bytes": 18597
+      "sha256": "154A93AAA1FEB5A667873B39268B0B1CFEF8CBE0F83F36DD5E6D75708A7101FC",
+      "bytes": 19368
     },
     "docs/notes/nielsen-ioana-theta-reductio-arxiv.pdf": {
-      "sha256": "A3E38708B1CFC9A02E8880369E1FD3C79E47964A5E4EE81B0C97E4DD7CE02B59",
-      "bytes": 90516
+      "sha256": "384669AC0828D885F266F1E04A10B1ADDF2ABA43ED4ECDCB5F533A52236A1683",
+      "bytes": 91198
     },
     "docs/publication/nielsen-ioana-theta-v0.1.3-source.zip": {
-      "sha256": "E16F9699CFD3344760BE7C691DFA0B89FDBA67DC51D88237ABFE329B79D08404",
-      "bytes": 9916
+      "sha256": "244CF26D5DB2C9947C6064875B1C80A3132C5CA30DD0D404BD9E32AB449A05AB",
+      "bytes": 10174
     }
   },
   "bundle_members": {
-    "nielsen-ioana-theta-reductio-arxiv.tex": "0A7178D4D945C75A74AF3ED2B701DC66F4807C80A705A31160765E064EC89EAC",
+    "nielsen-ioana-theta-reductio-arxiv.tex": "154A93AAA1FEB5A667873B39268B0B1CFEF8CBE0F83F36DD5E6D75708A7101FC",
     "SOURCE-IDENTITIES.md": "145EB8C72E638CD0B18E325BAFB3A4C2D5F94E34732AB31B0F254FBE4B7E1E44",
     "README.txt": "1688E43BF71D20E3CA6797E34538FBA5FAB5CBB8A3D867C9F3E0E0D7BCB009E4",
     "LICENSE.txt": "5458596E533CD4757DEFECE67CC5FA8AF97994ADFDD4CD63D7224E8E7A0ABD85"
   },
-  "reviewed_commit": "Use the Git commit containing this manifest; no tag has been created."
+  "reviewed_commit": "Use the Git commit containing this manifest; no tag has been created.",
+  "superseded_review_candidate_commit": "7ee23d1dc88f435725cfc20e576d49a5d30a58a2"
 }
