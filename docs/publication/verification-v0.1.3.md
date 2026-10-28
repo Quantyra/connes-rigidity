@@ -26,6 +26,8 @@ tectonic --keep-logs <extracted-dir>/nielsen-ioana-theta-reductio-arxiv.tex
 
 This clean-source build also exited 0. Its six-page text and rendered pages were compared with the candidate PDF. Byte-for-byte PDF reproducibility is not asserted across build timestamps or engines. Conventional two-pass pdflatex instructions are supplied as an alternative recipe, but were not tested in this revision.
 
+Final packaging normalizes the three source-package inputs to LF using scoped `.gitattributes` rules. Their archive bytes match the committed Git blobs. A rebuild after normalization has identical text and pixels on all six pages to the visually inspected PDF; the manifest records the final rebuilt PDF bytes.
+
 **Nonfatal environment diagnostic:** both Tectonic invocations printed `Fontconfig error: Cannot load default config file: No such file: (null)`. The bundled TeX fonts loaded, both builds completed, and visual inspection found no missing glyphs. This diagnostic is recorded rather than hidden. Build logs and page renders remain outside the public repository.
 
 ## Lean source inspection and coverage
