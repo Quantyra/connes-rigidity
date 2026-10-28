@@ -129,9 +129,11 @@ Modules: `ConnesRigidity.NielsenThetaImage`, `ConnesRigidity.NielsenThetaBlock`
 |-------------|---------|
 | `nielsen_theta_by_construction_lands_in_bad_leg` | **Classical import only:** Nielsen NIEWTC definitional Θ package and by-construction image containment as a semantic situation (not a Lean construction of \(A_G\bar\otimes L(H)\)) |
 | `nielsen_theta_by_construction_blocks_ioana82_hyp2` | **Proved:** from that import, Ioana 8.2 hyp (2) fails |
-| `nielsen_theta_by_construction_no_rigid_output_licensed_by_hyp2` | **Proved:** rigid output is not licensed by that failed application |
+| `nielsen_theta_by_construction_no_rigid_output_licensed_by_hyp2` | **Proved (definitional):** placeholder output (`Unit` carrier, `True` injectivity field) not licensed by semantic hypothesis (2); not a formalization of Ioana's conclusion or injectivity |
 | `intertwinesIntoConditionOne_of_le` | **Proved:** containment + nonzero unit ⇒ condition-(1) intertwiner (Popa bridge not axiomatized) |
 | `image_subseteq_M1_LH_blocks_ioana82_hyp2` | **Proved:** semantic containment blocks hyp (2) |
+
+In Lean, `IoanaRigidOutput` is a placeholder with a `Unit` carrier and a `True` injectivity field; it contains no actual group homomorphism or injectivity data. Licensing is defined as `hyp2.holds ∧ Nonempty (IoanaRigidOutput G H)`. The non-licensing export therefore follows directly from semantic hypothesis (2) failure and formalizes neither Ioana's conclusion nor injectivity.
 
 **Axiom profile of main exports:** only
 `nielsen_theta_by_construction_lands_in_bad_leg` + standard Lean foundations (`propext`, `Classical.choice`, `Quot.sound`).
