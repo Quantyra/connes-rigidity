@@ -1,0 +1,30 @@
+{
+  "version": "0.1.3-report",
+  "status": "local review candidate; independent four-role gate pending",
+  "date": "2026-10-28",
+  "base_science_commit": "c2d61f5179507af2c2184d837ee9458e8d766a57",
+  "lean_commit": "c1e6dfb7347261336714e57de86e6f25c7627461",
+  "compiler": "Tectonic 0.17.0",
+  "pages": 6,
+  "files": {
+    "docs/notes/nielsen-ioana-theta-reductio-arxiv.tex": {
+      "sha256": "A6864058AB23165EA930B4815B97DBFF81F56B93379DC160C232800EAD951B2B",
+      "bytes": 19000
+    },
+    "docs/notes/nielsen-ioana-theta-reductio-arxiv.pdf": {
+      "sha256": "7F201F6DF7ED967479001B53834B6AD9B4EA441A208D4D0DC8B4F6E735D2187C",
+      "bytes": 90515
+    },
+    "docs/publication/nielsen-ioana-theta-v0.1.3-source.zip": {
+      "sha256": "9EA2E7714D8A542605176BF23FE5177FE636E02464181855BB151C3A7A914F1D",
+      "bytes": 10028
+    }
+  },
+  "bundle_members": {
+    "nielsen-ioana-theta-reductio-arxiv.tex": "A6864058AB23165EA930B4815B97DBFF81F56B93379DC160C232800EAD951B2B",
+    "SOURCE-IDENTITIES.md": "F7F5358BD6EA8BA8193867A1E28F5916D6AF13E369DC40C632F3F8ADBD98EAA4",
+    "README.txt": "FD1711A2CF78FDF49DB0D3D13545E2716A817F781D70C9BBB2ECB98A458308DF",
+    "LICENSE.txt": "5458596E533CD4757DEFECE67CC5FA8AF97994ADFDD4CD63D7224E8E7A0ABD85"
+  },
+  "reviewed_commit": "Use the Git commit containing this manifest; no tag has been created."
+}

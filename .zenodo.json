@@ -1,5 +1,5 @@
 {
-  "title": "Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication (v0.1.2-report)",
+  "title": "Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication (v0.1.3-report)",
   "upload_type": "publication",
   "publication_type": "report",
   "creators": [
@@ -9,7 +9,7 @@
     }
   ],
   "license": "cc-by-4.0",
-  "version": "0.1.2-report",
+  "version": "0.1.3-report",
   "keywords": [
     "connes-rigidity",
     "ioana",
@@ -19,5 +19,5 @@
     "nielsen",
     "lean4"
   ],
-  "description": "<p><strong>Bounded public report (v0.1.2).</strong> Short note PDF + long-form package: Ioana Theorem 8.2 does not apply to the twisted comultiplication Θ because hypothesis (2) fails by construction. Primary file: nielsen-ioana-theta-reductio-arxiv.pdf. Companion Lean DOI 10.5281/zenodo.21859309. Version DOI 10.5281/zenodo.21859653; concept DOI 10.5281/zenodo.21845586.</p>"
+  "description": "<p><strong>Local review candidate v0.1.3-report, 28 October 2026; not released.</strong> Corrects the summary of Ioana Theorem 8.2 and responds to Section 21 of the 49-page Nielsen NIEWTC artifact and its retained Section 9 appeal. The bounded result remains failure of hypothesis (2) for the specified twisted comultiplication. No nonexistence of morphisms or impossibility of all other routes is asserted. The Lean companion imports the concrete image situation classically and proves the semantic containment-to-intertwining consequence; no full operator-algebra formalization is claimed. Four-role review and human approval are pending. No new version DOI exists. Historical science v0.1.2 DOI: 10.5281/zenodo.21859653; science concept DOI: 10.5281/zenodo.21845586. Companion Lean v0.1.1-obstruction DOI: 10.5281/zenodo.21859309.</p>"
 }

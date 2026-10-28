@@ -1,22 +1,28 @@
 # Quantyra-Connes-Rigidity
 
-Science / reconstruction satellite for the Quantyra Jenny **Connes rigidity controversy** audit.
+Science / reconstruction satellite for the Quantyra Jenny Connes rigidity audit.
 
-**GitHub:** https://github.com/Quantyra/connes-rigidity  
-**Lean:** https://github.com/Quantyra/connes-rigidity-lean  
-**Planning:** https://github.com/Quantyra/Quantyra-Jenny-Planning (private)
+## Current candidate: v0.1.3-report — 28 October 2026
 
-## Role
-Notes, reconstruction cards, literature extracts, and non-Lean evidence live here. Theorem-grade math goes to the Lean satellite.
+**Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication**, Daniel Eric Fredriksen.
 
-## Public report (v0.1.2)
+- [Revised PDF](docs/notes/nielsen-ioana-theta-reductio-arxiv.pdf) · [TeX](docs/notes/nielsen-ioana-theta-reductio-arxiv.tex)
+- [Long-form report](docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md)
+- [Source bundle](docs/publication/nielsen-ioana-theta-v0.1.3-source.zip) · [checklist](docs/publication/submission-checklist-v0.1.3.md) · [verification and Lean coverage](docs/publication/verification-v0.1.3.md)
+- [Source identity and page anchors](docs/sources/nielsen-2026-10-28-identity.md)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21859653.svg)](https://doi.org/10.5281/zenodo.21859653)
-[![Lean DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21859309.svg)](https://doi.org/10.5281/zenodo.21859309)
+This revision corrects our overstatement of Theorem 8.2's input and injectivity conclusion, addresses all three defenses in Nielsen's 49-page Section 21, and separately compares the hypotheses of the retained Section 9 appeal. The existing containment-to-intertwining obstruction remains bounded to this theorem application.
 
-**PDF:** [nielsen-ioana-theta-reductio-arxiv.pdf](https://zenodo.org/records/21859653/files/nielsen-ioana-theta-reductio-arxiv.pdf) · [DOI](https://doi.org/10.5281/zenodo.21859653)  
-**Long-form:** [report markdown](docs/reports/2026-08-08-nielsen-ioana-theta-reductio-refutation.md)  
-Lean companion: https://github.com/Quantyra/connes-rigidity-lean/releases/tag/v0.1.1-obstruction
+**Local review candidate only.** Four independent reviews and final human approval are pending. No candidate tag, release, upload or version DOI exists. Historical approval does not approve these bytes.
+
+## Historical deposit and Lean companion
+
+Previous public science version: [v0.1.2-report, DOI 10.5281/zenodo.21859653](https://doi.org/10.5281/zenodo.21859653). [Science concept DOI](https://doi.org/10.5281/zenodo.21845586).
+
+Lean: [v0.1.1-obstruction](https://github.com/Quantyra/connes-rigidity-lean/tree/v0.1.1-obstruction), SHA `c1e6dfb7347261336714e57de86e6f25c7627461`, [version DOI](https://doi.org/10.5281/zenodo.21859309). The concrete Nielsen image situation is classically imported; containment-to-intertwining and hypothesis failure are proved on a semantic interface. No full operator-algebra formalization or fresh author-run Lean build is claimed.
 
 ## Non-claims
-This report does **not** assert Connes true/false or OpenAI/Zhou counterexample validity. It only refutes Nielsen’s use of Ioana Thm 8.2 on the map Θ.
+
+This report does not decide Connes rigidity or the validity of OpenAI/Zhou counterexamples. Non-licensing of output by this application does not assert nonexistence of group morphisms or impossibility of other routes.
+
+Canonical repositories: [science](https://github.com/Quantyra/connes-rigidity), [Lean](https://github.com/Quantyra/connes-rigidity-lean). Theorem development belongs in the Lean satellite; this revision introduces no new theorem or Lean code.

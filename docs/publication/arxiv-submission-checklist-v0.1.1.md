@@ -1,5 +1,7 @@
 # arXiv submission checklist — Nielsen reductio refutation v0.1.1
 
+> Historical checklist only. Its approval applies to the August artifact, not v0.1.3-report. See [current candidate checklist](submission-checklist-v0.1.3.md).
+
 **Status:** Dan APPROVED 2026-08-09 — ready to upload  
 **Category suggestion:** `math.OA` (Operator Algebras); secondary `math.GR` optional  
 **License on arXiv:** match report CC-BY-4.0 or arXiv default + note Zenodo CC-BY-4.0  

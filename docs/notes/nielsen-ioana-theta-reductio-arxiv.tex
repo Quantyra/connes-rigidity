@@ -24,7 +24,7 @@ under a twisted comultiplication}
 \author{Daniel Eric Fredriksen\\
 Quantyra Inc.\\
 \url{https://github.com/Quantyra/connes-rigidity}}
-\date{9 August 2026}
+\date{28 October 2026 --- v0.1.3-report (review candidate)}
 
 \begin{document}
 \maketitle
@@ -44,7 +44,9 @@ construction,
 \]
 which is the forbidden tensor leg in Ioana's hypothesis~(2). Consequently
 Theorem~8.2 does not license the rigid-case output for this map, and the
-reductio that depends on that output does not start. The argument is
+reductio that depends on that output does not start. This revision corrects our summary of Theorem~8.2 and addresses the three
+defenses in Nielsen's 49-page revision, Section~21, and its retained
+Section~9 appeal by comparing the required hypotheses. The argument is
 supported by primary-source pins of Nielsen NIEWTC and Ioana JAMS~2011, and
 by a machine-checked Lean~4 packaging (release
 \texttt{v0.1.1-obstruction}) that imports one classical Nielsen
@@ -56,15 +58,27 @@ refute the OpenAI or Zhou counterexample constructions.
 
 \noindent\textbf{MSC 2020:} 46L10, 46L35, 22D25, 03B35.\\
 \textbf{Suggested arXiv categories:} math.OA (primary); math.GR (secondary).\\
-\textbf{Science package:} version DOI
+\textbf{Science package:} v0.1.3-report, local review candidate; no version DOI.\\
+\textbf{Historical science deposit:} version DOI
 \url{https://doi.org/10.5281/zenodo.21859653}
-(v0.1.2-report; PDF on deposit);
+(v0.1.2-report; previous PDF);
 concept DOI \url{https://doi.org/10.5281/zenodo.21845586}.\\
 \textbf{Lean package:} tag \texttt{v0.1.1-obstruction}; version DOI
 \url{https://doi.org/10.5281/zenodo.21859309};
 concept DOI \url{https://doi.org/10.5281/zenodo.21845588}.\\
 \textbf{Lean source (tag tree):}
 \url{https://github.com/Quantyra/connes-rigidity-lean/tree/v0.1.1-obstruction}.
+
+\newpage
+\paragraph{Revision note (28 October 2026).}
+Our previous version overstated Theorem~8.2 by describing its input as unital
+and its conclusion as injective group morphisms. Its general input is a
+$*$-homomorphism; its torsion-free conclusion gives a homomorphism into the
+product group, not asserted injectivity of both coordinates. We correct that
+summary below and distinguish Nielsen's additional injectivity claim. We also
+address Section~21 of the 49-page NIEWTC artifact inspected on 28 October 2026
+and its retained Section~9 appeal. The title, bounded obstruction and Lean
+anchors are unchanged. Independent reviews of this candidate are pending.
 
 \section{Introduction and non-claims}
 
@@ -105,11 +119,24 @@ machine-checked packaging of the obstruction logic.
 
 \section{Ioana's hypothesis~(2)}
 
-Ioana's Theorem~8.2 concerns a unital $*$-homomorphism
-$\theta\colon N\to M$ into a tensor product of two Bernoulli crossed products
-$M=M_1\bar\otimes M_2$. Under stated deformation and rigidity hypotheses, the
-rigid/standard conclusion supplies character data and injective group morphisms.
-That conclusion requires non-intertwining hypotheses, including hypothesis~(2):
+Ioana's Theorem~8.2 takes a general $*$-homomorphism
+$\theta\colon N\to M_1\bar\otimes M_2$, in its stated Bernoulli and
+relative-property~(T) setting. In the torsion-free case it concludes that
+$\theta$ is unital and supplies a character, a group homomorphism
+$\delta\colon\Lambda\to\Gamma_1\times\Gamma_2$ and unitary-conjugacy data.
+It does not state that both coordinate homomorphisms are injective.
+In general it gives a finite-index subgroup $\Lambda_1\subseteq\Lambda$
+and a one-to-one map $\delta\colon\Lambda_1\to\Gamma_1\times\Gamma_2$,
+with a finite subgroup $K$ normalized by every $\delta(\lambda)$ and
+$\delta(\lambda\lambda')^{-1}\delta(\lambda)\delta(\lambda')\in K$;
+the accompanying formula has a nonzero corner and finitely many
+normalizers of the Cartan algebra. This is not an unqualified pair of
+injective coordinate homomorphisms. See \cite[Theorem~8.2,
+pp.~1207--1208]{Ioana2011} for the full statement. Nielsen's desired
+injectivity of $\delta_2$ is a subsequent claim. Our particular $\Theta$ is
+unital, but unitality is not the general input assumption of that theorem.
+
+Both conclusions require the stated hypotheses, including hypothesis~(2):
 \begin{align*}
 \theta(N)&\nprec_M L(\Gamma_1)\bar\otimes M_2,\\
 \theta(N)&\nprec_M M_1\bar\otimes L(\Gamma_2).
@@ -133,22 +160,91 @@ one has the containment
 \Theta(A_G)\subseteq A_G\,\bar\otimes\, L(H)=M_1\bar\otimes L(\Gamma_2).
 \]
 If a unital image sits inside a von Neumann subalgebra $Q\subseteq M$, then the
-image intertwines into $Q$ in Popa's sense: one does not have
-$\theta(N)\nprec_M Q$ (see Popa~\cite{Popa2006}). Taking
+image intertwines into $Q$ in Popa's sense: in the corner criterion take
+both projections equal to $1$, the inclusion homomorphism, and the nonzero
+partial isometry $v=1$. The relation $\psi(x)v=vx$ is then immediate
+(\cite[Theorem~1.3.1(1), p.~1184]{Ioana2011}; see also \cite{Popa2006}).
+Thus one does not have $\theta(N)\nprec_M Q$. Taking
 $Q=M_1\bar\otimes L(\Gamma_2)$ shows that the second conjunct of Ioana's
 hypothesis~(2) fails for this $\Theta$. Therefore Theorem~8.2 does not supply
 the rigid-case group morphisms from this application. The reductio that requires
 $\delta_2$ from that step does not start.
 \end{theorem}
 
-\begin{remark}[Nielsen's own text]
-Nielsen records the containment into the group-algebra leg and treats it as
-``target alignment'' (NIEWTC, Remark~21). Under Ioana's published wording, that
-containment is a failed hypothesis~(2), not a harmless alignment. Nielsen also
-claims non-intertwining conditions~(NI1)--(NI2) hold uniformly via deformation
-and Cartan arguments. Even if those hold for other legs, they do not remove the
-literal containment that negates the second conjunct of hypothesis~(2).
-\end{remark}
+\section{Response to the 49-page Nielsen revision}
+
+Here page numbers refer to the 49-page artifact of NIEWTC
+\cite{Nielsen2026}, identified by its hash in Section~\ref{sec:sources}.
+Definition~8 (p.~21) retains the same formula for $\Theta$ and ambient
+$A_G\bar\otimes A_H$. Remark~11 (p.~23; formerly Remark~21 in the
+46-page source) and Lemma~14 (pp.~26--27) acknowledge the containment
+$\Theta(A_G)\subseteq A_G\bar\otimes L(H)$.
+Nielsen does name both mixed targets and explicitly claims to exclude the
+right one. The issue is that asserted exclusion despite the admitted
+containment, not a simple omission of the right target.
+
+\paragraph{The targets are different.}
+The single factors $A_G\otimes1$ and $1\otimes A_H$ are distinct from
+the left mixed target $L(G)\bar\otimes A_H$ and the right mixed target
+$A_G\bar\otimes L(H)$. Lemma~14 invokes Cartan non-intertwining into
+$L(G)$, declares the right mixed containment irrelevant to corner
+intertwining, and asserts a symmetric exclusion of the right target.
+But the corner criterion permits the unit witness just given.
+Moreover, $\Theta(L^\infty(X))=L^\infty(X)\otimes1$ lies inside the
+right mixed target: the Cartan images are not symmetric between the two
+Bernoulli factors. An argument about the left mixed target cannot establish
+the required non-intertwining into the right mixed target.
+
+\paragraph{The three defenses in Section~21 (pp.~37--39).}
+Remark~13 (pp.~37--38) invokes deformation fixity of $\Theta(u_g)$ and
+the Cartan image $L^\infty(X)\otimes1$, uniformly in $\Phi$.
+Even granting these properties, they are compatible with the right mixed
+containment and do not remove its intertwining witness.
+Remark~14 (p.~38) invokes property~(T) spectral gap and describes an
+exclusion of intertwining into a single tensor factor. Such an exclusion
+does not exclude a mixed target that contains the whole first crossed
+product and the second group algebra.
+Remark~15 (p.~38) identifies genuine involvement of both factors with the
+rigid alternative and refers back to the earlier non-intertwining checks.
+Involvement of both factors is compatible with a mixed-target alternative;
+it does not establish both conjuncts of hypothesis~(2).
+
+This distinction also matters for a trichotomy formulation. Ioana's
+Theorem~C explicitly includes both mixed targets in alternative~(2)
+\cite[p.~1179]{Ioana2011}; its own same-factor and torsion-free setting
+must also be respected. Invoking internal proof machinery does not eliminate
+the disputed premise: the proof of Theorem~8.2 starts under (1)--(2),
+uses assumption~(2) to obtain (8.b), and then applies Theorem~6.1
+\cite[pp.~1208--1209]{Ioana2011}. The existing containment witness is
+therefore still decisive for this particular application. This is
+non-licensing by the theorem, not nonexistence of group morphisms or a
+claim that its conclusion could never hold for special inputs.
+
+\section{The separate appeal to Ioana's Section~9}
+
+Remark~11 also invokes Theorem~9.1, Lemma~9.2(4), Case~(5), and the
+full Section~9 pipeline. This appeal already appeared in the archived
+Remark~21; it is not a new October argument. Ioana does treat a mixed
+case there, so the Section~8 obstruction should not be presented as an
+obstruction to every use of Section~9.
+
+The relevant hypothesis comparison is specific. Theorem~9.1 starts with
+a crossed-product isomorphism
+\[
+ N=C\rtimes\Lambda\ \cong\ qMq,
+ \qquad M=B^\Gamma\rtimes\Gamma,
+\]
+with the actions and groups satisfying its stated assumptions
+\cite[Theorem~9.1, p.~1213]{Ioana2011}. The proof transports
+comultiplication through this isomorphism before using Lemma~9.2 and
+the subsequent cases \cite[pp.~1214--1217]{Ioana2011}.
+The group-factor isomorphism $L(G)\cong L(H)$ assumed by Nielsen does
+not itself supply this crossed-product-isomorphism setup. Constructing
+the injective $\Theta$ is not a construction of that isomorphism, and the
+cited appeal supplies no hypothesis-by-hypothesis replacement. Thus the
+reviewed appeal demonstrates no repair of the application at issue.
+This is a comparison with the published hypotheses, not a new theorem
+that such an extension, or any alternative argument, is impossible.
 
 \section{Lean packaging and verification}
 
@@ -167,7 +263,13 @@ Modules:
 One declaration is a classical import of Nielsen's definitional package and the
 by-construction containment. The remaining named exports below are proved from
 that import on a semantic condition-(1) interface. Lean does not construct the
-spatial tensor product or the concrete range of $\Theta$.
+spatial tensor product or the concrete range of $\Theta$. The main exports
+assert the existence of an imported semantic image situation in which the
+hypothesis fails; they do not construct the concrete analytic objects.
+The containment bridge is in
+\lean{ConnesRigidity.Ioana.OperatorAlgebra.IntertwiningConditionOne}.
+The cited release is historical \cite{QuantyraLean}; no fresh Lean build is
+claimed here, and the independent audit for this revision is pending.
 
 {\small
 \begin{center}
@@ -210,13 +312,21 @@ lake build
 Then confirm: no \texttt{sorry}/\texttt{admit}; axiom/opaque register check as in
 the repository CI; declarations above are present in the named modules.
 
-\section{Primary sources}
+\section{Primary sources}\label{sec:sources}
 
 \begin{itemize}
-\item Nielsen, \emph{Connes' Rigidity Conjecture\ldots} (NIEWTC), Aug~2026;
+\item Nielsen, NIEWTC, 49-page artifact inspected 28 October 2026,
+  title-page date August 2026; 564,856 bytes; PDF SHA-256
+  \sha{BC201CC37F897EEEDA2446D1926AB7945405E5A96CF27176CA0E4157476D324E}.
+  Source: \url{https://philpapers.org/archive/NIEWTC.pdf}, record
+  \url{https://philpapers.org/rec/NIEWTC}.
+  Embedded creation/modification metadata: 28 October 2026,
+  15:26:37 at UTC$-05{:}00$; this is not a certified upload date.
+\item Historical Nielsen NIEWTC, 46 pages, title-page date August 2026;
   PDF SHA-256
   \sha{9529E43EBFF1E38A808397DA0C0FC56CABCB71C41B622FABA54B6B57573D3884}.
-  Local pin; not an arXiv preprint at the time of writing.
+  Historical pin retained for comparison; current page anchors refer to the
+  49-page artifact above.
 \item Ioana, JAMS~24 (2011), DOI
   \url{https://doi.org/10.1090/S0894-0347-2011-00706-6};
   PDF SHA-256
@@ -258,10 +368,11 @@ J.~Amer.\ Math.\ Soc.\ \textbf{24} (2011), 1175--1226.
 
 \bibitem{Nielsen2026}
 J.~L.~Nielsen,
-\emph{Connes' Rigidity Conjecture and the Failure of Recent
-Counterexamples} (NIEWTC), Aug~2026.
-Local pin SHA-256
-\sha{9529E43EBFF1E38A808397DA0C0FC56CABCB71C41B622FABA54B6B57573D3884}.
+\emph{Connes' Rigidity Conjecture: Disproof of the Counterexamples
+and Proof of the Theorem} (NIEWTC), title-page date August 2026.
+49-page artifact inspected 28 October 2026; historical 46-page artifact
+also retained. Identity hashes are listed in Section~\ref{sec:sources}.
+\url{https://philpapers.org/rec/NIEWTC}.
 
 \bibitem{Popa2006}
 S.~Popa,
@@ -285,7 +396,7 @@ comultiplication} (v0.1.2-report),
 Zenodo (2026).
 Version DOI \url{https://doi.org/10.5281/zenodo.21859653};
 concept DOI \url{https://doi.org/10.5281/zenodo.21845586}.
-Deposit includes this note as PDF plus long-form markdown.
+Historical deposit of the previous version, not the present revised PDF.
 
 \end{thebibliography}
 
