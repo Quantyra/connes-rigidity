@@ -22,9 +22,11 @@ abstract: >-
   by the by-construction containment im(Θ) ⊆ A_G ⊗̄ L(H). Does not prove or
   refute Connes rigidity and does not settle OpenAI or Zhou counterexamples.
   Companion Lean tag v0.1.1-obstruction (DOI 10.5281/zenodo.21859309).
-  Prepared, unreleased version dated 2026-10-28; four role PASSes at 9aba11a,
-  with targeted successor evidence/metadata checks and publication gate pending.
-  No version DOI or release date.
+  Manuscript dated 2026-10-28; four role PASSes at 9aba11a, targeted
+  public-verification-prose PASS at 896c1c9, and root metadata/hash/scope PASS
+  for that successor. Final status-only carryforward requires root inspection
+  and exact commit/body authorization before delivery. Release target:
+  v0.1.3-report; this is the prepublication gate record. New version DOI: pending.
   Corrects the theorem summary and responds to the 49-page Nielsen Section 21
   and retained Section 9 appeal. Concrete image situation is classically
   imported; the semantic containment-to-intertwining consequence is proved.

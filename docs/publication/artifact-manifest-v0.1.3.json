@@ -1,6 +1,6 @@
 {
   "version": "0.1.3-report",
-  "status": "prepared, unreleased version; four role PASSes at 9aba11a; targeted successor evidence and metadata checks pending",
+  "status": "prepublication checkpoint dated 2026-10-28 for release target v0.1.3-report; four role PASSes at 9aba11a; targeted prose and root metadata/hash/scope PASS at 896c1c9; final status-only carryforward requires root exact commit/body authorization before delivery; reviewed_commit retains its historical preparation statement",
   "date": "2026-10-28",
   "base_science_commit": "c2d61f5179507af2c2184d837ee9458e8d766a57",
   "lean_commit": "c1e6dfb7347261336714e57de86e6f25c7627461",

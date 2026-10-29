@@ -1,6 +1,6 @@
 # Kernel and audit provenance — v0.1.3-report
 
-Date: 2026-10-28 Hawaii (acceptance 2026-10-29 03:30 UTC). Independent Lean/build/audit PASS applies to science `9aba11a39d6fba5886f0c1cbd73408290b15339e`. This public record and its documentation-only successor require targeted review before release. See the [verification record](verification-v0.1.3.md) for review scopes and unchanged analytic coverage.
+Date: 2026-10-28 Hawaii (acceptance 2026-10-29 03:30 UTC). Independent Lean/build/audit PASS applies to science `9aba11a39d6fba5886f0c1cbd73408290b15339e`. Targeted independent Lean/public-verification review records PASS at `896c1c9`; final status-only carryforward requires root exact-delta inspection and authorization before delivery. See the [verification record](verification-v0.1.3.md) for review scopes and unchanged analytic coverage.
 
 ## Exact source and toolchain
 

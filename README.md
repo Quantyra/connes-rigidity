@@ -2,7 +2,7 @@
 
 Science / reconstruction satellite for the Quantyra Jenny Connes rigidity audit.
 
-## Prepared version: v0.1.3-report — 28 October 2026
+## Version: v0.1.3-report — 28 October 2026
 
 **Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication**, Daniel Eric Fredriksen.
 
@@ -13,7 +13,7 @@ Science / reconstruction satellite for the Quantyra Jenny Connes rigidity audit.
 
 This revision corrects our overstatement of Theorem 8.2's input and injectivity conclusion, addresses all three defenses in Nielsen's 49-page Section 21, and separately compares the hypotheses of the retained Section 9 appeal. The existing containment-to-intertwining obstruction remains bounded to this theorem application.
 
-**Prepared, unreleased version; publication gate pending.** Four independent role PASSes at `9aba11a` and the remaining targeted successor evidence/metadata checks are recorded in the [verification record](docs/publication/verification-v0.1.3.md). No tag, release, upload or version DOI exists for this version. Production of this version is authorized; arXiv submission and outreach require separate human approval. Historical approval does not approve these bytes.
+**Release target: [v0.1.3-report](https://github.com/Quantyra/connes-rigidity/releases/tag/v0.1.3-report).** Four independent role PASSes at `9aba11a`, targeted public-verification-prose PASS at `896c1c9`, and the root metadata/hash/scope PASS for that successor are recorded in the [verification record](docs/publication/verification-v0.1.3.md). Final status-only carryforward requires root inspection and exact commit/body authorization before delivery. This is the prepublication gate record; delivery is recorded by the release. New version DOI: pending. Production of this version is authorized; arXiv submission and outreach require separate human approval. Historical approval does not approve these bytes.
 
 ## Historical deposit and Lean companion
 

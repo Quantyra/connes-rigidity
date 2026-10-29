@@ -1,13 +1,13 @@
-# Submission checklist — prepared v0.1.3-report
+# Submission checklist — v0.1.3-report
 
-Date: 2026-10-28. **Prepared, unreleased version; publication gate pending.** The previous checklist and Dan's August approval are historical only. No new DOI, release or tag has been created.
+Manuscript date: 2026-10-28. **Prepublication gate checkpoint for release target [v0.1.3-report](https://github.com/Quantyra/connes-rigidity/releases/tag/v0.1.3-report).** The previous checklist and Dan's August approval are historical only. New version DOI: pending. Delivery is recorded externally by the release; this checkpoint does not assert a performed upload.
 
 Title: **Hypothesis failure for Ioana's Theorem 8.2 under a twisted comultiplication**
 Author: Daniel Eric Fredriksen, Quantyra Inc.
 Suggested categories: math.OA; optionally math.GR. MSC: 46L10, 46L35, 22D25, 03B35.
 License: CC-BY-4.0 for Quantyra-authored manuscript and documentation.
 
-## Candidate files
+## Version files
 
 - [Six-page PDF](../notes/nielsen-ioana-theta-reductio-arxiv.pdf)
 - [Authoritative TeX and abstract](../notes/nielsen-ioana-theta-reductio-arxiv.tex)
@@ -17,7 +17,7 @@ License: CC-BY-4.0 for Quantyra-authored manuscript and documentation.
 - [Verification record and Lean coverage matrix](verification-v0.1.3.md)
 - [Primary-source identities and page anchors](../sources/nielsen-2026-10-28-identity.md)
 
-The immutable candidate is the science commit containing these artifacts; record its exact SHA in the parent review packet. The manifest uses file hashes rather than a self-referential commit hash. Prepared version: `v0.1.3-report`. The canonical remote was fetched and checked: main was `c2d61f5179507af2c2184d837ee9458e8d766a57`; latest remote tag was `v0.1.1-report`; the subsequent public deposit is v0.1.2-report. No existing version is overwritten.
+The immutable candidate is the science commit containing these artifacts; record its exact SHA in the parent review packet. The manifest uses file hashes rather than a self-referential commit hash. Release target: `v0.1.3-report`. The canonical remote was fetched and checked: main was `c2d61f5179507af2c2184d837ee9458e8d766a57`; latest remote tag was `v0.1.1-report`; the subsequent public deposit is v0.1.2-report. No existing version is overwritten.
 
 ## Author checks completed
 
@@ -28,7 +28,7 @@ The immutable candidate is the science commit containing these artifacts; record
 - [x] Existing containment witness, Lean anchors, classical import and non-claims preserved.
 - [x] Tectonic build and clean extraction/rebuild of the source bundle succeeded; references and layout checked; all six pages visually inspected.
 - [x] Historical source pins retained; no new raw third-party PDF or private runtime logs bundled.
-- [x] Citation and Zenodo metadata identify a prepared, unreleased version with no new DOI; historical DOI explicitly historical.
+- [x] Citation and Zenodo metadata identify the version, manuscript date and prepublication gate checkpoint; new DOI pending, historical DOI explicitly historical.
 
 ## Repair status — 28 October 2026
 
@@ -37,18 +37,18 @@ The immutable candidate is the science commit containing these artifacts; record
 - [x] Non-claims minors: explicit placeholder coverage and dated historical bridge notice.
 - [x] N3 parent primary-source confirmation retained: Popa pp.809–899; direct Ioana criterion citation unchanged.
 
-Early findings at `7ee23d1dc88f435725cfc20e576d49a5d30a58a2` remain preserved in Git and are resolved by the recorded rechecks below. The final manuscript and fresh Lean role PASSes are recorded below; targeted successor-prose review and the parent aggregate gate remain pending. Author preparation is not reviewer signoff.
+Early findings at `7ee23d1dc88f435725cfc20e576d49a5d30a58a2` remain preserved in Git and are resolved by the recorded rechecks below. The final manuscript and fresh Lean role PASSes, targeted successor-prose PASS and root successor checks are recorded below; final status-only carryforward requires root inspection and exact authorization before delivery. Author preparation is not reviewer signoff.
 
-## Required closeout — pending
+## Required closeout — prepublication checkpoint
 
 - [x] Proof-adversarial, non-claims and package/metadata final PASSes at `9aba11a39d6fba5886f0c1cbd73408290b15339e`.
 - [x] Independent Lean/build/audit PASS at the same science commit, accepting corrected canonical source `c1e6dfb7347261336714e57de86e6f25c7627461`, fresh target build, twelve kernel profiles and statement match; operational closure checked separately.
 - [x] Historical full 3188-job CI remains separate support; fresh target is `ConnesRigidity.NielsenThetaImage`, not a full-project build.
 - [x] Final PDF/TeX/ZIP and all four bundle-member identities preserved; no rebuild or mathematical/source/coverage change in this evidence-only successor.
-- [ ] Targeted independent Lean acceptance of the new public verification prose and exact successor diff.
-- [ ] Parent metadata/hash/link/scope check of the exact successor; record conditional docs-only carryforward of the original three PASSes, without attributing unseen-byte review to those reviewers.
-- [ ] Parent records exact successor commit, all four role scopes and aggregate release decision in its publication packet.
+- [x] Targeted independent Lean/public-verification review: PASS for `896c1c9f070d46e8c586dc727d049dcf289667e6`; report SHA256 `72baaf2aa2dbbdc4c60fd65b77273981b67daa140f3b79e8150c704d19f8bdf2`.
+- [x] Root metadata/hash/link/scope PASS for `896c1c9f070d46e8c586dc727d049dcf289667e6`: record `root-check-896c1c9`, dated 2026-10-28, SHA256 `53f41f99ceb402cd4278282270a25144c195f6471b75653987784822b565be10`. Root accepts that successor for conditional docs-only carryforward; the original four role PASSes remain at `9aba11a39d6fba5886f0c1cbd73408290b15339e`.
+- [ ] At this prepublication checkpoint, root must inspect the final status-only delta and bind the final commit, body hash, seven assets and aggregate release decision before delivery. The final commit is bound externally, without attributing unseen-byte review to earlier reviewers. Carryforward preserves all scientific/source/coverage text, evidence identities, PDF/TeX/ZIP and four bundle members; any substantive change requires affected-role review. The targeted report retains its nonblocking private-summary qualification and all historical failure evidence.
 - [ ] Separate human approval before arXiv submission or outreach; neither is part of version production.
-- [ ] Ordinary GitHub release only after required gates; no additional human approval is a prerequisite for already-authorized version production. No publication action is part of this preparation. Record a new DOI only if actually issued; do not assign the v0.1.2 DOI to new bytes.
+- [ ] Ordinary GitHub release only after required gates; no additional human approval is a prerequisite for already-authorized version production. This checklist is the prepublication checkpoint; performed delivery is recorded by the release and delivery receipt. Record a new DOI only if actually issued; do not assign the v0.1.2 DOI to new bytes.
 
 Historical science DOI: https://doi.org/10.5281/zenodo.21859653 (v0.1.2-report). Science concept DOI: https://doi.org/10.5281/zenodo.21845586. Lean v0.1.1-obstruction DOI: https://doi.org/10.5281/zenodo.21859309.
