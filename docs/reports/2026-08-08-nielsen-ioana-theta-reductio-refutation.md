@@ -5,7 +5,7 @@ Long-form companion to the existing paper.
 **Quantyra Inc. — Jenny research lane**
 **Date:** 2026-10-28 (revises the 2026-08-08 report)
 **Authors:** Daniel Eric Fredriksen (Quantyra); orchestrated audit with machine-checked Lean core
-**Status:** v0.1.3-report prepared, unreleased version; publication gate pending; no new version DOI (see [verification record](../publication/verification-v0.1.3.md))
+**Status:** v0.1.3-report prepared, unreleased version; four role PASSes at `9aba11a`, targeted successor evidence/metadata checks and publication gate pending; no new version DOI (see [verification record](../publication/verification-v0.1.3.md))
 **Lean artifact:** https://github.com/Quantyra/connes-rigidity-lean (tag `v0.1.1-obstruction`)
 **Science repo:** https://github.com/Quantyra/connes-rigidity (prepared version `v0.1.3-report`; not tagged)
 

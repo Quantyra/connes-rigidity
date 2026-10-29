@@ -37,19 +37,17 @@ The immutable candidate is the science commit containing these artifacts; record
 - [x] Non-claims minors: explicit placeholder coverage and dated historical bridge notice.
 - [x] N3 parent primary-source confirmation retained: Popa pp.809–899; direct Ioana criterion citation unchanged.
 
-Early findings at `7ee23d1dc88f435725cfc20e576d49a5d30a58a2` remain preserved in Git and are resolved by the recorded rechecks below. Final artifact delta reviews, fresh kernel evidence and the parent four-role gate remain pending; author preparation is not reviewer signoff.
+Early findings at `7ee23d1dc88f435725cfc20e576d49a5d30a58a2` remain preserved in Git and are resolved by the recorded rechecks below. The final manuscript and fresh Lean role PASSes are recorded below; targeted successor-prose review and the parent aggregate gate remain pending. Author preparation is not reviewer signoff.
 
 ## Required closeout — pending
 
-- [x] Proof-adversarial PASS at `bdbb133e0accf4754da419aa8341ee1b1f3be844`; earlier blocking finding resolved.
-- [x] Non-claims PASS at `8eb09837d2c29d932d91b2b712f1008da4f7cb6b`; both earlier minors resolved.
-- [x] Package/metadata PASS at `bdbb133e0accf4754da419aa8341ee1b1f3be844`.
-- [x] Source-to-paper comparison PASS at `bdbb133e0accf4754da419aa8341ee1b1f3be844`.
-- [x] Historical full build and source/register checks independently verified at the unchanged Lean anchor.
-- [ ] Independent final artifact delta reviews of the prepared commit and regenerated artifacts.
-- [ ] Independent Lean/build/audit evidence at `c1e6dfb7347261336714e57de86e6f25c7627461`, including build, proof-hole/axiom closure and statement-match checks.
-- [ ] Resolve blocking findings; rebuild/re-hash changed artifacts and rerun affected roles.
-- [ ] Parent records exact reviewed commit, four role verdicts, and aggregate decision in its publication packet; mirror public-safe closeout in `verification-v0.1.3.md`.
+- [x] Proof-adversarial, non-claims and package/metadata final PASSes at `9aba11a39d6fba5886f0c1cbd73408290b15339e`.
+- [x] Independent Lean/build/audit PASS at the same science commit, accepting corrected canonical source `c1e6dfb7347261336714e57de86e6f25c7627461`, fresh target build, twelve kernel profiles and statement match; operational closure checked separately.
+- [x] Historical full 3188-job CI remains separate support; fresh target is `ConnesRigidity.NielsenThetaImage`, not a full-project build.
+- [x] Final PDF/TeX/ZIP and all four bundle-member identities preserved; no rebuild or mathematical/source/coverage change in this evidence-only successor.
+- [ ] Targeted independent Lean acceptance of the new public verification prose and exact successor diff.
+- [ ] Parent metadata/hash/link/scope check of the exact successor; record conditional docs-only carryforward of the original three PASSes, without attributing unseen-byte review to those reviewers.
+- [ ] Parent records exact successor commit, all four role scopes and aggregate release decision in its publication packet.
 - [ ] Separate human approval before arXiv submission or outreach; neither is part of version production.
 - [ ] Ordinary GitHub release only after required gates; no additional human approval is a prerequisite for already-authorized version production. No publication action is part of this preparation. Record a new DOI only if actually issued; do not assign the v0.1.2 DOI to new bytes.
 
